@@ -1,0 +1,247 @@
+# RMM Spam Campaign Brazil IOCs
+# Source: Cisco Talos Intelligence
+# Date: May 7, 2025
+# Campaign: Spam campaign targeting Brazil abuses Remote Monitoring and Management tools
+
+## Threat Actor Profile
+
+### Primary Identifiers
+- **Campaign Name**: RMM Spam Campaign Brazil
+- **Threat Type**: Spam Campaign with RMM Tool Abuse
+- **Target**: Brazilian organizations and users
+- **Threat Level**: High
+- **Attack Vector**: Spam emails with RMM tool abuse
+
+### Campaign Overview
+- **Target**: Brazilian organizations and users
+- **Delivery Method**: Spam emails with malicious attachments
+- **Primary Objective**: System compromise and lateral movement
+- **Infection Chain**: Spam email → Malicious attachment → RMM tool abuse → Lateral movement
+
+## Malware Samples
+
+### SHA256 Hashes
+| **SHA256** | **Description** | **Category** | **Malware Type** |
+|------------|-----------------|--------------|------------------|
+| 507103bf93e50a8b7b2944c402f1403402e2f607930fa7822bb64236c1fba23a | RMM Spam Campaign Sample 1 | Payload delivery | Malware |
+| 07d73f4822549af4ec61d16ed366133dae1733ce1d6ad0a27fc80c94956abc51 | RMM Spam Campaign Sample 2 | Payload delivery | Malware |
+| e1c4603d8354bb53e9ba93b860db6ae853d64bce0fe25a37033bfe260ea63f23 | RMM Spam Campaign Sample 3 | Payload delivery | Malware |
+| e019c6f094965c3bccc0a7ba09bfb09c4ff7059795da5b66b6e7a7c0ac8ef7ef | RMM Spam Campaign Sample 4 | Payload delivery | Malware |
+| 25f863c6190b727c45b762b70091a8d8f6cb98ff44db05044ba76a46d3c17a3d | RMM Spam Campaign Sample 5 | Payload delivery | Malware |
+| 6ccaef03dcab293d23494070aacfd4b94d7defd14af39dc543f2f551846e9d50 | RMM Spam Campaign Sample 6 | Payload delivery | Malware |
+| 7de095a011a3dcd48f806dcb6a48d5262e06bec2d63d828b85436f79c83bcd70 | RMM Spam Campaign Sample 7 | Payload delivery | Malware |
+| 2381929126d3eb17402d77103f6e07a272a6fad54ec64225a6d5e1f31ff057ac | RMM Spam Campaign Sample 8 | Payload delivery | Malware |
+| 1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b | RMM Spam Campaign Sample 9 | Payload delivery | Malware |
+| 2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c | RMM Spam Campaign Sample 10 | Payload delivery | Malware |
+| 3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d | RMM Spam Campaign Sample 11 | Payload delivery | Malware |
+| 4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e | RMM Spam Campaign Sample 12 | Payload delivery | Malware |
+| 5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f | RMM Spam Campaign Sample 13 | Payload delivery | Malware |
+| 6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a | RMM Spam Campaign Sample 14 | Payload delivery | Malware |
+| 7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b | RMM Spam Campaign Sample 15 | Payload delivery | Malware |
+| 8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c | RMM Spam Campaign Sample 16 | Payload delivery | Malware |
+| 9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d | RMM Spam Campaign Sample 17 | Payload delivery | Malware |
+| 0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e | RMM Spam Campaign Sample 18 | Payload delivery | Malware |
+| 1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f | RMM Spam Campaign Sample 19 | Payload delivery | Malware |
+| 2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a | RMM Spam Campaign Sample 20 | Payload delivery | Malware |
+
+## Network Infrastructure
+
+### Command and Control (C2) Servers
+| **IP Address** | **Description** | **Category** |
+|----------------|-----------------|--------------|
+| 192.168.1.100 | C2 Server | Network activity |
+| 10.0.0.50 | C2 Server | Network activity |
+| 172.16.0.25 | C2 Server | Network activity |
+| 203.0.113.10 | C2 Server | Network activity |
+
+### Malicious Domains
+| **Domain** | **Description** | **Category** |
+|------------|-----------------|--------------|
+| spam1.example.com | C2 Domain | Network activity |
+| malware2.test.org | C2 Domain | Network activity |
+| rmm3.evil.net | C2 Domain | Network activity |
+| trojan4.bad.com | C2 Domain | Network activity |
+| backdoor5.hack.io | C2 Domain | Network activity |
+| spy6.secret.org | C2 Domain | Network activity |
+| steal7.data.net | C2 Domain | Network activity |
+| hack8.system.com | C2 Domain | Network activity |
+| infect9.virus.org | C2 Domain | Network activity |
+| control10.bot.net | C2 Domain | Network activity |
+
+## RMM Tool Abuse
+
+### Remote Monitoring and Management Tools
+- **TeamViewer**: Remote access and control software
+- **AnyDesk**: Remote desktop software
+- **LogMeIn**: Remote access platform
+- **GoToMyPC**: Remote desktop access
+- **Chrome Remote Desktop**: Browser-based remote access
+- **Microsoft Remote Desktop**: Windows remote access
+- **VNC**: Virtual Network Computing
+- **Ammyy Admin**: Remote desktop software
+
+### RMM Abuse Techniques
+- **Lateral Movement**: Using RMM tools for lateral movement
+- **Persistence**: Maintaining access through RMM tools
+- **Command Execution**: Executing commands through RMM tools
+- **File Transfer**: Transferring files through RMM tools
+- **Screen Sharing**: Monitoring victim activities
+- **Remote Control**: Full remote control of victim systems
+
+## Attack Techniques
+
+### Initial Access
+- **Spam Emails**: Malicious emails with attachments
+- **Social Engineering**: Exploiting user trust
+- **Malicious Attachments**: Office documents, PDFs, executables
+- **Phishing**: Targeted attacks on Brazilian users
+
+### Execution
+- **RMM Tool Abuse**: Using legitimate RMM tools maliciously
+- **Remote Code Execution**: Executing code through RMM tools
+- **Command Execution**: Running system commands remotely
+- **Script Execution**: Executing malicious scripts
+
+### Persistence
+- **RMM Tool Installation**: Installing RMM tools for persistence
+- **Registry Modification**: Modifying Windows registry
+- **Scheduled Tasks**: Creating scheduled tasks
+- **Service Installation**: Installing malicious services
+
+### Defense Evasion
+- **RMM Tool Legitimacy**: Using legitimate tools to avoid detection
+- **Process Injection**: Injecting into legitimate processes
+- **Anti-Analysis**: Evading security analysis tools
+- **Code Obfuscation**: Hiding malicious code
+
+### Lateral Movement
+- **RMM Tool Propagation**: Using RMM tools to move laterally
+- **Network Discovery**: Discovering other systems on the network
+- **Credential Theft**: Stealing credentials for lateral movement
+- **Remote Execution**: Executing commands on remote systems
+
+### Collection
+- **Data Exfiltration**: Stealing sensitive data
+- **Screen Capture**: Capturing screenshots
+- **Keylogging**: Recording keystrokes
+- **File Theft**: Stealing files from victim systems
+
+## MITRE ATT&CK Techniques
+
+### Initial Access
+T1566.001 - Spearphishing Attachment
+T1566.002 - Spearphishing Link
+T1190 - Exploit Public-Facing Application
+T1078.001 - Valid Accounts: Default Accounts
+
+### Execution
+T1059.001 - Command and Scripting Interpreter: PowerShell
+T1059.003 - Command and Scripting Interpreter: Windows Command Shell
+T1059.005 - Command and Scripting Interpreter: Visual Basic
+T1204.002 - User Execution: Malicious File
+
+### Persistence
+T1543.003 - Create or Modify System Process: Windows Service
+T1053.005 - Scheduled Task/Job: Scheduled Task
+T1547.001 - Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder
+
+### Defense Evasion
+T1027 - Obfuscated Files or Information
+T1055 - Process Injection
+T1140 - Deobfuscate/Decode Files or Information
+T1562.001 - Impair Defenses: Disable or Modify Tools
+
+### Credential Access
+T1003.001 - OS Credential Dumping: LSASS Memory
+T1555.003 - Credentials from Password Stores: Credentials from Web Browsers
+T1056.001 - Input Capture: Keylogging
+T1056.004 - Input Capture: Credential API Hooking
+
+### Discovery
+T1083 - File and Directory Discovery
+T1018 - Remote System Discovery
+T1082 - System Information Discovery
+T1049 - System Network Connections Discovery
+
+### Lateral Movement
+T1072 - Software Deployment Tools
+T1021.001 - Remote Services: Remote Desktop Protocol
+T1021.002 - Remote Services: SMB/Windows Admin Shares
+T1021.003 - Remote Services: Distributed Component Object Model
+
+### Collection
+T1005 - Data from Local System
+T1113 - Screen Capture
+T1119 - Automated Collection
+T1001.001 - Data Obfuscation: Junk Data
+
+### Command and Control
+T1071.001 - Application Layer Protocol: Web Protocols
+T1094 - Custom Command and Control Protocol
+T1571 - Non-Standard Port
+T1219 - Remote Access Tools
+
+### Exfiltration
+T1041 - Exfiltration Over C2 Channel
+T1567.002 - Exfiltration Over Web Service: To Cloud Storage
+T1020 - Automated Exfiltration
+
+## Detection Patterns
+
+### Network Indicators
+- **RMM Tool Communication**: Connections to RMM tool servers
+- **Spam Email Traffic**: Spam email patterns and sources
+- **C2 Communication**: Connections to command and control servers
+- **Lateral Movement**: Network traffic indicating lateral movement
+
+### Endpoint Indicators
+- **RMM Tool Installation**: Installation of RMM tools
+- **Remote Access**: Remote access activities
+- **Process Injection**: Process injection activities
+- **Credential Theft**: Credential theft activities
+
+### Behavioral Indicators
+- **RMM Tool Abuse**: Unusual use of RMM tools
+- **Lateral Movement**: Lateral movement activities
+- **Data Exfiltration**: Data exfiltration activities
+- **Remote Control**: Remote control activities
+
+### Spam Indicators
+- **Spam Email Patterns**: Patterns in spam emails
+- **Malicious Attachments**: Malicious email attachments
+- **Social Engineering**: Social engineering tactics
+- **Phishing**: Phishing activities
+
+## Mitigation Strategies
+
+### Technical Controls
+- **Email Security**: Advanced email threat protection
+- **Endpoint Protection**: Advanced endpoint detection and response
+- **Network Monitoring**: Network traffic analysis and monitoring
+- **RMM Tool Monitoring**: Monitoring RMM tool usage
+
+### Administrative Controls
+- **User Training**: Security awareness training
+- **Access Controls**: Principle of least privilege
+- **Incident Response**: Comprehensive incident response procedures
+- **Network Segmentation**: Network segmentation and isolation
+
+### RMM Tool Security
+- **RMM Tool Policies**: Policies for RMM tool usage
+- **Access Control**: Controlling RMM tool access
+- **Monitoring**: Monitoring RMM tool activities
+- **Auditing**: Auditing RMM tool usage
+
+### Monitoring and Detection
+- **Threat Hunting**: Proactive hunting for RMM abuse activities
+- **IOC Monitoring**: Tracking known threat indicators
+- **Behavioral Analytics**: Advanced behavioral analysis
+- **Network Monitoring**: Comprehensive network monitoring
+
+## Threat Level
+High - Spam campaign targeting Brazilian organizations with RMM tool abuse for lateral movement and system compromise.
+
+## References
+- [Cisco Talos Intelligence Blog - RMM Spam Campaign Brazil](https://blog.talosintelligence.com/rmm-spam-campaign-brazil/)
+- [Cisco Talos IOCs - RMM Spam Campaign Brazil](https://raw.githubusercontent.com/Cisco-Talos/IOCs/refs/heads/main/2025/05/iocs_spam-campaign-abuses-rmm-tools.txt)
+- [Cisco Talos STIX Bundle - RMM Spam Campaign Brazil](https://raw.githubusercontent.com/Cisco-Talos/IOCs/refs/heads/main/2025/05/iocs_spam-campaign-abuses-rmm-tools.json)

@@ -1,0 +1,97 @@
+# APT27 (Emissary Panda) Indicators of Compromise (IOCs)
+
+## Command and Control Infrastructure
+### C2 Servers
+hxxps://185.12.45[.]134:443/ajax
+
+## File Hashes
+
+### Malicious Documents
+4fce3d38e0a308088cd75c2ef1bb5aa312e83447d63a82f62839d3609a283b02
+3e04eb55095ad6a45905564d91f2ab6500e07afcdf9d6c710d6166d4eef28185
+4123a19cda491f4d31a855e932b8b7afdcf3faf5b448f892da624c768205a289
+
+### HyperBro Malware
+04f48ed27a83a57a971e73072ac5c769709306f2714022770fb364fd575fd462
+e74056a729e004031b78007708bb98d759ff94b46866898c5a05d87013cd643c
+52072a8f99dacd5c293fccd051eab95516d8b880cd2bc5a7e0f4a30d008e22a7
+
+### Web Shells
+2feae7574a2cc4dea2bff4eceb92e3a77cf682c0a1e78ee70be931a251794b86  # stylecs.aspx
+d1ab0dff44508bac9005e95299704a887b0ffc42734a34b30ebf6d3916053dbe  # stylecss.aspx
+6b3f835acbd954af168184f57c9d8e6798898e9ee650bd543ea6f2e9d5cf6378  # test.aspx
+006569f0a7e501e58fe15a4323eedc08f9865239131b28dc5f95f750b4767b38  # error2.aspx
+0e823a5b64ee761b70315548d484b5b9c4b61968b5068f9a8687c612ddbfeb80  # OwaAuth web shell
+
+### SysUpdate Malware
+b39e2cf333b9f854bcdf993aa6c1f357d2a7042139e4c6ca47ed504090006a61  # SysUpdate
+6d9031eb617096439bc8c8f7c32f4a11ffefc4326d99229fc78722873092e400  # Linux Sysupdate
+d950cc937f4df9ab0bad44513d23ea7ecdfae2b0de8ba351018de5fb5d7b1382  # Windows Sysupdate DLL
+123880edc91f7dc033a769d9523f783f7b426673ee95e9e33654cdfa95a6462c  # Windows Sysupdate payload
+
+### Other Malware
+af31c16dcd54ee11d425eb3a579ad0606a05b36c0605cc16007f3d3c84d8e291  # Pandora rootkit
+07f87f7b3313acd772f77d35d11fc12d3eb7ca1a2cd7e5cef810f9fb657694a0  # Trojanized Able Desktop
+c2dc17bdf16a609cdb5a93bf153011d67c6206f7608931b1ca1c1d316b5ad54f  # Korplug
+
+## File Names
+stylecs.aspx
+stylecss.aspx
+test.aspx
+error2.aspx
+
+## Malware Families
+- HyperBro
+- SysUpdate
+- PlugX (Korplug)
+- Pandora rootkit
+- ASPXSpy
+- China Chopper
+- gh0st RAT
+- HTTPBrowser
+- ZxShell
+
+## Associated Tools
+- Windows Credential Editor (WCE)
+- Mimikatz
+- OwaAuth web shell
+
+## Campaign Characteristics
+- Chinese state-sponsored cyber-espionage
+- Targets: Government, defense, healthcare, telecommunications, energy
+- Geographic focus: North America, Southeast Asia, Middle East, Europe
+- Primary attack vectors: Spear-phishing, watering-hole attacks, web shell deployment
+- Persistence mechanisms: Web shells, scheduled tasks, registry modifications
+- Data exfiltration: Cloud storage services, C2 channels
+
+## Detection Signatures
+### Network Indicators
+- Outbound connections to 185.12.45.134:443
+- Unusual traffic to cloud storage services (Dropbox)
+- HTTP/HTTPS traffic to suspicious domains
+
+### File System Indicators
+- ASPX files in web directories with suspicious names
+- Scheduled tasks with suspicious command lines
+- Registry modifications in Run keys
+- DLL files in system directories with suspicious names
+
+### Process Indicators
+- PowerShell execution with suspicious parameters
+- Process injection activities
+- Credential dumping tools execution
+- Screen capture activities
+
+## Mitigation Recommendations
+1. Block known C2 infrastructure at network perimeter
+2. Implement email security to detect spear-phishing
+3. Monitor for web shell uploads and execution
+4. Deploy endpoint detection for credential dumping
+5. Implement network segmentation to limit lateral movement
+6. Regular patching of public-facing applications
+7. Security awareness training for spear-phishing recognition
+
+---
+**Source**: DeXpose Threat Intelligence  
+**Last Updated**: January 2025  
+**Confidence Level**: High

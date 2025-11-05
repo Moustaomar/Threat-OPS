@@ -1,0 +1,790 @@
+{
+  "name": "HoldingHands Asia Expansion Campaign",
+  "versions": {
+    "attack": "17",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "MITRE ATT&CK techniques used by HoldingHands Asia Expansion Campaign targeting China, Taiwan, Japan, and Malaysia (March 2024 - October 2025). This heatmap visualizes 34 techniques across 10 tactics with color-coded priority levels.",
+  "filters": {
+    "platforms": ["windows"]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": true,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1589.002",
+      "tactic": "reconnaissance",
+      "score": 85,
+      "color": "#ff6666",
+      "comment": "Email address gathering for phishing campaigns across Asia (China, Taiwan, Japan, Malaysia)",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Coordinated phishing campaigns targeting specific regions"
+        }
+      ],
+      "links": [],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1566.001",
+      "tactic": "initial-access",
+      "score": 100,
+      "color": "#ff0000",
+      "comment": "PDF/Excel/Word phishing attachments mimicking Ministry of Finance and government documents",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Phishing emails with malicious PDF, Excel, Word attachments"
+        }
+      ],
+      "links": [],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1566.002",
+      "tactic": "initial-access",
+      "score": 100,
+      "color": "#ff0000",
+      "comment": "Embedded malicious links in documents (Tencent Cloud + custom domains)",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Tencent Cloud links and custom domains with 'tw' pattern"
+        }
+      ],
+      "links": [],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1204.002",
+      "tactic": "execution",
+      "score": 90,
+      "color": "#ff6666",
+      "comment": "User executes malicious files disguised as tax audit documents",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Dokumen audit cukai dan sampel bahan.exe social engineering"
+        }
+      ],
+      "links": [],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1059.003",
+      "tactic": "execution",
+      "score": 75,
+      "color": "#ff9900",
+      "comment": "Windows Command Shell for shellcode execution",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Multi-stage shellcode execution through Windows processes"
+        }
+      ],
+      "links": [],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "execution",
+      "score": 100,
+      "color": "#ff0000",
+      "comment": "Task Scheduler service abuse for execution - sophisticated trigger mechanism",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Task Scheduler restart triggers TimeBrokerClient.dll loading"
+        }
+      ],
+      "links": [],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1574.002",
+      "tactic": "persistence",
+      "score": 100,
+      "color": "#ff0000",
+      "comment": "DLL side-loading: dokan2.dll (Dokany masquerade), TimeBrokerClient.dll (svchost.exe)",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "dokan2.dll and TimeBrokerClient.dll side-loading"
+        }
+      ],
+      "links": [],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "persistence",
+      "score": 75,
+      "color": "#ff9900",
+      "comment": "Registry Run Keys (HKEY_CURRENT_USER\\SOFTWARE\\HHClient)",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "HHClient registry key for configuration storage"
+        }
+      ],
+      "links": [],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "persistence",
+      "score": 100,
+      "color": "#ff0000",
+      "comment": "Task Scheduler for persistence - no direct process launch required",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Automatic restart triggers malware execution"
+        }
+      ],
+      "links": [],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1134.001",
+      "tactic": "privilege-escalation",
+      "score": 100,
+      "color": "#ff0000",
+      "comment": "TrustedInstaller impersonation + user token duplication via WTSEnumerateSessions",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "sw.dat impersonates TrustedInstaller, msvchost.dat duplicates user tokens"
+        }
+      ],
+      "links": [],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1055.001",
+      "tactic": "privilege-escalation",
+      "score": 85,
+      "color": "#ff9900",
+      "comment": "DLL injection into taskhostw.exe for payload execution",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "HoldingHands payload injected into taskhostw.exe"
+        }
+      ],
+      "links": [],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1574.002",
+      "tactic": "privilege-escalation",
+      "score": 95,
+      "color": "#ff0000",
+      "comment": "DLL side-loading also used for privilege escalation",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Leverages legitimate programs for elevated execution"
+        }
+      ],
+      "links": [],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "privilege-escalation",
+      "score": 95,
+      "color": "#ff0000",
+      "comment": "Task Scheduler abuse provides system-level execution",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Executes in svchost.exe context via Task Scheduler service"
+        }
+      ],
+      "links": [],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1140",
+      "tactic": "defense-evasion",
+      "score": 100,
+      "color": "#ff0000",
+      "comment": "Multi-stage decryption using process name (svchost.exe) as decryption key",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Process name used as decryption key for msvchost.dat"
+        }
+      ],
+      "links": [],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1027",
+      "tactic": "defense-evasion",
+      "score": 100,
+      "color": "#ff0000",
+      "comment": "Obfuscated .dat files, encrypted shellcode, dynamic filename generation",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "sw.dat, msvchost.dat, system.dat contain encrypted shellcode"
+        }
+      ],
+      "links": [],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1562.001",
+      "tactic": "defense-evasion",
+      "score": 80,
+      "color": "#ff9900",
+      "comment": "Anti-AV process checks to detect and evade security products",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Multiple anti-virus process detection checks"
+        }
+      ],
+      "links": [],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1497.001",
+      "tactic": "defense-evasion",
+      "score": 90,
+      "color": "#ff0000",
+      "comment": "Anti-VM detection via physical RAM checks",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "sw.dat checks physically installed RAM"
+        }
+      ],
+      "links": [],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1036.005",
+      "tactic": "defense-evasion",
+      "score": 70,
+      "color": "#ffcc00",
+      "comment": "DLL masquerading (dokan2.dll, TimeBrokerClient.dll)",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Malicious DLLs named to match legitimate system libraries"
+        }
+      ],
+      "links": [],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1553.002",
+      "tactic": "defense-evasion",
+      "score": 85,
+      "color": "#ff9900",
+      "comment": "Legitimate digital signatures on malicious executables",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "EXE files with legitimate digital signatures observed"
+        }
+      ],
+      "links": [],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1055.012",
+      "tactic": "defense-evasion",
+      "score": 80,
+      "color": "#ff9900",
+      "comment": "Process hollowing into taskhostw.exe",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "CreateProcessAsUserW launches taskhostw.exe, payload injected"
+        }
+      ],
+      "links": [],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1112",
+      "tactic": "defense-evasion",
+      "score": 75,
+      "color": "#ff9900",
+      "comment": "Registry modifications (HHClient, AdrrStrChar for C2 updates)",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "HKEY_CURRENT_USER\\SOFTWARE\\HHClient registry operations"
+        }
+      ],
+      "links": [],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1574.002",
+      "tactic": "defense-evasion",
+      "score": 95,
+      "color": "#ff0000",
+      "comment": "DLL side-loading as defense evasion technique",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Leverages trusted programs to load malicious code"
+        }
+      ],
+      "links": [],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1082",
+      "tactic": "discovery",
+      "score": 80,
+      "color": "#ff9900",
+      "comment": "System information discovery (RAM, process names, command lines)",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Physical RAM checks, process name ASCII sum calculations"
+        }
+      ],
+      "links": [],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1057",
+      "tactic": "discovery",
+      "score": 75,
+      "color": "#ff9900",
+      "comment": "Process discovery for security products and validation",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Anti-AV process checks, process name validation"
+        }
+      ],
+      "links": [],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1033",
+      "tactic": "discovery",
+      "score": 85,
+      "color": "#ff9900",
+      "comment": "User discovery via WTSEnumerateSessions to find active sessions",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "WTSEnumerateSessions API call to retrieve terminal sessions"
+        }
+      ],
+      "links": [],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1124",
+      "tactic": "discovery",
+      "score": 60,
+      "color": "#ffcc00",
+      "comment": "System time discovery for execution timing",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Inferred"
+        },
+        {
+          "name": "Evidence",
+          "value": "Task Scheduler timing-based execution"
+        }
+      ],
+      "links": [],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1005",
+      "tactic": "collection",
+      "score": 85,
+      "color": "#ff9900",
+      "comment": "Data collection from local system via HoldingHands payload",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Information stealing capabilities of HoldingHands malware"
+        }
+      ],
+      "links": [],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1113",
+      "tactic": "collection",
+      "score": 65,
+      "color": "#ffcc00",
+      "comment": "Potential screen capture capability (typical of info stealers)",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Inferred"
+        },
+        {
+          "name": "Evidence",
+          "value": "Information stealing malware classification"
+        }
+      ],
+      "links": [],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1071.001",
+      "tactic": "command-and-control",
+      "score": 70,
+      "color": "#ffcc00",
+      "comment": "Web protocols for C2 communication",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Communication with C2 servers at identified IP addresses"
+        }
+      ],
+      "links": [],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1573",
+      "tactic": "command-and-control",
+      "score": 80,
+      "color": "#ff9900",
+      "comment": "Encrypted C2 communications",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Encrypted shellcode and data transfer mechanisms"
+        }
+      ],
+      "links": [],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1008",
+      "tactic": "command-and-control",
+      "score": 100,
+      "color": "#ff0000",
+      "comment": "Dynamic C2 IP address updates via registry (Command 0x15, AdrrStrChar value)",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Registry-based C2 IP update capability enables infrastructure rotation"
+        }
+      ],
+      "links": [],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1102",
+      "tactic": "command-and-control",
+      "score": 70,
+      "color": "#ffcc00",
+      "comment": "Tencent Cloud storage abuse for malware distribution",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Tencent Cloud Account IDs 1321729461, 1329400280"
+        }
+      ],
+      "links": [],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1219",
+      "tactic": "command-and-control",
+      "score": 85,
+      "color": "#ff9900",
+      "comment": "HoldingHands provides remote access/backdoor capabilities",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Remote access trojan functionality"
+        }
+      ],
+      "links": [],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1041",
+      "tactic": "exfiltration",
+      "score": 80,
+      "color": "#ff9900",
+      "comment": "Data exfiltration over established C2 channels",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Data exfiltration through HoldingHands C2 communication"
+        }
+      ],
+      "links": [],
+      "showSubtechniques": false
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffffff",
+      "#ffcc00",
+      "#ff9900",
+      "#ff0000"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Critical Priority (Score: 95-100)",
+      "color": "#ff0000"
+    },
+    {
+      "label": "High Priority (Score: 75-94)",
+      "color": "#ff9900"
+    },
+    {
+      "label": "Medium Priority (Score: 60-74)",
+      "color": "#ffcc00"
+    },
+    {
+      "label": "Low Priority (Score: <60)",
+      "color": "#ffffff"
+    }
+  ],
+  "metadata": [
+    {
+      "name": "Campaign",
+      "value": "HoldingHands Asia Expansion Campaign"
+    },
+    {
+      "name": "Threat Actor",
+      "value": "Unidentified APT Group"
+    },
+    {
+      "name": "Malware Families",
+      "value": "HoldingHands, Winos 4.0"
+    },
+    {
+      "name": "Target Regions",
+      "value": "China, Taiwan, Japan, Malaysia"
+    },
+    {
+      "name": "Campaign Period",
+      "value": "March 2024 - October 2025 (Ongoing)"
+    },
+    {
+      "name": "Threat Level",
+      "value": "High"
+    },
+    {
+      "name": "Source",
+      "value": "Fortinet FortiGuard Labs - October 17, 2025"
+    },
+    {
+      "name": "Reference",
+      "value": "https://www.fortinet.com/blog/threat-research/tracking-malware-and-attack-expansion-a-hacker-groups-journey-across-asia"
+    },
+    {
+      "name": "Total Techniques",
+      "value": "34"
+    },
+    {
+      "name": "Tactics Coverage",
+      "value": "10 tactics"
+    }
+  ],
+  "links": [
+    {
+      "label": "Fortinet Report",
+      "url": "https://www.fortinet.com/blog/threat-research/tracking-malware-and-attack-expansion-a-hacker-groups-journey-across-asia"
+    },
+    {
+      "label": "MISP Event JSON",
+      "url": "HoldingHands_Asia_Expansion_Campaign_MISP_Event.json"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false
+}
+

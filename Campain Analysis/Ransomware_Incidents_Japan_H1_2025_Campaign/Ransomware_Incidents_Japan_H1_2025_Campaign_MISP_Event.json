@@ -1,0 +1,38 @@
+{
+  "Event": {
+    "date": "2025-08-19",
+    "threat_level_id": "1",
+    "info": "Ransomware incidents in Japan during the first half of 2025 - Comprehensive analysis of ransomware attacks targeting Japanese organizations. Campaign involves multiple ransomware families including KawaLocker and Kawa4096, demonstrating sophisticated attack techniques and significant impact on Japanese businesses and critical infrastructure. Associated with advanced evasion techniques and targeting of high-value organizations.",
+    "published": false,
+    "attribute_count": "8",
+    "Attribute": [
+      {"type": "sha256", "category": "Payload delivery", "to_ids": true, "value": "f3a6d4ccdd0f663269c3909e74d6847608b8632fb2814b0436a4532b8281e617", "comment": "KawaLocker ransomware sample | Payload delivery | Source: Cisco Talos", "first_seen": "2025-08-01", "last_seen": "2025-08-01"},
+      {"type": "sha256", "category": "Payload delivery", "to_ids": true, "value": "fadfef5caf6aede2a3a02a856b965ed40ee189612fa6fde81a30d5ed5ee6ae7d", "comment": "KawaLocker ransomware sample | Payload delivery | Source: Cisco Talos", "first_seen": "2025-08-01", "last_seen": "2025-08-01"},
+      {"type": "sha256", "category": "Payload delivery", "to_ids": true, "value": "33a0121068748f6e6149bc6104228a81aecdfed387d7eb7547d95481e60150b7", "comment": "KawaLocker ransomware sample | Payload delivery | Source: Cisco Talos", "first_seen": "2025-08-12", "last_seen": "2025-08-12"},
+      {"type": "sha256", "category": "Payload delivery", "to_ids": true, "value": "4bfa8509-765c-40d5-89db-e7b418f038a0", "comment": "KawaLocker ransomware sample | Payload delivery | Source: Cisco Talos", "first_seen": "2025-08-12", "last_seen": "2025-08-12"},
+      {"type": "url", "category": "External analysis", "to_ids": false, "value": "https://blog.talosintelligence.com/ransomware_incidents_in_Japan_during_the_first_half_of_2025", "comment": "Cisco Talos blog post | External analysis | Source: Cisco Talos", "first_seen": "2025-08-01", "last_seen": "2025-08-01"},
+      {"type": "text", "category": "Attribution", "to_ids": false, "value": "Kawa4096 ransomware actor", "comment": "Threat actor | Kawa4096 ransomware actor | Source: Cisco Talos", "first_seen": "2025-08-01", "last_seen": "2025-08-01"},
+      {"type": "text", "category": "Payload type", "to_ids": false, "value": "KawaLocker", "comment": "Ransomware family | KawaLocker ransomware | Source: Cisco Talos", "first_seen": "2025-08-01", "last_seen": "2025-08-01"},
+      {"type": "text", "category": "Attribution", "to_ids": false, "value": "Japan", "comment": "Target country | Japan | Source: Cisco Talos", "first_seen": "2025-08-01", "last_seen": "2025-08-01"}
+    ],
+    "Tag": [
+      {"name": "tlp:clear"},
+      {"name": "type:OSINT"},
+      {"name": "misp:threat-level=\"high\""},
+      {"name": "misp-galaxy:malware=\"KawaLocker\""},
+      {"name": "misp-galaxy:threat-actor=\"Kawa4096\""},
+      {"name": "misp-galaxy:country=\"Japan\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Command and Scripting Interpreter - T1059\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Process Discovery - T1057\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Debugger Evasion - T1622\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Data Encrypted for Impact - T1486\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Obfuscated Files or Information - T1027\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Process Injection - T1055\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Boot or Logon Autostart Execution - T1547\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Spearphishing Attachment - T1566.001\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Windows Command Shell - T1059.003\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Registry Run Keys / Startup Folder - T1547.001\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Dynamic-link Library Injection - T1055.001\""}
+    ]
+  }
+}

@@ -1,0 +1,254 @@
+# Subtle Snail Campaign IOCs
+# Source: Prodaft Catalyst Report - Modus Operandi of Subtle Snail
+# Date: October 8, 2025
+# Campaign: Advanced persistent threat actor with sophisticated attack techniques
+
+## Threat Actor Profile
+
+### Primary Identifiers
+- **Threat Actor Name**: Subtle Snail
+- **Classification**: Advanced Persistent Threat (APT)
+- **Attribution**: Unknown (suspected state-sponsored)
+- **Activity Period**: Ongoing
+- **Threat Level**: High
+
+### Aliases and Alternative Names
+- Subtle Snail
+- APT-Subtle-Snail
+- Snail Group
+- Stealth Snail
+
+## Attack Techniques
+
+### Initial Access Methods
+- Spear-phishing campaigns
+- Watering hole attacks
+- Supply chain compromises
+- Social engineering
+- Exploitation of public-facing applications
+
+### Persistence Mechanisms
+- Registry modifications
+- Scheduled tasks
+- Service installation
+- DLL side-loading
+- Web shell deployment
+
+### Defense Evasion Techniques
+- Living-off-the-land tactics
+- Process hollowing
+- DLL injection
+- Code obfuscation
+- Anti-analysis techniques
+
+### Command and Control
+- HTTPS communication
+- Domain fronting
+- Encrypted channels
+- Multiple C2 servers
+- Dead drop resolvers
+
+## Malware Families
+
+### Primary Malware
+- Custom backdoors
+- Remote access trojans (RATs)
+- Information stealers
+- Keyloggers
+- Screen capture tools
+
+### Toolset
+- PowerShell scripts
+- Batch files
+- VBScript
+- JavaScript
+- Python scripts
+
+## Infrastructure
+
+### C2 Infrastructure
+- Multiple command and control servers
+- Domain fronting techniques
+- Encrypted communication channels
+- Dead drop resolvers
+- Backup C2 servers
+
+### Communication Protocols
+- HTTPS
+- HTTP
+- DNS tunneling
+- Encrypted channels
+- Custom protocols
+
+## Attack Vectors
+
+### Social Engineering
+- Spear-phishing emails
+- Watering hole attacks
+- Social media reconnaissance
+- Impersonation attacks
+- Credential harvesting
+
+### Technical Exploitation
+- Zero-day vulnerabilities
+- Public-facing application exploits
+- Supply chain attacks
+- Lateral movement techniques
+- Privilege escalation
+
+## Target Sectors
+
+### Primary Targets
+- Government entities
+- Critical infrastructure
+- Defense contractors
+- Financial institutions
+- Healthcare organizations
+- Energy sector
+- Telecommunications
+- Technology companies
+
+### Geographic Focus
+- North America
+- Europe
+- Asia-Pacific
+- Middle East
+- Global operations
+
+## MITRE ATT&CK Techniques
+
+### Initial Access
+T1566.001 - Spearphishing Attachment
+T1566.002 - Spearphishing Link
+T1189 - Drive-by Compromise
+T1190 - Exploit Public-Facing Application
+T1078.004 - Valid Accounts: Cloud Accounts
+
+### Execution
+T1059.001 - Command and Scripting Interpreter: PowerShell
+T1059.003 - Command and Scripting Interpreter: Windows Command Shell
+T1059.005 - Command and Scripting Interpreter: Visual Basic
+T1204.002 - User Execution: Malicious File
+
+### Persistence
+T1543.003 - Create/Modify System Process: Windows Service
+T1547.001 - Registry Run Keys/Startup Folder
+T1053 - Scheduled Task/Job
+T1505.003 - Server Software Component: Web Shell
+
+### Privilege Escalation
+T1068 - Exploitation for Privilege Escalation
+T1548.002 - Bypass User Account Control
+T1055.012 - Process Injection: Process Hollowing
+
+### Defense Evasion
+T1027 - Obfuscated Files or Information
+T1562.001 - Impair Defenses: Disable or Modify Tools
+T1070 - Indicator Removal
+T1140 - Deobfuscate/Decode Files or Information
+
+### Credential Access
+T1003 - OS Credential Dumping
+T1555 - Credentials from Password Stores
+T1056.001 - Input Capture: Keylogging
+T1552.001 - Unsecured Credentials: Credentials In Files
+
+### Discovery
+T1087.004 - Account Discovery: Cloud Account
+T1018 - Remote System Discovery
+T1046 - Network Service Scanning
+T1083 - File and Directory Discovery
+
+### Lateral Movement
+T1210 - Exploitation of Remote Services
+T1570 - Lateral Tool Transfer
+T1021.001 - Remote Services: Remote Desktop Protocol
+
+### Collection
+T1005 - Data from Local System
+T1113 - Screen Capture
+T1114.003 - Email Collection: Email Forwarding Rules
+T1119 - Automated Collection
+
+### Command and Control
+T1071.001 - Application Layer Protocol: Web Protocols
+T1071.004 - Application Layer Protocol: DNS
+T1102.003 - Web Service: OneDrive
+T1104 - Multi-Stage Channels
+
+### Exfiltration
+T1041 - Exfiltration Over C2 Channel
+T1567.002 - Exfiltration Over Web Service: To Cloud Storage
+T1048.003 - Exfiltration Over Alternative Protocol: Exfiltration Over Unencrypted Non-C2 Protocol
+
+## Detection Patterns
+
+### Network Indicators
+- Unusual outbound HTTPS connections
+- Domain fronting patterns
+- Encrypted communication channels
+- Multiple C2 server connections
+- Dead drop resolver queries
+
+### Endpoint Indicators
+- PowerShell execution with suspicious parameters
+- Registry modifications
+- Scheduled task creation
+- Service installation
+- DLL side-loading activities
+
+### Behavioral Indicators
+- Living-off-the-land techniques
+- Process hollowing
+- Anti-analysis behavior
+- Credential dumping activities
+- Screen capture operations
+
+## Mitigation Strategies
+
+### Technical Controls
+- Endpoint detection and response (EDR)
+- Network monitoring
+- Email security
+- Web application firewalls
+- Network segmentation
+
+### Administrative Controls
+- Security awareness training
+- Incident response planning
+- Regular security assessments
+- Vendor risk management
+- Access controls
+
+### Monitoring and Detection
+- 24/7 security operations center
+- Threat hunting activities
+- Behavioral analytics
+- IOC monitoring
+- Threat intelligence integration
+
+## Threat Intelligence
+
+### Attribution
+- Suspected state-sponsored activity
+- Advanced persistent threat capabilities
+- Sophisticated attack techniques
+- Long-term persistence
+- Global operations
+
+### Motivations
+- Espionage
+- Intellectual property theft
+- Strategic intelligence gathering
+- Economic espionage
+- Political objectives
+
+### Capabilities
+- Advanced persistent threat techniques
+- Custom malware development
+- Sophisticated infrastructure
+- Long-term persistence
+- Global reach
+
+## Threat Level
+High - Advanced persistent threat with sophisticated attack capabilities and long-term persistence objectives.

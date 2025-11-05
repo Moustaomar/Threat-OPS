@@ -1,0 +1,35 @@
+{
+  "Event": {
+    "date": "2025-08-12",
+    "threat_level_id": "2",
+    "info": "PS1Bot Malvertising Campaign - Multi-stage PowerShell Malware Framework",
+    "published": true,
+    "attribute_count": "168",
+    "Attribute": [
+      {
+        "type": "malware-family",
+        "category": "Malware",
+        "to_ids": false,
+        "value": "PS1Bot",
+        "comment": "Multi-stage PowerShell malware framework",
+        "first_seen": "2025-08-12",
+        "last_seen": "2025-08-12"
+      },
+      {
+        "type": "malware-family",
+        "category": "Malware",
+        "to_ids": false,
+        "value": "AHK Bot",
+        "comment": "Related malware family with similar architecture",
+        "first_seen": "2025-08-12",
+        "last_seen": "2025-08-12"
+      }
+    ],
+    "Tag": [
+      {"name": "tlp:amber"},
+      {"name": "threat-level:medium"},
+      {"name": "misp-galaxy:malware=\"PS1Bot\""},
+      {"name": "misp-galaxy:tool=\"PowerShell\""}
+    ]
+  }
+}

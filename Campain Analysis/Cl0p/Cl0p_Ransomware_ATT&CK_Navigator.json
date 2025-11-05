@@ -1,0 +1,1074 @@
+{
+  "name": "Cl0p Ransomware Group (2019-2025)",
+  "versions": {
+    "attack": "17",
+    "navigator": "5.1.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "MITRE ATT&CK techniques used by Cl0p (Clop) Ransomware Group from 2019-2025. Associated with FIN11 and TA505. Known for exploiting zero-day vulnerabilities (MOVEit, PaperCut, GoAnywhere), double extortion tactics, and massive victim campaigns. This heatmap visualizes 45+ techniques across 11 tactics with color-coded priority levels based on observed frequency and impact.",
+  "filters": {
+    "platforms": ["windows", "linux", "macos", "network"]
+  },
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "aggregateFunction": "average",
+    "showID": true,
+    "showName": true,
+    "showAggregateScores": true,
+    "countUnscored": false
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1078",
+      "tactic": "initial-access",
+      "score": 90,
+      "color": "#ff0000",
+      "comment": "Valid accounts obtained via credential theft, brute force, or password reset abuse",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes - High Frequency"
+        },
+        {
+          "name": "Evidence",
+          "value": "RDP brute force, stolen credentials, password reset abuse"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1190",
+      "tactic": "initial-access",
+      "score": 100,
+      "color": "#ff0000",
+      "comment": "Exploit public-facing applications: MOVEit CVE-2023-34362, PaperCut CVE-2023-27350/27351, GoAnywhere CVE-2023-0669, Oracle E-Business Suite, Accellion FTA, SolarWinds Serv-U",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes - Critical"
+        },
+        {
+          "name": "Evidence",
+          "value": "Multiple zero-day exploits, SQL injection attacks"
+        },
+        {
+          "name": "CVEs",
+          "value": "CVE-2023-34362, CVE-2023-27350, CVE-2023-27351, CVE-2023-0669"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1566.001",
+      "tactic": "initial-access",
+      "score": 85,
+      "color": "#ff9900",
+      "comment": "Spearphishing attachments with malicious macros or executables",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Phishing campaigns with malicious attachments"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1566.002",
+      "tactic": "initial-access",
+      "score": 80,
+      "color": "#ff9900",
+      "comment": "Spearphishing links to credential harvesting or malware delivery pages",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Phishing domains with typosquatting patterns"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1059.001",
+      "tactic": "execution",
+      "score": 95,
+      "color": "#ff0000",
+      "comment": "PowerShell used for script execution, payload delivery, and lateral movement",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes - High Frequency"
+        },
+        {
+          "name": "Evidence",
+          "value": "PowerShell scripts for automation and payload execution"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1059.003",
+      "tactic": "execution",
+      "score": 85,
+      "color": "#ff9900",
+      "comment": "Windows Command Shell for batch scripts and system commands",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Command line execution for various operations"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1204.002",
+      "tactic": "execution",
+      "score": 80,
+      "color": "#ff9900",
+      "comment": "User execution of malicious files delivered via phishing",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Social engineering to execute malware"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1047",
+      "tactic": "execution",
+      "score": 85,
+      "color": "#ff9900",
+      "comment": "WMI for remote command execution and lateral movement",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Windows Management Instrumentation usage"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1543.003",
+      "tactic": "persistence",
+      "score": 90,
+      "color": "#ff0000",
+      "comment": "Windows service creation for persistence",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Malicious service installation"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1547.001",
+      "tactic": "persistence",
+      "score": 85,
+      "color": "#ff9900",
+      "comment": "Registry Run Keys for autostart execution",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Registry persistence mechanisms"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1053.005",
+      "tactic": "persistence",
+      "score": 80,
+      "color": "#ff9900",
+      "comment": "Scheduled tasks for persistence and execution",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Task Scheduler abuse"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1027",
+      "tactic": "defense-evasion",
+      "score": 90,
+      "color": "#ff0000",
+      "comment": "Obfuscated files and information to evade detection",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Code obfuscation, packed malware"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1070.004",
+      "tactic": "defense-evasion",
+      "score": 85,
+      "color": "#ff9900",
+      "comment": "File deletion to remove evidence and forensic artifacts",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Log deletion, artifact removal"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1562.001",
+      "tactic": "defense-evasion",
+      "score": 95,
+      "color": "#ff0000",
+      "comment": "Disable or modify security tools (AV, EDR, Windows Defender)",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes - High Priority"
+        },
+        {
+          "name": "Evidence",
+          "value": "Security software disablement"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1036",
+      "tactic": "defense-evasion",
+      "score": 75,
+      "color": "#ffcc00",
+      "comment": "Masquerading as legitimate files or processes",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Filename masquerading, process impersonation"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1574",
+      "tactic": "defense-evasion",
+      "score": 70,
+      "color": "#ffcc00",
+      "comment": "Hijack execution flow via DLL side-loading or other methods",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Execution flow hijacking techniques"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1003.001",
+      "tactic": "credential-access",
+      "score": 100,
+      "color": "#ff0000",
+      "comment": "LSASS memory dumping for credential harvesting",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes - Critical"
+        },
+        {
+          "name": "Evidence",
+          "value": "LSASS credential dumping operations"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1003.002",
+      "tactic": "credential-access",
+      "score": 90,
+      "color": "#ff0000",
+      "comment": "Security Account Manager (SAM) database extraction",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "SAM database access for credential theft"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1003.003",
+      "tactic": "credential-access",
+      "score": 95,
+      "color": "#ff0000",
+      "comment": "NTDS.dit extraction from Domain Controllers",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Active Directory database extraction"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1018",
+      "tactic": "discovery",
+      "score": 85,
+      "color": "#ff9900",
+      "comment": "Remote system discovery for network mapping",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Network reconnaissance activities"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1033",
+      "tactic": "discovery",
+      "score": 75,
+      "color": "#ffcc00",
+      "comment": "System owner/user discovery",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "User enumeration activities"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1057",
+      "tactic": "discovery",
+      "score": 80,
+      "color": "#ff9900",
+      "comment": "Process discovery for security tool identification",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Running process enumeration"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1083",
+      "tactic": "discovery",
+      "score": 90,
+      "color": "#ff0000",
+      "comment": "File and directory discovery for valuable data targeting",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes - High Frequency"
+        },
+        {
+          "name": "Evidence",
+          "value": "File system enumeration for sensitive data"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1135",
+      "tactic": "discovery",
+      "score": 85,
+      "color": "#ff9900",
+      "comment": "Network share discovery using AdFind and other tools",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "AdFind tool usage, network share enumeration"
+        },
+        {
+          "name": "Tool",
+          "value": "AdFind"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1082",
+      "tactic": "discovery",
+      "score": 75,
+      "color": "#ffcc00",
+      "comment": "System information discovery",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "System reconnaissance"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1087.001",
+      "tactic": "discovery",
+      "score": 80,
+      "color": "#ff9900",
+      "comment": "Local account discovery",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Account enumeration via AdFind"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1087.002",
+      "tactic": "discovery",
+      "score": 85,
+      "color": "#ff9900",
+      "comment": "Domain account discovery using AdFind",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Active Directory enumeration"
+        },
+        {
+          "name": "Tool",
+          "value": "AdFind"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1021.001",
+      "tactic": "lateral-movement",
+      "score": 95,
+      "color": "#ff0000",
+      "comment": "Remote Desktop Protocol for lateral movement",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes - High Frequency"
+        },
+        {
+          "name": "Evidence",
+          "value": "RDP usage for lateral movement"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1021.002",
+      "tactic": "lateral-movement",
+      "score": 90,
+      "color": "#ff0000",
+      "comment": "SMB/Windows Admin Shares for lateral movement",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Network share exploitation"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1570",
+      "tactic": "lateral-movement",
+      "score": 85,
+      "color": "#ff9900",
+      "comment": "Lateral tool transfer to propagate malware across network",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Tool and payload distribution across network"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1074.001",
+      "tactic": "collection",
+      "score": 95,
+      "color": "#ff0000",
+      "comment": "Local data staging before exfiltration using LEMURLOOT",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes - High Frequency"
+        },
+        {
+          "name": "Evidence",
+          "value": "Data staging operations"
+        },
+        {
+          "name": "Tool",
+          "value": "LEMURLOOT info-stealer"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1074.002",
+      "tactic": "collection",
+      "score": 90,
+      "color": "#ff0000",
+      "comment": "Remote data staging on compromised systems",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Staging servers for data aggregation"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1213",
+      "tactic": "collection",
+      "score": 100,
+      "color": "#ff0000",
+      "comment": "Data from information repositories (databases, file servers, SharePoint, etc.)",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes - Critical"
+        },
+        {
+          "name": "Evidence",
+          "value": "Exploitation of MOVEit, GoAnywhere, and other data repositories"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1114",
+      "tactic": "collection",
+      "score": 85,
+      "color": "#ff9900",
+      "comment": "Email collection for sensitive data theft",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Email data harvesting"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1560.001",
+      "tactic": "collection",
+      "score": 80,
+      "color": "#ff9900",
+      "comment": "Archive collected data via compression utilities",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Data archiving before exfiltration"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1071.001",
+      "tactic": "command-and-control",
+      "score": 90,
+      "color": "#ff0000",
+      "comment": "Web protocols (HTTP/HTTPS) for C2 communication",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Standard web protocol C2"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1090.003",
+      "tactic": "command-and-control",
+      "score": 75,
+      "color": "#ffcc00",
+      "comment": "Multi-hop proxy for C2 obfuscation",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Proxy infrastructure usage"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1573",
+      "tactic": "command-and-control",
+      "score": 85,
+      "color": "#ff9900",
+      "comment": "Encrypted channel for C2 communications",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "TLS/SSL encrypted communications"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1105",
+      "tactic": "command-and-control",
+      "score": 95,
+      "color": "#ff0000",
+      "comment": "Ingress tool transfer (Truebot loader, LEMURLOOT, ransomware payload)",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes - High Frequency"
+        },
+        {
+          "name": "Evidence",
+          "value": "Tool and payload download from C2"
+        },
+        {
+          "name": "Tools",
+          "value": "Truebot, LEMURLOOT, AdFind"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1219",
+      "tactic": "command-and-control",
+      "score": 80,
+      "color": "#ff9900",
+      "comment": "Remote access software (AnyDesk variants)",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Phishing domains: anydeskupdates.com, anydeskupdate.com"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1041",
+      "tactic": "exfiltration",
+      "score": 95,
+      "color": "#ff0000",
+      "comment": "Exfiltration over C2 channel before encryption",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes - High Frequency"
+        },
+        {
+          "name": "Evidence",
+          "value": "Data exfiltration via C2 infrastructure"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1048",
+      "tactic": "exfiltration",
+      "score": 85,
+      "color": "#ff9900",
+      "comment": "Exfiltration over alternative protocol (non-C2 channels)",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Multiple exfiltration methods"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1567",
+      "tactic": "exfiltration",
+      "score": 90,
+      "color": "#ff0000",
+      "comment": "Exfiltration over web service to cloud storage or file sharing",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Cloud service abuse for data exfiltration"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1486",
+      "tactic": "impact",
+      "score": 100,
+      "color": "#ff0000",
+      "comment": "Data encrypted for impact - PRIMARY IMPACT - Cl0p ransomware encryption",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes - CRITICAL"
+        },
+        {
+          "name": "Evidence",
+          "value": "Ransomware encryption operations, .clop extension"
+        },
+        {
+          "name": "Impact",
+          "value": "335+ victims in Feb 2025 campaign, 180+ in Dec 2024"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1490",
+      "tactic": "impact",
+      "score": 100,
+      "color": "#ff0000",
+      "comment": "Inhibit system recovery (shadow copy deletion, backup destruction)",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes - CRITICAL"
+        },
+        {
+          "name": "Evidence",
+          "value": "Shadow copy deletion, backup removal"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1489",
+      "tactic": "impact",
+      "score": 95,
+      "color": "#ff0000",
+      "comment": "Service stop before encryption (databases, backup services)",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Service termination to enable file encryption"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1491",
+      "tactic": "impact",
+      "score": 90,
+      "color": "#ff0000",
+      "comment": "Defacement via ransom notes and data leak site publication",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Ransom note deployment, public leak site defacement"
+        },
+        {
+          "name": "Leak Sites",
+          "value": "7 Tor onion services"
+        }
+      ],
+      "showSubtechniques": false
+    },
+    {
+      "techniqueID": "T1657",
+      "tactic": "impact",
+      "score": 85,
+      "color": "#ff9900",
+      "comment": "Financial theft via ransom demands and double extortion",
+      "enabled": true,
+      "metadata": [
+        {
+          "name": "Observed",
+          "value": "Yes"
+        },
+        {
+          "name": "Evidence",
+          "value": "Double extortion: encryption + data leak threats"
+        }
+      ],
+      "showSubtechniques": false
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffffff",
+      "#ffcc00",
+      "#ff9900",
+      "#ff0000"
+    ],
+    "minValue": 0,
+    "maxValue": 100
+  },
+  "legendItems": [
+    {
+      "label": "Critical Priority (Score: 95-100) - Signature Techniques",
+      "color": "#ff0000"
+    },
+    {
+      "label": "High Priority (Score: 80-94) - Frequent Techniques",
+      "color": "#ff9900"
+    },
+    {
+      "label": "Medium Priority (Score: 70-79) - Supporting Techniques",
+      "color": "#ffcc00"
+    },
+    {
+      "label": "Low Priority (Score: <70) - Occasional Techniques",
+      "color": "#ffffff"
+    }
+  ],
+  "metadata": [
+    {
+      "name": "Campaign",
+      "value": "Cl0p Ransomware Group Operations"
+    },
+    {
+      "name": "Threat Actor",
+      "value": "Cl0p (Clop) Ransomware Group"
+    },
+    {
+      "name": "Associated Groups",
+      "value": "FIN11, TA505"
+    },
+    {
+      "name": "Malware Families",
+      "value": "Cl0p Ransomware, LEMURLOOT, Truebot, AdFind"
+    },
+    {
+      "name": "Campaign Period",
+      "value": "2019 - Present (October 2025)"
+    },
+    {
+      "name": "Status",
+      "value": "Active"
+    },
+    {
+      "name": "Threat Level",
+      "value": "Critical"
+    },
+    {
+      "name": "Motivation",
+      "value": "Financial - Ransomware-as-a-Service (RaaS)"
+    },
+    {
+      "name": "Key Vulnerabilities",
+      "value": "CVE-2023-34362 (MOVEit), CVE-2023-27350/27351 (PaperCut), CVE-2023-0669 (GoAnywhere)"
+    },
+    {
+      "name": "Target Sectors",
+      "value": "Healthcare, Education, Government, Finance, Energy, Technology, Manufacturing"
+    },
+    {
+      "name": "Geographic Focus",
+      "value": "Global"
+    },
+    {
+      "name": "Total Techniques",
+      "value": "47"
+    },
+    {
+      "name": "Tactics Coverage",
+      "value": "11 tactics"
+    },
+    {
+      "name": "Notable Campaigns",
+      "value": "Feb 2025: 335 victims; Dec 2024: 180+ organizations (Cleo Software)"
+    },
+    {
+      "name": "IOC Count",
+      "value": "616+ indicators (178 IPs, 28 domains, 145+ malware samples)"
+    },
+    {
+      "name": "Data Leak Sites",
+      "value": "7 Tor onion services"
+    }
+  ],
+  "links": [
+    {
+      "label": "MISP Event JSON",
+      "url": "Cl0p_Complete_Updated_MISP_Event.json"
+    },
+    {
+      "label": "CISA Advisory",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories"
+    }
+  ],
+  "showTacticRowBackground": true,
+  "tacticRowBackground": "#dddddd",
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false
+}
+

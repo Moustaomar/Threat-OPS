@@ -1,0 +1,124 @@
+# APT35 (Mint Sandstorm/Charming Kitten/Educated Manticore) Phishing Campaign IOCs
+# Source: Stormshield - https://www.stormshield.com/news/apt35-plays-same-music-again/
+# Date: 2025-09-26
+# Threat Level: High
+
+## IP Addresses
+79.132.131.184	# APT35 | Phishing infrastructure server | AS 39378 SERVINGA
+84.200.193.20	# APT35 | Phishing infrastructure server | AS 214036 Ultahost, Inc.
+
+## Domains - Phishing Infrastructure
+viliam-live-identity.online
+viliam.viliam-live-identity.online
+proof-video.online
+look-together-online.online
+meet.proof-video.online
+www.look-together-online.online
+viliam.look-together-online.online
+www.video-connect.online
+meet.video-connect.online
+video-connect.online
+www.go0gle.online
+meet.go0gle.online
+go0gle.online
+tensore.online
+ell-safe.online
+azdava.online
+meet.azdava.online
+meet.ell-safe.online
+viliam.azdava.online
+viliam.tensore.online
+viliam.teslator.online
+teslator.online
+viliam.kuret-live.online
+kuret-live.online
+book.kuret-live.online
+viliam.safe-lord.online
+safe-lord.online
+www.p-safe.online
+viliam.p-safe.online
+p-safe.online
+into-support.online
+villiam.online-speak.online
+viliam.online-speak.online
+online-speak.online
+viliam.into-support.online
+viliam.alpha-met.online
+alpha-met.online
+viliam.kuret-met.online
+viliam.live-board.online
+live-board.online
+www.owner-rate.online
+viliam.owner-rate.online
+owner-rate.online
+viliam.alpha-meet.online
+alpha-meet.online
+arcanet.online
+viliam.arcanet.online
+viliam.cppsg.online
+cppsg.online
+rohand63.xyz
+www.rohand63.xyz
+viliam.rohand63.xyz
+robinthing123.online
+viliam.robinthing123.online
+viliam.superlite.online
+superlite.online
+dmn-inter.online
+viliam.dmn-inter.online
+www.toolfare.online
+viliam.toolfare.online
+toolfare.online
+oranus.besatoo.online
+viliam.besatoo.online
+mickel.besatoo.online
+live.besatoo.online
+besatoo.online
+
+## URLs - Phishing Landing Pages
+https://viliam.ude-final.online/
+https://viliam.ude-final.online/styles/font.css
+https://viliam.ude-final.online/static/js/main.7e80d47f.js
+https://viliam.ude-final.online/static/css/main.365793d0.css
+
+## URLs - Phishing with Invitation Parameters
+https://viliam.superlite.online/?invitation-ter-nsbs-oer	# Submitted from Sweden 2025-07-15
+http://viliam.sky-writer.online/?invitation-caq-beqd-ery	# Submitted from Israel 2025-08-03
+https://viliam.alpha-met.online/?invitation-ter-nsbs-oeht	# Submitted from Israel 2025-08-10
+http://viliam.alpha-met.online/?invitation-tgr-nzfes-ohr	# Submitted from Israel 2025-08-10
+https://meet.ell-safe.online/invitation-fgh-rewk-evg	# Submitted from Israel 2025-09-17
+
+## Technical Indicators
+html_body_ssdeep:*Ve1LTG7faKjubGga	# HTML body ssdeep hash for hunting
+html_body_ssdeep:6:q9hqIY0gYkC/fAbplGMuzT6palUvN*	# HTML body ssdeep hash for hunting
+"You need to enable JavaScript to run this app."	# Phishing page JavaScript requirement message
+"blue ball red ball yellow ball green ball"	# Phishing page loading animation elements
+
+## Hunting Queries
+# SilentPush Query (High Confidence):
+# datasource = ["webscan"] AND html_body_ssdeep = "*Ve1LTG7faKjubGga" AND html_body_ssdeep = "6:q9hqIY0gYkC/fAbplGMuzT6palUvN*"
+
+# VirusTotal Queries:
+# entity:domain domain:viliam.*
+# entity:url url:online/?invitation
+
+## Campaign Characteristics
+- Threat Actor: APT35 (Mint Sandstorm/Charming Kitten/Educated Manticore)
+- Country: Iran
+- Affiliation: Islamic Revolutionary Guard Corps (IRGC)
+- Activity Period: Since 2015, active through 2025
+- Targets: Government, military, media, academic and international organizations
+- Geographic Focus: US, Middle East, Europe
+- TTPs: Phishing, Social Engineering, Video Conferencing Impersonation
+- Infrastructure: Multiple .online TLD domains, Viliam subdomain pattern
+- Landing Page: Four colored dots loading animation with JavaScript requirement
+
+## MITRE ATT&CK Techniques
+T1566 - Phishing
+T1566.002 - Spearphishing Link
+T1583.001 - Acquire Infrastructure - Domains
+T1584.001 - Compromise Infrastructure - Domains
+T1071.001 - Web Protocols
+T1059.007 - JavaScript
+T1189 - Drive-by Compromise
+T1204 - User Execution

@@ -1,0 +1,246 @@
+# UAT-7237 Taiwanese Web Hosting Campaign IOCs
+# Source: Cisco Talos - UAT-7237 targets Taiwanese web hosting infrastructure
+# Date: August 15, 2025
+# Campaign: Advanced threat actors targeting Taiwanese web hosting infrastructure
+
+## Threat Actor Profile
+
+### Primary Identifiers
+- **Campaign Name**: UAT-7237 Taiwanese Web Hosting Campaign
+- **Primary Threat Actor**: UAT-7237
+- **Secondary Threat Actor**: UAT-5918
+- **Target Country**: Taiwan
+- **Threat Level**: High
+- **Source**: Cisco Talos Intelligence
+
+### Campaign Overview
+- **Attack Vector**: Targeting Taiwanese web hosting infrastructure
+- **Primary Objective**: Infrastructure compromise and credential theft
+- **Target**: Taiwanese web hosting providers and infrastructure
+- **Infection Chain**: Initial access → SoundBill loader → Cobalt Strike → Credential dumping
+
+## File Indicators
+
+### Malware Samples (SHA-256)
+| **Hash** | **Description** | **Category** |
+|----------|-----------------|--------------|
+| 450fa9029c59af9edf2126df1d6a657ee6eb024d0341b32e6f6bdb8dc04bae5a | WMIScan tool | Payload delivery |
+| 6a72e4b92d6a459fc2c6054e9ddb9819d04ed362bd847333492410b6d7bae5aa | ssp_dump_lsass tool | Payload delivery |
+| baafa2ae-fa8d-46f8-838f-1eb50e893713 | Malicious tool | Payload delivery |
+| d2d70d4d-2e4a-4a65-adbb-6e3de484ff6c | Malicious tool | Payload delivery |
+| 66125185-1d8f-4d07-bfef-c43ec599f40a | Malicious tool | Payload delivery |
+| 1be5153c-878a-4ac5-9410-0cfb306219ba | Malicious tool | Payload delivery |
+| df8497b9c37b780d6b6904a24133131faed8ea4cf3d75830b53c25d41c5ea386 | SoundBill malware loader | Payload delivery |
+| 0952e5409f39824b8a630881d585030a1d656db897adf228ce27dd9243db20b7 | Cobalt Strike | Payload delivery |
+| 7a5f05da3739ad3e11414672d01b8bcf23503a9a8f1dd3f10ba2ead7745cdb1f | Cobalt Strike | Payload delivery |
+
+## Network Indicators
+
+### IP Addresses
+| **IP Address** | **Description** | **Category** |
+|----------------|-----------------|--------------|
+| 141.164.50.141 | UAT-7237 infrastructure | Payload delivery |
+
+### URLs
+| **URL** | **Description** | **Category** |
+|---------|-----------------|--------------|
+| http://141.164.50.141/sdksdk608/win-x64.rar | UAT-6382 infrastructure | Payload delivery |
+
+### Domains
+| **Domain** | **Description** | **Category** |
+|------------|-----------------|--------------|
+| cvbbonwxtgvc3isfqfc52cwzja0kvuqd.lambda-url.ap-northeast-1.on.aws | UAT-6382 infrastructure | Payload delivery |
+
+### External Analysis
+| **URL** | **Description** | **Category** |
+|---------|-----------------|--------------|
+| https://blog.talosintelligence.com/uat-7237-targets-web-hosting-infra/ | Cisco Talos blog post | External analysis |
+
+## Threat Actor Information
+
+### UAT-7237
+- **Group Type**: Advanced threat actor
+- **Specialization**: Infrastructure targeting and credential theft
+- **Target**: Taiwanese web hosting infrastructure
+- **Tactics**: SoundBill loader, Cobalt Strike, credential dumping
+- **Infrastructure**: 141.164.50.141
+
+### UAT-5918
+- **Group Type**: Secondary threat actor
+- **Specialization**: Infrastructure support and tooling
+- **Target**: Taiwanese web hosting infrastructure
+- **Tactics**: Infrastructure support and tooling
+- **Infrastructure**: AWS Lambda infrastructure
+
+### SoundBill Malware Loader
+- **Type**: Malware loader
+- **Capabilities**: Initial payload delivery and execution
+- **Target**: Taiwanese web hosting infrastructure
+- **Evasion**: Advanced evasion techniques
+- **Persistence**: Loader-based persistence
+
+### Cobalt Strike
+- **Type**: Post-exploitation framework
+- **Capabilities**: Command and control, lateral movement, data exfiltration
+- **Target**: Compromised Taiwanese infrastructure
+- **Evasion**: Advanced evasion techniques
+- **Persistence**: Long-term persistence mechanisms
+
+## Attack Techniques
+
+### Initial Access
+- **Infrastructure Targeting**: Direct targeting of Taiwanese web hosting infrastructure
+- **Credential Theft**: Theft of credentials for infrastructure access
+- **Supply Chain**: Supply chain attacks on hosting providers
+- **Remote Services**: Abuse of remote services for access
+
+### Execution
+- **SoundBill Loader**: Initial payload delivery and execution
+- **Cobalt Strike**: Post-exploitation framework execution
+- **Credential Dumping**: Use of credential dumping tools
+- **System Commands**: Execution of system commands
+
+### Persistence
+- **Cobalt Strike**: Long-term persistence through Cobalt Strike
+- **Service Installation**: Installation of malicious services
+- **Registry Persistence**: Registry-based persistence
+- **Task Scheduling**: Scheduled task persistence
+
+### Credential Access
+- **Credential Dumping**: Use of ssp_dump_lsass tool
+- **WMIScan**: Use of WMIScan for credential discovery
+- **Password Stores**: Access to password stores
+- **Token Manipulation**: Token manipulation techniques
+
+### Discovery
+- **System Discovery**: Discovery of system information
+- **Network Discovery**: Network and system enumeration
+- **Account Discovery**: Discovery of user accounts
+- **Service Discovery**: Discovery of running services
+
+### Collection
+- **Data Collection**: Collection of sensitive information
+- **Credential Collection**: Collection of credentials
+- **System Information**: Gathering system information
+- **Network Information**: Collection of network information
+
+### Command and Control
+- **Cobalt Strike C2**: Command and control through Cobalt Strike
+- **Infrastructure C2**: Use of infrastructure for C2
+- **AWS Lambda**: Use of AWS Lambda for C2
+- **Multi-Stage C2**: Multi-stage command and control
+
+### Exfiltration
+- **Data Exfiltration**: Exfiltration of collected data
+- **Credential Exfiltration**: Exfiltration of credentials
+- **Infrastructure Data**: Exfiltration of infrastructure data
+- **C2 Exfiltration**: Exfiltration over C2 channels
+
+## Technical Details
+
+### SoundBill Malware Loader
+- **Purpose**: Initial payload delivery and execution
+- **Capabilities**: Payload loading and execution
+- **Evasion**: Advanced evasion techniques
+- **Persistence**: Loader-based persistence mechanisms
+
+### Cobalt Strike Framework
+- **Purpose**: Post-exploitation activities
+- **Capabilities**: Command and control, lateral movement, data exfiltration
+- **Evasion**: Advanced evasion techniques
+- **Persistence**: Long-term persistence mechanisms
+
+### Credential Dumping Tools
+- **ssp_dump_lsass**: Tool for dumping LSASS credentials
+- **WMIScan**: Tool for credential discovery
+- **Additional Tools**: Various credential dumping tools
+
+### Infrastructure
+- **Primary C2**: 141.164.50.141
+- **AWS Lambda**: cvbbonwxtgvc3isfqfc52cwzja0kvuqd.lambda-url.ap-northeast-1.on.aws
+- **Payload Delivery**: http://141.164.50.141/sdksdk608/win-x64.rar
+
+## MITRE ATT&CK Techniques
+
+### Initial Access
+T1078.004 - Valid Accounts: Cloud Accounts
+T1584.003 - Virtual Private Server
+
+### Execution
+T1059.001 - Command and Scripting Interpreter: PowerShell
+T1053 - Scheduled Task/Job
+
+### Persistence
+T1055 - Process Injection
+
+### Defense Evasion
+T1027 - Obfuscated Files or Information
+T1140 - Deobfuscate/Decode Files or Information
+T1562.001 - Impair Defenses: Disable or Modify Tools
+
+### Credential Access
+T1003 - OS Credential Dumping
+T1555 - Credentials from Password Stores
+T1056.001 - Input Capture: Keylogging
+
+### Discovery
+T1087.004 - Account Discovery: Cloud Account
+T1018 - Remote System Discovery
+T1046 - Network Service Scanning
+
+### Collection
+T1005 - Data from Local System
+T1113 - Screen Capture
+T1119 - Automated Collection
+
+### Command and Control
+T1071.001 - Application Layer Protocol: Web Protocols
+T1102.003 - Web Service: OneDrive
+T1104 - Multi-Stage Channels
+
+### Exfiltration
+T1041 - Exfiltration Over C2 Channel
+T1567.002 - Exfiltration Over Web Service: To Cloud Storage
+
+## Detection Patterns
+
+### Network Indicators
+- **C2 Communication**: Communication with C2 infrastructure
+- **AWS Lambda**: Connections to AWS Lambda infrastructure
+- **Payload Delivery**: Unusual payload delivery activities
+- **Infrastructure Abuse**: Abuse of hosting infrastructure
+
+### Endpoint Indicators
+- **SoundBill Loader**: SoundBill loader execution
+- **Cobalt Strike**: Cobalt Strike framework execution
+- **Credential Dumping**: Credential dumping activities
+- **Tool Usage**: Use of credential dumping tools
+
+### Behavioral Indicators
+- **Infrastructure Targeting**: Targeting of hosting infrastructure
+- **Credential Theft**: Credential theft activities
+- **Tool Usage**: Use of credential dumping tools
+- **C2 Communication**: Command and control communication
+
+## Mitigation Strategies
+
+### Technical Controls
+- **Infrastructure Security**: Implement comprehensive infrastructure security
+- **Credential Protection**: Implement credential protection mechanisms
+- **Network Segmentation**: Implement network segmentation
+- **Monitoring**: Deploy comprehensive monitoring
+
+### Administrative Controls
+- **Access Controls**: Implement proper access controls
+- **Credential Management**: Implement credential management policies
+- **Incident Response**: Develop incident response procedures
+- **User Training**: Provide security awareness training
+
+### Monitoring and Detection
+- **Infrastructure Monitoring**: Monitor for infrastructure abuse
+- **Credential Monitoring**: Monitor for credential theft
+- **Tool Monitoring**: Monitor for credential dumping tools
+- **C2 Monitoring**: Monitor for command and control communication
+
+## Threat Level
+High - Advanced threat actors targeting Taiwanese web hosting infrastructure with sophisticated attack techniques and credential theft capabilities.

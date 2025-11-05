@@ -1,0 +1,80 @@
+# Malvertising Certificate Abuse Campaign IOCs
+# Source: Conscia Blog - From SEO Poisoning to Malware Deployment: Malvertising campaign uncovered
+# Date: September 26, 2025
+# Campaign: Sophisticated malvertising campaign leveraging SEO poisoning and certificate abuse
+
+## Network Indicators
+
+### Malicious Domains
+teams-install.icu
+team.frywow.com
+witherspoon-law.com
+nickbush24.com
+
+### IP Addresses
+172.67.154.95
+104.21.72.190
+
+### URLs
+https://teams-install.icu
+https://team.frywow.com
+https://witherspoon-law.com
+https://nickbush24.com
+
+## File Indicators
+
+### Malicious Executable
+MSTeamsSetup.exe
+
+### File Hashes
+SHA256: bd6ad2e1b62b2d0994adf322011f2a3afbb14f097efa3cbe741bc4c963e48889
+
+### Certificate Information
+Signer: KUTTANADAN CREATIONS INC.
+Certificate Chain: Microsoft ID Verified CS EOC CA 01
+Certificate Validity: September 24-26, 2025 (2 days only)
+Certificate Authority: Google Trust Services (WE1)
+
+## Infrastructure Details
+
+### Hosting Information
+Hosting Provider: Cloudflare CDN
+IP Ranges: 104.21.x.x, 172.67.x.x
+SSL Certificate: Google Trust Services (WE1)
+Domain Age: Newly registered (typical of malicious campaigns)
+
+### Related Certificate Signers
+KUTTANADAN CREATIONS INC.
+Shanxi Yanghua HOME Furnishings Ltd
+Shanghai Ruikang Decoration Co
+
+## Attack Timeline
+
+### Key Events
+13:42:28 - Navigation to www.bing.com
+13:42:39 - Redirection to teams-install.icu (11 seconds after search)
+13:42:55 - HTTPS connection established to malicious domain
+14:20:21 - cleanmgr.exe creates DismHost.exe in Temp folders
+14:39:00 - MSTeamsSetup.exe execution attempted
+14:39:15 - ASR blocks C2 connection attempt
+
+## Malware Family
+Oyster Backdoor (also known as Broomstick or CleanUpLoader)
+
+## Detection Points
+- Certificate anomaly detection (certificates valid for ≤ 7 days)
+- First-seen signers for software installers
+- Rapid redirects from search engines to newly registered domains
+- Downloads from domains with .icu TLDs
+- Connections to Cloudflare IPs immediately after search engine queries
+
+## MITRE ATT&CK Techniques
+T1566.001 - Spearphishing Attachment
+T1189 - Drive-by Compromise
+T1059.001 - Command and Scripting Interpreter: PowerShell
+T1071.001 - Application Layer Protocol: Web Protocols
+T1027 - Obfuscated Files or Information
+T1562.001 - Impair Defenses: Disable or Modify Tools
+
+## Threat Level
+High - Sophisticated malvertising campaign with certificate abuse

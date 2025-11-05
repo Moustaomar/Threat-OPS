@@ -1,0 +1,53 @@
+{
+  "Event": {
+    "date": "2025-10-07",
+    "threat_level_id": "1",
+    "info": "Comprehensive analysis of threat actors abusing Microsoft Teams capabilities for reconnaissance, initial access, persistence, and data exfiltration. Threat actors exploit Teams' core features including messaging, calls/meetings, and video-based screen sharing at different stages of the attack chain. Campaigns include phishing via Teams chat, malicious file uploads, external user impersonation, and guest account abuse. Microsoft Teams represents a high-value target due to its extensive collaboration features and global adoption.",
+    "published": false,
+    "attribute_count": "20",
+    "Attribute": [
+      {"type": "text", "category": "Attribution", "to_ids": false, "value": "ROADtools", "comment": "Reconnaissance tool | Teams enumeration | Source: Microsoft", "first_seen": "2025-10-07", "last_seen": "2025-10-07"},
+      {"type": "text", "category": "Attribution", "to_ids": false, "value": "TeamFiltration", "comment": "Teams exploitation framework | Reconnaissance and exploitation | Source: Microsoft", "first_seen": "2025-10-07", "last_seen": "2025-10-07"},
+      {"type": "text", "category": "Attribution", "to_ids": false, "value": "TeamsEnum", "comment": "Teams enumeration tool | Reconnaissance | Source: Microsoft", "first_seen": "2025-10-07", "last_seen": "2025-10-07"},
+      {"type": "text", "category": "Attribution", "to_ids": false, "value": "MSFT-Recon-RS", "comment": "Microsoft reconnaissance tool | Teams enumeration | Source: Microsoft", "first_seen": "2025-10-07", "last_seen": "2025-10-07"},
+      {"type": "text", "category": "Attribution", "to_ids": false, "value": "GraphRunner", "comment": "Microsoft Graph API exploitation tool | Teams abuse | Source: Microsoft", "first_seen": "2025-10-07", "last_seen": "2025-10-07"},
+      {"type": "text", "category": "Attribution", "to_ids": false, "value": "convoC2", "comment": "Teams C2 framework | Command and control | Source: Microsoft", "first_seen": "2025-10-07", "last_seen": "2025-10-07"},
+      {"type": "text", "category": "Attribution", "to_ids": false, "value": "EvilSlackbot", "comment": "Teams exploitation tool | Malicious bot | Source: Microsoft", "first_seen": "2025-10-07", "last_seen": "2025-10-07"},
+      {"type": "text", "category": "Attribution", "to_ids": false, "value": "TeamsPhisher", "comment": "Teams phishing tool | Social engineering | Source: Microsoft", "first_seen": "2025-10-07", "last_seen": "2025-10-07"},
+      {"type": "text", "category": "Attribution", "to_ids": false, "value": "3AM Ransomware", "comment": "Ransomware group | Teams vishing campaigns | Source: Microsoft", "first_seen": "2025-10-07", "last_seen": "2025-10-07"},
+      {"type": "text", "category": "Attribution", "to_ids": false, "value": "DarkGate Malware", "comment": "Malware family | Teams-based delivery | Source: Microsoft", "first_seen": "2025-10-07", "last_seen": "2025-10-07"},
+      {"type": "text", "category": "Attribution", "to_ids": false, "value": "Atomic Stealer", "comment": "Malware family | Fake Teams for Mac delivery | Source: Microsoft", "first_seen": "2025-10-07", "last_seen": "2025-10-07"},
+      {"type": "text", "category": "Attribution", "to_ids": false, "value": "VEILDrive", "comment": "C2 framework | Microsoft services abuse | Source: Microsoft", "first_seen": "2025-10-07", "last_seen": "2025-10-07"},
+      {"type": "text", "category": "Attribution", "to_ids": false, "value": "Microsoft Teams", "comment": "Target platform | Collaboration platform abuse | Source: Microsoft", "first_seen": "2025-10-07", "last_seen": "2025-10-07"},
+      {"type": "text", "category": "Attribution", "to_ids": false, "value": "Microsoft Entra ID", "comment": "Identity platform | Teams authentication abuse | Source: Microsoft", "first_seen": "2025-10-07", "last_seen": "2025-10-07"},
+      {"type": "text", "category": "Attribution", "to_ids": false, "value": "Microsoft Graph API", "comment": "API platform | Teams enumeration and abuse | Source: Microsoft", "first_seen": "2025-10-07", "last_seen": "2025-10-07"},
+      {"type": "text", "category": "Attribution", "to_ids": false, "value": "Help Desk", "comment": "Impersonation target | Social engineering | Source: Microsoft", "first_seen": "2025-10-07", "last_seen": "2025-10-07"},
+      {"type": "text", "category": "Attribution", "to_ids": false, "value": "Microsoft Security", "comment": "Impersonation target | Social engineering | Source: Microsoft", "first_seen": "2025-10-07", "last_seen": "2025-10-07"},
+      {"type": "text", "category": "Attribution", "to_ids": false, "value": "IT Support", "comment": "Impersonation target | Social engineering | Source: Microsoft", "first_seen": "2025-10-07", "last_seen": "2025-10-07"},
+      {"type": "text", "category": "Attribution", "to_ids": false, "value": "Guest Users", "comment": "Attack vector | External user abuse | Source: Microsoft", "first_seen": "2025-10-07", "last_seen": "2025-10-07"},
+      {"type": "text", "category": "Attribution", "to_ids": false, "value": "External Users", "comment": "Attack vector | Cross-tenant communication abuse | Source: Microsoft", "first_seen": "2025-10-07", "last_seen": "2025-10-07"}
+    ],
+    "Tag": [
+      {"name": "tlp:amber"},
+      {"name": "type:OSINT"},
+      {"name": "misp:threat-level=\"high\""},
+      {"name": "misp-galaxy:malware=\"DarkGate\""},
+      {"name": "misp-galaxy:malware=\"Atomic Stealer\""},
+      {"name": "misp-galaxy:malware=\"VEILDrive\""},
+      {"name": "misp-galaxy:tool=\"Microsoft Teams\""},
+      {"name": "misp-galaxy:tool=\"Microsoft Graph API\""},
+      {"name": "misp-galaxy:tool=\"Microsoft Entra ID\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Spearphishing Attachment - T1566.001\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Spearphishing via Service - T1566.003\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Drive-by Compromise - T1189\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Valid Accounts: Cloud Accounts - T1078.004\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Command and Scripting Interpreter: PowerShell - T1059.001\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Server Software Component: Web Shell - T1505.003\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Credentials from Password Stores - T1555\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Screen Capture - T1113\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Application Layer Protocol: Web Protocols - T1071.001\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Exfiltration Over C2 Channel - T1041\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Exfiltration Over Web Service: To Cloud Storage - T1567.002\""}
+    ]
+  }
+}

@@ -1,0 +1,110 @@
+ioc_type,ioc_value,malware_family,first_seen,last_seen,confidence,source,description
+ip,131.226.2.6,ShadowPad,7/21/2025,7/21/2025,High,Kaspersky,Post-exploitation C2 server
+ip,134.199.202.205,ShadowPad,7/21/2025,7/21/2025,High,Kaspersky,Exploitation source IP
+ip,104.238.159.149,ShadowPad,7/21/2025,7/21/2025,High,Kaspersky,Exploitation source IP
+ip,188.130.206.168,ShadowPad,7/21/2025,7/21/2025,High,Kaspersky,Exploitation source IP
+ip,45.84.1.181,ShadowPad,7/21/2025,7/21/2025,High,Kaspersky,APT41 infrastructure
+ip,45.153.231.31,ShadowPad,7/21/2025,7/21/2025,High,Kaspersky,APT41 infrastructure
+ip,149.28.15.152,ShadowPad,7/21/2025,7/21/2025,High,Kaspersky,APT41 infrastructure
+ip,194.156.98.12,ShadowPad,7/21/2025,7/21/2025,High,Kaspersky,APT41 infrastructure
+ip,95.164.16.231,ShadowPad,7/21/2025,7/21/2025,High,Kaspersky,APT41 infrastructure
+domain,github.githubassets[.]net,ShadowPad,7/21/2025,7/21/2025,High,Kaspersky,Fake GitHub domain for payload delivery
+domain,c34718cbb4c6.ngrok-free[.]app,ShadowPad,7/21/2025,7/21/2025,High,Kaspersky,Ngrok tunnel for PowerShell C2
+domain,www.amazonlivenews.com,ShadowPad,7/17/2025,7/17/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,channels.openvista.ma,ShadowPad,7/16/2025,7/16/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,kasperskyupdate.com,ShadowPad,7/16/2025,7/16/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,www.googleaccount.org,ShadowPad,7/16/2025,7/16/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,topmicrosoft.com,ShadowPad,7/16/2025,7/16/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,youtubedownloading.com,ShadowPad,7/16/2025,7/16/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,microsoftdesktop.com,ShadowPad,7/16/2025,7/16/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,en.earthen.io,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,topmicrosoftmarketing.com,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,sv3.xxyybb.xyz,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,googlelivenews.com,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,microsoftasps.com,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,www.paloaltonetworkhelp.com,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,gomyhalf.com,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,symence.org,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,apt41.com,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,108.61.123.165.vultr.com,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,as.website,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,doccloude.info,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,drproxy.pro,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,hergoumgoum2.pserver.ru,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,kacer11.ru,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,kdes3.ru,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,kqvca36.ru,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,kvca6.ru,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,leadd12.ru,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,leadd22.ru,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,lrsm12.ru,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,rttkola.ru,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,scdx5.ru,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,teon5.ru,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,rania.ddnsking.com,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,singnal.ddns.net,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,rtb-de.thrivemobi.net,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,rtb-dev.thrivemobi.net,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,server9133.quickfins.com,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,vamtlgrm.drproxy.pro,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,video.postbackapi.com,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,ariatpromotions.shop,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,www.ariatpromotions.shop,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,llbean-usaaus.shop,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,llbeancrazydealca.shop,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,llbeanfactoryoutlets.shop,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,www.llbean-usaaus.shop,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,www.llbeancrazydealca.shop,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,www.llbeanfactoryoutlets.shop,ShadowPad,7/7/2025,7/7/2025,High,pancak3lullz,ShadowPad infrastructure
+domain,term-restore-satisfied-hence.trycloudflare.com,TOUGHPROGRESS,7/7/2025,7/7/2025,High,juroots,TOUGHPROGRESS infrastructure
+domain,104075625139-l53k83pb6jbbc2qbreo4i5a0vepen41j.apps.googleusercontent.com,TOUGHPROGRESS,7/7/2025,7/7/2025,High,juroots,TOUGHPROGRESS infrastructure
+domain,cloud.msapp.workers.dev,TOUGHPROGRESS,7/7/2025,7/7/2025,High,juroots,TOUGHPROGRESS infrastructure
+domain,pubs.infinityfreeapp.com,TOUGHPROGRESS,7/7/2025,7/7/2025,High,juroots,TOUGHPROGRESS infrastructure
+domain,resource.infinityfreeapp.com,TOUGHPROGRESS,7/7/2025,7/7/2025,High,juroots,TOUGHPROGRESS infrastructure
+domain,ways-sms-pmc-shareholders.trycloudflare.com,TOUGHPROGRESS,7/7/2025,7/7/2025,High,juroots,TOUGHPROGRESS infrastructure
+domain,word.msapp.workers.dev,TOUGHPROGRESS,7/7/2025,7/7/2025,High,juroots,TOUGHPROGRESS infrastructure
+domain,https://my5353.com/ppOH5,TOUGHPROGRESS,7/7/2025,7/7/2025,High,juroots,TOUGHPROGRESS infrastructure
+domain,https://tinyurl.com/3wnz46pv,TOUGHPROGRESS,7/7/2025,7/7/2025,High,juroots,TOUGHPROGRESS infrastructure
+domain,https://my5353.com/nWyTf,TOUGHPROGRESS,7/7/2025,7/7/2025,High,juroots,TOUGHPROGRESS infrastructure
+domain,https://reurl.cc/WNr2Xy,TOUGHPROGRESS,7/7/2025,7/7/2025,High,juroots,TOUGHPROGRESS infrastructure
+domain,https://lihi.cc/5nlgd,TOUGHPROGRESS,7/7/2025,7/7/2025,High,juroots,TOUGHPROGRESS infrastructure
+domain,https://my5353.com/ZwEkm,TOUGHPROGRESS,7/7/2025,7/7/2025,High,juroots,TOUGHPROGRESS infrastructure
+domain,https://tinyurl.com/mr42t4yv,TOUGHPROGRESS,7/7/2025,7/7/2025,High,juroots,TOUGHPROGRESS infrastructure
+domain,https://my5353.com/vEWiT,TOUGHPROGRESS,7/7/2025,7/7/2025,High,juroots,TOUGHPROGRESS infrastructure
+domain,https://tinyurl.com/hycev3y7,TOUGHPROGRESS,7/7/2025,7/7/2025,High,juroots,TOUGHPROGRESS infrastructure
+domain,https://my5353.com/fPUcX,TOUGHPROGRESS,7/7/2025,7/7/2025,High,juroots,TOUGHPROGRESS infrastructure
+domain,https://www.googleapis.com/calendar/v3/calendars/ff57964096cadc1a8733cf566b41c9528c89d30edec86326c723932c1e79ebf0@group.calendar.google.com/events,TOUGHPROGRESS,7/7/2025,7/7/2025,High,juroots,TOUGHPROGRESS infrastructure
+domain,https://lihi.cc/4z5sh,TOUGHPROGRESS,7/7/2025,7/7/2025,High,juroots,TOUGHPROGRESS infrastructure
+domain,https://tinyurl.com/mpa2c5wj,TOUGHPROGRESS,7/7/2025,7/7/2025,High,juroots,TOUGHPROGRESS infrastructure
+domain,https://lihi.cc/v3OyQ,TOUGHPROGRESS,7/7/2025,7/7/2025,High,juroots,TOUGHPROGRESS infrastructure
+domain,https://lihi.cc/edcOv,TOUGHPROGRESS,7/7/2025,7/7/2025,High,juroots,TOUGHPROGRESS infrastructure
+domain,https://lihi.cc/6dekU,TOUGHPROGRESS,7/7/2025,7/7/2025,High,juroots,TOUGHPROGRESS infrastructure
+hash,79b949d4d1157becc6f3bde0860fc5e5,TOUGHPROGRESS,7/7/2025,7/7/2025,High,TheRavenFile,TOUGHPROGRESS malware
+hash,adfbcbf70e91cdc7e647def8ecd5d786,TOUGHPROGRESS,7/7/2025,7/7/2025,High,TheRavenFile,TOUGHPROGRESS malware
+hash,65da1a9026cf171a5a7779bc5ee45fb1,TOUGHPROGRESS,7/7/2025,7/7/2025,High,TheRavenFile,TOUGHPROGRESS malware
+hash,d54187089a44e825d6a0e8e3793d5516,TOUGHPROGRESS,7/7/2025,7/7/2025,High,TheRavenFile,TOUGHPROGRESS malware
+hash,43725d046e1e6db97a3e00fc465f532f,TOUGHPROGRESS,7/7/2025,7/7/2025,High,TheRavenFile,TOUGHPROGRESS malware
+hash,4a06c0e6bc28b1b7e6b29a76664c413b,TOUGHPROGRESS,7/7/2025,7/7/2025,High,TheRavenFile,TOUGHPROGRESS malware
+hash,50124174a4ac0d65bf8b6fd66f538829d1589edc73aa7cf36502e57aa5513360,TOUGHPROGRESS,7/7/2025,7/7/2025,High,TheRavenFile,TOUGHPROGRESS malware
+hash,469b534bec827be03c0823e72e7b4da0b84f53199040705da203986ef154406a,TOUGHPROGRESS,7/7/2025,7/7/2025,High,TheRavenFile,TOUGHPROGRESS malware
+hash,3b88b3efbdc86383ee9738c92026b8931ce1c13cd75cd1cda2fa302791c2c4fb,TOUGHPROGRESS,7/7/2025,7/7/2025,High,TheRavenFile,TOUGHPROGRESS malware
+hash,151257e9dfda476cdafd9983266ad3255104d72a66f9265caa8417a5fe1df5d7,TOUGHPROGRESS,7/7/2025,7/7/2025,High,TheRavenFile,TOUGHPROGRESS malware
+hash,5b1e8455291d99a1724327b9a7fc2616,GDrive Moonwalk,7/7/2025,7/7/2025,High,Gi7w0rm,GDrive Moonwalk malware
+hash,b69984cbf52b418673bd08279ca845d6,GDrive Moonwalk,7/7/2025,7/7/2025,High,Gi7w0rm,GDrive Moonwalk malware
+hash,bfd6286bb39a0e24a2af28c63bd8e194,GDrive Moonwalk,7/7/2025,7/7/2025,High,Gi7w0rm,GDrive Moonwalk malware
+hash,75bfb7d5199bf0c4e62525099b33e14f,GDrive Moonwalk,7/7/2025,7/7/2025,High,Gi7w0rm,GDrive Moonwalk malware
+hash,f68ef9e40462c9760bf9c829edd9f4a9,GDrive Moonwalk,7/7/2025,7/7/2025,High,Gi7w0rm,GDrive Moonwalk malware
+hash,393065ef9754e3f39b24b2d1051eab61,DodgeBox Dropper,7/7/2025,7/7/2025,High,Gi7w0rm,DodgeBox Dropper malware
+hash,b3067f382d70705d4c8f6977a7d7bee4,DodgeBox Dropper,7/7/2025,7/7/2025,High,Gi7w0rm,DodgeBox Dropper malware
+hash,0d068b6d0523f069d1ada59c12891c4a,DodgeBox Dropper,7/7/2025,7/7/2025,High,Gi7w0rm,DodgeBox Dropper malware
+hash,d72f202c1d684c9a19f075290a60920f,DodgeBox Dropper,7/7/2025,7/7/2025,High,Gi7w0rm,DodgeBox Dropper malware
+hash,bcac2cbda36019776d7861f12d9b59c4,DodgeBox Dropper,7/7/2025,7/7/2025,High,Gi7w0rm,DodgeBox Dropper malware
+hash,294cc02db5a122e3a1bc4f07997956da,DodgeBox Dropper,7/7/2025,7/7/2025,High,Gi7w0rm,DodgeBox Dropper malware
+hash,f062183da590aba5e911d2392bc29181,StealthVector,7/7/2025,7/7/2025,High,Gi7w0rm,StealthVector malware
+hash,4141c4b827ff67c180096ff5f2cc1474,StealthVector,7/7/2025,7/7/2025,High,Gi7w0rm,StealthVector malware
+hash,bc85062de0f70afd44bb072b0b71a8cc,StealthVector,7/7/2025,7/7/2025,High,Gi7w0rm,StealthVector malware
+hash,72070b165d1f11bd4d009a81bf28a3e5,StealthVector,7/7/2025,7/7/2025,High,Gi7w0rm,StealthVector malware
+hash,f0953ed4a679b987a2da955788737602,StealthVector,7/7/2025,7/7/2025,High,Gi7w0rm,StealthVector malware
+hash,92bb4ddb98eeaf11fc15bb32e71d0a63256a0ed826a03ba293ce3a8bf057a514,ShadowPad,7/7/2025,7/7/2025,High,Kaspersky,ShadowPad malware
+hash,ac125aea0b703de37980779599438b4a,ShadowPad,7/7/2025,7/7/2025,High,Kaspersky,ShadowPad malware
+hash,17d0ada8f5610ff29f2e8eaf0e3bb578,ShadowPad,7/7/2025,7/7/2025,High,Kaspersky,ShadowPad malware

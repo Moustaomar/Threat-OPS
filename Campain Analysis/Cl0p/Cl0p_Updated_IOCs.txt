@@ -1,0 +1,356 @@
+Cl0p Ransomware Group - Updated Comprehensive IOCs
+==================================================
+
+Threat Actor: Cl0p Ransomware Group
+Associated Groups: FIN11, TA505
+Campaign Period: 2019-2025
+Status: Active
+Last Updated: January 15, 2025
+
+=== PHISHING DOMAINS ===
+tdameritradeclientsdata.com
+pwcclinetsanddocuments.com
+zagclinets.net
+highticketclientsdata.xyz
+1stsourcedatafiles.com
+eydataclinets.com
+essadonio.com
+ber6vjyb.com
+anydeskupdates.com
+windowservicecenter.com
+netviewremote.com
+windowcsupdates.com
+windowservicecentar.com
+winserverupdates.com
+anydeskupdate.com
+windowservicecemter.com
+updateservicecenter.com
+study.abroad.ge
+drm-server13-login-microsoftonline.com
+windows-afx-update.com
+
+=== TOR ONION DOMAINS ===
+santat7kpllt6iyvqbr7q4amdv6dzrh6paatvyrzl7ry3zm72zigf4ad.onion
+amnwxasjtjc6e42siac6t45mhbkgtycrx5krv7sf5festvqxmnchuayd.onion
+ekbgzchl6x2ias37.onion
+cvfzmngbtwzywfnryt45zro4ocpze7cqdtzj2n6jz7eucpdglsulcsid.onion
+ophjkc25tkizlbuwhzl45cbeq3hjpoo5o5fskqkz7jepbvrp3ecsizad.onion
+3ws3t4uo7fehnn4qpmadk3zjrxta5xlt3gsc5mx4sztrsy7ficuz5ayd.onion
+menkznjhs7sasbi6cas3vda7sh57vekebgjzsgeqw37l67b3qlggdrid.onion
+
+=== INFRASTRUCTURE IPs ===
+185.181.60.11
+200.107.207.26
+74.48.108.208
+45.152.86.74
+213.152.183.18
+181.214.147.164
+209.127.12.38
+192.119.99.42
+5.149.249.226
+185.181.230.103
+176.123.5.126
+81.19.135.11
+45.182.189.102
+67.220.94.173
+45.182.189.226
+185.162.128.219
+92.51.2.221
+216.245.221.83
+186.136.204.137
+186.162.118.133
+184.107.3.70
+185.162.128.100
+209.127.121.38
+186.128.224.0
+6.149.249.226
+58.180.61.138
+176.125.101.115
+5.149.228.109
+176.123.4.226
+80.82.78.42
+6.184.168.25
+45.140.145.68
+89.248.172.139
+5.188.86.2
+45.227.253.132
+88.214.27.89
+207.174.31.231
+38.54.2.115
+91.92.245.185
+92.118.36.235
+81.19.138.52
+45.182.189.100
+179.60.150.34
+162.244.34.26
+185.104.194.24
+194.33.40.103
+206.221.182.106
+209.127.116.122
+45.56.165.248
+5.188.87.194
+62.112.11.57
+91.202.4.76
+91.222.174.95
+185.181.229.73
+185.185.50.172
+193.169.245.79
+198.12.76.214
+209.97.137.33
+5.149.248.68
+5.188.86.114
+5.188.87.226
+84.234.96.31
+91.229.76.187
+185.104.194.156
+146.0.77.141
+146.0.77.183
+162.244.35.6
+179.60.150.143
+185.174.100.250
+185.181.229.240
+198.27.75.110
+45.227.253.50
+45.227.253.6
+5.149.250.74
+62.182.85.234
+84.234.96.104
+89.39.105.108
+93.190.142.131
+45.227.253.133
+5.188.44.40
+185.104.194.40
+185.117.88.17
+185.162.128.75
+5.34.180.205
+66.85.26.215
+66.85.26.248
+79.141.160.83
+89.39.104.118
+45.227.253.82
+194.33.40.164
+104.194.222.107
+138.197.152.201
+146.0.77.155
+148.113.152.144
+185.174.100.215
+185.183.32.122
+188.241.58.244
+194.33.40.104
+209.127.4.22
+209.222.103.170
+45.227.253.147
+5.149.250.92
+5.188.86.250
+5.252.23.116
+5.252.25.88
+62.182.82.19
+66.85.26.234
+79.141.160.78
+5.188.87.27
+45.227.253.58
+92.63.196.27
+45.182.189.71
+5.188.86.18
+213.152.174.63
+5.188.87.92
+5.188.87.2
+81.19.135.30
+45.143.203.76
+45.143.203.121
+5.188.87.90
+5.188.87.94
+92.63.196.65
+213.152.186.219
+134.19.178.140
+45.143.203.51
+139.60.160.166
+92.118.36.199
+92.63.196.115
+45.143.203.94
+92.63.196.49
+5.188.87.93
+5.188.87.91
+92.63.196.21
+45.227.253.194
+5.188.86.29
+5.188.206.78
+5.188.206.14
+194.88.104.24
+192.154.253.120
+45.135.229.179
+79.141.162.82
+155.94.160.40
+192.52.167.101
+192.52.167.233
+185.212.128.146
+195.123.242.250
+89.144.25.171
+194.99.21.202
+91.214.124.20
+89.144.25.173
+45.227.252.54
+43.251.158.68
+185.17.121.188
+89.144.25.23
+89.144.25.176
+89.144.25.25
+91.214.124.13
+89.144.25.170
+194.165.16.228
+194.68.27.18
+91.214.124.25
+89.144.25.96
+89.144.25.19
+89.144.25.94
+89.144.25.172
+105.201.1.186
+89.144.25.97
+89.144.25.21
+89.144.25.92
+89.144.25.99
+89.144.25.174
+89.144.25.165
+105.201.1.249
+89.144.25.27
+89.144.25.22
+89.144.25.20
+89.144.25.95
+
+=== PAYLOAD DELIVERY URLs ===
+http://santat7kpllt6iyvqbr7q4amdv6dzrh6paatvyrzl7ry3zm72zigf4ad.onion/
+http://amnwxasjtjc6e42siac6t45mhbkgtycrx5krv7sf5festvqxmnchuayd.onion/
+http://91.38.135.67/km1
+
+=== MALWARE SAMPLES (SHA256) ===
+# LEMURLOOT Info-Stealer Variants
+348e435196dd795e1ec31169bd111c7ec964e5a6ab525a562b17f10de0ab031d
+38e69f4a6d2e81f28ed2dc6df0daf31e73ea365bd2cfc90ebc31441404cca264
+3a977446ed70b02864ef8cfa3135d8b134c93ef868a4cc0aa5d3c2a74545725b
+3c0dbda8a5500367c22ca224919bfc87d725d890756222c8066933286f26494c
+4359aead416b1b2df8ad9e53c497806403a2253b7e13c03317fc08ad3b0b95bf
+6015fed13c5510bbb89b0a5302c8b95a5b811982ff6de9930725c4630ec4011d
+9d1723777de67bc7e11678db800d2a32de3bcd6c40a629cd165e3f7bbace8ead
+b9a0baf82feb08e42fa6ca53e9ec379e79fbe8362a7dac6150eb39c2d33d94ad
+cec425b3383890b63f5022054c396f6d510fae436041add935cd6ce42033f621
+0b3220b11698b1436d1d866ac07cc90018e59884e91a8cb71ef8924309f1e0e9
+110e301d3b5019177728010202c8096824829c0b11bb0dc0bff55547ead18286
+1826268249e1ea58275328102a5a8d158d36b4fd312009e4a2526f0bfbc30de2
+2413b5d0750c23b07999ec33a5b4930be224b661aaf290a0118db803f31acbc5
+2ccf7e42afd3f6bf845865c74b2e01e2046e541bb633d037b05bd1cdb296fa59
+387cee566aedbafa8c114ed1c6b98d8b9b65e9f178cf2f6ae2f5ac441082747a
+7c39499dd3b0b283b242f7b7996205a9b3cf8bd5c943ef6766992204d46ec5f1
+93137272f3654d56b9ce63bec2e40dd816c82fb6bad9985bed477f17999a47db
+9e89d9f045664996067a05610ea2b0ad4f7f502f73d84321fb07861348fdc24a
+bdd4fa8e97e5e6eaaac8d6178f1cf4c324b9c59fc276fd6b368e811b327ccf8b
+0ea05169d111415903a1098110c34cdbbd390c23016cd4e179dd9ef507104495
+769f77aace5eed4717c7d3142989b53bd5bac9297a6e11b2c588c3989b397e6b
+c56bcb513248885673645ff1df44d3661a75cfacdce485535da898aa9ba320d4
+f0d85b65b9f6942c75271209138ab24a73da29a06bc6cc4faeddcb825058c09d
+48367d94ccb4411f15d7ef9c455c92125f3ad812f2363c4d2e949ce1b615429a
+5b566de1aa4b2f79f579cdac6283b33e98fdc8c1cfa6211a787f8156848d67ff
+702421bcee1785d93271d311f0203da34cc936317e299575b06503945a6ea1e0
+b1c299a9fe6076f370178de7b808f36135df16c4e438ef6453a39565ff2ec272
+b5ef11d04604c9145e4fe1bedaeb52f2c2345703d52115a5bf11ea56d7fb6b03
+c77438e8657518221613fbce451c664a75f05beea2184a3ae67f30ea71d34f37
+cf23ea0d63b4c4c348865cefd70c35727ea8c82ba86d56635e488d816e60ea45
+daaa102d82550f97642887514093c98ccd51735e025995c2cc14718330a856f4
+e8012a15b6f6b404a33f293205b602ece486d01337b8b3ec331cd99ccadb562e
+ea433739fb708f5d25c937925e499c8d2228bf245653ee89a6f3d26a5fd00b7a
+3ab73ea9aebf271e5f3ed701286701d0be688bf7ad4fb276cb4fbe35c8af8409
+58ccfb603cdc4d305fddd52b84ad3f58ff554f1af4d7ef164007cb8438976166
+98a30c7251cf622bd4abce92ab527c3f233b817a57519c2dd2bf8e3d3ccb7db8
+a1269294254e958e0e58fc0fe887ebbc4201d5c266557f09c3f37542bd6d53d7
+a8f6c1ccba662a908ef7b0cb3cc59c2d1c9e2cbbe1866937da81c4c616e68986
+d477ec94e522b8d741f46b2c00291da05c72d21c359244ccb1c211c12b635899
+d49cf23d83b2743c573ba383bf6f3c28da41ac5f745cde41ef8cd1344528c195
+ed0c3e75b7ac2587a5892ca951707b4e0dd9c8b18aaf8590c24720d73aa6b90c
+fe5f8388ccea7c548d587d1e2843921c038a9f4ddad3cb03f3aa8a45c29c6a2f
+
+# Additional Malware Samples
+76b6d36e04e367a2334c445b51e1ecce97e4c614e88dfb4f72b104ca0f31235d
+aa0d3859d6633b62bccfb69017d33a8979a3be1f3f0a5a4bf6960d6c73d41121
+6fd538e4a8e3493dda6f9fcdc96e814bdd14f3e2ef8aa46f0143bff34b882c1b
+A13FAAC1F0EC462739AB30801003C0070F99F07DF16A0641D2C912FD0351F459
+4481E2CEFFE2816DA5CD4530F5D5E3DF7BEBF4FA8BE40B9944C8A597A2C34E98
+5ac0a6c76160772acd8a0de0705362fcdc325138eeadfe3d8d40e4bf2212a146
+b5acf14cdac40be590318dee95425d0746e85b1b7b1cbd14da66f21f2522bf4d
+eba8a0fe7b3724c4332fa126ef27daeca32e1dc9265c8bc5ae015b439744e989
+d1c04608546caf39761a0e390d8f240faa4fc821eea279f688b15d0b2cfc9729
+e8d98621b4cb45e027785d89770b25be0c323df553274238810872164187a45f
+8e91f3294883fbdc31ff17c3075f252cbfdc1fc9145c6238468847f86d590418
+
+# Truebot Loader
+717beedcd2431785a0f59d194e47970e9544fbf398d462a305f6ad9a1b1100cb
+
+# AdFind Tool
+c92c158d7c37fea795114fa6491fe5f145ad2f8c08776b18ae79db811e8e36a3
+
+# Chrome.exe Malware
+121a1f64fff22c4bfcef3f11a23956ed403cdeb9bdb803f9c42763087bd6d94e
+
+# System Files
+a1390a78533c47e55cc364e97af431117126d04a7faed49390210ea3e89dd0e1
+f9947c5763542b3119788923977153ff8ca807a2e535e6ab28fc42641983aabb
+c0f8aeeb2d11c6e751ee87c40ee609aceb1c1036706a5af0d3d78738b6cc4125
+
+=== EMAIL ADDRESSES ===
+cl0p@bk.ru
+cl0p@inbox.ru
+cl0p@internet.ru
+cl0p@list.ru
+cl0p@mail.ru
+cl0p@pm.me
+cl0p@proton.me
+cl0p@protonmail.ch
+cl0p@protonmail.com
+woshihuaimei@gmail.com
+
+=== VULNERABILITIES TARGETED ===
+CVE-2023-34362 - MOVEit Transfer SQL Injection
+CVE-2023-27350 - PaperCut Authentication Bypass
+CVE-2023-27351 - PaperCut Remote Code Execution
+CVE-2023-0669 - GoAnywhere MFT Zero-day
+Oracle E-Business Suite vulnerabilities (July 2025 CPU)
+Accellion FTA vulnerabilities
+SolarWinds Serv-U FTP vulnerabilities
+
+=== CAMPAIGN IMPACT ===
+- February 2025: 335 victims (massive extortion campaign)
+- December 2024: 180+ organizations (Cleo Software campaign)
+- Multiple zero-day exploits across various platforms
+- High-volume extortion campaigns with public leak sites
+
+=== ATTACK VECTORS ===
+- Zero-day vulnerability exploitation
+- SQL injection attacks
+- Authentication bypass
+- Remote code execution
+- Password reset abuse
+- Email compromise
+- Web shell deployment
+- Data exfiltration
+- Double extortion
+- Ransom demands
+
+=== TARGET SECTORS ===
+- Healthcare
+- Education
+- Financial Services
+- Government
+- Energy
+- Technology
+- Manufacturing
+- Logistics
+- Supply Chain
+
+=== THREAT ACTOR PROFILE ===
+- Name: Cl0p Ransomware Group
+- Associated Groups: FIN11, TA505
+- Motivation: Financial
+- Capabilities: Zero-day exploitation, Ransomware, Data theft
+- Targeting: Opportunistic, High-volume campaigns
+- TTPs: Double extortion, Public leak sites, Ransom demands
+
+Source: Threat Intelligence Reports, CISA Advisories, Dark Web Monitoring
+Last Updated: January 15, 2025

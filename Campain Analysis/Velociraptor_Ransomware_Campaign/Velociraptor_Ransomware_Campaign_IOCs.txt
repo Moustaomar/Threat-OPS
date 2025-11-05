@@ -1,0 +1,215 @@
+# Velociraptor Ransomware Campaign IOCs
+# Source: Cisco Talos - Velociraptor leveraged in ransomware attacks
+# Date: October 6, 2025
+# Campaign: Advanced threat actors leveraging Velociraptor DFIR platform for ransomware operations
+
+## Threat Actor Profile
+
+### Primary Identifiers
+- **Campaign Name**: Velociraptor Ransomware Campaign
+- **Threat Type**: Ransomware with DFIR tool abuse
+- **Associated Ransomware**: LockBit, Babuk Ransomware
+- **Threat Group**: AEGIS
+- **Threat Level**: High
+- **Source**: Cisco Talos Intelligence
+
+### Campaign Overview
+- **Attack Vector**: Abuse of legitimate DFIR tools
+- **Primary Objective**: Data exfiltration, lateral movement, and ransomware deployment
+- **Target**: Organizations with Velociraptor deployments
+- **Infection Chain**: Velociraptor abuse → Data collection → Lateral movement → Ransomware deployment
+
+## Network Indicators
+
+### IP Addresses
+| **IP Address** | **Description** | **Category** |
+|----------------|-----------------|--------------|
+| 65.38.121.226 | Malicious C2 infrastructure | Network activity |
+
+### Domains
+| **Domain** | **Description** | **Category** |
+|------------|-----------------|--------------|
+| stoaccinfoniqaveeambkp.blob.core.windows.net | Azure blob storage C2 | Network activity |
+| velo.qaubctgg.workers.dev | Cloudflare Workers C2 | Network activity |
+
+## File Indicators
+
+### File Hashes
+| **Hash Type** | **Hash Value** | **Description** | **Category** |
+|---------------|----------------|-----------------|--------------|
+| SHA-1 | 4c9beca7af8b54bd427d665907c9650660c53660 | Velociraptor abuse payload | Payload delivery |
+| SHA-1 | 6658502c86d0731d362c8b9b6ddaa9d4c86d484a | Velociraptor abuse payload | Payload delivery |
+
+## Malware Families
+
+### Associated Ransomware
+- **LockBit**: Ransomware family associated with Velociraptor abuse
+- **Babuk Ransomware**: Ransomware family associated with Velociraptor abuse
+
+### Abused Tools
+- **Velociraptor**: Open-source digital forensics and incident response platform
+- **Microsoft Azure**: Cloud platform for blob storage C2
+- **Cloudflare Workers**: Serverless platform for C2 operations
+
+## Infrastructure
+
+### Cloud Services
+- **Microsoft Azure Blob Storage**: Primary C2 infrastructure
+- **Cloudflare Workers**: Secondary C2 infrastructure
+- **Legitimate DFIR Tools**: Velociraptor platform abuse
+
+### Communication Channels
+- **HTTPS**: Encrypted communication for C2 operations
+- **Cloud APIs**: API-driven channels to cloud infrastructure
+- **DFIR Tool APIs**: Abuse of legitimate security tool APIs
+
+## Attack Techniques
+
+### Initial Access
+- **Valid Accounts**: Compromise of existing cloud accounts
+- **Cloud Account Abuse**: Abuse of legitimate cloud services
+- **DFIR Tool Abuse**: Exploitation of Velociraptor deployments
+
+### Execution
+- **PowerShell**: Command and scripting interpreter abuse
+- **Scheduled Tasks**: Task scheduling for persistence
+- **Process Injection**: Code injection techniques
+
+### Persistence
+- **Scheduled Tasks**: Task scheduling for long-term persistence
+- **Cloud Account Persistence**: Maintaining access through cloud accounts
+- **DFIR Tool Persistence**: Maintaining access through security tools
+
+### Defense Evasion
+- **Obfuscated Files**: File and information obfuscation
+- **Deobfuscation**: Decoding of obfuscated content
+- **Tool Disabling**: Disabling security tools and defenses
+
+### Credential Access
+- **OS Credential Dumping**: Operating system credential extraction
+- **Password Store Access**: Access to stored credentials
+- **Keylogging**: Input capture for credential theft
+
+### Discovery
+- **Cloud Account Discovery**: Discovery of cloud accounts
+- **Remote System Discovery**: Network and system discovery
+- **Network Service Scanning**: Service enumeration
+
+### Collection
+- **Local Data Collection**: Data collection from local systems
+- **Screen Capture**: Visual data collection
+- **Automated Collection**: Automated data collection processes
+
+### Command and Control
+- **Web Protocols**: Application layer protocol communication
+- **OneDrive Integration**: Web service integration for C2
+- **Multi-Stage Channels**: Complex C2 communication
+
+### Exfiltration
+- **C2 Channel Exfiltration**: Data exfiltration over C2 channels
+- **Cloud Storage Exfiltration**: Data exfiltration to cloud storage
+
+## Technical Details
+
+### Velociraptor Abuse
+- **Legitimate Tool**: Open-source digital forensics and incident response platform
+- **Abuse Vector**: Exploitation of DFIR tool capabilities for malicious purposes
+- **Data Collection**: Abuse of data collection capabilities
+- **Lateral Movement**: Abuse of network discovery and access capabilities
+
+### Cloud Infrastructure
+- **Azure Blob Storage**: Primary C2 infrastructure using legitimate cloud services
+- **Cloudflare Workers**: Secondary C2 infrastructure using serverless platforms
+- **API Abuse**: Abuse of cloud service APIs for C2 operations
+
+### Encryption and Obfuscation
+- **File Obfuscation**: Obfuscation of malicious files and information
+- **Communication Obfuscation**: Obfuscation of C2 communications
+- **Data Obfuscation**: Obfuscation of collected data
+
+## MITRE ATT&CK Techniques
+
+### Initial Access
+T1078.004 - Valid Accounts: Cloud Accounts
+T1584.003 - Virtual Private Server
+
+### Execution
+T1059.001 - Command and Scripting Interpreter: PowerShell
+T1053 - Scheduled Task/Job
+T1055 - Process Injection
+
+### Persistence
+T1053 - Scheduled Task/Job
+T1078.004 - Valid Accounts: Cloud Accounts
+
+### Defense Evasion
+T1027 - Obfuscated Files or Information
+T1140 - Deobfuscate/Decode Files or Information
+T1562.001 - Impair Defenses: Disable or Modify Tools
+
+### Credential Access
+T1003 - OS Credential Dumping
+T1555 - Credentials from Password Stores
+T1056.001 - Input Capture: Keylogging
+
+### Discovery
+T1087.004 - Account Discovery: Cloud Account
+T1018 - Remote System Discovery
+T1046 - Network Service Scanning
+
+### Collection
+T1005 - Data from Local System
+T1113 - Screen Capture
+T1119 - Automated Collection
+
+### Command and Control
+T1071.001 - Application Layer Protocol: Web Protocols
+T1102.003 - Web Service: OneDrive
+T1104 - Multi-Stage Channels
+
+### Exfiltration
+T1041 - Exfiltration Over C2 Channel
+T1567.002 - Exfiltration Over Web Service: To Cloud Storage
+
+## Detection Patterns
+
+### Network Indicators
+- **Azure Blob Storage**: Connections to Azure blob storage services
+- **Cloudflare Workers**: Connections to Cloudflare Workers platform
+- **HTTPS C2**: Encrypted C2 communication patterns
+- **Cloud API Calls**: Unusual cloud service API calls
+
+### Endpoint Indicators
+- **Velociraptor Abuse**: Unusual Velociraptor tool usage patterns
+- **PowerShell Execution**: Suspicious PowerShell command execution
+- **Scheduled Tasks**: Unusual scheduled task creation
+- **Process Injection**: Process injection activities
+
+### Behavioral Indicators
+- **DFIR Tool Abuse**: Abuse of legitimate security tools
+- **Cloud Service Abuse**: Unusual cloud service usage patterns
+- **Data Collection**: Unusual data collection activities
+- **Lateral Movement**: Unusual network access patterns
+
+## Mitigation Strategies
+
+### Technical Controls
+- **DFIR Tool Security**: Secure configuration of DFIR tools
+- **Cloud Security**: Cloud service access controls and monitoring
+- **Endpoint Detection**: EDR solutions for malware detection
+- **Network Monitoring**: Cloud service API monitoring
+
+### Administrative Controls
+- **Tool Access Control**: Proper access controls for DFIR tools
+- **Cloud Security**: Cloud service security policies
+- **User Training**: Security awareness for tool abuse
+- **Incident Response**: Proper incident response procedures
+
+### Monitoring and Detection
+- **Tool Monitoring**: Monitoring of DFIR tool usage
+- **Cloud Monitoring**: Cloud service activity monitoring
+- **Behavioral Analytics**: Advanced behavioral analysis
+- **Threat Hunting**: Proactive hunting for tool abuse
+
+## Threat Level
+High - Advanced threat actors abusing legitimate security tools for malicious purposes, demonstrating sophisticated understanding of DFIR tools and cloud infrastructure.

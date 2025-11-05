@@ -1,0 +1,304 @@
+# APT35 Phishing Campaign Detection Rules
+# Source: Stormshield Intelligence Report
+# Date: 2025-09-26
+# TLP: Amber
+
+---
+# SIEM Detection Rules for APT35 Phishing Campaign
+# Compatible with Splunk, Elastic, QRadar, and other SIEM platforms
+
+# Rule 1: APT35 Infrastructure Communication
+- name: APT35 Infrastructure Communication
+  description: "Detects communication with known APT35 phishing infrastructure"
+  condition: |
+    (destination_ip in ["79.132.131.184", "84.200.193.20"] OR
+     destination_domain matches /.*\.online$/ AND
+     (subdomain contains "viliam" OR subdomain contains "meet")) AND
+     user_agent contains "Mozilla"
+  severity: high
+  tags: [apt35, phishing, infrastructure, video-conferencing]
+  confidence: high
+  false_positives: low
+
+# Rule 2: APT35 Phishing Domain Access
+- name: APT35 Phishing Domain Access
+  description: "Detects access to APT35 phishing domains"
+  condition: |
+    domain matches /.*\.online$/ AND
+    (subdomain contains "viliam" OR subdomain contains "meet") AND
+    (url contains "invitation" OR url contains "?invitation")
+  severity: high
+  tags: [apt35, phishing, video-conferencing, credential-harvesting]
+  confidence: high
+  false_positives: medium
+
+# Rule 3: APT35 Landing Page Characteristics
+- name: APT35 Landing Page Characteristics
+  description: "Detects APT35 landing page characteristics"
+  condition: |
+    (http_response_body contains "You need to enable JavaScript to run this app" OR
+     http_response_body contains "blue ball red ball yellow ball green ball" OR
+     http_response_body contains "viliam") AND
+     domain matches /.*\.online$/
+  severity: medium
+  tags: [apt35, phishing, landing-page, javascript]
+  confidence: medium
+  false_positives: medium
+
+# Rule 4: APT35 URL Parameter Patterns
+- name: APT35 URL Parameter Patterns
+  description: "Detects APT35 URL parameter patterns"
+  condition: |
+    url contains "invitation" AND
+    (url contains "viliam" OR url contains "meet") AND
+    domain matches /.*\.online$/
+  severity: medium
+  tags: [apt35, phishing, url-parameters, tracking]
+  confidence: medium
+  false_positives: medium
+
+# Rule 5: APT35 ASN Communication
+- name: APT35 ASN Communication
+  description: "Detects communication with APT35 ASNs"
+  condition: |
+    destination_asn in ["39378", "214036"] AND
+    (domain matches /.*\.online$/ OR
+     destination_ip in ["79.132.131.184", "84.200.193.20"])
+  severity: medium
+  tags: [apt35, infrastructure, asn, network]
+  confidence: medium
+  false_positives: low
+
+---
+# Network Detection Rules
+# For network security devices and firewalls
+
+# Rule 6: APT35 Network Traffic
+- name: APT35 Network Traffic
+  description: "Detects network traffic to APT35 infrastructure"
+  condition: |
+    (destination_ip in ["79.132.131.184", "84.200.193.20"] OR
+     destination_domain matches /.*\.online$/ AND
+     subdomain contains "viliam") AND
+     protocol in ["HTTP", "HTTPS"]
+  severity: high
+  tags: [apt35, network, infrastructure, phishing]
+  confidence: high
+  action: block
+
+# Rule 7: APT35 DNS Queries
+- name: APT35 DNS Queries
+  description: "Detects DNS queries for APT35 domains"
+  condition: |
+    dns_query matches /.*\.online$/ AND
+    (dns_query contains "viliam" OR dns_query contains "meet") AND
+    dns_query contains "online"
+  severity: medium
+  tags: [apt35, dns, domain, phishing]
+  confidence: medium
+  action: log
+
+---
+# Email Security Rules
+# For email security gateways
+
+# Rule 8: APT35 Phishing Emails
+- name: APT35 Phishing Emails
+  description: "Detects APT35 phishing emails"
+  condition: |
+    (email_body contains "invitation" OR
+     email_body contains "meeting" OR
+     email_body contains "video conference") AND
+    (email_url contains ".online" OR
+     email_url contains "viliam" OR
+     email_url contains "meet")
+  severity: high
+  tags: [apt35, email, phishing, video-conferencing]
+  confidence: medium
+  action: quarantine
+
+# Rule 9: APT35 Email URLs
+- name: APT35 Email URLs
+  description: "Detects APT35 URLs in emails"
+  condition: |
+    email_url matches /.*\.online$/ AND
+    (email_url contains "viliam" OR email_url contains "meet") AND
+    (email_url contains "invitation" OR email_url contains "?")
+  severity: high
+  tags: [apt35, email, url, phishing]
+  confidence: high
+  action: block
+
+---
+# Endpoint Detection Rules
+# For EDR and endpoint security
+
+# Rule 10: APT35 Browser Activity
+- name: APT35 Browser Activity
+  description: "Detects browser activity to APT35 infrastructure"
+  condition: |
+    process_name in ["chrome.exe", "firefox.exe", "edge.exe", "safari.exe"] AND
+    (network_connection contains "79.132.131.184" OR
+     network_connection contains "84.200.193.20" OR
+     network_connection matches /.*\.online$/) AND
+    (network_connection contains "viliam" OR network_connection contains "meet")
+  severity: medium
+  tags: [apt35, browser, endpoint, phishing]
+  confidence: medium
+  action: alert
+
+# Rule 11: APT35 JavaScript Execution
+- name: APT35 JavaScript Execution
+  description: "Detects JavaScript execution on APT35 pages"
+  condition: |
+    process_name in ["chrome.exe", "firefox.exe", "edge.exe", "safari.exe"] AND
+    (network_connection contains "viliam" OR network_connection contains "meet") AND
+    (network_connection contains ".online" OR network_connection contains "invitation")
+  severity: medium
+  tags: [apt35, javascript, browser, phishing]
+  confidence: medium
+  action: alert
+
+---
+# Threat Hunting Queries
+# For proactive threat hunting
+
+# Rule 12: APT35 Infrastructure Hunting
+- name: APT35 Infrastructure Hunting
+  description: "Hunt for APT35 infrastructure communication"
+  query: |
+    (destination_ip in ["79.132.131.184", "84.200.193.20"] OR
+     destination_domain matches /.*\.online$/ AND
+     (subdomain contains "viliam" OR subdomain contains "meet")) AND
+     timestamp >= "2025-07-01"
+  severity: medium
+  tags: [apt35, hunting, infrastructure, network]
+  confidence: high
+  action: investigate
+
+# Rule 13: APT35 Domain Hunting
+- name: APT35 Domain Hunting
+  description: "Hunt for APT35 domain patterns"
+  query: |
+    domain matches /.*\.online$/ AND
+    (subdomain contains "viliam" OR subdomain contains "meet") AND
+    (url contains "invitation" OR url contains "?") AND
+    timestamp >= "2025-07-01"
+  severity: medium
+  tags: [apt35, hunting, domain, phishing]
+  confidence: medium
+  action: investigate
+
+# Rule 14: APT35 Behavioral Hunting
+- name: APT35 Behavioral Hunting
+  description: "Hunt for APT35 behavioral patterns"
+  query: |
+    (http_response_body contains "You need to enable JavaScript" OR
+     http_response_body contains "blue ball red ball yellow ball green ball" OR
+     http_response_body contains "viliam") AND
+     domain matches /.*\.online$/
+  severity: medium
+  tags: [apt35, hunting, behavior, landing-page]
+  confidence: medium
+  action: investigate
+
+---
+# YARA Rules
+# For file and content analysis
+
+# Rule 15: APT35 Landing Page YARA
+- name: APT35 Landing Page YARA
+  description: "YARA rule for APT35 landing page detection"
+  yara_rule: |
+    rule APT35_Phishing_Landing_Page {
+        meta:
+            description = "Detects APT35 phishing landing pages"
+            author = "Threat Intelligence Team"
+            date = "2025-09-26"
+            reference = "https://www.stormshield.com/news/apt35-plays-same-music-again/"
+        
+        strings:
+            $s1 = "You need to enable JavaScript to run this app."
+            $s2 = "blue ball red ball yellow ball green ball"
+            $s3 = "viliam"
+            $s4 = "invitation"
+            $s5 = ".online"
+        
+        condition:
+            3 of them
+    }
+  severity: medium
+  tags: [apt35, yara, landing-page, phishing]
+  confidence: medium
+  action: alert
+
+# Rule 16: APT35 Infrastructure YARA
+- name: APT35 Infrastructure YARA
+  description: "YARA rule for APT35 infrastructure detection"
+  yara_rule: |
+    rule APT35_Infrastructure {
+        meta:
+            description = "Detects APT35 infrastructure patterns"
+            author = "Threat Intelligence Team"
+            date = "2025-09-26"
+        
+        strings:
+            $s1 = "79.132.131.184"
+            $s2 = "84.200.193.20"
+            $s3 = "39378"
+            $s4 = "214036"
+            $s5 = "viliam"
+            $s6 = ".online"
+        
+        condition:
+            2 of them
+    }
+  severity: medium
+  tags: [apt35, yara, infrastructure, network]
+  confidence: medium
+  action: alert
+
+---
+# Correlation Rules
+# For advanced correlation and analysis
+
+# Rule 17: APT35 Campaign Correlation
+- name: APT35 Campaign Correlation
+  description: "Correlates multiple APT35 indicators"
+  condition: |
+    (destination_ip in ["79.132.131.184", "84.200.193.20"] OR
+     destination_domain matches /.*\.online$/ AND
+     (subdomain contains "viliam" OR subdomain contains "meet")) AND
+    (url contains "invitation" OR
+     http_response_body contains "You need to enable JavaScript" OR
+     http_response_body contains "viliam")
+  severity: high
+  tags: [apt35, correlation, campaign, phishing]
+  confidence: high
+  action: alert
+
+# Rule 18: APT35 Multi-Stage Attack
+- name: APT35 Multi-Stage Attack
+  description: "Detects multi-stage APT35 attacks"
+  condition: |
+    (destination_domain matches /.*\.online$/ AND
+     subdomain contains "viliam") AND
+    (url contains "invitation" OR
+     http_response_body contains "JavaScript" OR
+     http_response_body contains "viliam") AND
+    (user_agent contains "Mozilla" OR
+     user_agent contains "Chrome" OR
+     user_agent contains "Firefox")
+  severity: high
+  tags: [apt35, multi-stage, attack, phishing]
+  confidence: high
+  action: alert
+
+---
+# Summary
+# Total Rules: 18
+# High Severity: 8
+# Medium Severity: 10
+# High Confidence: 6
+# Medium Confidence: 12
+# Tags: apt35, phishing, infrastructure, video-conferencing, hunting, yara, correlation

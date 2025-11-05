@@ -1,0 +1,197 @@
+# HomeLand Justice (Void Manticore) - IOCs and TTPs
+# Threat Actor: HomeLand Justice (persona of Void Manticore)
+
+## Network Infrastructure
+
+### IPv4 Addresses
+159.198.36[.]115    # PRIMARY: Shared with MuddyWater operations [Ports: 80,22,8080,443] [US/AS22612/NAMEC-4] [Active since: 2025-08-19]
+144.76.6[.]34       # German HETZNER infrastructure [15 hosts] [Ports: 443,143,3306,25,3389,2083,9000,8080,222,3000,22,80,2087,53,110] [DE/AS24940/HETZNER] [PTR: static.34.6.76.144.clients.your-server.de]
+148.251.232[.]252   # German HETZNER infrastructure [11 hosts] [Ports: 80,58846,3306,443,9000,9001,8080,9091,22,3389,9083] [DE/AS24940/HETZNER] [PTR: pve.nitka.org]
+148.251.233[.]231   # German HETZNER infrastructure [13 hosts] [Ports: 21,222,53,80,3306,2222,443,3389,22,8080,143,25,110] [DE/AS24940/HETZNER] [PTR: static.231.233.251.148.clients.your-server.de]
+176.9.18[.]143      # German HETZNER infrastructure [16 hosts] [Ports: 2087,443,8080,21,80,3389,123,143,110,3306,22,222,25,2083,2222,6379] [DE/AS24940/HETZNER] [PTR: jarvis.amazonline.it]
+185.82.72[.]111     # Netherlands ExpressVPN infrastructure [2 hosts] [Ports: 25,80] [NL/AS206092/LSW-CUST-EXPRESSVPN] [PTR: lmxx.applictns.org] [Tagged: Scanning IP]
+46.101.36[.]39      # UK DigitalOcean infrastructure [3 hosts] [Ports: 22,443,80] [GB/AS14061/DIGITALOCEAN] [Tagged: application server, hosting]
+46.30.189[.]66      # German Crowncloud infrastructure [7 hosts] [Ports: 445,22,1194,443,80,53,3389] [DE/AS31400/Crowncloud-Germany]
+64.176.169[.]22     # Vultr infrastructure [4 hosts] [Ports: 22,8888,443,80] [AS33321] [PTR: 64.176.169.22.vultrusercontent.com] [Tagged: hosting]
+64.176.172[.]101    # Vultr infrastructure [4 hosts] [Ports: 22,2083,8443,80] [AS33321] [PTR: 64.176.172.101.vultrusercontent.com] [Tagged: hosting]
+64.176.172[.]165    # Vultr infrastructure [1 host] [Ports: 22] [AS33321] [PTR: 64.176.172.165.vultrusercontent.com] [Tagged: scanning ip]
+64.176.172[.]23     # Vultr infrastructure [4 hosts] [Ports: 9001,443,80,22] [AS33321] [PTR: 64-176-172-23.navisite.net]
+64.176.173[.]77     # Vultr infrastructure [3 hosts] [Ports: 22,80,443] [AS33321] [PTR: 64.176.173.77.vultrusercontent.com] [Tagged: hosting]
+
+### Domains and Infrastructure
+screenai[.]online           # PRIMARY C2 domain [Current IP: 3.64.163.50] [Registrar: NAMECHEAP INC] [Registered: 2024-04-07] [Expires: 2025-04-07] [SSL cert: 2025-08-18 to 2025-11-16]
+cloud-avira[.]com          # Avira impersonation domain [IPs: 209.99.64.51, 69.195.124.135]
+netivtech[.]org            # Technology company impersonation [Cloudflare IPs: 2606:4700:3034::ac43:8896, 2606:4700:3033::6815:5107, 172.67.136.150, 104.21.81.7, 162.255.119.28] [Registrar: NAMECHEAP INC] [Registered: 2024-11-27] [Expires: 2025-11-27]
+pgp.eu[.]com               # PGP-themed domain [IPs: 54.153.56.183, 205.234.136.2, 154.16.114.152, 181.214.31.160]
+server-avira[.]com         # Avira impersonation variant [IP: 69.195.124.135]
+skype.se[.]net             # Skype impersonation domain [IPs: 79.124.78.120, 205.234.200.237, 78.142.29.210, 181.214.31.156, 54.153.56.183, 91.195.240.87]
+telegram-update[.]com      # Telegram impersonation [IPs: 99.83.154.118, 154.16.114.152, 198.54.116.32, 181.214.31.160, 77.232.43.97] [Registrar: ERANET INTERNATIONAL LIMITED] [Registered: 2024-10-05] [Expires: 2025-10-05]
+uk2privat[.]com            # Privacy service impersonation [IPs: 205.234.200.235, 205.234.129.16, 91.195.240.117]
+update-pgp[.]com           # PGP update impersonation [IPs: 107.149.99.19, 205.234.200.237, 181.214.31.156, 98.124.243.37, 38.239.179.109, 107.151.113.124, 205.234.186.216, 91.195.240.87]
+update-real[.]com          # Real software impersonation [IPs: 104.171.0.106, 143.95.66.198] [Registrar: eNom, LLC] [Registered: 2012-04-17] [Expires: 2026-04-17]
+windowsupadates[.]com      # Windows update typosquatting [IPs: 99.83.154.118, 198.54.115.32]
+sedgelike-passaggio.vpsrdns.web-hosting[.]com    # VPS-related subdomain
+
+### URLs
+hxxps://screenai[.]online/Home/    # Primary C2 endpoint
+
+## File Indicators
+
+### SHA1 Hashes (Malware Samples)
+0028dd2783cc7e3e335e4a118d37ef829de0b566    # Wextract (PE32 executable for MS Windows GUI Intel 80386 32-bit) [2022-09-10]
+28fbc636449f8b60611fd7d68f2350dad35b9eb4    # ssv.dll (PE32 executable DLL GUI Intel 80386) [2022-09-10]
+33b9c6c8a19925551b8ec146273fbfab4269f197    # unpack.exe (PE32 executable GUI Intel 80386) [2022-09-10]
+384523f49fba4dde56c2518a79e52e8cab45bf41    # ssv.dll (PE32 executable DLL GUI Intel 80386) [2022-09-10]
+3a9f149ff6ebedbdae86b84c9f8ccff370a5aa2b    # unpack.exe [2022-08-09 to 2022-09-10]
+4da8896dcbc88f0c3e5bd29bbe83103232be66d0    # Package (PE32 executable GUI Intel 80386) [2022-09-10]
+4f619fee4c1f9f36ff35edf856a6854e91e651be    # ssv.dll (PE32 executable DLL GUI Intel 80386) [2022-09-10]
+5c31d1f89e55b88ee964cd0a951204ec751afb3b    # pvtps6f51.exe (PE32 executable GUI Intel 80386) [2022-09-10]
+5d117d8ef075f3f8ed1d4edcc0771a2a0886a376    # GoXml.exe [2022-07-26 to 2022-07-29]
+5dafc3de9a0b6726ba5e6231fe502fb92a87d057    # 12c39f052f030a77c0cd531df86ad3477f46d1287b8b98b625d1dcf89385d721 (PE32 executable console Intel 80386, 5 sections) [2025-08-13 to 2025-08-24]
+7589cd077f56cb066a34118bb4c840d8d7b9fc20    # 3d9f08a2a74c8eb4a0f82a3f36738ac40d13bb887ed433cf8e96de3cb2f3e57d (PE32+ executable console x86-64, 15 sections) [2025-08-24]
+7e3c1dd68d344fcbf49d9c01f0d95a8cc2223f32    # Slui (PE32 executable GUI Intel 80386) [2022-09-10]
+85b5802f703f3ee049cbde1a2f6ccb3301705c45    # rl_85fa58cc8c4560adb955ba0ae9b9d6cab2c381d10dbd42a0bceb8b62a92b7636 [2025-08-25]
+963bbf4024248257d42a153cecba10dc274751c0    # Slui (PE32 executable GUI Intel 80386) [2022-09-10]
+9b020dd3a60a60613d9d4a42408d317cc3cda4b3    # virussign.com_77a369e5e49e7e62d8eef2c00cd02950.vir (PE32 executable DLL GUI Intel 80386) [2022-09-10 to 2024-11-15]
+ad0dea6e2f11b35a427b0c675913b9f91ee19f20    # ssv.dll (PE32 executable DLL GUI Intel 80386) [2022-09-10]
+b1fa281946c017726377e7aa25bbf3de868c476b    # ssv.dll (PE32 executable DLL GUI Intel 80386) [2022-09-10]
+b3378887c25f264f9a6b5e095c9b5ac5a8cb6359    # ssv.dll (PE32 executable DLL GUI Intel 80386) [2022-09-10]
+b60f349fb8af109404842bf5d898835b6c05b659    # ssv.dll (PE32 executable DLL GUI Intel 80386) [2022-09-10]
+bc1d7c9968ee92431f8ad9b4f8063b5b56f32ad5    # $R3YDFH6.exe (PE32 executable GUI Intel 80386) [2019-10-04 to 2023-07-23]
+e7b0ad1dbda20e771662aed2d4165883adb58d81    # 3b67debe898a0ad7a766ff729d89e57cff846aa0429a1a9431ad557bb3812b36 [2025-08-25]
+e866cc6b1507f21f688ecc2ef15a64e413743da7    # 45bf0057b3121c6e444b316afafdd802d16083282d1cbfde3cdbf2a9d0915ace.exe [2022-07-23 to 2025-05-29]
+e92977728318484f1e200e0df3fbd37d592a2877    # s7k0.2.exe (PE32 executable GUI Intel 80386) [2022-09-10]
+f1f28bb361734bff3ca5715cc2b8dca54f0e2595    # x6hbyl1k1.exe (PE32 executable GUI Intel 80386) [2022-09-10]
+f22a7ec80fbfdc4d8ed796119c76bfac01e0a908    # rl_e1204ebbd8f15dbf5f2e41dddc5337e3182fc4daf75b05acc948b8b965480ca0 [2025-08-25]
+
+### Cross-Campaign SHA1 Hashes (Shared with MuddyWater)
+183deb80b1a2e5fbc76f4f99c1291dd6020868e4    # ThisDocument.cls - SHARED WITH MUDDYWATER
+290ab496ab0a66e16f0558d621a52cacd5c66392    # Online Seminar.MFA.gov.ct.tr-1.doc - SHARED WITH MUDDYWATER
+29f86bc6921b56ea178c8f2b06f136b3b1fc80a6    # sysProcUpdate.exe - SHARED WITH MUDDYWATER
+2b5ddc48fe17d014e38b9fd6646b23d5eb70b471    # Online Seminar.FM.gov.om.doc - SHARED WITH MUDDYWATER
+33591832d096223b4c44ac56e7894ec038a9ebf7    # DPR for dredging in FreeSpan_16082025.2.doc - SHARED WITH MUDDYWATER
+4f69ab8e1f90ad087a4a74397ff8cd0748e85be8    # sysProcUpdate.exe - SHARED WITH MUDDYWATER
+8a7cf41375dae8561f5946f64e0b08d1ef007ed5    # EML1_b83e2495-1968-4cd2-ac40-ad5fcfee687d.eml - SHARED WITH MUDDYWATER
+cb0d1f3ea8230c1d46eff18ac846546786776782    # Online Seminar.FM.gov.om.doc - SHARED WITH MUDDYWATER
+d4378b67c2827ee4def62fd3e8a98f4a0d950298    # EML2_d3ea2214-3ada-4154-bf5e-a6077d7938f8.eml - SHARED WITH MUDDYWATER
+ec251c5b831be6265d8daeb0437229b8b00e0b68    # Online Seminar.MFA.gov.ct.tr.doc - SHARED WITH MUDDYWATER
+f07a8014f36181e88d273d07b7a5503417f799a3    # DPR for dredging in FreeSpan_16082025.2.doc - SHARED WITH MUDDYWATER
+f326bb96544e1b0c9df9bdc496c417dcf5760067    # sysProcUpdate.exe - SHARED WITH MUDDYWATER
+ff3fe0c43949a9011f8fd4eab8bddce6c1287bdb    # sysProcUpdate.exe - SHARED WITH MUDDYWATER
+
+## Attribution and Tagging
+
+### Threat Actor Tags
+HomeLandJustice           # Primary threat actor tag
+MuddyWater               # Related Iranian threat actor sharing infrastructure
+
+
+## Cross-Campaign Intelligence
+
+### Shared Infrastructure with MuddyWater
+- IP: 159.198.36[.]115
+- Domain: screenai[.]online
+- File Hashes: 13 shared malware samples
+
+This extensive infrastructure sharing indicates:
+1. Centralized MOIS Operations: Coordinated resource management
+2. Operational Efficiency: Shared development and hosting costs
+3. Strategic Coordination: Synchronized campaign timing
+
+## MITRE ATT&CK Mapping
+
+### Initial Access
+- T1190: Exploit Public-Facing Application - Web services exploitation on multiple ports
+- T1078: Valid Accounts - Compromised credential usage for network infiltration
+
+### Execution
+- T1059: Command and Scripting Interpreter - Multiple variants:
+  - T1059.001: PowerShell - Primary payload execution method
+  - T1059.004: Unix Shell - Linux/Unix system command execution
+  - T1059.003: Windows Command Shell - Windows system command execution
+- T1072: Software Deployment Tools - Legitimate tools misused for malware deployment
+- T1569: System Services - Service manipulation for execution
+- T1569.002: Service Execution - Windows service abuse
+
+### Persistence
+- T1098: Account Manipulation - User account modification for persistence
+- T1543: Create or Modify System Process - System process manipulation
+- T1112: Modify Registry - Registry modification for persistence
+- T1078: Valid Accounts - Persistent access via compromised accounts
+- T1505.003: Web Shell - Server software component web shell deployment
+- T1543.003: Windows Service - Windows service creation/modification
+
+### Privilege Escalation
+- T1134: Access Token Manipulation - Token privilege escalation
+- T1098: Account Manipulation - Account privilege escalation
+- T1543: Create or Modify System Process - Process privilege escalation
+- T1055: Process Injection - Code injection into legitimate processes
+- T1078: Valid Accounts - Privileged account abuse
+- T1543.003: Windows Service - Service-based privilege escalation
+
+### Defense Evasion
+- T1134: Access Token Manipulation - Token-based evasion techniques
+- T1553.002: Code Signing - Subvert trust controls via code signing
+- T1140: Deobfuscate/Decode Files or Information - Runtime deobfuscation
+- T1562.001: Disable or Modify Tools - Security tool impairment
+- T1070.004: File Deletion - Indicator removal via file deletion
+- T1562: Impair Defenses - Security mechanism disruption
+- T1070: Indicator Removal - Evidence elimination
+- T1036: Masquerading - Legitimate software/process impersonation
+- T1112: Modify Registry - Registry-based evasion
+- T1027: Obfuscated Files or Information - Code/data obfuscation
+- T1055: Process Injection - Code injection for evasion
+- T1497.001: System Checks - Virtualization/sandbox detection
+- T1070.006: Timestomp - File timestamp manipulation
+- T1078: Valid Accounts - Legitimate account abuse
+- T1497: Virtualization/Sandbox Evasion - Automated analysis evasion
+
+### Credential Access
+- T1056: Input Capture - User input interception
+- T1056.001: Keylogging - Keystroke capture
+- T1003.001: LSASS Memory - OS credential dumping from LSASS
+
+### Discovery
+- T1087: Account Discovery - User account enumeration
+- T1083: File and Directory Discovery - File system reconnaissance
+- T1046: Network Service Discovery - Network service scanning
+- T1057: Process Discovery - Running process enumeration
+- T1012: Query Registry - Registry information gathering
+- T1018: Remote System Discovery - Network system discovery
+- T1518: Software Discovery - Installed software enumeration
+- T1497.001: System Checks - Virtualization/sandbox detection
+- T1082: System Information Discovery - System configuration gathering
+- T1033: System Owner/User Discovery - User/ownership information
+- T1007: System Service Discovery - System service enumeration
+- T1497: Virtualization/Sandbox Evasion - Environment analysis
+
+### Lateral Movement
+- T1570: Lateral Tool Transfer - Tool deployment across systems
+- T1021.001: Remote Desktop Protocol - RDP-based lateral movement
+- T1021: Remote Services - Remote service exploitation
+- T1021.002: SMB/Windows Admin Shares - File share lateral movement
+- T1072: Software Deployment Tools - Legitimate tool misuse
+- T1021.006: Windows Remote Management - WinRM lateral movement
+
+### Collection
+- T1056: Input Capture - User data collection
+- T1056.001: Keylogging - Keystroke data collection
+- T1113: Screen Capture - Screen content collection
+
+### Command and Control
+- T1105: Ingress Tool Transfer - Tool/payload delivery
+- T1095: Non-Application Layer Protocol - Custom protocol C2
+- T1572: Protocol Tunneling - Protocol encapsulation
+- T1090: Proxy - Proxy chain communication
+
+### Exfiltration
+- T1048.003: Exfiltration Over Unencrypted Non-C2 Protocol - Alternative exfiltration channels
+
+### Impact
+- T1485: Data Destruction - Data deletion/corruption
+- T1486: Data Encrypted for Impact - Ransomware/encryption attacks
+- T1561.001: Disk Content Wipe - Disk data wiping
+- T1561.002: Disk Structure Wipe - Disk structure destruction
+- T1561: Disk Wipe - Complete disk wiping
+- T1490: Inhibit System Recovery - Recovery mechanism disruption
+- T1489: Service Stop - Critical service termination

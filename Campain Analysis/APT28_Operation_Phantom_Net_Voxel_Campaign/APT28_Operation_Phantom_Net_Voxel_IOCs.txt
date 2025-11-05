@@ -1,0 +1,211 @@
+# APT28 Operation Phantom Net Voxel Campaign IOCs
+# Source: Sekoia.io Blog - APT28 Operation Phantom Net Voxel
+# Date: September 16, 2025
+# Campaign: APT28 spearphishing campaign targeting Ukrainian military with sophisticated malware
+
+## Threat Actor Profile
+
+### Primary Identifiers
+- **Threat Actor Name**: APT28
+- **Alternative Names**: Sofacy, Fancy Bear, BlueDelta, Forest Blizzard, TAG-110
+- **Attribution**: Russian GRU (General Staff Main Intelligence Directorate)
+- **Specific Unit**: 85th Main Special Service Centre (GTsSS) of Military Unit 26165
+- **Campaign Name**: Operation Phantom Net Voxel
+- **Threat Level**: High
+
+### Campaign Overview
+- **Target**: Ukrainian military personnel
+- **Delivery Method**: Private Signal chat spearphishing
+- **Primary Objective**: Cyber espionage and intelligence gathering
+- **Infection Chain**: Office documents → VBA macros → DLL loading → Covenant framework → BeardShell
+
+## Weaponized Office Documents
+
+### Document Hashes
+| **MD5** | **Filename** | **Description** |
+|---------|--------------|-----------------|
+| 915179579ab7dc358c41ea99e4fcab52 | Акт.doc | Primary lure document |
+| b6e3894c17fb05db754a61ac9a0e5925 | tmsnrb41da2y867.tmp | Temporary file |
+| 66007a1ca6d07ebb4ed85bf82e79719d | [UNKNOWN] | Unknown document |
+| 608877a9e11101da53bce99b0effc75b | СЛУЖБОВА ХАРАКТЕРИСТИКА.doc | Service characteristics document |
+| 2632fa8fc67dd2fd5c5a6275465dcc95 | tmsnrb41da2y867.tmp | Temporary file variant |
+| 0fbc2bf2f66fc72c521a9b8561bab1da | Акт_про_передачу_обладнання_в_експлуатацію_150425.doc | Equipment transfer act |
+| 3b4ea6079ac9f154e0d4ec2cb6d05431 | 1a#U0410.doc | Encoded document |
+| 7de7febec6bed06c49efb4e2c3dd23e1 | attachment.doc | Generic attachment |
+| 7de7febec6bed06c49efb4e2c3dd23e1 | zrazok-raport-matdopomoga-forma-dlya-zapovnennya-v3.doc | Report template |
+| bbfb92161cb71825a16e49e2aa4d2750 | lorem.doc | Lorem ipsum document |
+| 1498f1df4ca0e9cf23babe00cf34ed3d | lorem.doc | Lorem ipsum variant |
+
+### Document Themes
+- **Military Evaluation Forms**: Administrative procedures for military personnel
+- **Medical Assistance Requests**: Forms for requesting medical assistance
+- **Equipment Transfer Documents**: Administrative procedures for equipment
+- **Service Characteristics**: Personnel evaluation documents
+- **Report Templates**: Various administrative report forms
+
+## Malware Components
+
+### Primary Malware
+- **Covenant Framework**: .NET-based C2 framework
+- **GruntHTTPStager**: Covenant component for initial C2 communication
+- **BeardShell**: C++ malware using icedrive cloud storage for C2
+- **SlimAgent**: Spyware component (observed on same infected server)
+
+### Steganography Files
+- **windows.png**: PNG file containing encrypted shellcode
+- **windows1.png**: Additional steganographic payload
+- **windows2.png**: Additional steganographic payload
+- **windows3.png**: Additional steganographic payload
+- **Koala.png**: Additional steganographic payload
+
+### Secondary Payloads
+- **sample-03.wav**: Audio file containing encrypted BeardShell payload
+- **PlaySndSrv.dll**: DLL for decrypting and extracting BeardShell from WAV file
+
+## Infrastructure
+
+### Cloud Storage Services
+- **Koofr**: Primary cloud storage for Covenant framework communication
+- **Icedrive**: Cloud storage service used by BeardShell for C2
+
+### Communication Channels
+- **Signal**: Private messaging platform used for spearphishing delivery
+- **HTTPS**: Encrypted communication for C2 operations
+- **Cloud APIs**: API-driven channels to cloud infrastructure
+
+## Attack Techniques
+
+### Initial Access
+- **Spearphishing**: Targeted emails with malicious Office documents
+- **Social Engineering**: Impersonation of colleagues/superiors
+- **Signal Messaging**: Private Signal chat for document delivery
+
+### Execution
+- **VBA Macros**: Malicious macros in Office documents
+- **COM Hijacking**: User-level COM hijack to load malicious DLL
+- **DLL Loading**: Loading malicious DLL through COM hijacking
+
+### Persistence
+- **Covenant Framework**: Persistent C2 framework
+- **BeardShell**: Long-term persistence through cloud storage C2
+- **SlimAgent**: Additional spyware for persistence
+
+### Defense Evasion
+- **Steganography**: Hiding payloads in PNG files
+- **Encryption**: ChaCha20-Poly1305 encryption for payloads
+- **Cloud Storage**: Using legitimate cloud services for C2
+
+### Command and Control
+- **Covenant Framework**: .NET-based C2 framework
+- **BeardShell**: C++ malware with cloud storage C2
+- **Koofr Integration**: Cloud storage API for C2 communication
+- **Icedrive Integration**: Cloud storage service for BeardShell C2
+
+## Technical Details
+
+### Encryption
+- **Algorithm**: ChaCha20-Poly1305
+- **Key**: F9685510DD90C05856950D86C12CF7A2CC9D148AACC187DDDDFCE0C9EDAE6EE3
+- **Nonce**: 12 bytes
+- **Tag**: 16 bytes
+- **AAD**: 16 bytes (arbitrary chosen)
+
+### Steganography Implementation
+- **PNG Files**: Shellcode hidden in PNG image files
+- **LSB Steganography**: Least significant bit steganography
+- **Size Calculation**: Dynamic size calculation based on image data
+
+### PowerShell Commands
+- **BeardShell**: Executes PowerShell commands received from C2
+- **System Information**: Gathering system information
+- **Script Execution**: Executing PowerShell scripts
+- **Command Execution**: Running system commands
+
+## MITRE ATT&CK Techniques
+
+### Initial Access
+T1566.001 - Spearphishing Attachment
+T1566.003 - Spearphishing via Service
+T1078.004 - Valid Accounts: Cloud Accounts
+
+### Execution
+T1059.001 - Command and Scripting Interpreter: PowerShell
+T1204.002 - User Execution: Malicious File
+T1055.012 - Process Injection: Process Hollowing
+
+### Persistence
+T1505.003 - Server Software Component: Web Shell
+T1078.004 - Valid Accounts: Cloud Accounts
+T1053 - Scheduled Task/Job
+
+### Defense Evasion
+T1027 - Obfuscated Files or Information
+T1140 - Deobfuscate/Decode Files or Information
+T1562.001 - Impair Defenses: Disable or Modify Tools
+
+### Credential Access
+T1003 - OS Credential Dumping
+T1555 - Credentials from Password Stores
+T1056.001 - Input Capture: Keylogging
+
+### Discovery
+T1087.004 - Account Discovery: Cloud Account
+T1018 - Remote System Discovery
+T1046 - Network Service Scanning
+
+### Collection
+T1005 - Data from Local System
+T1113 - Screen Capture
+T1119 - Automated Collection
+
+### Command and Control
+T1071.001 - Application Layer Protocol: Web Protocols
+T1102.003 - Web Service: OneDrive
+T1104 - Multi-Stage Channels
+
+### Exfiltration
+T1041 - Exfiltration Over C2 Channel
+T1567.002 - Exfiltration Over Web Service: To Cloud Storage
+
+## Detection Patterns
+
+### Network Indicators
+- **Koofr API Calls**: Connections to Koofr cloud storage
+- **Icedrive API Calls**: Connections to Icedrive cloud storage
+- **Signal Communication**: Private Signal chat communications
+- **HTTPS C2**: Encrypted C2 communication
+
+### Endpoint Indicators
+- **Office Macro Execution**: VBA macro execution in Office documents
+- **DLL Loading**: Suspicious DLL loading activities
+- **PNG File Processing**: Processing of PNG files with embedded payloads
+- **PowerShell Execution**: PowerShell command execution
+
+### Behavioral Indicators
+- **Steganography**: Processing of image files for hidden content
+- **Cloud Storage Access**: Unusual access to cloud storage services
+- **COM Hijacking**: User-level COM hijacking activities
+- **Covenant Framework**: .NET framework execution
+
+## Mitigation Strategies
+
+### Technical Controls
+- **Email Security**: Advanced email threat protection
+- **Office Security**: Macro security and document scanning
+- **Endpoint Detection**: EDR solutions for malware detection
+- **Network Monitoring**: Cloud storage API monitoring
+
+### Administrative Controls
+- **User Training**: Security awareness for spearphishing
+- **Signal Security**: Secure messaging practices
+- **Document Security**: Secure document handling procedures
+- **Cloud Security**: Cloud storage access controls
+
+### Monitoring and Detection
+- **Threat Hunting**: Proactive hunting for APT28 activities
+- **IOC Monitoring**: Tracking known threat indicators
+- **Behavioral Analytics**: Advanced behavioral analysis
+- **Cloud Monitoring**: Cloud storage activity monitoring
+
+## Threat Level
+High - Advanced persistent threat with sophisticated attack techniques targeting military personnel and critical infrastructure.

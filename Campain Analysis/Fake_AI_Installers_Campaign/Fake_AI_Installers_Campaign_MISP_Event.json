@@ -1,0 +1,41 @@
+{
+  "Event": {
+    "date": "2025-05-28",
+    "threat_level_id": "1",
+    "info": "Fake AI Installers Campaign: Cybercriminals camouflaging threats as AI tool installers with multiple ransomware families and destructive malware capabilities",
+    "published": false,
+    "attribute_count": "8",
+    "Attribute": [
+      {"type": "sha256", "category": "Payload delivery", "to_ids": true, "value": "507103bf93e50a8b7b2944c402f1403402e2f607930fa7822bb64236c1fba23a", "comment": "Fake AI Installers | CyberLock dropper | Source: Cisco Talos", "first_seen": "2025-05-28", "last_seen": "2025-05-28"},
+      {"type": "sha256", "category": "Payload delivery", "to_ids": true, "value": "07d73f4822549af4ec61d16ed366133dae1733ce1d6ad0a27fc80c94956abc51", "comment": "Fake AI Installers | CyberLock ransomware PowerShell script | Source: Cisco Talos", "first_seen": "2025-05-28", "last_seen": "2025-05-28"},
+      {"type": "sha256", "category": "Payload delivery", "to_ids": true, "value": "e1c4603d8354bb53e9ba93b860db6ae853d64bce0fe25a37033bfe260ea63f23", "comment": "Fake AI Installers | Lucky_Gh0$t dropper | Source: Cisco Talos", "first_seen": "2025-05-28", "last_seen": "2025-05-28"},
+      {"type": "sha256", "category": "Payload delivery", "to_ids": true, "value": "e019c6f094965c3bccc0a7ba09bfb09c4ff7059795da5b66b6e7a7c0ac8ef7ef", "comment": "Fake AI Installers | Lucky_Gh0$t ransomware | Source: Cisco Talos", "first_seen": "2025-05-28", "last_seen": "2025-05-28"},
+      {"type": "sha256", "category": "Payload delivery", "to_ids": true, "value": "25f863c6190b727c45b762b70091a8d8f6cb98ff44db05044ba76a46d3c17a3d", "comment": "Fake AI Installers | Numero dropper | Source: Cisco Talos", "first_seen": "2025-05-28", "last_seen": "2025-05-28"},
+      {"type": "sha256", "category": "Payload delivery", "to_ids": true, "value": "6ccaef03dcab293d23494070aacfd4b94d7defd14af39dc543f2f551846e9d50", "comment": "Fake AI Installers | Numero Malware | Source: Cisco Talos", "first_seen": "2025-05-28", "last_seen": "2025-05-28"},
+      {"type": "sha256", "category": "Payload delivery", "to_ids": true, "value": "7de095a011a3dcd48f806dcb6a48d5262e06bec2d63d828b85436f79c83bcd70", "comment": "Fake AI Installers | Shellcode | Source: Cisco Talos", "first_seen": "2025-05-28", "last_seen": "2025-05-28"},
+      {"type": "sha256", "category": "Payload delivery", "to_ids": true, "value": "2381929126d3eb17402d77103f6e07a272a6fad54ec64225a6d5e1f31ff057ac", "comment": "Fake AI Installers | Batch Script | Source: Cisco Talos", "first_seen": "2025-05-28", "last_seen": "2025-05-28"}
+    ],
+    "Tag": [
+      {"name": "tlp:white"},
+      {"name": "type:OSINT"},
+      {"name": "misp:threat-level=\"high\""},
+      {"name": "misp-galaxy:malware=\"CyberLock\""},
+      {"name": "misp-galaxy:malware=\"Lucky_Gh0$t\""},
+      {"name": "misp-galaxy:malware=\"Numero\""},
+      {"name": "misp-galaxy:malware=\"Ransomware\""},
+      {"name": "misp-galaxy:malware=\"Dropper\""},
+      {"name": "misp-galaxy:malware=\"Shellcode\""},
+      {"name": "misp-galaxy:tool=\"PowerShell\""},
+      {"name": "misp-galaxy:tool=\"Batch Script\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Spearphishing Attachment - T1566.001\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"User Execution - T1204.002\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Data Encrypted for Impact - T1486\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Inhibit System Recovery - T1490\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Data Destruction - T1485\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Process Injection - T1055\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"OS Credential Dumping - T1003\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"System Information Discovery - T1082\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"File and Directory Discovery - T1083\""}
+    ]
+  }
+}

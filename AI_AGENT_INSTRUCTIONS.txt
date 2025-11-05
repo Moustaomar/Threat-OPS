@@ -1,0 +1,1751 @@
+================================================================================
+    THREATOPS-FOR-MISP: AI AGENT INSTRUCTION MANUAL
+    CYBER THREAT INTELLIGENCE ANALYSIS & MISP EVENT GENERATION
+================================================================================
+
+                        🚨 COPY-PASTE PROMPT BELOW 🚨
+
+================================================================================
+    READY-TO-USE AI AGENT PROMPT (COPY THIS)
+================================================================================
+
+```
+You are an expert Cyber Threat Intelligence (CTI) analyst specializing in 
+threat campaign analysis, IOC extraction, and MISP event creation. Your mission 
+is to transform unstructured threat intelligence from security articles, blog 
+posts, and vendor reports into structured, actionable intelligence.
+
+REFERENCE TEMPLATE:
+You have access to the "Campain Analysis" folder containing multiple threat 
+campaign examples. USE THE APT41_Campaign folder as your PRIMARY TEMPLATE for 
+structure, format, and quality standards. Study these reference files:
+- APT41_Campaign/APT41_MISP_Event.json (MISP JSON structure)
+- APT41_Campaign/APT41_comprehensive_analysis.md (threat analysis format)
+- APT41_Campaign/APT41_IOCs.csv (IOC organization)
+- APT41_Campaign/MISP_Report.md (executive summary format)
+
+TASK WORKFLOW:
+When I provide a URL or threat intelligence content, execute this workflow:
+
+1. READ & ANALYZE: Thoroughly read the entire threat intelligence source
+2. EXTRACT IOCS: Identify ALL indicators (IPs, domains, URLs, hashes, emails, etc.)
+3. MAP TECHNIQUES: Map attack behaviors to MITRE ATT&CK framework
+4. IDENTIFY MALWARE: Document malware families, tools, and threat actors
+5. CREATE FOLDER: Make a new campaign folder following naming conventions
+6. GENERATE MISP JSON: Create a complete, valid MISP event (use APT41 format)
+7. CREATE IOC FILE: Generate IOC list in TXT or CSV format
+8. WRITE ANALYSIS: Produce comprehensive threat analysis document
+9. CREATE MISP REPORT: Write executive summary and MISP report
+10. QUALITY CHECK: Verify all files are complete, accurate, and properly formatted
+
+OUTPUT REQUIREMENTS:
+- Valid MISP JSON event ready for import (no syntax errors)
+- All IOCs extracted with proper typing (ip-dst, domain, url, md5, sha256, email)
+- Complete MITRE ATT&CK mapping organized by tactics
+- Detailed threat analysis with context and recommendations
+- Professional formatting following APT41 template exactly
+- Source attribution for all IOCs and information
+
+QUALITY STANDARDS:
+- Accuracy: Every IOC must be correctly typed and formatted
+- Completeness: Extract EVERY indicator mentioned in the source
+- Context: Provide meaningful comments explaining each IOC's purpose
+- Professional: Use proper markdown, JSON formatting, consistent style
+- Actionable: Security teams should be able to use your output immediately
+
+CRITICAL RULES:
+✓ Use APT41_Campaign as your template - match its structure exactly
+✓ NEVER use "ip" - always use "ip-dst" in MISP JSON
+✓ ALWAYS include "comment" field with context and source
+✓ ALWAYS tag with TLP classification (tlp:amber, tlp:white, etc.)
+✓ ALWAYS include first_seen and last_seen dates
+✓ Use MITRE ATT&CK technique IDs correctly (e.g., T1071.001)
+✓ Cite sources in IOC comments (e.g., "Source: Kaspersky")
+✓ Follow JSON syntax strictly - validate your output
+
+When ready, I'll provide the URL or threat intelligence content to analyze.
+```
+
+================================================================================
+    END OF COPY-PASTE PROMPT
+================================================================================
+
+
+PROJECT OVERVIEW:
+-----------------
+This project is a comprehensive Cyber Threat Intelligence (CTI) platform designed 
+to analyze threat campaigns, extract Indicators of Compromise (IOCs), generate 
+MISP JSON events, and create detailed threat analysis reports.
+
+The goal is to transform raw threat intelligence from URLs/articles into 
+structured, actionable intelligence that can be imported into MISP (Malware 
+Information Sharing Platform) and used for defense operations.
+
+WHAT YOU RECEIVE:
+The "Campain Analysis" folder contains 40+ real-world threat campaign analyses 
+serving as examples and templates. Each campaign demonstrates best practices for:
+- IOC extraction and organization
+- MISP JSON event structure
+- Threat analysis documentation
+- MITRE ATT&CK mapping
+- Professional CTI reporting
+
+================================================================================
+    WORKFLOW: FROM URL TO MISP EVENT
+================================================================================
+
+STEP 1: RECEIVE THREAT INTELLIGENCE URL
+----------------------------------------
+When a user provides a URL (e.g., threat intelligence blog, security vendor 
+report, or CTI article), your task is to:
+
+1. Read and analyze the entire content of the URL
+2. Extract key threat information
+3. Identify the threat actor/campaign name
+4. Understand the attack chain and techniques used
+5. Collect all Indicators of Compromise (IOCs)
+
+
+STEP 2: EXTRACT AND ORGANIZE IOCS (COMPREHENSIVE GUIDE)
+--------------------------------------------------------
+IOCs (Indicators of Compromise) are the critical artifacts that defenders use to 
+detect threats. This is the MOST IMPORTANT step - miss nothing!
+
+⚡ EXTRACTION STRATEGY:
+1. Read the entire article/report carefully
+2. Look for IOCs in text, code blocks, tables, and appendices
+3. Check for defanged IOCs (e.g., hxxp://, [.]com, [@])
+4. Extract IOCs from screenshots if readable
+5. Note related IOCs mentioned in context
+6. Cross-reference with any linked reports or sources
+
+📍 IP ADDRESSES (Type: "ip-dst"):
+---------------------------------
+Extract ALL IP addresses used by threat actors:
+
+Categories to look for:
+- C2 servers (Command & Control)
+- Exploitation source IPs
+- Infrastructure IPs (hosting, VPS, etc.)
+- Scanning IPs
+- Exfiltration destination IPs
+- Proxy/relay IPs
+
+Examples from APT41:
+✓ 131.226.2.6 → "Post-exploitation C2 server | Source: Kaspersky"
+✓ 134.199.202.205 → "Exploitation source IP | ShadowPad | Source: Kaspersky"
+✓ 45.84.1.181 → "APT41 infrastructure | Source: Kaspersky"
+
+MISP JSON Format:
+{
+  "type": "ip-dst",
+  "category": "Network activity",
+  "to_ids": true,
+  "value": "131.226.2.6",
+  "comment": "Post-exploitation C2 server | ShadowPad | Source: Kaspersky",
+  "first_seen": "2025-07-21",
+  "last_seen": "2025-07-21"
+}
+
+⚠️ CRITICAL: Use "ip-dst" NOT "ip" (this is a common mistake)
+
+
+🌐 DOMAINS (Type: "domain"):
+----------------------------
+Extract ALL malicious domains:
+
+Categories to look for:
+- C2 domains
+- Phishing domains
+- Payload hosting domains
+- Infrastructure domains
+- Typosquatting domains
+- Fake/impersonation domains (e.g., fake GitHub, Google)
+- Dynamic DNS domains (ddns.net, ngrok, cloudflare tunnels)
+
+Examples from APT41:
+✓ github.githubassets.net → "Fake GitHub domain for payload delivery"
+✓ c34718cbb4c6.ngrok-free.app → "Ngrok tunnel for PowerShell C2"
+✓ www.amazonlivenews.com → "ShadowPad infrastructure"
+✓ kasperskyupdate.com → "Fake Kaspersky domain | ShadowPad infrastructure"
+
+MISP JSON Format:
+{
+  "type": "domain",
+  "category": "Network activity",
+  "to_ids": true,
+  "value": "github.githubassets.net",
+  "comment": "Fake GitHub domain for payload delivery | ShadowPad | Source: Kaspersky",
+  "first_seen": "2025-07-21",
+  "last_seen": "2025-07-21"
+}
+
+⚠️ Note: Remove http://, https://, and paths - just the domain
+
+
+🔗 URLS (Type: "url"):
+---------------------
+Extract ALL malicious URLs:
+
+Categories to look for:
+- Payload delivery URLs
+- Phishing URLs
+- C2 callback URLs
+- URL shorteners (tinyurl, bit.ly, etc.)
+- Malicious file download URLs
+- OAuth/API endpoints used for C2
+
+Examples from APT41:
+✓ https://my5353.com/ppOH5 → "Payload delivery | TOUGHPROGRESS"
+✓ https://tinyurl.com/3wnz46pv → "Payload delivery | TOUGHPROGRESS"
+✓ https://www.googleapis.com/calendar/v3/calendars/[...] → "C2 via Google Calendar"
+
+MISP JSON Format:
+{
+  "type": "url",
+  "category": "Network activity",
+  "to_ids": true,
+  "value": "https://my5353.com/ppOH5",
+  "comment": "TOUGHPROGRESS | Payload delivery | Source: juroots",
+  "first_seen": "2025-05-29",
+  "last_seen": "2025-05-29"
+}
+
+
+🔐 FILE HASHES (Types: "md5", "sha1", "sha256"):
+------------------------------------------------
+Extract ALL file hashes - these are gold for detection!
+
+Hash Types:
+- MD5: 32 hexadecimal characters
+- SHA1: 40 hexadecimal characters  
+- SHA256: 64 hexadecimal characters (preferred)
+
+Categories to look for:
+- Malware samples
+- Droppers/loaders
+- Web shells
+- Malicious documents
+- Tools and utilities
+- Legitimate tools (for detection context)
+
+Examples from APT41:
+✓ MD5: 79b949d4d1157becc6f3bde0860fc5e5 → "TOUGHPROGRESS malware"
+✓ SHA256: 92bb4ddb98eeaf11fc15bb32e71d0a63256a0ed826a03ba293ce3a8bf057a514
+   → "spinstall0.aspx web shell | ShadowPad"
+
+MISP JSON Format for MD5:
+{
+  "type": "md5",
+  "category": "Payload delivery",
+  "to_ids": true,
+  "value": "79b949d4d1157becc6f3bde0860fc5e5",
+  "comment": "TOUGHPROGRESS malware | Source: TheRavenFile",
+  "first_seen": "2025-06-03",
+  "last_seen": "2025-06-03"
+}
+
+MISP JSON Format for SHA256:
+{
+  "type": "sha256",
+  "category": "Payload delivery",
+  "to_ids": true,
+  "value": "92bb4ddb98eeaf11fc15bb32e71d0a63256a0ed826a03ba293ce3a8bf057a514",
+  "comment": "ShadowPad | spinstall0.aspx web shell | Source: Kaspersky",
+  "first_seen": "2025-07-21",
+  "last_seen": "2025-07-21"
+}
+
+
+📧 EMAIL ADDRESSES (Type: "email"):
+-----------------------------------
+Extract ALL email addresses associated with the threat:
+
+Categories to look for:
+- Attacker/threat actor emails
+- Registration emails (domain registration)
+- Phishing sender addresses
+- C2 communication emails
+- Attribution emails
+
+Examples from APT41:
+✓ apt41@inbox.ru → "Primary attacker email"
+✓ mengsimin@xqkj.top → "Associated email | Domain registration"
+✓ apt41@protonmail.com → "Secure email"
+
+MISP JSON Format:
+{
+  "type": "email",
+  "category": "Attribution",
+  "to_ids": true,
+  "value": "apt41@inbox.ru",
+  "comment": "APT41 | Primary email | Source: Threat Intelligence",
+  "first_seen": "2025-07-21",
+  "last_seen": "2025-07-21"
+}
+
+
+📞 PHONE NUMBERS (Type: "phone-number"):
+----------------------------------------
+Extract phone numbers if mentioned:
+
+Categories:
+- Registration phone numbers
+- Attribution phone numbers
+- Victim contact numbers (for context)
+
+MISP JSON Format:
+{
+  "type": "phone-number",
+  "category": "Attribution",
+  "to_ids": true,
+  "value": "136051853",
+  "comment": "APT41 | Associated phone number | Source: Threat Intelligence",
+  "first_seen": "2025-07-21",
+  "last_seen": "2025-07-21"
+}
+
+
+📁 FILENAMES (Type: "filename"):
+--------------------------------
+Extract specific malicious filenames:
+
+Categories:
+- Malware executables
+- Malicious documents
+- Web shells
+- Scripts
+- DLLs
+- Configuration files
+
+Examples:
+✓ spinstall0.aspx → "ShadowPad web shell"
+✓ update.exe → "Malware dropper"
+✓ invoice.pdf.exe → "Malicious document"
+
+MISP JSON Format:
+{
+  "type": "filename",
+  "category": "Payload delivery",
+  "to_ids": true,
+  "value": "spinstall0.aspx",
+  "comment": "ShadowPad web shell | Source: Kaspersky",
+  "first_seen": "2025-07-21",
+  "last_seen": "2025-07-21"
+}
+
+
+🔧 REGISTRY KEYS (Type: "regkey"):
+----------------------------------
+Extract Windows registry keys used for persistence or configuration:
+
+Examples:
+✓ HKLM\Software\Microsoft\Windows\CurrentVersion\Run\Update
+✓ HKCU\Software\Classes\CLSID\{GUID}\InprocServer32
+
+MISP JSON Format:
+{
+  "type": "regkey",
+  "category": "Persistence mechanism",
+  "to_ids": true,
+  "value": "HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\Update",
+  "comment": "Persistence registry key | Malware autostart",
+  "first_seen": "2025-07-21",
+  "last_seen": "2025-07-21"
+}
+
+
+🔒 MUTEX VALUES (Type: "mutex"):
+--------------------------------
+Extract mutex names used by malware for synchronization:
+
+Examples:
+✓ Global\MutexName123
+✓ {8F6F0AC4-B9A1-45fd-A8CF-72FE4F5F2F7C}
+
+MISP JSON Format:
+{
+  "type": "mutex",
+  "category": "Artifacts dropped",
+  "to_ids": true,
+  "value": "Global\\MutexName123",
+  "comment": "Malware mutex | Prevents multiple infections",
+  "first_seen": "2025-07-21",
+  "last_seen": "2025-07-21"
+}
+
+
+💾 OTHER USEFUL IOC TYPES:
+--------------------------
+- user-agent: Custom user agent strings
+- AS (Autonomous System): ASN numbers
+- x509-fingerprint-sha256: Certificate fingerprints
+- bitcoin: Cryptocurrency addresses
+- pattern-in-file: YARA rules or patterns
+- vulnerability: CVE numbers
+
+
+📝 IOC EXTRACTION CHECKLIST:
+----------------------------
+For each IOC you extract, ensure you have:
+✓ Correct type (ip-dst, domain, url, md5, sha256, email, etc.)
+✓ The actual value (IP, domain, hash, etc.)
+✓ Meaningful comment with context
+✓ Malware family or campaign name
+✓ Source attribution (who discovered it)
+✓ First seen date (YYYY-MM-DD format)
+✓ Last seen date (YYYY-MM-DD format)
+✓ Proper category ("Network activity", "Payload delivery", "Attribution")
+✓ to_ids flag set to true (for detection-worthy IOCs)
+
+
+STEP 3: MAP TO MITRE ATT&CK FRAMEWORK (COMPREHENSIVE GUIDE)
+------------------------------------------------------------
+The MITRE ATT&CK framework provides a common language for describing adversary 
+tactics and techniques. This is ESSENTIAL for threat intelligence sharing.
+
+🎯 MAPPING STRATEGY:
+1. Read attack descriptions carefully
+2. Identify WHAT the attacker did (technique)
+3. Identify WHY they did it (tactic)
+4. Find the matching ATT&CK technique ID
+5. Include both parent and sub-techniques when applicable
+6. Tag each technique in MISP JSON
+
+📚 REFERENCE: https://attack.mitre.org/
+
+🔍 HOW TO FIND TECHNIQUES:
+- Look for action keywords: "executed", "downloaded", "launched", "created"
+- Identify tools mentioned: PowerShell, WMI, Cobalt Strike, etc.
+- Note persistence methods: registry keys, scheduled tasks, services
+- Identify C2 methods: HTTP, DNS, cloud services
+- Look for credential theft: Mimikatz, LSASS dumping
+
+
+📋 MITRE ATT&CK TACTICS & COMMON TECHNIQUES:
+============================================
+
+1️⃣ INITIAL ACCESS (TA0001):
+---------------------------
+How attackers get into your network.
+
+T1190 - Exploit Public-Facing Application
+  Example: "Exploited CVE-2021-34527 in Print Spooler"
+  Keywords: vulnerability, exploit, CVE, public-facing
+
+T1566 - Phishing
+  T1566.001 - Spearphishing Attachment (malicious doc, exe)
+  T1566.002 - Spearphishing Link (malicious URL in email)
+  T1566.003 - Spearphishing via Service (LinkedIn, Teams)
+  Example: "Sent malicious Excel document via email"
+  
+T1078 - Valid Accounts
+  T1078.004 - Cloud Accounts
+  Example: "Used compromised Office 365 credentials"
+
+T1189 - Drive-by Compromise
+  Example: "Compromised website served exploit kit"
+
+T1133 - External Remote Services
+  Example: "Exploited VPN vulnerability"
+
+
+2️⃣ EXECUTION (TA0002):
+----------------------
+How attackers run malicious code.
+
+T1059 - Command and Scripting Interpreter
+  T1059.001 - PowerShell ⭐ (very common)
+  T1059.003 - Windows Command Shell (cmd.exe)
+  T1059.005 - Visual Basic
+  T1059.006 - Python
+  T1059.007 - JavaScript (via mshta.exe, wscript)
+  Example: "Executed PowerShell script to download payload"
+  
+T1047 - Windows Management Instrumentation (WMI)
+  Example: "Used WMIC to execute commands remotely"
+  
+T1204 - User Execution
+  T1204.001 - Malicious Link
+  T1204.002 - Malicious File
+  Example: "User opened malicious attachment"
+
+T1203 - Exploitation for Client Execution
+  Example: "Exploited browser vulnerability to run code"
+
+
+3️⃣ PERSISTENCE (TA0003):
+------------------------
+How attackers maintain access.
+
+T1547 - Boot or Logon Autostart Execution
+  T1547.001 - Registry Run Keys / Startup Folder ⭐
+  Example: "Added malware to HKCU\\...\\Run registry key"
+  
+T1053 - Scheduled Task/Job
+  T1053.005 - Scheduled Task (Windows)
+  T1053.003 - Cron (Linux)
+  Example: "Created scheduled task to run malware daily"
+  
+T1543 - Create or Modify System Process
+  T1543.003 - Windows Service
+  Example: "Installed malware as Windows service"
+
+T1505 - Server Software Component
+  T1505.003 - Web Shell ⭐
+  Example: "Deployed ASPX web shell on IIS server"
+
+T1078 - Valid Accounts
+  Example: "Created backdoor account"
+
+
+4️⃣ PRIVILEGE ESCALATION (TA0004):
+----------------------------------
+How attackers gain higher privileges.
+
+T1548 - Abuse Elevation Control Mechanism
+  T1548.002 - Bypass User Account Control (UAC)
+  Example: "Bypassed UAC using COM interface"
+
+T1055 - Process Injection
+  T1055.001 - Dynamic-link Library Injection
+  T1055.002 - Portable Executable Injection
+  T1055.012 - Process Hollowing
+  Example: "Injected malicious code into legitimate process"
+
+T1068 - Exploitation for Privilege Escalation
+  Example: "Exploited local privilege escalation vulnerability"
+
+T1134 - Access Token Manipulation
+  Example: "Impersonated privileged user token"
+
+
+5️⃣ DEFENSE EVASION (TA0005):
+----------------------------
+How attackers avoid detection.
+
+T1027 - Obfuscated Files or Information ⭐
+  T1027.002 - Software Packing
+  T1027.010 - Command Obfuscation
+  Example: "Used base64 encoding to obfuscate PowerShell"
+
+T1070 - Indicator Removal
+  T1070.001 - Clear Windows Event Logs
+  T1070.004 - File Deletion
+  Example: "Cleared security logs after compromise"
+
+T1574 - Hijack Execution Flow
+  T1574.002 - DLL Side-Loading ⭐
+  Example: "Used DLL side-loading to execute malware"
+
+T1562 - Impair Defenses
+  T1562.001 - Disable or Modify Tools (AV, EDR)
+  Example: "Disabled Windows Defender"
+
+T1140 - Deobfuscate/Decode Files or Information
+  Example: "Decoded base64-encoded payload"
+
+T1218 - System Binary Proxy Execution
+  T1218.005 - Mshta
+  T1218.011 - Rundll32
+  Example: "Used mshta.exe to execute malicious HTA file"
+
+
+6️⃣ CREDENTIAL ACCESS (TA0006):
+------------------------------
+How attackers steal credentials.
+
+T1003 - OS Credential Dumping ⭐⭐⭐ (critical)
+  T1003.001 - LSASS Memory (Mimikatz)
+  T1003.002 - Security Account Manager
+  T1003.003 - NTDS (Active Directory database)
+  T1003.004 - LSA Secrets
+  T1003.005 - Cached Domain Credentials
+  Example: "Used Mimikatz to dump LSASS memory"
+
+T1558 - Steal or Forge Kerberos Tickets
+  T1558.003 - Kerberoasting
+  Example: "Performed Kerberoasting attack"
+
+T1110 - Brute Force
+  T1110.003 - Password Spraying
+  Example: "Password spraying against Office 365"
+
+T1555 - Credentials from Password Stores
+  Example: "Extracted credentials from Chrome browser"
+
+
+7️⃣ DISCOVERY (TA0007):
+----------------------
+How attackers learn about the environment.
+
+T1087 - Account Discovery
+  T1087.001 - Local Account
+  T1087.002 - Domain Account
+  Example: "Enumerated domain users with net user /domain"
+
+T1083 - File and Directory Discovery
+  Example: "Searched for sensitive files"
+
+T1046 - Network Service Discovery
+  Example: "Scanned internal network with port scanner"
+
+T1057 - Process Discovery
+  Example: "Listed running processes with tasklist"
+
+T1018 - Remote System Discovery
+  Example: "Enumerated domain computers"
+
+T1082 - System Information Discovery
+  Example: "Gathered system info with systeminfo"
+
+T1016 - System Network Configuration Discovery
+  Example: "Ran ipconfig and netstat"
+
+T1069 - Permission Groups Discovery
+  Example: "Enumerated group memberships"
+
+
+8️⃣ LATERAL MOVEMENT (TA0008):
+-----------------------------
+How attackers move through the network.
+
+T1021 - Remote Services
+  T1021.001 - Remote Desktop Protocol (RDP)
+  T1021.002 - SMB/Windows Admin Shares ⭐
+  T1021.006 - Windows Remote Management (WinRM)
+  Example: "Used PsExec to execute commands on remote hosts"
+
+T1210 - Exploitation of Remote Services
+  Example: "Exploited SMB vulnerability to spread"
+
+T1550 - Use Alternate Authentication Material
+  T1550.002 - Pass the Hash
+  T1550.003 - Pass the Ticket
+  Example: "Used pass-the-hash with Impacket"
+
+
+9️⃣ COLLECTION (TA0009):
+-----------------------
+What attackers collect.
+
+T1005 - Data from Local System
+  Example: "Collected documents from user directories"
+
+T1039 - Data from Network Shared Drive
+  Example: "Accessed file shares to steal data"
+
+T1113 - Screen Capture
+  Example: "Captured screenshots periodically"
+
+T1056 - Input Capture
+  T1056.001 - Keylogging
+  Example: "Installed keylogger"
+
+T1114 - Email Collection
+  Example: "Accessed victim's email account"
+
+
+🔟 COMMAND AND CONTROL (TA0011):
+--------------------------------
+How attackers communicate with compromised systems.
+
+T1071 - Application Layer Protocol ⭐⭐⭐
+  T1071.001 - Web Protocols (HTTP/HTTPS)
+  T1071.002 - File Transfer Protocols (FTP)
+  T1071.004 - DNS
+  Example: "C2 traffic over HTTPS to malicious domain"
+
+T1573 - Encrypted Channel
+  T1573.002 - Asymmetric Cryptography
+  Example: "Used TLS encrypted C2 communications"
+
+T1568 - Dynamic Resolution
+  T1568.002 - Domain Generation Algorithms (DGA)
+  Example: "Used DGA to generate C2 domains"
+
+T1105 - Ingress Tool Transfer ⭐
+  Example: "Downloaded additional tools from C2 server"
+
+T1102 - Web Service
+  T1102.001 - Dead Drop Resolver
+  T1102.002 - Bidirectional Communication
+  Example: "Used Google Drive for C2 communications"
+
+T1090 - Proxy
+  T1090.003 - Multi-hop Proxy
+  Example: "Used compromised hosts as proxy chain"
+
+T1001 - Data Obfuscation
+  Example: "Obfuscated C2 traffic with encoding"
+
+
+1️⃣1️⃣ EXFILTRATION (TA0010):
+---------------------------
+How attackers steal data.
+
+T1041 - Exfiltration Over C2 Channel ⭐
+  Example: "Exfiltrated data over existing C2 channel"
+
+T1567 - Exfiltration Over Web Service
+  T1567.002 - Exfiltration to Cloud Storage
+  Example: "Uploaded stolen data to Dropbox"
+
+T1048 - Exfiltration Over Alternative Protocol
+  T1048.003 - Exfiltration Over Unencrypted Protocol
+  Example: "Exfiltrated data over FTP"
+
+T1029 - Scheduled Transfer
+  Example: "Scheduled nightly data exfiltration"
+
+
+1️⃣2️⃣ IMPACT (TA0040):
+---------------------
+How attackers cause damage.
+
+T1486 - Data Encrypted for Impact (Ransomware)
+  Example: "Deployed ransomware encrypting files"
+
+T1490 - Inhibit System Recovery
+  Example: "Deleted volume shadow copies"
+
+T1485 - Data Destruction
+  Example: "Wiped critical files"
+
+T1565 - Data Manipulation
+  T1565.001 - Stored Data Manipulation
+  Example: "Modified database records"
+
+
+📝 MISP JSON TAGGING FORMAT:
+===========================
+
+For each MITRE ATT&CK technique, add a tag in this format:
+
+{"name": "misp-galaxy:mitre-attack-pattern=\"Technique Name - TID\""}
+
+Examples from APT41:
+{"name": "misp-galaxy:mitre-attack-pattern=\"Web Protocols - T1071.001\""}
+{"name": "misp-galaxy:mitre-attack-pattern=\"PowerShell - T1059.001\""}
+{"name": "misp-galaxy:mitre-attack-pattern=\"DLL Side-Loading - T1574.002\""}
+{"name": "misp-galaxy:mitre-attack-pattern=\"LSASS Memory - T1003.001\""}
+
+
+⚡ TECHNIQUE MAPPING CHECKLIST:
+==============================
+✓ Read the attack narrative carefully
+✓ Identify specific actions taken by attacker
+✓ Match actions to ATT&CK techniques
+✓ Use sub-techniques when applicable (T1059.001 vs T1059)
+✓ Include techniques for ALL phases of the attack
+✓ Verify technique IDs are correct
+✓ Add tags to MISP JSON in proper format
+✓ Document techniques in threat analysis report
+
+
+STEP 4: IDENTIFY MALWARE FAMILIES AND TOOLS (COMPREHENSIVE GUIDE)
+------------------------------------------------------------------
+
+🦠 MALWARE FAMILIES:
+-------------------
+Carefully identify and document ALL malware mentioned in the report.
+
+Categories:
+- Backdoors (remote access trojans)
+- Droppers/Loaders (initial infection vectors)
+- Infostealers (credential/data theft)
+- Ransomware (encryption for extortion)
+- Web Shells (persistent web server access)
+- Rootkits (stealth/persistence)
+- Worms (self-propagating)
+- Botnets (coordinated network of infected hosts)
+
+Examples from APT41:
+✓ ShadowPad → Sophisticated backdoor with modular capabilities
+✓ TOUGHPROGRESS → Custom malware framework with C2 capabilities
+✓ GDrive Moonwalk → Malware using Google Drive for C2
+✓ DodgeBox Dropper → Initial dropper for payload delivery
+✓ StealthVector → Malware with evasion capabilities
+
+For each malware family, note:
+- Name and aliases
+- Type (backdoor, dropper, stealer, etc.)
+- Capabilities (C2, data exfiltration, persistence, etc.)
+- Associated threat actor
+- Related IOCs (hashes, domains, IPs)
+
+MISP Tag Format:
+{"name": "misp-galaxy:malware=\"MalwareName\""}
+
+Examples:
+{"name": "misp-galaxy:malware=\"ShadowPad\""}
+{"name": "misp-galaxy:malware=\"TOUGHPROGRESS\""}
+{"name": "misp-galaxy:malware=\"GDrive Moonwalk\""}
+
+
+🛠️ ATTACKER TOOLS:
+------------------
+Document legitimate and custom tools used by attackers.
+
+Common Offensive Tools:
+- Cobalt Strike (post-exploitation framework)
+- Mimikatz (credential dumping)
+- Impacket (Python framework for network protocols)
+- BloodHound (Active Directory mapping)
+- PowerShell Empire (post-exploitation)
+- Metasploit (exploitation framework)
+- PsExec (remote execution)
+- WMI (Windows Management Instrumentation)
+- Living-off-the-Land Binaries (LOLBins): cmd.exe, powershell.exe, wmic.exe
+
+Examples from APT41:
+✓ Cobalt Strike → Post-exploitation and C2
+✓ Impacket → Lateral movement via WmiExec and Atexec
+✓ Mimikatz → Credential harvesting
+
+MISP Tag Format:
+{"name": "misp-galaxy:tool=\"ToolName\""}
+
+Examples:
+{"name": "misp-galaxy:tool=\"Cobalt Strike\""}
+{"name": "misp-galaxy:tool=\"Impacket\""}
+{"name": "misp-galaxy:tool=\"Mimikatz\""}
+
+
+🎭 THREAT ACTORS:
+-----------------
+Identify the threat actor or group behind the campaign.
+
+Attribution Indicators:
+- Group name (APT41, Lazarus, etc.)
+- Aliases (different names used by researchers)
+- Country of origin
+- Motivation (espionage, financial, destructive)
+- Target sectors
+- Known TTPs (tactics, techniques, procedures)
+
+Examples:
+✓ APT41 → China-linked cyber espionage group
+✓ Lazarus → North Korea-linked APT
+✓ FIN7 → Financial crime group
+
+MISP Tag Format:
+{"name": "misp-galaxy:threat-actor=\"ActorName\""}
+{"name": "misp-galaxy:country=\"CountryName\""}
+
+Examples:
+{"name": "misp-galaxy:threat-actor=\"APT41\""}
+{"name": "misp-galaxy:country=\"China\""}
+
+
+📊 MALWARE/TOOL DOCUMENTATION CHECKLIST:
+=======================================
+✓ Identify all malware families mentioned
+✓ Note malware capabilities and purpose
+✓ Document tools used by attackers
+✓ Link malware to specific IOCs (hashes)
+✓ Associate with threat actor
+✓ Tag appropriately in MISP JSON
+✓ Include in threat analysis report
+
+
+STEP 5: CREATE MISP JSON EVENT (COMPLETE GUIDE WITH EXAMPLES)
+--------------------------------------------------------------
+This is the MOST CRITICAL deliverable. The MISP JSON event must be perfect, 
+valid, and ready for import into MISP.
+
+📋 REFERENCE TEMPLATE:
+Use "Campain Analysis/APT41_Campaign/APT41_MISP_Event.json" as your PRIMARY 
+TEMPLATE. Study its structure carefully.
+
+🎯 MISP EVENT STRUCTURE:
+The structure MUST follow this EXACT format:
+
+{
+  "Event": {
+    "date": "YYYY-MM-DD",  // Current date or campaign date
+    "threat_level_id": "1",  // 1=High, 2=Medium, 3=Low, 4=Undefined
+    "info": "Campaign Name: Brief Description",
+    "published": false,
+    "attribute_count": "XX",  // Total number of IOCs
+    "Attribute": [
+      {
+        "type": "ip-dst",  // IOC type
+        "category": "Network activity",  // Category
+        "to_ids": true,  // Enable IDS detection
+        "value": "IP_ADDRESS",  // The IOC value
+        "comment": "Context | Purpose | Source: Source_Name",
+        "first_seen": "YYYY-MM-DD",
+        "last_seen": "YYYY-MM-DD"
+      },
+      {
+        "type": "domain",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "malicious.domain.com",
+        "comment": "Malware Family | Purpose | Source: Source_Name",
+        "first_seen": "YYYY-MM-DD",
+        "last_seen": "YYYY-MM-DD"
+      },
+      {
+        "type": "url",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "https://malicious.url/payload",
+        "comment": "Payload delivery | Source: Source_Name",
+        "first_seen": "YYYY-MM-DD",
+        "last_seen": "YYYY-MM-DD"
+      },
+      {
+        "type": "md5",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "hash_value",
+        "comment": "Malware sample | Source: Source_Name",
+        "first_seen": "YYYY-MM-DD",
+        "last_seen": "YYYY-MM-DD"
+      },
+      {
+        "type": "sha256",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "hash_value",
+        "comment": "Malware sample | Source: Source_Name",
+        "first_seen": "YYYY-MM-DD",
+        "last_seen": "YYYY-MM-DD"
+      },
+      {
+        "type": "email",
+        "category": "Attribution",
+        "to_ids": true,
+        "value": "attacker@email.com",
+        "comment": "Attacker email | Source: Source_Name",
+        "first_seen": "YYYY-MM-DD",
+        "last_seen": "YYYY-MM-DD"
+      }
+    ],
+    "Tag": [
+      {"name": "tlp:amber"},  // TLP classification: white/green/amber/red
+      {"name": "type:OSINT"},  // Source type
+      {"name": "misp:threat-level=\"high\""},  // Threat level
+      {"name": "misp-galaxy:threat-actor=\"ThreatActorName\""},
+      {"name": "misp-galaxy:country=\"CountryName\""},
+      {"name": "misp-galaxy:malware=\"MalwareName\""},
+      {"name": "misp-galaxy:tool=\"ToolName\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Technique Name - TID\""}
+    ]
+  }
+}
+
+⚠️ CRITICAL MISP JSON RULES:
+============================
+1. Use "ip-dst" for IP addresses (NOT "ip") ← Common mistake!
+2. Include "comment" field for EVERY attribute with context and source
+3. Set "to_ids": true for detection-worthy IOCs
+4. Include "first_seen" and "last_seen" dates in YYYY-MM-DD format
+5. Use proper category: "Network activity", "Payload delivery", "Attribution"
+6. Count your attributes and set "attribute_count" correctly
+7. NO trailing commas in JSON (last item shouldn't have comma)
+8. Validate JSON syntax before saving
+9. Tag with TLP classification (tlp:white, tlp:green, tlp:amber, tlp:red)
+10. Tag with all relevant MITRE ATT&CK techniques
+
+
+📝 TLP (Traffic Light Protocol) CLASSIFICATIONS:
+================================================
+{"name": "tlp:red"} → Not for disclosure, restricted to specific participants
+{"name": "tlp:amber"} → Limited disclosure, recipients can share within organization
+{"name": "tlp:green"} → Community wide, limited disclosure to community
+{"name": "tlp:white"} → Unlimited disclosure, publicly shareable
+
+Default: Use tlp:amber for most threat intelligence
+
+
+🏷️ COMPLETE TAG EXAMPLES:
+========================
+
+Threat Level:
+{"name": "misp:threat-level=\"high\""}     ← For high-severity threats
+{"name": "misp:threat-level=\"medium\""}   ← For moderate threats
+{"name": "misp:threat-level=\"low\""}      ← For low-severity threats
+
+Source Type:
+{"name": "type:OSINT"}                     ← Open Source Intelligence
+{"name": "type:technical"}                 ← Technical analysis
+
+Threat Actors:
+{"name": "misp-galaxy:threat-actor=\"APT41\""}
+{"name": "misp-galaxy:threat-actor=\"Lazarus Group\""}
+{"name": "misp-galaxy:threat-actor=\"FIN7\""}
+
+Countries:
+{"name": "misp-galaxy:country=\"China\""}
+{"name": "misp-galaxy:country=\"North Korea\""}
+{"name": "misp-galaxy:country=\"Russia\""}
+
+Malware:
+{"name": "misp-galaxy:malware=\"ShadowPad\""}
+{"name": "misp-galaxy:malware=\"Cobalt Strike\""}
+{"name": "misp-galaxy:malware=\"Emotet\""}
+
+Tools:
+{"name": "misp-galaxy:tool=\"Mimikatz\""}
+{"name": "misp-galaxy:tool=\"Impacket\""}
+{"name": "misp-galaxy:tool=\"BloodHound\""}
+
+MITRE ATT&CK:
+{"name": "misp-galaxy:mitre-attack-pattern=\"PowerShell - T1059.001\""}
+{"name": "misp-galaxy:mitre-attack-pattern=\"Web Protocols - T1071.001\""}
+{"name": "misp-galaxy:mitre-attack-pattern=\"LSASS Memory - T1003.001\""}
+
+
+📊 COMPLETE WORKING EXAMPLE:
+============================
+
+{
+  "Event": {
+    "date": "2025-10-22",
+    "threat_level_id": "1",
+    "info": "Example Campaign: Phishing with Remote Access Trojan",
+    "published": false,
+    "attribute_count": "10",
+    "Attribute": [
+      {
+        "type": "ip-dst",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "192.0.2.1",
+        "comment": "C2 server | Malware RAT | Source: Vendor Report",
+        "first_seen": "2025-10-15",
+        "last_seen": "2025-10-22"
+      },
+      {
+        "type": "domain",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "malicious-c2.example.com",
+        "comment": "C2 domain | RAT communications | Source: Vendor Report",
+        "first_seen": "2025-10-15",
+        "last_seen": "2025-10-22"
+      },
+      {
+        "type": "url",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "https://malicious-c2.example.com/payload.exe",
+        "comment": "Payload delivery URL | Source: Vendor Report",
+        "first_seen": "2025-10-15",
+        "last_seen": "2025-10-22"
+      },
+      {
+        "type": "md5",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "5d41402abc4b2a76b9719d911017c592",
+        "comment": "RAT malware sample | Source: VirusTotal",
+        "first_seen": "2025-10-15",
+        "last_seen": "2025-10-22"
+      },
+      {
+        "type": "sha256",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "2c26b46b68ffc68ff99b453c1d30413413422d706483bfa0f98a5e886266e7ae",
+        "comment": "RAT malware sample | Source: VirusTotal",
+        "first_seen": "2025-10-15",
+        "last_seen": "2025-10-22"
+      },
+      {
+        "type": "email",
+        "category": "Attribution",
+        "to_ids": true,
+        "value": "attacker@example.com",
+        "comment": "Phishing sender address | Source: Email headers",
+        "first_seen": "2025-10-15",
+        "last_seen": "2025-10-22"
+      },
+      {
+        "type": "filename",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "invoice_2025.pdf.exe",
+        "comment": "Malicious attachment | Double extension | Source: Email analysis",
+        "first_seen": "2025-10-15",
+        "last_seen": "2025-10-22"
+      },
+      {
+        "type": "regkey",
+        "category": "Persistence mechanism",
+        "to_ids": true,
+        "value": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\Update",
+        "comment": "Persistence registry key | RAT autostart | Source: Malware analysis",
+        "first_seen": "2025-10-15",
+        "last_seen": "2025-10-22"
+      },
+      {
+        "type": "mutex",
+        "category": "Artifacts dropped",
+        "to_ids": true,
+        "value": "Global\\MalwareMutex123",
+        "comment": "Malware mutex | Prevents multiple instances | Source: Malware analysis",
+        "first_seen": "2025-10-15",
+        "last_seen": "2025-10-22"
+      },
+      {
+        "type": "user-agent",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "Mozilla/5.0 (CustomRAT v1.0)",
+        "comment": "Custom user agent | C2 communications | Source: Network capture",
+        "first_seen": "2025-10-15",
+        "last_seen": "2025-10-22"
+      }
+    ],
+    "Tag": [
+      {"name": "tlp:amber"},
+      {"name": "type:OSINT"},
+      {"name": "misp:threat-level=\"high\""},
+      {"name": "misp-galaxy:threat-actor=\"UNC0000\""},
+      {"name": "misp-galaxy:malware=\"RemoteAccessTrojan\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Spearphishing Attachment - T1566.001\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"PowerShell - T1059.001\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Registry Run Keys - T1547.001\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Web Protocols - T1071.001\""}
+    ]
+  }
+}
+
+
+✅ MISP JSON VALIDATION CHECKLIST:
+==================================
+Before finalizing your MISP JSON, verify:
+
+✓ Valid JSON syntax (use JSON validator)
+✓ No trailing commas
+✓ All quotes are double quotes (not single)
+✓ "attribute_count" matches number of attributes
+✓ All "type" fields use correct values (ip-dst, domain, url, md5, sha256, email)
+✓ All attributes have "comment" field with context
+✓ All attributes have "first_seen" and "last_seen" dates
+✓ "to_ids" is set to true for detection-worthy IOCs
+✓ At least one TLP tag is present
+✓ Threat actor tagged (if known)
+✓ Malware families tagged
+✓ MITRE ATT&CK techniques tagged
+✓ "info" field is descriptive and clear
+✓ "threat_level_id" is appropriate (1=High, 2=Medium, 3=Low)
+✓ File is saved as [CampaignName]_MISP_Event.json
+
+
+STEP 6: CREATE IOC TEXT/CSV FILE
+---------------------------------
+Create a separate file with all IOCs in an easy-to-read format:
+
+For TXT format (CampaignName_IOCs.txt):
+```
+================================================================================
+[Campaign Name] - Indicators of Compromise (IOCs)
+================================================================================
+
+IP ADDRESSES:
+-------------
+131.226.2.6                    # Post-exploitation C2 server | ShadowPad
+134.199.202.205               # Exploitation source IP | ShadowPad
+
+DOMAINS:
+--------
+github.githubassets.net       # Fake GitHub domain for payload delivery
+c34718cbb4c6.ngrok-free.app  # Ngrok tunnel for PowerShell C2
+
+URLS:
+-----
+https://my5353.com/ppOH5     # Payload delivery | TOUGHPROGRESS
+
+FILE HASHES (MD5):
+------------------
+79b949d4d1157becc6f3bde0860fc5e5  # TOUGHPROGRESS malware
+
+FILE HASHES (SHA256):
+---------------------
+50124174a4ac0d65bf8b6fd66f538829d1589edc73aa7cf36502e57aa5513360  # TOUGHPROGRESS
+
+EMAIL ADDRESSES:
+----------------
+apt41@inbox.ru                # Primary attacker email
+```
+
+For CSV format (CampaignName_IOCs.csv):
+```
+ioc_type,ioc_value,malware_family,first_seen,last_seen,confidence,source,description
+ip,131.226.2.6,ShadowPad,2025-07-21,2025-07-21,High,Kaspersky,Post-exploitation C2
+domain,github.githubassets.net,ShadowPad,2025-07-21,2025-07-21,High,Kaspersky,Fake GitHub domain
+```
+
+
+STEP 7: CREATE COMPREHENSIVE THREAT ANALYSIS
+---------------------------------------------
+Write a detailed markdown report (CampaignName_Comprehensive_Threat_Analysis.md):
+
+STRUCTURE:
+```markdown
+# [Campaign Name] - Comprehensive Threat Analysis
+
+## Campaign Overview
+- **Date:** Campaign date
+- **Target:** Target organizations/sectors/regions
+- **Threat Actor:** Attribution (if known)
+- **Source:** Original report URL
+
+## Campaign Significance
+- Why is this campaign important?
+- What makes it unique?
+- Geographic/sector targeting patterns
+
+## Attack Flow & Techniques
+
+### Initial Compromise
+- Entry point details
+- Exploitation techniques
+- MITRE ATT&CK mapping
+
+### Lateral Movement & Privilege Escalation
+- Tools used
+- Techniques employed
+- MITRE ATT&CK mapping
+
+### Command & Control (C2)
+- C2 infrastructure details
+- Communication methods
+- MITRE ATT&CK mapping
+
+### Payload Delivery
+- Malware families
+- Delivery methods
+- MITRE ATT&CK mapping
+
+## Infrastructure IOCs
+### Command & Control Servers
+[List all C2 IPs with descriptions]
+
+### Domains & URLs
+[List all malicious domains/URLs]
+
+### File Hashes
+[List all malware hashes]
+
+## Malware Analysis
+[Detailed analysis of each malware family]
+
+## MITRE ATT&CK Mapping
+[Complete mapping organized by tactics]
+
+## Detection Recommendations
+### Network Monitoring
+### Endpoint Detection
+### Behavioral Analysis
+
+## Mitigation Strategies
+### Technical Controls
+### Operational Controls
+
+## Intelligence Gaps
+[What's unknown or needs further research]
+
+## References
+[List all sources]
+```
+
+
+STEP 8: CREATE MISP REPORT
+---------------------------
+Create a MISP_Report.md file summarizing the MISP event:
+
+```markdown
+# MISP Report - [Campaign Name]
+
+## Executive Summary
+[Brief overview of the threat]
+
+## Campaign Overview
+- **Campaign Name:** 
+- **Threat Actor:**
+- **Target:**
+- **Threat Level:** High/Medium/Low
+- **Date:**
+
+## Threat Intelligence Summary
+### Primary Attack Vectors
+### Key Indicators of Compromise (IOCs)
+
+## Technical Analysis
+### Attack Techniques
+### Malware Capabilities
+
+## MITRE ATT&CK Mapping
+[Organized by tactics]
+
+## Detection Recommendations
+[How to detect this threat]
+
+## Mitigation Strategies
+[How to defend against this threat]
+
+## MISP Event Details
+- **Event ID:**
+- **Date:**
+- **Threat Level:**
+- **Attribute Count:**
+```
+
+
+STEP 9: CREATE MITRE ATT&CK MAPPING DOCUMENT (OPTIONAL)
+--------------------------------------------------------
+For complex campaigns, create a dedicated MITRE ATT&CK mapping file:
+CampaignName_MITRE_ATTACK_Mapping.md
+
+Organize by tactics (Initial Access, Execution, Persistence, etc.) with 
+technique IDs, names, and campaign-specific usage examples.
+
+
+================================================================================
+    DIRECTORY STRUCTURE AND FILE NAMING
+================================================================================
+
+For each campaign analysis, create a folder structure under "Campain Analysis/":
+
+Campain Analysis/
+└── [CampaignName]/
+    ├── [CampaignName]_MISP_Event.json          # MISP JSON event
+    ├── [CampaignName]_IOCs.txt or .csv          # IOC list
+    ├── [CampaignName]_Comprehensive_Threat_Analysis.md
+    ├── [CampaignName]_MITRE_ATTACK_Mapping.md  # Optional
+    └── MISP_Report.md                           # MISP summary report
+
+NAMING CONVENTIONS:
+- Use underscores (_) instead of spaces
+- Use descriptive campaign names
+- Include threat actor name if known (e.g., APT41_Campaign)
+- Be consistent with file extensions (.md, .json, .txt, .csv)
+
+
+================================================================================
+    QUALITY STANDARDS AND BEST PRACTICES
+================================================================================
+
+1. ACCURACY:
+   - Verify all IOCs are correctly typed (ip-dst, domain, url, md5, sha256)
+   - Double-check MITRE ATT&CK technique IDs
+   - Ensure dates are in YYYY-MM-DD format
+
+2. COMPLETENESS:
+   - Extract ALL IOCs from the source material
+   - Don't miss any indicators mentioned in the article
+   - Include context for each IOC (what it's used for)
+
+3. CONTEXT:
+   - Always add comments to IOCs explaining their purpose
+   - Include the source of each IOC
+   - Note the malware family associated with each IOC
+
+4. FORMATTING:
+   - Follow JSON syntax strictly for MISP events
+   - Use proper markdown formatting for reports
+   - Maintain consistent indentation (2 spaces for JSON)
+
+5. TAGGING:
+   - Always include TLP classification
+   - Tag with threat actors when known
+   - Tag with malware families
+   - Tag with MITRE ATT&CK techniques
+   - Use proper galaxy naming: "misp-galaxy:malware=\"MalwareName\""
+
+6. ATTRIBUTION:
+   - Always cite sources in comments
+   - Include source URLs in comprehensive analysis
+   - Credit researchers/vendors who discovered the threat
+
+7. DATES:
+   - Use campaign dates when available
+   - Use current date if campaign dates are unknown
+   - Be consistent with date formats (YYYY-MM-DD)
+
+
+================================================================================
+    REFERENCE: APT41 CAMPAIGN AS TEMPLATE
+================================================================================
+
+LOCATION: Campain Analysis/APT41_Campaign/
+
+The APT41 campaign serves as your GOLD STANDARD template. Study these files:
+
+1. APT41_MISP_Event.json
+   - Perfect example of MISP JSON structure
+   - Shows proper IOC formatting
+   - Demonstrates comprehensive tagging
+
+2. APT41_comprehensive_analysis.md
+   - Example of thorough threat analysis
+   - Shows proper MITRE ATT&CK mapping
+   - Includes all necessary sections
+
+3. APT41_IOCs.csv
+   - Shows IOC organization and formatting
+   - Demonstrates proper categorization
+
+4. MISP_Report.md
+   - Template for MISP event summaries
+   - Shows executive summary format
+
+
+================================================================================
+    COMMON PITFALLS TO AVOID
+================================================================================
+
+1. ❌ Using "ip" instead of "ip-dst" in MISP JSON
+2. ❌ Missing "comment" fields in MISP attributes
+3. ❌ Incorrect MITRE ATT&CK technique IDs
+4. ❌ Inconsistent date formats
+5. ❌ Missing source attribution in IOC comments
+6. ❌ Incomplete IOC extraction (missing some from the source)
+7. ❌ Invalid JSON syntax (missing commas, brackets, quotes)
+8. ❌ Not tagging with TLP classification
+9. ❌ Using wrong category for IOC types
+10. ❌ Missing "to_ids": true flag for detection-worthy IOCs
+
+
+================================================================================
+    ADDITIONAL FEATURES (OPTIONAL)
+================================================================================
+
+SIGMA RULES:
+If the campaign warrants detection rules, create Sigma rules under:
+Sigma Rules/[CampaignName]/
+- Follow YAML format for Sigma rules
+- Include detection logic for key techniques
+- Reference IOCs in the rules
+
+CTI QUARTERLY REPORTS:
+Update the CTI_Quarterly_Activity_Report_Q[X]_YYYY.md with new campaigns
+
+THREAT TRACKING:
+Update threat_campaign_tracking.csv with campaign metadata
+
+
+================================================================================
+    WORKFLOW SUMMARY
+================================================================================
+
+1. ✅ Receive URL from user
+2. ✅ Read and analyze the threat intelligence content
+3. ✅ Extract ALL IOCs (IPs, domains, URLs, hashes, emails, etc.)
+4. ✅ Map techniques to MITRE ATT&CK
+5. ✅ Identify malware families and tools
+6. ✅ Create folder: Campain Analysis/[CampaignName]/
+7. ✅ Generate MISP JSON event ([CampaignName]_MISP_Event.json)
+8. ✅ Create IOC list ([CampaignName]_IOCs.txt or .csv)
+9. ✅ Write comprehensive analysis ([CampaignName]_Comprehensive_Threat_Analysis.md)
+10. ✅ Create MISP report (MISP_Report.md)
+11. ✅ Optional: Create MITRE ATT&CK mapping document
+12. ✅ Optional: Generate Sigma detection rules
+
+
+================================================================================
+    EXPECTED OUTPUT QUALITY
+================================================================================
+
+When a user provides a URL, they expect:
+
+✓ A complete, valid MISP JSON event ready for import
+✓ All IOCs extracted and properly categorized
+✓ Detailed threat analysis with context
+✓ Proper MITRE ATT&CK mapping
+✓ Detection recommendations
+✓ Mitigation strategies
+✓ Professional formatting and organization
+
+The output should be IMMEDIATELY USABLE by security operations teams to:
+- Import into MISP for threat intelligence sharing
+- Configure detection rules in SIEM/IDS/IPS
+- Update threat hunting playbooks
+- Brief stakeholders on the threat
+- Prioritize defense improvements
+
+
+================================================================================
+    REAL-WORLD APPLICATION EXAMPLES
+================================================================================
+
+🎓 EXAMPLE WALKTHROUGH: Analyzing a Threat Report
+--------------------------------------------------
+
+SCENARIO: You receive this URL:
+"https://securityvendor.com/blog/apt-group-targets-financial-sector"
+
+STEP-BY-STEP EXECUTION:
+
+1. READ THE ARTICLE:
+   - Identify threat actor: "APT-Finance" (fictional)
+   - Target: Financial sector, banks in North America
+   - Method: Spearphishing with malicious Excel macros
+   - Malware: Custom backdoor named "BankRAT"
+   
+2. EXTRACT IOCs FROM ARTICLE:
+   IPs mentioned:
+   - 203.0.113.50 (C2 server)
+   - 203.0.113.51 (Backup C2)
+   
+   Domains mentioned:
+   - secure-bankupdate.com
+   - financial-portal-secure.net
+   
+   Hashes mentioned:
+   - MD5: abc123def456... (Excel document)
+   - SHA256: fedcba987654... (BankRAT sample)
+   
+   Emails mentioned:
+   - security@financial-portal-secure.net (phishing sender)
+
+3. MAP TO MITRE ATT&CK:
+   - T1566.001 (Spearphishing Attachment) - Excel document
+   - T1059.005 (Visual Basic) - Macro execution
+   - T1071.001 (Web Protocols) - HTTP C2
+   - T1547.001 (Registry Run Keys) - Persistence
+   - T1003.001 (LSASS Memory) - Credential dumping
+
+4. CREATE FOLDER:
+   Campain Analysis/APT_Finance_Banking_Campaign/
+
+5. GENERATE FILES:
+   - APT_Finance_Banking_Campaign_MISP_Event.json
+   - APT_Finance_Banking_Campaign_IOCs.txt
+   - APT_Finance_Banking_Campaign_Comprehensive_Threat_Analysis.md
+   - MISP_Report.md
+
+6. QUALITY CHECK:
+   ✓ All IOCs extracted
+   ✓ MISP JSON validates
+   ✓ MITRE techniques mapped
+   ✓ Files properly formatted
+   ✓ Ready for use by SOC team
+
+
+🔍 TIPS FOR SUCCESS:
+====================
+
+1. READ THOROUGHLY:
+   - Don't skim - read every paragraph
+   - Check appendices and tables
+   - Look for IOC sections at the end of reports
+   - Follow linked references for additional IOCs
+
+2. BE SYSTEMATIC:
+   - Use the checklist approach
+   - Extract one type of IOC at a time
+   - Document as you go
+   - Don't rely on memory
+
+3. PROVIDE CONTEXT:
+   - Every IOC needs a comment explaining its purpose
+   - Include the source (who discovered it)
+   - Note the malware family
+   - Explain the role (C2, payload delivery, etc.)
+
+4. VALIDATE EVERYTHING:
+   - Check JSON syntax
+   - Verify MITRE technique IDs on attack.mitre.org
+   - Ensure dates are in correct format
+   - Count your IOCs and update attribute_count
+
+5. USE THE TEMPLATE:
+   - Always refer to APT41_Campaign for structure
+   - Copy the format exactly
+   - Don't improvise new structures
+   - Match the professionalism and detail level
+
+
+🎯 QUALITY BENCHMARKS:
+======================
+
+Your output should meet these standards:
+
+A. COMPLETENESS:
+   ✓ Every IOC from the source extracted
+   ✓ All MITRE techniques mapped
+   ✓ Complete threat analysis with all sections
+   ✓ Comprehensive IOC file with categorization
+   ✓ Executive summary in MISP report
+
+B. ACCURACY:
+   ✓ No typos in IOCs (they won't work!)
+   ✓ Correct MITRE technique IDs
+   ✓ Valid JSON syntax
+   ✓ Appropriate threat level classification
+   ✓ Accurate dates
+
+C. PROFESSIONALISM:
+   ✓ Consistent formatting
+   ✓ Proper markdown structure
+   ✓ Clear, concise writing
+   ✓ Well-organized sections
+   ✓ Professional terminology
+
+D. ACTIONABILITY:
+   ✓ SOC can import MISP event immediately
+   ✓ Detection recommendations are implementable
+   ✓ IOCs are ready for blocking/alerting
+   ✓ Mitigation strategies are practical
+   ✓ Context helps prioritization
+
+
+================================================================================
+    CAMPAIGN FOLDER EXAMPLES IN YOUR REFERENCE
+================================================================================
+
+You have access to 40+ real-world campaign analyses. Study these examples:
+
+ESSENTIAL REFERENCES:
+- APT41_Campaign/ ⭐⭐⭐ (PRIMARY TEMPLATE - study this first!)
+- APT27_Emissary_Panda_Campaign/
+- APT28_Operation_Phantom_Net_Voxel_Campaign/
+- MuddyWater_Cairo_Diplomatic_Campaign/
+- Ransomware_Incidents_Japan_H1_2025_Campaign/
+
+Each folder demonstrates:
+- Professional MISP JSON structure
+- Comprehensive IOC extraction
+- MITRE ATT&CK mapping
+- Detailed threat analysis
+- Detection and mitigation recommendations
+
+Browse through multiple campaigns to understand the consistency and quality 
+expected across all analyses.
+
+
+================================================================================
+    COMMON QUESTIONS & ANSWERS
+================================================================================
+
+Q: What if the report doesn't mention specific IOCs?
+A: Extract what's available. If no IPs/domains/hashes are mentioned, focus on 
+   techniques, TTPs, and create a detailed analysis. Note in the MISP report 
+   that specific IOCs were not disclosed.
+
+Q: What if I'm unsure about the MITRE technique ID?
+A: Visit https://attack.mitre.org/ and search for the technique by name or 
+   behavior. Verify the ID before including it. When in doubt, check how 
+   similar techniques were mapped in the APT41 campaign.
+
+Q: What date should I use for first_seen/last_seen?
+A: Use the dates mentioned in the report. If not specified, use the article 
+   publication date. If that's unavailable, use the current date.
+
+Q: How do I handle defanged IOCs like hxxp:// or [.]com?
+A: Convert them back to proper format: hxxp:// → http://, [.]com → .com
+
+Q: What if the campaign doesn't have a specific name?
+A: Create a descriptive name based on the threat actor, target, or technique.
+   Examples: "FIN7_Retail_Campaign", "Phishing_Healthcare_Oct2025", 
+   "Ransomware_Manufacturing_Attack"
+
+Q: How many MITRE techniques should I map?
+A: Map ALL techniques described in the report. A comprehensive campaign might 
+   have 10-20 techniques across multiple tactics. Don't artificially limit 
+   the mapping.
+
+Q: Should I include deprecated or old IOCs?
+A: Yes! Even old IOCs are valuable for historical analysis and threat hunting. 
+   Include them with appropriate dates and note if they're no longer active.
+
+
+================================================================================
+    ERROR PREVENTION CHECKLIST
+================================================================================
+
+Before submitting your analysis, verify you avoided these common errors:
+
+JSON ERRORS:
+❌ Using "ip" instead of "ip-dst"
+❌ Missing commas between attributes
+❌ Trailing comma on last attribute
+❌ Single quotes instead of double quotes
+❌ Unescaped backslashes in registry keys
+❌ Missing closing brackets
+❌ Incorrect "attribute_count"
+
+CONTENT ERRORS:
+❌ Missing IOC comments
+❌ No source attribution
+❌ Incorrect MITRE technique IDs
+❌ Wrong date format (use YYYY-MM-DD)
+❌ Missing TLP tags
+❌ Incomplete IOC extraction
+❌ No threat actor tagging
+
+FORMAT ERRORS:
+❌ Inconsistent markdown formatting
+❌ Missing sections in threat analysis
+❌ Poor organization
+❌ Typos in IOCs
+❌ Broken links or references
+
+PROCESS ERRORS:
+❌ Didn't read entire source article
+❌ Didn't check APT41 template
+❌ Didn't validate JSON syntax
+❌ Rushed through without quality check
+❌ Didn't cross-reference linked sources
+
+
+================================================================================
+    FINAL NOTES FOR AI AGENTS
+================================================================================
+
+🎯 YOUR MISSION:
+Transform unstructured threat intelligence into structured, actionable 
+intelligence that security teams can immediately deploy for defense.
+
+⚡ KEY PRINCIPLES:
+1. ACCURACY - Every detail must be correct
+2. COMPLETENESS - Extract everything, miss nothing
+3. CONTEXT - Explain the "why" and "how" for each IOC
+4. CONSISTENCY - Match the APT41 template exactly
+5. PROFESSIONALISM - Maintain high standards throughout
+
+🏆 SUCCESS CRITERIA:
+- MISP JSON imports without errors
+- SOC team can immediately use IOCs for detection
+- Threat analysts understand the campaign completely
+- Executives can brief stakeholders from your report
+- Detection engineers can write rules from your analysis
+
+📚 CONTINUOUS LEARNING:
+- Study the Campaign Analysis folder examples
+- Compare your output to APT41 quality standards
+- Learn from the variety of campaign types
+- Understand different threat actor behaviors
+- Recognize patterns in TTPs
+
+🚀 BEST PRACTICES:
+- Work methodically through each step
+- Don't skip the quality checks
+- Provide rich context for every IOC
+- Map techniques comprehensively
+- Write for your audience (technical analysts + executives)
+
+Remember: Your analysis will be used to defend real organizations against real 
+threats. Quality and accuracy are paramount. Lives, businesses, and critical 
+infrastructure may depend on the intelligence you provide.
+
+When you receive a URL or threat intelligence source:
+1. Take your time
+2. Be thorough
+3. Follow the template
+4. Validate everything
+5. Provide actionable intelligence
+
+Good luck with your cyber threat intelligence analysis!
+
+================================================================================
+                           END OF INSTRUCTIONS
+================================================================================
+

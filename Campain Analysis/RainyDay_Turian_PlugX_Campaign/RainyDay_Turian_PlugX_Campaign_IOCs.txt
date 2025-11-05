@@ -1,0 +1,229 @@
+# RainyDay, Turian, and PlugX Variant Campaign IOCs
+# Source: Cisco Talos - A Deep Dive into RainyDay, Turian, and a new PlugX Variant
+# Date: September 28, 2025
+# Campaign: Advanced threat actors leveraging DLL search order hijacking techniques
+
+## Threat Actor Profile
+
+### Primary Identifiers
+- **Campaign Name**: RainyDay, Turian, and PlugX Variant Campaign
+- **Threat Type**: DLL Search Order Hijacking with Multiple Malware Families
+- **Associated Malware**: RainyDay, Turian, PlugX Variant
+- **Threat Level**: High
+- **Source**: Cisco Talos Intelligence
+
+### Campaign Overview
+- **Attack Vector**: DLL search order hijacking techniques
+- **Primary Objective**: Persistence, evasion, and data exfiltration
+- **Target**: Windows systems with vulnerable DLL search paths
+- **Infection Chain**: DLL hijacking → Malware deployment → Persistence → C2 communication
+
+## File Indicators
+
+### Malware Samples (SHA-256)
+| **Hash** | **Description** | **Category** |
+|----------|-----------------|--------------|
+| e29767ffb75be9f363a39ba9b66785ecfc992e3d91ec9fc46515ef94c37dc0b6 | RainyDay malware sample | Payload delivery |
+| 00dbc8a4b3121af5a19504a9d969e36e709556420a6117eb3533f1d2a8100fd9 | Turian malware sample | Payload delivery |
+| aec2d0cbd2f195bf35e55019a29f0d6109451eb85dc7941b73e3b562b065a11c | PlugX variant sample | Payload delivery |
+| 2755de59ef87f9f38c236ed860a1f6f41a1d864126f54c4c0a7f87d4b4f63b20 | Malware sample | Payload delivery |
+| fe4f88bdfff87a94bd57bc16c20d199ee548e551b4aca852bcc013d0955d7ce8 | Malware sample | Payload delivery |
+| 3480613294bc1e1704616dbf5628b92d7186246b87dbef1c8c3dbae13fe35c8b | Malware sample | Payload delivery |
+| a12ed375965859d9434c9f651eef2f3663bb076963fec31723176c9083117671 | Malware sample | Payload delivery |
+| 906ff72d4ea9cd831c58dc009fb1bbe407e8f430208a63d3dffd3f8e1da73f6e | Malware sample | Payload delivery |
+| f0ad27f8737ac1a079a52c91d8b5cdd554cd42dccc597de8337e0c25d5287dd2 | Malware sample | Payload delivery |
+| 42c9505c2c55b80e0e311cd6da6a5263b946c8ae8bd8162b0280a1e9be7f174b | Malware sample | Payload delivery |
+| b691b2c1846ea75bb5b07a21c8664ecdb6379685623ba45fe6ca552e94a58ebc | Malware sample | Payload delivery |
+| 0ec83d1deb6065cac8ba8f849cdf5672da7313ec2e860a7d71bb7e397e661394 | Malware sample | Payload delivery |
+| 7b028a9bd2bc0c306ab6561cf702406f5925fc073f9d0d2d9408ceccd6907743 | Malware sample | Payload delivery |
+| a92ed5f831c99bb84208ef7d7c733e0183a79de40f9d3b3be54744951f0a1391 | Malware sample | Payload delivery |
+| ab526d5ed335860ac2fe0adee26de1a95a3c528299800ddbb4d1e2dd91267252 | Malware sample | Payload delivery |
+| fd87149d6b8fdcad5d84ba4a3ca52e1cef8f0c54cafca6dbbb5d156f313d79dd | Malware sample | Payload delivery |
+| fd6b1ca0f26e54fa9c97ea15c834e58ffb71798df38071ad00b14f19d6a4126c | Malware sample | Payload delivery |
+| c91595edd1c9a0a2c1168e3bfa532e4a7dbb6b1380afd80ba445b728622798a4 | Malware sample | Payload delivery |
+| 03CEC3B010853893310FEA486ECFDDF09642A7A5C695C70DB77D22BC7C402234 | Malware sample | Payload delivery |
+| 10479191F2E06FF11797FC4DDA2E38AE6667C9DC396FAC32A6CF76965358ADE6 | Malware sample | Payload delivery |
+| 0443289B1FC556C5EF4BBFA13774500E3936D965799A9C27BE0601170601094D | Malware sample | Payload delivery |
+| b1EE96026A3FC0EE55DAB3B73896E88760F909B3C52D4A0152288D90E63F2E63 | Malware sample | Payload delivery |
+| b03fe49036c3830f149135068ff54f5c6c6622008a6fcb7edbf6b352e9a0acc0 | Malware sample | Payload delivery |
+
+## Network Indicators
+
+### IP Addresses
+| **IP Address** | **Description** | **Category** |
+|----------------|-----------------|--------------|
+| 141.164.59.111 | Malicious C2 infrastructure | Network activity |
+| 66.42.62.253 | Malicious C2 infrastructure | Network activity |
+| 45.114.192.137 | Malicious C2 infrastructure | Network activity |
+| 103.9.14.218 | Malicious C2 infrastructure | Network activity |
+| 117.254.105.200 | Malicious C2 infrastructure | Network activity |
+| 103.136.45.108 | Malicious C2 infrastructure | Network activity |
+| 103.172.10.165 | Malicious C2 infrastructure | Network activity |
+| 117.239.199.202 | Malicious C2 infrastructure | Network activity |
+| 23.254.225.184 | Malicious C2 infrastructure | Network activity |
+
+### Domains
+| **Domain** | **Description** | **Category** |
+|------------|-----------------|--------------|
+| pay.googleinstall.com | Malicious C2 domain | Network activity |
+| mailserver.kozow.com | Malicious C2 domain | Network activity |
+| newsinfom.org | Malicious C2 domain | Network activity |
+| asp.asphspes.com | Malicious C2 domain | Network activity |
+
+## Malware Families
+
+### RainyDay
+- **Type**: DLL hijacking malware
+- **Capabilities**: DLL search order hijacking, persistence, evasion
+- **Target**: Windows systems with vulnerable DLL search paths
+- **Evasion**: Advanced evasion techniques including debugger evasion
+
+### Turian
+- **Type**: DLL hijacking malware
+- **Capabilities**: DLL search order hijacking, persistence, evasion
+- **Target**: Windows systems with vulnerable DLL search paths
+- **Evasion**: Sophisticated evasion techniques
+
+### PlugX Variant
+- **Type**: Remote Access Trojan (RAT) with DLL hijacking
+- **Capabilities**: Remote access, data exfiltration, persistence
+- **Target**: Windows systems with vulnerable DLL search paths
+- **Evasion**: Advanced evasion and anti-analysis techniques
+
+## Attack Techniques
+
+### DLL Search Order Hijacking
+- **Technique**: T1574.001 - DLL Search Order Hijacking
+- **Description**: Abuse of Windows DLL search order to load malicious DLLs
+- **Implementation**: Placing malicious DLLs in directories searched before legitimate ones
+- **Evasion**: Bypassing security controls through legitimate-looking DLL loading
+
+### Masquerading
+- **Technique**: T1036 - Masquerading
+- **Description**: Hiding malicious activities behind legitimate-looking processes
+- **Implementation**: Using legitimate process names and file locations
+- **Evasion**: Avoiding detection through process masquerading
+
+### Debugger Evasion
+- **Technique**: T1622 - Debugger Evasion
+- **Description**: Detecting and avoiding debugger environments
+- **Implementation**: Anti-debugging techniques and environment checks
+- **Evasion**: Preventing analysis and reverse engineering
+
+### Process Injection
+- **Technique**: T1055 - Process Injection
+- **Description**: Injecting malicious code into legitimate processes
+- **Implementation**: DLL injection and process hollowing
+- **Evasion**: Hiding malicious activities within legitimate processes
+
+## Technical Details
+
+### DLL Search Order Hijacking
+- **Windows DLL Search Order**: 
+  1. Application directory
+  2. System directory (C:\Windows\System32)
+  3. 16-bit system directory (C:\Windows\System)
+  4. Windows directory (C:\Windows)
+  5. Current directory
+  6. Directories in PATH environment variable
+- **Abuse Vector**: Placing malicious DLLs in directories searched before legitimate ones
+- **Evasion**: Using legitimate-looking DLL names and locations
+
+### Evasion Techniques
+- **Anti-Debugging**: Detecting debugger presence and altering behavior
+- **Anti-Analysis**: Detecting analysis environments and evading detection
+- **Process Masquerading**: Hiding behind legitimate processes
+- **File Masquerading**: Using legitimate file names and locations
+
+### Persistence Mechanisms
+- **DLL Hijacking**: Persistent DLL loading through search order abuse
+- **Process Injection**: Long-term persistence through process injection
+- **Registry Modification**: Registry-based persistence mechanisms
+- **Service Installation**: Service-based persistence
+
+## MITRE ATT&CK Techniques
+
+### Initial Access
+T1574.001 - DLL Search Order Hijacking
+
+### Execution
+T1055 - Process Injection
+T1059.001 - Command and Scripting Interpreter: PowerShell
+
+### Persistence
+T1574.001 - DLL Search Order Hijacking
+T1055 - Process Injection
+
+### Defense Evasion
+T1036 - Masquerading
+T1622 - Debugger Evasion
+T1027 - Obfuscated Files or Information
+T1140 - Deobfuscate/Decode Files or Information
+T1562.001 - Impair Defenses: Disable or Modify Tools
+
+### Credential Access
+T1003 - OS Credential Dumping
+T1555 - Credentials from Password Stores
+T1056.001 - Input Capture: Keylogging
+
+### Discovery
+T1087.004 - Account Discovery: Cloud Account
+T1018 - Remote System Discovery
+T1046 - Network Service Scanning
+
+### Collection
+T1005 - Data from Local System
+T1113 - Screen Capture
+T1119 - Automated Collection
+
+### Command and Control
+T1071.001 - Application Layer Protocol: Web Protocols
+T1102.003 - Web Service: OneDrive
+T1104 - Multi-Stage Channels
+
+### Exfiltration
+T1041 - Exfiltration Over C2 Channel
+T1567.002 - Exfiltration Over Web Service: To Cloud Storage
+
+## Detection Patterns
+
+### Network Indicators
+- **C2 Communication**: Connections to malicious IP addresses and domains
+- **DNS Queries**: Queries to malicious domains
+- **HTTP/HTTPS Traffic**: Encrypted C2 communication
+- **Suspicious Domains**: Domains with suspicious patterns
+
+### Endpoint Indicators
+- **DLL Loading**: Unusual DLL loading patterns
+- **Process Injection**: Process injection activities
+- **File System**: Unusual file access patterns
+- **Registry**: Registry modifications
+
+### Behavioral Indicators
+- **DLL Hijacking**: DLL search order abuse
+- **Process Masquerading**: Process name and location abuse
+- **Anti-Debugging**: Debugger evasion techniques
+- **Evasion**: Advanced evasion techniques
+
+## Mitigation Strategies
+
+### Technical Controls
+- **DLL Security**: Implement DLL search order security
+- **Process Monitoring**: Monitor for process injection
+- **File System Monitoring**: Monitor for unusual file access
+- **Registry Monitoring**: Monitor for registry modifications
+
+### Administrative Controls
+- **Access Controls**: Implement proper access controls
+- **User Training**: Provide security awareness training
+- **Incident Response**: Develop incident response procedures
+- **Security Policies**: Implement comprehensive security policies
+
+### Monitoring and Detection
+- **Behavioral Analytics**: Implement behavioral analysis
+- **Threat Hunting**: Conduct proactive threat hunting
+- **IOC Monitoring**: Monitor for known threat indicators
+- **Advanced Detection**: Deploy advanced detection capabilities
+
+## Threat Level
+High - Advanced threat actors using sophisticated DLL hijacking techniques with multiple malware families demonstrating advanced evasion and persistence capabilities.

@@ -1,0 +1,209 @@
+# Fake AI Installers Campaign IOCs
+# Source: Cisco Talos Intelligence
+# Date: May 28, 2025
+# Campaign: Cybercriminals camouflaging threats as AI tool installers
+
+## Threat Actor Profile
+
+### Primary Identifiers
+- **Campaign Name**: Fake AI Installers Campaign
+- **Threat Type**: Social Engineering and Malware Distribution
+- **Target**: Users seeking AI tools and applications
+- **Threat Level**: High
+- **Attack Vector**: Social Engineering via Fake AI Installers
+
+### Campaign Overview
+- **Target**: Users downloading AI tools and applications
+- **Delivery Method**: Fake AI tool installers and malicious executables
+- **Primary Objective**: Malware distribution and system compromise
+- **Infection Chain**: Fake AI installer → Malware deployment → System compromise
+
+## Malware Samples
+
+### SHA256 Hashes
+| **SHA256** | **Description** | **Category** | **Malware Type** |
+|------------|-----------------|--------------|------------------|
+| 507103bf93e50a8b7b2944c402f1403402e2f607930fa7822bb64236c1fba23a | CyberLock dropper | Payload delivery | Dropper |
+| 07d73f4822549af4ec61d16ed366133dae1733ce1d6ad0a27fc80c94956abc51 | CyberLock ransomware PowerShell script | Payload delivery | Ransomware |
+| e1c4603d8354bb53e9ba93b860db6ae853d64bce0fe25a37033bfe260ea63f23 | Lucky_Gh0$t dropper | Payload delivery | Dropper |
+| e019c6f094965c3bccc0a7ba09bfb09c4ff7059795da5b66b6e7a7c0ac8ef7ef | Lucky_Gh0$t ransomware | Payload delivery | Ransomware |
+| 25f863c6190b727c45b762b70091a8d8f6cb98ff44db05044ba76a46d3c17a3d | Numero dropper | Payload delivery | Dropper |
+| 6ccaef03dcab293d23494070aacfd4b94d7defd14af39dc543f2f551846e9d50 | Numero Malware | Payload delivery | Malware |
+| 7de095a011a3dcd48f806dcb6a48d5262e06bec2d63d828b85436f79c83bcd70 | Shellcode | Payload delivery | Shellcode |
+| 2381929126d3eb17402d77103f6e07a272a6fad54ec64225a6d5e1f31ff057ac | Batch Script | Payload delivery | Script |
+
+## Malware Analysis
+
+### CyberLock Ransomware Family
+- **Dropper**: 507103bf93e50a8b7b2944c402f1403402e2f607930fa7822bb64236c1fba23a
+- **Ransomware**: 07d73f4822549af4ec61d16ed366133dae1733ce1d6ad0a27fc80c94956abc51
+- **Type**: Ransomware-as-a-Service (RaaS)
+- **Capabilities**: File encryption, ransom demands, system disruption
+
+### Lucky_Gh0$t Ransomware Family
+- **Dropper**: e1c4603d8354bb53e9ba93b860db6ae853d64bce0fe25a37033bfe260ea63f23
+- **Ransomware**: e019c6f094965c3bccc0a7ba09bfb09c4ff7059795da5b66b6e7a7c0ac8ef7ef
+- **Type**: Ransomware with advanced evasion techniques
+- **Capabilities**: File encryption, anti-analysis, persistence
+
+### Numero Malware Family
+- **Dropper**: 25f863c6190b727c45b762b70091a8d8f6cb98ff44db05044ba76a46d3c17a3d
+- **Malware**: 6ccaef03dcab293d23494070aacfd4b94d7defd14af39dc543f2f551846e9d50
+- **Type**: Multi-purpose malware
+- **Capabilities**: Data theft, system compromise, backdoor access
+
+### Additional Components
+- **Shellcode**: 7de095a011a3dcd48f806dcb6a48d5262e06bec2d63d828b85436f79c83bcd70
+- **Batch Script**: 2381929126d3eb17402d77103f6e07a272a6fad54ec64225a6d5e1f31ff057ac
+
+## Attack Techniques
+
+### Social Engineering
+- **Fake AI Installers**: Malicious executables disguised as legitimate AI tools
+- **Social Engineering**: Exploiting user trust in AI applications
+- **Phishing**: Targeted attacks on AI tool users
+- **Brand Impersonation**: Impersonating legitimate AI companies
+
+### Initial Access
+- **Malicious Downloads**: Fake AI tool installers
+- **Social Engineering**: Exploiting user curiosity about AI tools
+- **Drive-by Downloads**: Automatic malware installation
+- **User Execution**: Tricking users into executing malicious files
+
+### Execution
+- **Dropper Execution**: Initial malware deployment
+- **Ransomware Deployment**: Encryption of user files
+- **Shellcode Execution**: Low-level system access
+- **Script Execution**: Batch script execution for persistence
+
+### Persistence
+- **Registry Modification**: Modifying Windows registry for persistence
+- **Scheduled Tasks**: Creating scheduled tasks for persistence
+- **Service Installation**: Installing malicious services
+- **Startup Programs**: Adding to startup programs
+
+### Defense Evasion
+- **File Obfuscation**: Hiding malicious code
+- **Anti-Analysis**: Evading security analysis tools
+- **Process Injection**: Injecting into legitimate processes
+- **Code Signing**: Using fake or stolen certificates
+
+### Impact
+- **Data Encryption**: Encryption of user files
+- **Ransom Demands**: Demanding payment for decryption
+- **System Disruption**: Disrupting normal business operations
+- **Data Theft**: Stealing sensitive information
+
+## MITRE ATT&CK Techniques
+
+### Initial Access
+T1566.001 - Spearphishing Attachment
+T1566.002 - Spearphishing Link
+T1190 - Exploit Public-Facing Application
+T1078.001 - Valid Accounts: Default Accounts
+
+### Execution
+T1059.001 - Command and Scripting Interpreter: PowerShell
+T1059.003 - Command and Scripting Interpreter: Windows Command Shell
+T1059.005 - Command and Scripting Interpreter: Visual Basic
+T1204.002 - User Execution: Malicious File
+
+### Persistence
+T1543.003 - Create or Modify System Process: Windows Service
+T1053.005 - Scheduled Task/Job: Scheduled Task
+T1547.001 - Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder
+
+### Defense Evasion
+T1027 - Obfuscated Files or Information
+T1055 - Process Injection
+T1140 - Deobfuscate/Decode Files or Information
+T1562.001 - Impair Defenses: Disable or Modify Tools
+
+### Credential Access
+T1003.001 - OS Credential Dumping: LSASS Memory
+T1555.003 - Credentials from Password Stores: Credentials from Web Browsers
+T1056.001 - Input Capture: Keylogging
+
+### Discovery
+T1083 - File and Directory Discovery
+T1018 - Remote System Discovery
+T1082 - System Information Discovery
+T1049 - System Network Connections Discovery
+
+### Collection
+T1005 - Data from Local System
+T1113 - Screen Capture
+T1119 - Automated Collection
+T1001.001 - Data Obfuscation: Junk Data
+
+### Command and Control
+T1071.001 - Application Layer Protocol: Web Protocols
+T1094 - Custom Command and Control Protocol
+T1571 - Non-Standard Port
+T1219 - Remote Access Tools
+
+### Impact
+T1486 - Data Encrypted for Impact
+T1490 - Inhibit System Recovery
+T1485 - Data Destruction
+T1499.004 - Endpoint Denial of Service: Application or System Exploitation
+
+## Detection Patterns
+
+### Network Indicators
+- **C2 Communication**: Connections to command and control servers
+- **Ransomware Communication**: Encrypted communication with C2
+- **File Encryption**: Network traffic during encryption process
+- **Data Exfiltration**: Unusual data transfer activities
+
+### Endpoint Indicators
+- **File Encryption**: Rapid encryption of multiple files
+- **System Modification**: Changes to system settings
+- **Backup Deletion**: Removal of system backups
+- **Ransom Notes**: Creation of ransom demand files
+
+### Behavioral Indicators
+- **Rapid File Encryption**: Quick encryption of multiple file types
+- **System Recovery Disabling**: Disabling of system recovery features
+- **Backup Deletion**: Systematic removal of backups
+- **Ransom Note Creation**: Creation of ransom demand files
+
+### Social Engineering Indicators
+- **Fake AI Installers**: Executables with AI-related names
+- **Suspicious Downloads**: Downloads from untrusted sources
+- **Brand Impersonation**: Impersonating legitimate AI companies
+- **Social Engineering**: Exploiting user trust in AI applications
+
+## Mitigation Strategies
+
+### Technical Controls
+- **Endpoint Protection**: Advanced endpoint detection and response
+- **Network Monitoring**: Network traffic analysis and monitoring
+- **Application Control**: Controlling application execution
+- **Patch Management**: Timely application of security patches
+
+### Administrative Controls
+- **User Training**: Security awareness training for AI tool usage
+- **Access Controls**: Principle of least privilege
+- **Incident Response**: Comprehensive incident response procedures
+- **Network Segmentation**: Network segmentation and isolation
+
+### Monitoring and Detection
+- **Threat Hunting**: Proactive hunting for fake AI installer activities
+- **IOC Monitoring**: Tracking known threat indicators
+- **Behavioral Analytics**: Advanced behavioral analysis
+- **Network Monitoring**: Comprehensive network monitoring
+
+### AI Tool Security
+- **Source Verification**: Verifying the authenticity of AI tool sources
+- **Digital Signatures**: Checking digital signatures of AI tools
+- **Reputation Checking**: Checking the reputation of AI tool providers
+- **Sandboxing**: Testing AI tools in isolated environments
+
+## Threat Level
+High - Social engineering campaign targeting AI tool users with multiple ransomware families and destructive malware capabilities.
+
+## References
+- [Cisco Talos Intelligence Blog - Fake AI Installers](https://blog.talosintelligence.com/fake-ai-installers/)
+- [Cisco Talos IOCs - Fake AI Installers](https://raw.githubusercontent.com/Cisco-Talos/IOCs/refs/heads/main/2025/05/fake-AI-installers.txt)
+- [Cisco Talos STIX Bundle - Fake AI Installers](https://raw.githubusercontent.com/Cisco-Talos/IOCs/refs/heads/main/2025/05/fake-AI-installers.json)

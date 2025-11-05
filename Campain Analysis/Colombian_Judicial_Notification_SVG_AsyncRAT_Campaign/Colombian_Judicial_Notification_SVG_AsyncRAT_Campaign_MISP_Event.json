@@ -1,0 +1,709 @@
+{
+  "Event": {
+    "date": "2025-10-13",
+    "threat_level_id": "1",
+    "info": "Colombian Judicial Notification SVG AsyncRAT Campaign - Multi-Stage Phishing targeting Colombia (October 2025)",
+    "published": false,
+    "attribute_count": "78",
+    "analysis": "2",
+    "orgc_id": "1",
+    "timestamp": "1728806400",
+    "distribution": "3",
+    "sharing_group_id": "0",
+    "Attribute": [
+      {
+        "type": "md5",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "b1ed63ee45ec48b324bf126446fdc888",
+        "comment": "Fiscalia General De La Nacion Juzgado Civil 17.svg - Initial SVG dropper"
+      },
+      {
+        "type": "sha1",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "30780d6c0c092f31635fafafabc7fd51201cbe32",
+        "comment": "Fiscalia General De La Nacion Juzgado Civil 17.svg - Initial SVG dropper"
+      },
+      {
+        "type": "sha256",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "05d0e4b3be0f2e98fdb18d80d90036109797ae68ed8459d4fd2930dca1c74a10",
+        "comment": "Fiscalia General De La Nacion Juzgado Civil 17.svg - Initial SVG dropper"
+      },
+      {
+        "type": "md5",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "817081c745aa14fcb15d76f029e80e15",
+        "comment": "DOCUMENTO_OFICIAL_JUZGADO.hta - HTA dropper stage 2"
+      },
+      {
+        "type": "sha1",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "11ecf9edcf1918885f35984171a6862e5b602504",
+        "comment": "DOCUMENTO_OFICIAL_JUZGADO.hta - HTA dropper stage 2"
+      },
+      {
+        "type": "sha256",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "a30e619c87f3f47265cf43ae3e868392a2e3bfdf1ce09a6b0d4e315080d889db",
+        "comment": "DOCUMENTO_OFICIAL_JUZGADO.hta - HTA dropper stage 2"
+      },
+      {
+        "type": "md5",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "6da792b17c4bba72ca995061e040f984",
+        "comment": "actualiza.vbs - VBS dropper stage 3"
+      },
+      {
+        "type": "sha1",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "9bdcaf963d298edc70ef6c26fcc5ccd489a59e44",
+        "comment": "actualiza.vbs - VBS dropper stage 3"
+      },
+      {
+        "type": "sha256",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "6f8cce7829a7033b15f28b551fc0528247c996f69734649f78d318a575f7ae83",
+        "comment": "actualiza.vbs - VBS dropper stage 3"
+      },
+      {
+        "type": "md5",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "f3b56b3cfe462e4f8a32c989cd0c5a7c",
+        "comment": "ClassLibrary3.dll - .NET downloader/loader stage 5"
+      },
+      {
+        "type": "sha1",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "98b31d4e3e69a14705e95c4dec4e3b768b7968b0",
+        "comment": "ClassLibrary3.dll - .NET downloader/loader stage 5"
+      },
+      {
+        "type": "sha256",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "f6f1d85437d887e5872f2395670307182626453de15416e08c81a7108759a555",
+        "comment": "ClassLibrary3.dll - .NET downloader/loader stage 5"
+      },
+      {
+        "type": "md5",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "5fad0c5b6e5a758059c5a4e633424555",
+        "comment": "MoNtReaL.dll - .NET injector stage 6"
+      },
+      {
+        "type": "sha1",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "8f3d5e5f05e5064832dff5c8af0e6a72a4c8026e",
+        "comment": "MoNtReaL.dll - .NET injector stage 6"
+      },
+      {
+        "type": "sha256",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "d3c19be06cf4d3c02cede7b7d4bcc2926c0449739e570f95643e7fe94a4751fc",
+        "comment": "MoNtReaL.dll - .NET injector stage 6"
+      },
+      {
+        "type": "md5",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "fe0fc2949addeefa6506b50215329ed9",
+        "comment": "Client.exe - AsyncRAT payload stage 7"
+      },
+      {
+        "type": "sha1",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "153215c07a3334f2ce0881a0a56cc39f593f68f6",
+        "comment": "Client.exe - AsyncRAT payload stage 7"
+      },
+      {
+        "type": "sha256",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "96ae863780107947c8e262f187e96b85f8cd96d66fe2d7e39dc8cef2ae669445",
+        "comment": "Client.exe - AsyncRAT payload stage 7"
+      },
+      {
+        "type": "filename",
+        "category": "Artifacts dropped",
+        "to_ids": true,
+        "value": "Fiscalia General De La Nacion Juzgado Civil 17.svg",
+        "comment": "Malicious SVG attachment - Attorney General's Office Civil Court 17"
+      },
+      {
+        "type": "filename",
+        "category": "Artifacts dropped",
+        "to_ids": true,
+        "value": "DOCUMENTO_OFICIAL_JUZGADO.hta",
+        "comment": "HTA file dropped by SVG - Official Court Document"
+      },
+      {
+        "type": "filename",
+        "category": "Artifacts dropped",
+        "to_ids": true,
+        "value": "actualiza.vbs",
+        "comment": "VBS dropper created by HTA"
+      },
+      {
+        "type": "filename",
+        "category": "Artifacts dropped",
+        "to_ids": true,
+        "value": "veooZ.ps1",
+        "comment": "PowerShell downloader script"
+      },
+      {
+        "type": "filename",
+        "category": "Artifacts dropped",
+        "to_ids": true,
+        "value": "Ysemg.txt",
+        "comment": "Downloaded text file containing encoded .NET assembly"
+      },
+      {
+        "type": "filename",
+        "category": "Artifacts dropped",
+        "to_ids": true,
+        "value": "ClassLibrary3.dll",
+        "comment": ".NET downloader/loader module"
+      },
+      {
+        "type": "filename",
+        "category": "Artifacts dropped",
+        "to_ids": true,
+        "value": "MoNtReaL.dll",
+        "comment": ".NET process injection module"
+      },
+      {
+        "type": "filename",
+        "category": "Artifacts dropped",
+        "to_ids": true,
+        "value": "Client.exe",
+        "comment": "AsyncRAT final payload"
+      },
+      {
+        "type": "domain",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "dpaste.com",
+        "comment": "Text hosting service used for payload delivery (Ysemg.txt)"
+      },
+      {
+        "type": "mutex",
+        "category": "Artifacts dropped",
+        "to_ids": true,
+        "value": "DcRatMutex_qwqdanchun",
+        "comment": "AsyncRAT mutex to prevent multiple infections"
+      },
+      {
+        "type": "regkey",
+        "category": "Persistence mechanism",
+        "to_ids": true,
+        "value": "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run",
+        "comment": "Registry Run key for persistence (standard user)"
+      },
+      {
+        "type": "text",
+        "category": "Other",
+        "to_ids": false,
+        "value": "schtasks /create /f /sc onlogon /rl highest /tn \"<filename>\" /tr \"<fullpath>\"",
+        "comment": "Scheduled task creation command (elevated privileges)"
+      },
+      {
+        "type": "text",
+        "category": "Other",
+        "to_ids": false,
+        "value": "MSBuild.exe",
+        "comment": "Target process for AsyncRAT injection"
+      },
+      {
+        "type": "email-subject",
+        "category": "Payload delivery",
+        "to_ids": false,
+        "value": "Demanda judicial en su contra – Juzgado 17 Civil Municipal",
+        "comment": "Spanish phishing email subject - Judicial lawsuit against you - Municipal Civil Court 17"
+      },
+      {
+        "type": "text",
+        "category": "Other",
+        "to_ids": false,
+        "value": "Juzgado 17 Civil Municipal del Circuito de Bogotá",
+        "comment": "Impersonated institution - 17th Municipal Civil Court of Bogotá Circuit"
+      },
+      {
+        "type": "text",
+        "category": "Other",
+        "to_ids": false,
+        "value": "Fiscalía General de la Nación",
+        "comment": "Impersonated institution - Attorney General's Office of Colombia"
+      },
+      {
+        "type": "text",
+        "category": "Other",
+        "to_ids": false,
+        "value": "Sistema de Notificaciones Judiciales",
+        "comment": "Fake sender - Judicial Notification System"
+      },
+      {
+        "type": "malware-sample",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "AsyncRAT",
+        "comment": "Remote Access Trojan - Open-source C# RAT"
+      },
+      {
+        "type": "target-user",
+        "category": "Targeting data",
+        "to_ids": false,
+        "value": "Colombian citizens",
+        "comment": "Primary target - Spanish-speaking users in Colombia"
+      },
+      {
+        "type": "target-location",
+        "category": "Targeting data",
+        "to_ids": false,
+        "value": "Colombia - Bogotá",
+        "comment": "Geographic target - Capital city and judicial center"
+      },
+      {
+        "type": "campaign-name",
+        "category": "Attribution",
+        "to_ids": false,
+        "value": "Colombian Judicial Notification SVG AsyncRAT Campaign",
+        "comment": "Campaign identifier"
+      },
+      {
+        "type": "campaign-id",
+        "category": "Attribution",
+        "to_ids": false,
+        "value": "CO-JUDI-SVG-ASYNC-2025-001",
+        "comment": "Internal tracking ID"
+      },
+      {
+        "type": "comment",
+        "category": "Internal reference",
+        "to_ids": false,
+        "value": "7-stage infection chain: SVG → HTA → VBS → PS1 → DLL loader → DLL injector → AsyncRAT in MSBuild.exe"
+      },
+      {
+        "type": "comment",
+        "category": "Internal reference",
+        "to_ids": false,
+        "value": "Anti-analysis: Anti-VM (WMI queries), Anti-sandbox, AMSI bypass, process termination (Taskmgr, ProcessHacker)"
+      },
+      {
+        "type": "comment",
+        "category": "Internal reference",
+        "to_ids": false,
+        "value": "Obfuscation: Base64 encoding, reversed strings, character substitution (9& for A, $$ for A), junk code"
+      },
+      {
+        "type": "comment",
+        "category": "Internal reference",
+        "to_ids": false,
+        "value": "Persistence: Registry Run key (HKCU) for standard users, Scheduled task (onlogon) for elevated privileges"
+      },
+      {
+        "type": "comment",
+        "category": "Internal reference",
+        "to_ids": false,
+        "value": "AsyncRAT capabilities: Remote desktop, keylogging, webcam access, file operations, credential theft, plugin loading, MessagePack C2"
+      },
+      {
+        "type": "other",
+        "category": "Other",
+        "to_ids": false,
+        "value": "Language: Spanish (Colombian dialect)",
+        "comment": "Campaign localization"
+      },
+      {
+        "type": "other",
+        "category": "Other",
+        "to_ids": false,
+        "value": "File size anomaly: 2.66 MB SVG (unusually large)",
+        "comment": "Detection indicator - normal SVGs are much smaller"
+      },
+      {
+        "type": "other",
+        "category": "Other",
+        "to_ids": false,
+        "value": "Severity: High - Full system compromise, persistent access, data exfiltration",
+        "comment": "Impact assessment"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://www.seqrite.com/blog/judicial-notification-phish-colombia-svg-asyncrat/",
+        "comment": "Seqrite threat research publication"
+      },
+      {
+        "type": "ssdeep",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "24576:emfb7XZZXhZw6PdpXEkaYpNb0Fu4pRIVA2A5GN69AAepl+zSKmcd6dVXFOwjw+W+:b1ZXvzXNvuScGN6FsdVXruMRZ",
+        "comment": "Fiscalia General De La Nacion Juzgado Civil 17.svg fuzzy hash"
+      },
+      {
+        "type": "imphash",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "dae02f32a21e03ce65412f6e56942daa",
+        "comment": "ClassLibrary3.dll and MoNtReaL.dll import hash"
+      },
+      {
+        "type": "imphash",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "f34d5f2d4577ed6d9ceec516c1f5a744",
+        "comment": "Client.exe (AsyncRAT) import hash"
+      },
+      {
+        "type": "pattern-in-file",
+        "category": "Artifacts dropped",
+        "to_ids": true,
+        "value": "openDocument()",
+        "comment": "JavaScript function in malicious SVG"
+      },
+      {
+        "type": "pattern-in-file",
+        "category": "Artifacts dropped",
+        "to_ids": true,
+        "value": "GftsOTSaty",
+        "comment": "Obfuscated variable name in actualiza.vbs"
+      },
+      {
+        "type": "pattern-in-file",
+        "category": "Artifacts dropped",
+        "to_ids": true,
+        "value": "MSqBIbY",
+        "comment": "Method name in ClassLibrary3.dll invoked by PowerShell"
+      },
+      {
+        "type": "yara",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "rule AsyncRAT_Mutex { strings: $mutex = \"DcRatMutex_qwqdanchun\" condition: $mutex }",
+        "comment": "YARA rule for AsyncRAT mutex detection"
+      },
+      {
+        "type": "yara",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "rule Colombian_SVG_Phish { strings: $s1 = \"Fiscalia General\" $s2 = \"Juzgado\" $s3 = \"openDocument()\" condition: all of them }",
+        "comment": "YARA rule for Colombian judicial SVG phishing"
+      },
+      {
+        "type": "vulnerability",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "N/A - No CVE exploited",
+        "comment": "Campaign relies on social engineering, not vulnerability exploitation"
+      },
+      {
+        "type": "text",
+        "category": "Other",
+        "to_ids": false,
+        "value": "Compiler: VB.NET - Framework: .NET v4.0.30319",
+        "comment": "All .NET components compiled with VB.NET"
+      },
+      {
+        "type": "text",
+        "category": "Other",
+        "to_ids": false,
+        "value": "Detection names: Trojan.InjectorCiR, Html.Asyncrat.49974.GC, Script.Trojan.49969.GC, Backdoor.MsilFC.S13564499, Trojandownloader.AgentCiR",
+        "comment": "Quick Heal / Seqrite detection signatures"
+      },
+      {
+        "type": "text",
+        "category": "Other",
+        "to_ids": false,
+        "value": "C2 Protocol: TLS-wrapped TCP with MessagePack serialization",
+        "comment": "AsyncRAT command and control mechanism"
+      },
+      {
+        "type": "text",
+        "category": "Other",
+        "to_ids": false,
+        "value": "Injection technique: VirtualAllocEx + WriteProcessMemory + CreateRemoteThread",
+        "comment": "Process injection API sequence"
+      },
+      {
+        "type": "text",
+        "category": "Other",
+        "to_ids": false,
+        "value": "Targeted processes for termination: Taskmgr.exe, ProcessHacker.exe, procexp.exe",
+        "comment": "Security and monitoring tools killed by AsyncRAT"
+      },
+      {
+        "type": "text",
+        "category": "Other",
+        "to_ids": false,
+        "value": "WMI query: SELECT * FROM Win32_ComputerSystem",
+        "comment": "Anti-VM detection method"
+      },
+      {
+        "type": "text",
+        "category": "Other",
+        "to_ids": false,
+        "value": "Checked VM indicators: VMware, VirtualBox, QEMU, Xen",
+        "comment": "Virtualization platforms detected"
+      },
+      {
+        "type": "text",
+        "category": "Other",
+        "to_ids": false,
+        "value": "Collected system info: HWID, OS version, privileges, camera, antivirus",
+        "comment": "AsyncRAT reconnaissance data"
+      },
+      {
+        "type": "text",
+        "category": "Other",
+        "to_ids": false,
+        "value": "Email lure date: September 11, 2025",
+        "comment": "Date referenced in phishing email"
+      },
+      {
+        "type": "text",
+        "category": "Other",
+        "to_ids": false,
+        "value": "Campaign discovery: October 13, 2025",
+        "comment": "Publication date by Seqrite"
+      },
+      {
+        "type": "text",
+        "category": "Other",
+        "to_ids": false,
+        "value": "Encoding schemes: Base64, UTF-16 LE, character substitution, string reversal",
+        "comment": "Obfuscation methods used"
+      },
+      {
+        "type": "text",
+        "category": "Other",
+        "to_ids": false,
+        "value": "Threat level: High - Persistent RAT access, credential theft, surveillance",
+        "comment": "Risk assessment"
+      },
+      {
+        "type": "text",
+        "category": "Other",
+        "to_ids": false,
+        "value": "Attack vector innovation: SVG files rarely used in malware campaigns",
+        "comment": "Noteworthy technique"
+      },
+      {
+        "type": "text",
+        "category": "Other",
+        "to_ids": false,
+        "value": "Social engineering theme: Legal/judicial authority with lawsuit threat",
+        "comment": "Psychological manipulation tactic"
+      },
+      {
+        "type": "text",
+        "category": "Other",
+        "to_ids": false,
+        "value": "AsyncRAT capabilities: Webcam/microphone access, keylogging, remote desktop, file theft, plugin loading",
+        "comment": "RAT feature set"
+      },
+      {
+        "type": "text",
+        "category": "Other",
+        "to_ids": false,
+        "value": "Evasion: Process name validation, mutex checks, AMSI bypass, anti-debugging",
+        "comment": "Defense evasion techniques"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "misp-galaxy:malware=\"AsyncRAT\""
+      },
+      {
+        "name": "misp-galaxy:tool=\"PowerShell\""
+      },
+      {
+        "name": "misp-galaxy:mitre-attack-pattern=\"Spearphishing Attachment - T1566.001\""
+      },
+      {
+        "name": "misp-galaxy:mitre-attack-pattern=\"Mshta - T1218.005\""
+      },
+      {
+        "name": "misp-galaxy:mitre-attack-pattern=\"PowerShell - T1059.001\""
+      },
+      {
+        "name": "misp-galaxy:mitre-attack-pattern=\"Visual Basic - T1059.005\""
+      },
+      {
+        "name": "misp-galaxy:mitre-attack-pattern=\"Registry Run Keys - T1547.001\""
+      },
+      {
+        "name": "misp-galaxy:mitre-attack-pattern=\"Scheduled Task - T1053.005\""
+      },
+      {
+        "name": "misp-galaxy:mitre-attack-pattern=\"Obfuscated Files - T1027\""
+      },
+      {
+        "name": "misp-galaxy:mitre-attack-pattern=\"Impair Defenses - T1562.001\""
+      },
+      {
+        "name": "misp-galaxy:mitre-attack-pattern=\"Process Injection - T1055\""
+      },
+      {
+        "name": "misp-galaxy:mitre-attack-pattern=\"Virtualization/Sandbox Evasion - T1497\""
+      },
+      {
+        "name": "misp-galaxy:mitre-attack-pattern=\"Process Discovery - T1057\""
+      },
+      {
+        "name": "misp-galaxy:mitre-attack-pattern=\"System Information Discovery - T1082\""
+      },
+      {
+        "name": "misp-galaxy:mitre-attack-pattern=\"Video Capture - T1125\""
+      },
+      {
+        "name": "misp-galaxy:mitre-attack-pattern=\"Input Capture: Keylogging - T1056.001\""
+      },
+      {
+        "name": "misp-galaxy:mitre-attack-pattern=\"Encrypted Channel - T1573\""
+      },
+      {
+        "name": "misp-galaxy:mitre-attack-pattern=\"Ingress Tool Transfer - T1105\""
+      },
+      {
+        "name": "tlp:white"
+      },
+      {
+        "name": "workflow:state=\"in-progress\""
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "targeted-country:CO"
+      },
+      {
+        "name": "malware:rat"
+      },
+      {
+        "name": "malware:infostealer"
+      },
+      {
+        "name": "phishing:svg-attachment"
+      },
+      {
+        "name": "phishing:judicial-impersonation"
+      },
+      {
+        "name": "language:spanish"
+      },
+      {
+        "name": "evasion:anti-vm"
+      },
+      {
+        "name": "evasion:anti-sandbox"
+      },
+      {
+        "name": "evasion:amsi-bypass"
+      }
+    ],
+    "Galaxy": [
+      {
+        "name": "Malware",
+        "type": "malware",
+        "description": "Malware galaxy including RAT, infostealer, and backdoor families.",
+        "GalaxyCluster": [
+          {
+            "type": "malware",
+            "value": "AsyncRAT",
+            "description": "AsyncRAT is an open-source remote access trojan written in C#. It provides remote desktop capabilities, keylogging, webcam access, file operations, and data exfiltration. Uses TLS-encrypted MessagePack for C2 communication. Widely used by cybercriminals due to its open-source availability.",
+            "meta": {
+              "malware-type": "RAT",
+              "programming-language": "C#",
+              "first-seen": "2019",
+              "refs": ["https://github.com/NYAN-x-CAT/AsyncRAT-C-Sharp"]
+            }
+          }
+        ]
+      },
+      {
+        "name": "MITRE ATT&CK",
+        "type": "mitre-attack-pattern",
+        "description": "ATT&CK Techniques observed in Colombian Judicial SVG AsyncRAT Campaign",
+        "GalaxyCluster": [
+          {
+            "type": "mitre-attack-pattern",
+            "value": "T1566.001 - Spearphishing Attachment",
+            "description": "Malicious .SVG attachment impersonating Colombian judicial notification"
+          },
+          {
+            "type": "mitre-attack-pattern",
+            "value": "T1218.005 - Signed Binary Proxy Execution: Mshta",
+            "description": "HTA file execution via mshta.exe"
+          },
+          {
+            "type": "mitre-attack-pattern",
+            "value": "T1059.001 - PowerShell",
+            "description": "PowerShell script downloads encoded payload from dpaste"
+          },
+          {
+            "type": "mitre-attack-pattern",
+            "value": "T1059.005 - Visual Basic",
+            "description": "VBS dropper executes PowerShell downloader"
+          },
+          {
+            "type": "mitre-attack-pattern",
+            "value": "T1547.001 - Registry Run Keys",
+            "description": "HKCU Run key persistence for standard users"
+          },
+          {
+            "type": "mitre-attack-pattern",
+            "value": "T1053.005 - Scheduled Task",
+            "description": "Scheduled task persistence for elevated privileges"
+          },
+          {
+            "type": "mitre-attack-pattern",
+            "value": "T1027 - Obfuscated Files or Information",
+            "description": "Base64 encoding, reversed strings, character substitution, junk code"
+          },
+          {
+            "type": "mitre-attack-pattern",
+            "value": "T1055 - Process Injection",
+            "description": "AsyncRAT injected into MSBuild.exe via VirtualAllocEx/WriteProcessMemory/CreateRemoteThread"
+          },
+          {
+            "type": "mitre-attack-pattern",
+            "value": "T1497 - Virtualization/Sandbox Evasion",
+            "description": "WMI queries detect VMware, VirtualBox, QEMU, Xen"
+          },
+          {
+            "type": "mitre-attack-pattern",
+            "value": "T1562.001 - Impair Defenses",
+            "description": "Kills Taskmgr, ProcessHacker; AMSI bypass"
+          },
+          {
+            "type": "mitre-attack-pattern",
+            "value": "T1105 - Ingress Tool Transfer",
+            "description": "Downloads injector (MoNtReaL.dll) and AsyncRAT payload"
+          },
+          {
+            "type": "mitre-attack-pattern",
+            "value": "T1573 - Encrypted Channel",
+            "description": "TLS-wrapped TCP C2 with MessagePack"
+          }
+        ]
+      }
+    ]
+  }
+}
+

@@ -1,0 +1,46 @@
+{
+  "Event": {
+    "date": "2025-08-11",
+    "threat_level_id": "1",
+    "info": "RomCom: WinRAR CVE-2025-8088 zero-day exploitation campaign targeting financial, manufacturing, defense, and logistics companies",
+    "published": false,
+    "attribute_count": "52",
+    "Attribute": [
+      {"type": "vulnerability", "category": "External analysis", "to_ids": true, "value": "CVE-2025-8088", "comment": "WinRAR path traversal vulnerability using alternate data streams | Source: ESET Research", "first_seen": "2025-07-18", "last_seen": "2025-07-21"},
+      {"type": "vulnerability", "category": "External analysis", "to_ids": true, "value": "CVE-2025-6218", "comment": "Related WinRAR path traversal vulnerability | Source: ESET Research", "first_seen": "2025-06-19", "last_seen": "2025-06-19"},
+      {"type": "ip-dst", "category": "Network activity", "to_ids": true, "value": "162.19.175.44", "comment": "MeltingClaw C&C server | Source: ESET Research", "first_seen": "2025-06-05", "last_seen": "2025-07-21"},
+      {"type": "ip-dst", "category": "Network activity", "to_ids": true, "value": "194.36.209.127", "comment": "Mythic agent C&C server | Source: ESET Research", "first_seen": "2025-07-09", "last_seen": "2025-07-21"},
+      {"type": "ip-dst", "category": "Network activity", "to_ids": true, "value": "85.158.108.62", "comment": "RustyClaw C&C server | Source: ESET Research", "first_seen": "2025-07-07", "last_seen": "2025-07-21"},
+      {"type": "ip-dst", "category": "Network activity", "to_ids": true, "value": "185.173.235.134", "comment": "SnipBot variant C&C server | Source: ESET Research", "first_seen": "2025-07-18", "last_seen": "2025-07-21"},
+      {"type": "domain", "category": "Network activity", "to_ids": true, "value": "gohazeldale.com", "comment": "MeltingClaw C&C server | Source: ESET Research", "first_seen": "2025-06-05", "last_seen": "2025-07-21"},
+      {"type": "domain", "category": "Network activity", "to_ids": true, "value": "srlaptop.com", "comment": "Mythic agent C&C server | Source: ESET Research", "first_seen": "2025-07-09", "last_seen": "2025-07-21"},
+      {"type": "domain", "category": "Network activity", "to_ids": true, "value": "melamorri.com", "comment": "RustyClaw C&C server | Source: ESET Research", "first_seen": "2025-07-07", "last_seen": "2025-07-21"},
+      {"type": "domain", "category": "Network activity", "to_ids": true, "value": "campanole.com", "comment": "SnipBot variant C&C server | Source: ESET Research", "first_seen": "2025-07-18", "last_seen": "2025-07-21"},
+      {"type": "url", "category": "Network activity", "to_ids": true, "value": "https://srlaptop.com/s/0.7.8/clarity.js", "comment": "Mythic agent C&C endpoint | Source: ESET Research", "first_seen": "2025-07-09", "last_seen": "2025-07-21"},
+      {"type": "url", "category": "Network activity", "to_ids": true, "value": "https://campanole.com/TOfrPOseJKZ", "comment": "SnipBot variant payload delivery | Source: ESET Research", "first_seen": "2025-07-18", "last_seen": "2025-07-21"},
+      {"type": "url", "category": "Network activity", "to_ids": true, "value": "https://melamorri.com/iEZGPctehTZ", "comment": "RustyClaw payload delivery | Source: ESET Research", "first_seen": "2025-07-07", "last_seen": "2025-07-21"},
+      {"type": "email-src", "category": "Payload delivery", "to_ids": true, "value": "2constheatcomshirl@seznam.cz", "comment": "RomCom spearphishing sender | Source: ESET Research", "first_seen": "2025-07-18", "last_seen": "2025-07-21"},
+      {"type": "email-src", "category": "Payload delivery", "to_ids": true, "value": "geoshilovyf@gmx.com", "comment": "RomCom spearphishing sender | Source: ESET Research", "first_seen": "2025-07-18", "last_seen": "2025-07-21"},
+      {"type": "email-src", "category": "Payload delivery", "to_ids": true, "value": "93leocarperpiyd@seznam.cz", "comment": "RomCom spearphishing sender | Source: ESET Research", "first_seen": "2025-07-18", "last_seen": "2025-07-21"},
+      {"type": "email-src", "category": "Payload delivery", "to_ids": true, "value": "93geoprobmenfuuu@seznam.cz", "comment": "RomCom spearphishing sender | Source: ESET Research", "first_seen": "2025-07-18", "last_seen": "2025-07-21"},
+      {"type": "email-src", "category": "Payload delivery", "to_ids": true, "value": "3tiafratferpate@seznam.cz", "comment": "RomCom spearphishing sender | Source: ESET Research", "first_seen": "2025-07-18", "last_seen": "2025-07-21"},
+      {"type": "email-src", "category": "Payload delivery", "to_ids": true, "value": "sampnestpihydbi@gmx.com", "comment": "RomCom spearphishing sender | Source: ESET Research", "first_seen": "2025-07-18", "last_seen": "2025-07-21"},
+      {"type": "email-src", "category": "Payload delivery", "to_ids": true, "value": "stefanmuribi@gmx.net", "comment": "RomCom spearphishing sender | Source: ESET Research", "first_seen": "2025-07-18", "last_seen": "2025-07-21"},
+      {"type": "email-src", "category": "Payload delivery", "to_ids": true, "value": "patricklofiri@gmx.net", "comment": "RomCom spearphishing sender | Source: ESET Research", "first_seen": "2025-07-18", "last_seen": "2025-07-21"},
+      {"type": "email-src", "category": "Payload delivery", "to_ids": true, "value": "emponafinpu@gmx.com", "comment": "RomCom spearphishing sender | Source: ESET Research", "first_seen": "2025-07-18", "last_seen": "2025-07-21"}
+    ],
+    "Tag": [
+      {"name": "tlp:amber"},
+      {"name": "threat-level:high"},
+      {"name": "misp-galaxy:threat-actor=\"RomCom\""},
+      {"name": "misp-galaxy:malware=\"MeltingClaw\""},
+      {"name": "misp-galaxy:malware=\"RustyClaw\""},
+      {"name": "misp-galaxy:malware=\"SnipBot\""},
+      {"name": "misp-galaxy:malware=\"Mythic\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Exploit Public-Facing Application - T1190\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Spearphishing Attachment - T1566.001\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Command and Scripting Interpreter - T1059\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"PowerShell - T1059.001\""}
+    ]
+  }
+}

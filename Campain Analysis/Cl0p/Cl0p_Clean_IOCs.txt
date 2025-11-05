@@ -1,0 +1,138 @@
+Cl0p Ransomware Group - Clean IOCs
+====================================
+
+Threat Actor: Cl0p Ransomware Group
+Associated Groups: FIN11, TA505
+Campaign Period: 2019-2025
+Status: Active
+
+
+=== PHISHING DOMAINS ===
+tdameritradeclientsdata.com
+pwcclinetsanddocuments.com
+zagclinets.net
+highticketclientsdata.xyz
+1stsourcedatafiles.com
+eydataclinets.com
+essadonio.com
+ber6vjyb.com
+anydeskupdates.com
+windowservicecenter.com
+netviewremote.com
+windowcsupdates.com
+windowservicecentar.com
+winserverupdates.com
+anydeskupdate.com
+windowservicecemter.com
+updateservicecenter.com
+study.abroad.ge
+drm-server13-login-microsoftonline.com
+windows-afx-update.com
+
+=== INFRASTRUCTURE IPs ===
+74.48.108.208
+45.152.86.74
+213.152.183.18
+181.214.147.164
+209.127.12.38
+192.119.99.42
+5.149.249.226
+185.181.230.103
+176.123.5.126
+81.19.135.11
+45.182.189.102
+67.220.94.173
+45.182.189.226
+185.162.128.219
+92.51.2.221
+216.245.221.83
+186.136.204.137
+186.162.118.133
+184.107.3.70
+185.162.128.100
+209.127.121.38
+186.128.224.0
+
+=== MALWARE SAMPLES (SHA256) ===
+# LEMURLOOT Info-Stealer Variants
+348e435196dd795e1ec31169bd111c7ec964e5a6ab525a562b17f10de0ab031d
+38e69f4a6d2e81f28ed2dc6df0daf31e73ea365bd2cfc90ebc31441404cca264
+3a977446ed70b02864ef8cfa3135d8b134c93ef868a4cc0aa5d3c2a74545725b
+3c0dbda8a5500367c22ca224919bfc87d725d890756222c8066933286f26494c
+4359aead416b1b2df8ad9e53c497806403a2253b7e13c03317fc08ad3b0b95bf
+6015fed13c5510bbb89b0a5302c8b95a5b811982ff6de9930725c4630ec4011d
+9d1723777de67bc7e11678db800d2a32de3bcd6c40a629cd165e3f7bbace8ead
+b9a0baf82feb08e42fa6ca53e9ec379e79fbe8362a7dac6150eb39c2d33d94ad
+cec425b3383890b63f5022054c396f6d510fae436041add935cd6ce42033f621
+
+# Truebot Loader
+717beedcd2431785a0f59d194e47970e9544fbf398d462a305f6ad9a1b1100cb
+
+# AdFind Tool
+c92c158d7c37fea795114fa6491fe5f145ad2f8c08776b18ae79db811e8e36a3
+
+# Chrome.exe Malware
+121a1f64fff22c4bfcef3f11a23956ed403cdeb9bdb803f9c42763087bd6d94e
+
+=== EMAIL ADDRESSES ===
+cl0p@bk.ru
+cl0p@inbox.ru
+cl0p@internet.ru
+cl0p@list.ru
+cl0p@mail.ru
+cl0p@pm.me
+cl0p@proton.me
+cl0p@protonmail.ch
+cl0p@protonmail.com
+woshihuaimei@gmail.com
+
+=== PAYLOAD DELIVERY URLs ===
+http://91.38.135.67/km1
+
+=== VULNERABILITIES TARGETED ===
+CVE-2023-34362 - MOVEit Transfer SQL Injection
+CVE-2023-27350 - PaperCut Authentication Bypass
+CVE-2023-27351 - PaperCut Remote Code Execution
+CVE-2023-0669 - GoAnywhere MFT Zero-day
+Oracle E-Business Suite vulnerabilities (July 2025 CPU)
+Accellion FTA vulnerabilities
+SolarWinds Serv-U FTP vulnerabilities
+
+=== CAMPAIGN IMPACT ===
+- February 2025: 335 victims (massive extortion campaign)
+- December 2024: 180+ organizations (Cleo Software campaign)
+- Multiple zero-day exploits across various platforms
+- High-volume extortion campaigns with public leak sites
+
+=== ATTACK VECTORS ===
+- Zero-day vulnerability exploitation
+- SQL injection attacks
+- Authentication bypass
+- Remote code execution
+- Password reset abuse
+- Email compromise
+- Web shell deployment
+- Data exfiltration
+- Double extortion
+- Ransom demands
+
+=== TARGET SECTORS ===
+- Healthcare
+- Education
+- Financial Services
+- Government
+- Energy
+- Technology
+- Manufacturing
+- Logistics
+- Supply Chain
+
+=== THREAT ACTOR PROFILE ===
+- Name: Cl0p Ransomware Group
+- Associated Groups: FIN11, TA505
+- Motivation: Financial
+- Capabilities: Zero-day exploitation, Ransomware, Data theft
+- Targeting: Opportunistic, High-volume campaigns
+- TTPs: Double extortion, Public leak sites, Ransom demands
+
+Source: Threat Intelligence Reports, CISA Advisories, Dark Web Monitoring

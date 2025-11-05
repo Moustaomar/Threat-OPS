@@ -1,0 +1,282 @@
+# =============================================================================
+# CRITICAL IP ADDRESSES TO BLOCK (IMMEDIATE)
+# =============================================================================
+
+# Primary C2 Infrastructure (196.251.x.x range)
+196.251.88.198
+196.251.118.208
+196.251.117.251
+196.251.114.106
+196.251.88.245
+196.251.117.171
+196.251.115.252
+196.251.115.205
+196.251.115.238
+196.251.115.253
+196.251.88.153
+196.251.88.166
+196.251.88.201
+196.251.88.252
+196.251.115.13
+196.251.115.101
+196.251.90.58
+196.251.90.21
+196.251.89.167
+196.251.90.23
+
+# Secondary C2 Infrastructure
+192.71.249.50
+206.123.145.172
+148.113.172.197
+45.149.241.239
+117.167.136.242
+154.44.177.192
+198.50.160.103
+
+# Additional Infrastructure
+94.156.167.25
+176.65.144.98
+94.156.167.23
+94.156.167.71
+85.31.47.216
+85.31.47.199
+85.31.47.75
+87.121.86.8
+93.123.109.195
+80.76.51.209
+93.123.39.76
+93.123.39.68
+45.88.88.7
+94.156.68.149
+94.156.65.159
+94.156.69.232
+91.92.245.231
+94.156.71.108
+91.92.253.74
+94.156.71.212
+94.156.69.145
+94.156.66.50
+91.92.252.40
+43.205.33.20
+46.246.84.74
+178.73.192.17
+20.91.192.253
+46.246.84.21
+46.246.84.17
+45.15.16.228
+176.9.193.5
+160.155.0.199
+108.62.49.249
+45.15.16.238
+46.246.84.83
+102.139.84.153
+212.7.208.110
+185.244.31.24
+45.15.16.156
+213.227.140.15
+
+# =============================================================================
+# CRITICAL DOMAINS TO BLOCK (IMMEDIATE)
+# =============================================================================
+
+# C2 Infrastructure Domains
+cobalt.warii.club
+wari.warii.club
+warima.warii.club
+winsec.warii.club
+info.warii.club
+
+# Phishing Domains
+banqueislamik.ddrive.online
+news.coris-bank.fr
+personnel.bdm-sa.fr
+boa.eimaragon.org
+news.banquealtantique.net
+personnels.bdm-sa.fr
+wa.eimaragon.org
+bac.eimaragon.org
+
+# Security Software Impersonation
+update.mcafee-endpoint.com
+download.nortonupdate.com
+update.microsofts.download
+
+# Healthcare Impersonation
+winsec.senegalsante.org
+info.senegalsante.org
+contact.senegalsante.org
+bac.senegalsante.org
+
+# Malware Distribution
+files.ddrive.online
+
+# Dynamic DNS Infrastructure
+reply2host.duckdns.org
+queen2012.ddns.net
+winsec.ddns.net
+winsec.gotdns.ch
+gemalto788.ddns.net
+lofl2154.odns.fr
+
+# Additional Infrastructure
+blackid-40543.portmap.io
+covid.ocitnetad.com
+news.afrikmedia.info
+driver.eimaragon.org
+actu.afrikmedia.info
+cnam.myvnc.com
+bdm-sa.fr
+
+# =============================================================================
+# CRITICAL MALWARE HASHES TO BLOCK (IMMEDIATE)
+# =============================================================================
+
+# Cobalt Strike Variants (HIGH PRIORITY)
+# MD5 Hashes
+2707299e9ec7fb2173f6afb2e23a4d74865cf5a3
+17e0b8fe9acfd1776a1566ce5ed6f051f7e0f91f
+ac85af8395d1b97a8cbcbd16f995ce119e3c4955
+
+# SHA1 Hashes
+2707299e9ec7fb2173f6afb2e23a4d74865cf5a3
+17e0b8fe9acfd1776a1566ce5ed6f051f7e0f91f
+ac85af8395d1b97a8cbcbd16f995ce119e3c4955
+
+# SHA256 Hashes
+2b1245c4547eee5a4545431f1969ab4dd5ba8ac4d0d2dd758d3c77a250e6ddb8
+e14a079d5b6a7ee69fad8577c089a2c1cad0d3c8152d5cadda836930bff2a40a
+6D1E639E69899575DB2E78EEFB0116B02CBC9EB46F61A592D5B18119296766FA
+
+# Additional Malware Hashes
+# MD5 Hashes
+e8848f591f9cd537e1feb84a54fe18ff
+0258f4f0319fa77b10978dd92edf87c1
+44069f273916002a782a737fca6c140f
+2aa09843321aeced3befa5f7ceca5f52
+905b386750d2977f116ac8805c030492
+fbec4459fbf7018db2a0148406d8196f
+bb592a79fd934e30df6832b67b918923
+2d17eb61660c1e4390fe88c9ddefc6c7
+ac4c38200c6b668ea188d92f9f526b7f
+af67701a6387834d2195282719ef6636
+0a11428c5f4cb64bea4905576d30044d
+809f42059da3058a1e62fa7ba56ce66b
+a0873962bca482a7d14dafbeaf5346cb
+093ba856381c9e17e29a5fc2aadfa9f9
+49237e35bac0a1625fde93ebcadeb58c
+6d93c6535945e0caadb6ebee9b2b5e17
+ce89231981dc64542c76f64979639826
+92de907d5d84361487288088b0b28c40
+5f9e1eb02be8edfe26d480fd78f065d4
+f63d75f66574c346ccc2a2f6b7f3f01e
+5aa2bc6132915f9ddd56b7fd17f992e6
+f39e284c2fcf02f7aea3ba7ff47349cc
+63417ec71d3c7670c2306afc4164b0de
+7444684c7152c6089e68305c36f585e3
+2c5dcd5c42ece2a91e53914f10b10270
+7e2801b8d44eb6bece5b3b5467242111
+7ddee4ec4650bf7836478ca8f286ac10
+017ba3cb35528108f6c4e05db99f3572
+5501196c0134a5a9eac0dfe250acd055
+bcc73790f7b2d37704976cd78095a9e9
+dda2894e76da57dca989e37f4a210d34
+7899e70a841605b22fdc42ed82d1ec6e
+d1d1749cc28a05873b26594e6742f228
+71621e1a35137ea2a7c48db9bde0298c
+3cbe2c4d95d10a0d5f1d33db3e752df0
+2d03e001d92c099a002692c1669432b6
+c4a0b6076fdd71b6dbcf3125434cb8e3
+fd4f43af4b47683256b31e74d5bdfb9c
+c9194a86915eb04b8293183dada19e79
+b180eecc6beb4998bcbe40b226538026
+0f304bd73274a6fd4a5b05eb5f0657f7
+782e17672213b22dae0a20397ffc3dae
+368653e74934b6d649c8d08d66341177
+a9ab4f14d339eb15d8209b13a51ce989
+bace201a0f9bc25dda6b288e22023f61
+ceb73b19f731fa24fca9a6b55ffe910c
+f7533a09f0bc3b7e9317c65050f987d2
+31fa90a98da6fc1276662ab5862b01a4
+47777cb7a44e587e1c39eb4b7aec6ac4
+1be74532a1cd57f5c7c02de4549384dd
+432894dc16c320b45f32eb72e66cba58
+f1bef120cb72066000e67171ed5193a7
+e37e9402a3a63b60065eaee7c552f514
+49ad6020376caba051b4d6a6578efc1c
+9d5696758c45cceb3405a62af931c11d
+dda5a9d262181339921c04902bd77173
+4f06d98642b9a8c000128c66bea6207d
+4e14c0aeb2e3f660f3dcd831fe5bcfbe
+8061ba44ebc7cc1adb5dc61c903f541f
+4fbf342ef3e828fe28ed4afd7dd955d8
+fb6c7eb4f64f699511380721e9c8cabb
+f7e6e117024b8936cf0f3ba1ac303a3b
+306447863f89c6962fc5c16517c8fb9c
+ffea49fca3098180dc03037ea5f87138
+cf7d3cdb8806d59c9e3b4a64d46df62e
+218ccd13162c76f4a251164917b8c7c0
+5d9d7de37e423d33aec86617a750662d
+f24a401dc5974e995a2cf98f03a42e17
+2f53f7e0e4dc0aebd7c73abc1460bea2
+72902ec0df95a7dcfb3b66f9b02ef7f3
+9810a7e072a97aee69126d751afc3666
+5a4fa5c58234034800ba1a929c18d278
+13c07511ff89f1567a8f39a5215bc884
+67caabf197df108e2a5707f198146ac1
+58c6fa3caf152bf781da8da64ab52799
+bdbe1fbfb2085e6a3d1a5659da5bd409
+2178d1efad5f2a1f7400e0d6d0a263f8
+4facb81f57e515a508040270849bcd35
+0e695222e2244eb32c461ae50ea05174
+2b83d157f134a0388d6b48a4fbb85bd0
+351cbc60e73886519a8e1232adf80f28
+92492bbeaecf7d28bb9f3e52d845ebb6
+b1de80dc4a1d8122909f53a101802449
+2e5af496face122157e459e84e5fe14b
+40340722aca5dc78ab182ada40f01bc2
+7584fa7ded7aed3b38635274719b7966
+3d79e91b1382280535596ce7eaa5e29b
+69c2af6fffd6537590c7bdba36b5823b
+80c0cd9971c1d458c40a10ffc54ec35d
+1df5c1f71f3cb82b697e4170cc81b188
+9bbf6882f33bcdddc34fb7508ee68b31
+b6c707729ac8e7fe2f6d358b5dd2736c
+c9a5a794de0c80f844549555ce399118
+24aa5d597961bc1d902c5462052a1250
+dc33c287ffa253bc5af591e7f40877da
+22fe5107805f9c5f1ce8051c9796df18
+
+# Additional SHA1 Hashes
+9d4711bbdcf0bb4341414447ba0e16dd3181e6e1
+20d66981942264b1f9aaac6128bdb116203fc85b
+5aac18c5f3406b298235a8a0f76e156d460ca699
+a2f426e4d013f5400d9e86e251d54b057717f546
+
+# Additional SHA256 Hashes
+9c27d8cbcd2398e8f20ce60d12164e165945486249c554e706f43f576ec817b0
+c7d3fe9a84e891a05ecdc6b117edb75cb3c10bb18a611a08ebd519f17beb50d2
+e8a6e7c538c293b0ec26e0ac3d24954dd7412c153567c9dede0c1f74b3dd6b9a
+644985bd33d378f4ca9fde53e472652a6d175cc14e202e4703a265daac774a24
+07191e65af30541f71e876b6037079a070a34c435641897dc788c15e5f62f53c
+
+
+# =============================================================================
+# BEHAVIORAL INDICATORS
+# =============================================================================
+
+# PowerShell Commands to Monitor
+powershell.exe -EncodedCommand
+powershell.exe -ExecutionPolicy Bypass
+powershell.exe -WindowStyle Hidden
+
+# Registry Keys to Monitor
+HKCU\Software\Microsoft\Windows\CurrentVersion\Run
+HKLM\Software\Microsoft\Windows\CurrentVersion\Run
+HKCU\Software\Microsoft\Windows\CurrentVersion\RunOnce
+HKLM\Software\Microsoft\Windows\CurrentVersion\RunOnce
+
+# File Paths to Monitor
+%TEMP%\
+%APPDATA%\
+%USERPROFILE%\AppData\Local\Temp\
+C:\Windows\Temp\

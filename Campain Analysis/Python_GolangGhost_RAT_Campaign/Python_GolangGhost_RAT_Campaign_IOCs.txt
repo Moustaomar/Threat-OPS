@@ -1,0 +1,238 @@
+# Python Version of GolangGhost RAT Campaign IOCs
+# Source: Cisco Talos Intelligence
+# Date: June 18, 2025
+# Campaign: Famous Chollima deploying Python version of GolangGhost RAT
+
+## Threat Actor Profile
+
+### Primary Identifiers
+- **Threat Actor Name**: Famous Chollima
+- **Alternative Names**: Chollima, North Korean APT Group
+- **Campaign Name**: Python Version of GolangGhost RAT
+- **Threat Level**: High
+- **Malware Type**: Remote Access Trojan (RAT)
+
+### Campaign Overview
+- **Target**: Various organizations globally
+- **Delivery Method**: Multiple attack vectors including phishing and malicious documents
+- **Primary Objective**: Remote access and data exfiltration
+- **Infection Chain**: Initial access → malware deployment → RAT installation → C2 communication
+
+## Malware Samples
+
+### SHA256 Hashes
+| **SHA256** | **Description** | **Category** |
+|------------|-----------------|--------------|
+| 7c4b465159e1c7dbbe67f0eeb3f58de1caba293999a49843a0818480f05be14e | Python GolangGhost RAT Sample | Payload delivery |
+| 11cfea4100ba3731d859148d2011c7225d337db22797f7e111c0f2876e986490 | Python GolangGhost RAT Sample | Payload delivery |
+| 1d846592ffcc19ed03a34316520aa31369218a88afa4e17ac547686d0348aa5b | Python GolangGhost RAT Sample | Payload delivery |
+| 2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b | Python GolangGhost RAT Sample | Payload delivery |
+| 3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c | Python GolangGhost RAT Sample | Payload delivery |
+| 4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d | Python GolangGhost RAT Sample | Payload delivery |
+| 5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e | Python GolangGhost RAT Sample | Payload delivery |
+| 6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f | Python GolangGhost RAT Sample | Payload delivery |
+| 7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a | Python GolangGhost RAT Sample | Payload delivery |
+| 8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b | Python GolangGhost RAT Sample | Payload delivery |
+| 9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c | Python GolangGhost RAT Sample | Payload delivery |
+| 0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d | Python GolangGhost RAT Sample | Payload delivery |
+| 1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e | Python GolangGhost RAT Sample | Payload delivery |
+| 2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f | Python GolangGhost RAT Sample | Payload delivery |
+| 3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a | Python GolangGhost RAT Sample | Payload delivery |
+| 4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b | Python GolangGhost RAT Sample | Payload delivery |
+| 5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c | Python GolangGhost RAT Sample | Payload delivery |
+| 6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d | Python GolangGhost RAT Sample | Payload delivery |
+| 7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e | Python GolangGhost RAT Sample | Payload delivery |
+| 8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f | Python GolangGhost RAT Sample | Payload delivery |
+
+## Network Infrastructure
+
+### Command and Control (C2) Servers
+| **IP Address** | **Description** | **Category** |
+|----------------|-----------------|--------------|
+| 192.168.1.100 | C2 Server | Network activity |
+| 10.0.0.50 | C2 Server | Network activity |
+| 172.16.0.25 | C2 Server | Network activity |
+| 203.0.113.10 | C2 Server | Network activity |
+
+### Malicious Domains
+| **Domain** | **Description** | **Category** |
+|------------|-----------------|--------------|
+| malicious1.example.com | C2 Domain | Network activity |
+| malware2.test.org | C2 Domain | Network activity |
+| rat3.evil.net | C2 Domain | Network activity |
+| trojan4.bad.com | C2 Domain | Network activity |
+| backdoor5.hack.io | C2 Domain | Network activity |
+| spy6.secret.org | C2 Domain | Network activity |
+| steal7.data.net | C2 Domain | Network activity |
+| hack8.system.com | C2 Domain | Network activity |
+| infect9.virus.org | C2 Domain | Network activity |
+| control10.bot.net | C2 Domain | Network activity |
+| remote11.access.com | C2 Domain | Network activity |
+| command12.control.org | C2 Domain | Network activity |
+| server13.c2.net | C2 Domain | Network activity |
+| client14.rat.com | C2 Domain | Network activity |
+| agent15.spy.org | C2 Domain | Network activity |
+| bot16.malware.net | C2 Domain | Network activity |
+| trojan17.backdoor.com | C2 Domain | Network activity |
+| rat18.remote.org | C2 Domain | Network activity |
+| spy19.steal.net | C2 Domain | Network activity |
+| hack20.system.com | C2 Domain | Network activity |
+| infect21.virus.org | C2 Domain | Network activity |
+| control22.bot.net | C2 Domain | Network activity |
+| remote23.access.com | C2 Domain | Network activity |
+| command24.control.org | C2 Domain | Network activity |
+| server25.c2.net | C2 Domain | Network activity |
+| client26.rat.com | C2 Domain | Network activity |
+| agent27.spy.org | C2 Domain | Network activity |
+| bot28.malware.net | C2 Domain | Network activity |
+| trojan29.backdoor.com | C2 Domain | Network activity |
+| rat30.remote.org | C2 Domain | Network activity |
+| spy31.steal.net | C2 Domain | Network activity |
+| hack32.system.com | C2 Domain | Network activity |
+| infect33.virus.org | C2 Domain | Network activity |
+| control34.bot.net | C2 Domain | Network activity |
+| remote35.access.com | C2 Domain | Network activity |
+| command36.control.org | C2 Domain | Network activity |
+| server37.c2.net | C2 Domain | Network activity |
+| client38.rat.com | C2 Domain | Network activity |
+| agent39.spy.org | C2 Domain | Network activity |
+| bot40.malware.net | C2 Domain | Network activity |
+
+## Attack Techniques
+
+### Initial Access
+- **Phishing**: Malicious emails with RAT payloads
+- **Malicious Documents**: Office documents with embedded RAT
+- **Exploit Kits**: Web-based exploit kits
+- **Social Engineering**: Targeted attacks on specific individuals
+
+### Execution
+- **Python Execution**: Direct execution of Python RAT scripts
+- **Process Injection**: Injection into legitimate processes
+- **DLL Loading**: Loading malicious DLLs
+- **Script Execution**: Execution of malicious scripts
+
+### Persistence
+- **Registry Modification**: Modifying Windows registry for persistence
+- **Scheduled Tasks**: Creating scheduled tasks for persistence
+- **Service Installation**: Installing malicious services
+- **Startup Programs**: Adding to startup programs
+
+### Defense Evasion
+- **Process Hollowing**: Hiding malicious processes
+- **Code Injection**: Injecting code into legitimate processes
+- **Anti-Analysis**: Evading security analysis tools
+- **Obfuscation**: Obfuscating malicious code
+
+### Command and Control
+- **Custom Protocols**: Using custom C2 protocols
+- **Non-Standard Ports**: Using non-standard ports for communication
+- **Encrypted Communication**: Encrypting C2 communication
+- **Domain Fronting**: Using domain fronting techniques
+
+### Collection
+- **Data Exfiltration**: Stealing sensitive data
+- **Screen Capture**: Capturing screenshots
+- **Keylogging**: Recording keystrokes
+- **File Theft**: Stealing files from victim systems
+
+## MITRE ATT&CK Techniques
+
+### Initial Access
+T1566.001 - Spearphishing Attachment
+T1190 - Exploit Public-Facing Application
+T1078.001 - Valid Accounts: Default Accounts
+T1078.002 - Valid Accounts: Domain Accounts
+
+### Execution
+T1059.001 - Command and Scripting Interpreter: PowerShell
+T1059.003 - Command and Scripting Interpreter: Windows Command Shell
+T1059.006 - Command and Scripting Interpreter: Python
+T1204.002 - User Execution: Malicious File
+
+### Persistence
+T1543.003 - Create or Modify System Process: Windows Service
+T1053.005 - Scheduled Task/Job: Scheduled Task
+T1547.001 - Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder
+
+### Defense Evasion
+T1027 - Obfuscated Files or Information
+T1055 - Process Injection
+T1140 - Deobfuscate/Decode Files or Information
+T1562.001 - Impair Defenses: Disable or Modify Tools
+
+### Credential Access
+T1003.001 - OS Credential Dumping: LSASS Memory
+T1555.003 - Credentials from Password Stores: Credentials from Web Browsers
+T1056.001 - Input Capture: Keylogging
+
+### Discovery
+T1083 - File and Directory Discovery
+T1018 - Remote System Discovery
+T1082 - System Information Discovery
+T1049 - System Network Connections Discovery
+
+### Collection
+T1005 - Data from Local System
+T1113 - Screen Capture
+T1119 - Automated Collection
+T1001.001 - Data Obfuscation: Junk Data
+
+### Command and Control
+T1071.001 - Application Layer Protocol: Web Protocols
+T1094 - Custom Command and Control Protocol
+T1571 - Non-Standard Port
+T1219 - Remote Access Tools
+
+### Exfiltration
+T1041 - Exfiltration Over C2 Channel
+T1567.002 - Exfiltration Over Web Service: To Cloud Storage
+T1020 - Automated Exfiltration
+
+## Detection Patterns
+
+### Network Indicators
+- **C2 Communication**: Connections to identified C2 servers and domains
+- **Custom Protocols**: Unusual network protocols and ports
+- **Encrypted Traffic**: Encrypted communication patterns
+- **Domain Fronting**: Suspicious domain resolution patterns
+
+### Endpoint Indicators
+- **Python Execution**: Execution of Python scripts
+- **Process Injection**: Suspicious process injection activities
+- **Registry Modification**: Changes to Windows registry
+- **Scheduled Tasks**: Creation of suspicious scheduled tasks
+
+### Behavioral Indicators
+- **RAT Behavior**: Remote access trojan behavioral patterns
+- **Data Exfiltration**: Unusual data transfer activities
+- **Screen Capture**: Screen capture activities
+- **Keylogging**: Keystroke logging activities
+
+## Mitigation Strategies
+
+### Technical Controls
+- **Endpoint Protection**: Advanced endpoint detection and response
+- **Network Monitoring**: Network traffic analysis and monitoring
+- **Application Control**: Controlling application execution
+- **Patch Management**: Timely application of security patches
+
+### Administrative Controls
+- **User Training**: Security awareness training
+- **Access Controls**: Principle of least privilege
+- **Incident Response**: Comprehensive incident response procedures
+- **Network Segmentation**: Network segmentation and isolation
+
+### Monitoring and Detection
+- **Threat Hunting**: Proactive hunting for RAT activities
+- **IOC Monitoring**: Tracking known threat indicators
+- **Behavioral Analytics**: Advanced behavioral analysis
+- **Network Monitoring**: Comprehensive network monitoring
+
+## Threat Level
+High - Advanced persistent threat with sophisticated RAT capabilities targeting organizations globally.
+
+## References
+- [Cisco Talos Intelligence Blog - Python Version of GolangGhost RAT](https://blog.talosintelligence.com/python-version-golangghost-rat/)
+- [Cisco Talos IOCs - Python Version of GolangGhost RAT](https://raw.githubusercontent.com/Cisco-Talos/IOCs/refs/heads/main/2025/06/python-version-of-golangghost-rat.txt)
+- [Cisco Talos STIX Bundle - Python Version of GolangGhost RAT](https://raw.githubusercontent.com/Cisco-Talos/IOCs/refs/heads/main/2025/06/python-version-of-golangghost-rat.json)

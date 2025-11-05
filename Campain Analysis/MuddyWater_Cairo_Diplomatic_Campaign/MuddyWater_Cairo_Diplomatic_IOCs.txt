@@ -1,0 +1,97 @@
+# MuddyWater Cairo-Centric Diplomatic Espionage Campaign - IOCs
+
+## Network Indicators
+
+### Domains
+screenai[.]online
+
+### IPv4 Addresses
+159.198.36[.]115    # ⚠️ CRITICAL: Associated with HomeLand Justice (Void Manticore) - MOIS infrastructure sharing
+
+### URLs
+hxxps://screenai[.]online/Home/
+
+## File Hashes
+
+### MD5 Hashes
+fd75770a2ef293fe0c2ffe1c46cbd904    # EML2_d3ea2214-3ada-4154-bf5e-a6077d7938f8.eml
+69fed0fafc29065ff081793b4647bfc0    # ThisDocument.cls
+a408e056425307096dbf3e8b50a0b673    # sysProcUpdate.exe
+3bb65d389d5c535f068328e607d2d688    # Online Seminar.MFA.gov.ct.tr-1.doc
+7e3c10bb262865a0daaf5c88a2fe7a79    # ThisDocument.cls
+e71743da2965b2b85cc00dba5d9f6515    # ThisDocument.cls
+78b778ba0bcd546337077a50b8f90532    # sysProcUpdate.exe
+3ab16bd1c339fd0727be650104b74dd1    # Online Seminar.FM.gov.om.doc
+8b01d3ba8a5df19a37d9bd212875c4aa    # ThisDocument.cls
+1a86ed697e24731b88e5e591c6ecfb91    # sysProcUpdate.exe
+e73ba93d008affdc4cce0cb4e18ae5c6    # DPR for dredging in FreeSpan_16082025.2.doc
+7e73ca410dc6480c77a9236c0733c0a1    # sysProcUpdate.exe
+7a725ed8e770d9c5d32813a85b903bab    # EML1_b83e2495-1968-4cd2-ac40-ad5fcfee687d.eml
+d6ad04612f9a6060f3955c43ad5cf236    # DPR for dredging in FreeSpan_16082025.2.doc
+1de19958e7c2ef14addfb35b43a594ec    # Online Seminar.MFA.gov.ct.tr.doc
+e2a5019f85a8aed140b13c87cf9a791a    # Online Seminar.FM.gov.om.doc
+
+### SHA1 Hashes
+d4378b67c2827ee4def62fd3e8a98f4a0d950298    # EML2_d3ea2214-3ada-4154-bf5e-a6077d7938f8.eml
+56013f71ff7cfd585708cce301cb4e52a340c6e0    # ThisDocument.cls
+4f69ab8e1f90ad087a4a74397ff8cd0748e85be8    # sysProcUpdate.exe
+290ab496ab0a66e16f0558d621a52cacd5c66392    # Online Seminar.MFA.gov.ct.tr-1.doc
+183deb80b1a2e5fbc76f4f99c1291dd6020868e4    # ThisDocument.cls
+d549856a988b3df32b4fd48511f26e6d89f0f523    # ThisDocument.cls
+f326bb96544e1b0c9df9bdc496c417dcf5760067    # sysProcUpdate.exe
+2b5ddc48fe17d014e38b9fd6646b23d5eb70b471    # Online Seminar.FM.gov.om.doc
+815b89d9e46ea0f9e3fb039992af3a303e89642c    # ThisDocument.cls
+ff3fe0c43949a9011f8fd4eab8bddce6c1287bdb    # sysProcUpdate.exe
+f07a8014f36181e88d273d07b7a5503417f799a3    # DPR for dredging in FreeSpan_16082025.2.doc
+29f86bc6921b56ea178c8f2b06f136b3b1fc80a6    # sysProcUpdate.exe
+8a7cf41375dae8561f5946f64e0b08d1ef007ed5    # EML1_b83e2495-1968-4cd2-ac40-ad5fcfee687d.eml
+33591832d096223b4c44ac56e7894ec038a9ebf7    # DPR for dredging in FreeSpan_16082025.2.doc
+ec251c5b831be6265d8daeb0437229b8b00e0b68    # Online Seminar.MFA.gov.ct.tr.doc
+cb0d1f3ea8230c1d46eff18ac846546786776782    # Online Seminar.FM.gov.om.doc
+
+### SHA256 Hashes
+05d8f686dcbb6078f91f49af779e4572ba1646a9c5629a1525e8499ab481dbf2    # EML2_d3ea2214-3ada-4154-bf5e-a6077d7938f8.eml
+e49766f63eb24ca7b0c9324c31a98586d3d91fae3bdbb5bdbd467a88323058ab    # ThisDocument.cls
+1883db6de22d98ed00f8719b11de5bf1d02fc206b89fedd6dd0df0e8d40c4c56    # sysProcUpdate.exe
+f0ba41ce46e566f83db1ba3fc762fd9b394d12a01a9cef4ac279135e4c1c67a9    # Online Seminar.MFA.gov.ct.tr-1.doc
+20e7b9dcf954660555d511a64a07996f6178f5819f8501611a521e19fbba74b0    # ThisDocument.cls
+5927c790444db2b6194f7864a5cf3416cfc1af26d76c4e93431bb6bc616225c1    # ThisDocument.cls
+3d6f69cc0330b302ddf4701bbc956b8fca683d1c1b3146768dcbce4a1a3932ca    # sysProcUpdate.exe
+b2c52fde1301a3624a9ceb995f2de4112d57fcbc6a4695799aec15af4fa0a122    # Online Seminar.FM.gov.om.doc
+19e1f01ecd17b8bce14b6c37b0ad22f0c22f155841e1c71d81eda4a2074fa9a0    # ThisDocument.cls
+3ac8283916547c50501eed8e7c3a77f0ae8b009c7b72275be8726a5b6ae255e3    # sysProcUpdate.exe
+2c92c7bf2d6574f9240032ec6adee738edddc2ba8d3207eb102eddf4ab963db0    # DPR for dredging in FreeSpan_16082025.2.doc
+76fa8dca768b64aefedd85f7d0a33c2693b94bdb55f40ced7830561e48e39c75    # sysProcUpdate.exe
+03828aebefde47bca0fcf0684ecae18aedde035c85f9d39edd2b7a147a1146fa    # EML1_b83e2495-1968-4cd2-ac40-ad5fcfee687d.eml
+80e9105233f9d93df753a43291c2ab1a010375357db9327f9fe40d184f078c6b    # DPR for dredging in FreeSpan_16082025.2.doc
+1c16b271c0c4e277eb3d1a7795d4746ce80152f04827a4f3c5798aaf4d51f6a1    # Online Seminar.MFA.gov.ct.tr.doc
+02ccc4271362b92a59e6851ac6d5d2c07182064a602906d7166fe2867cc662a5    # Online Seminar.FM.gov.om.doc
+
+## File Names
+EML2_d3ea2214-3ada-4154-bf5e-a6077d7938f8.eml
+ThisDocument.cls
+sysProcUpdate.exe
+Online Seminar.MFA.gov.ct.tr-1.doc
+Online Seminar.FM.gov.om.doc
+DPR for dredging in FreeSpan_16082025.2.doc
+EML1_b83e2495-1968-4cd2-ac40-ad5fcfee687d.eml
+Online Seminar.MFA.gov.ct.tr.doc
+
+## MITRE ATT&CK Mapping
+Based on the MITRE tactics CSV, this campaign includes:
+- T1586.002: Compromise Accounts -> Email Accounts
+- T1566.001: Phishing -> Spearphishing Attachment
+- T1204.002: User Execution -> Malicious File
+- T1059.005: Command and Scripting Interpreter -> Visual Basic
+- T1059.003: Command and Scripting Interpreter -> Windows Command Shell
+- T1547.001: Boot or Logon Autostart Execution -> Registry Run Keys / Startup Folder
+- T1055.002: Process Injection -> Portable Executable Injection
+- T1140: Deobfuscate/Decode Files or Information
+- T1027.016: Obfuscated Files or Information -> Junk Code Insertion
+- T1497: Virtualization/Sandbox Evasion
+- T1087.001: Account Discovery -> Local Account
+- T1082: System Information Discovery
+- T1033: System Owner/User Discovery
+- T1105: Ingress Tool Transfer
+- T1071.001: Application Layer Protocol -> Web Protocols
+- T1041: Exfiltration Over C2 Channel

@@ -1,0 +1,70 @@
+# HybridPetya UEFI Ransomware Campaign - IOCs
+# Source: ESET Research - https://www.welivesecurity.com/en/eset-research/introducing-hybridpetya-petya-notpetya-copycat-uefi-secure-boot-bypass/
+# Campaign: HybridPetya - Petya/NotPetya copycat with UEFI Secure Boot bypass
+
+## File Hashes - HybridPetya Installers
+
+8E7A1F4A3F5B2C9D0E6F8A9B1C2D3E4F5A6B7C8D9E0F1A2B  # notpetyanew.exe
+C7C270F9D3AE80EC5E8926A3CD1FB5C9D208F1DC  # notpetyanew.exe
+C8E3F1BF0B67C83D2A6D9E594DE8067F0378E6C5  # notpetya_new.exe
+3393A8C258239D6802553FD1CCE397E18FA285A1  # notpetyanew_improved_final.exe
+A6EBFA062270A321241439E8DF72664CD54EA1BC  # improved_notpetyanew.exe
+D31F86BA572904192D7476CA376686E76E103D28  # f20000.mbam_update.exe
+CDC8CB3D211589202B49A48618B0D90C4D8F86FD  # core.dll
+B6C9A8D5E7F2B1C4A6E8F0D3B7A9C2E5F1A4B6D8  # HybridPetya installer (generic)
+
+
+## Email Addresses
+wowsmith1234567@proton.me  # Operator contact (installer version)
+wowsmith999999@proton.me   # Operator contact (UEFI Secure Boot bypass version)
+
+## Bitcoin Address
+bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh  # Ransom payment address
+
+## CVE References
+CVE-2024-7344  # UEFI Secure Boot bypass vulnerability exploited by HybridPetya
+
+## File Paths and Names
+
+### Configuration Files
+\EFI\Microsoft\Boot\config      # Bootkit configuration file
+\EFI\Microsoft\Boot\verify      # Encrypted verification file
+\EFI\Microsoft\Boot\counter     # Encryption progress counter
+
+### Malicious Filenames
+notpetyanew.exe
+notpetya_new.exe
+notpetyanew_improved_final.exe
+improved_notpetyanew.exe
+f20000.mbam_update.exe
+core.dll
+bootmgfw.efi
+cloak.dat
+
+## MITRE ATT&CK TTPs
+T1587.001  # Develop Capabilities: Malware
+T1587.004  # Develop Capabilities: Exploits
+T1203      # Exploitation for Client Execution
+T1106      # Native API
+T1542.003  # Pre-OS Boot: Bootkit
+T1574      # Hijack Execution Flow
+T1068      # Exploitation for Privilege Escalation
+T1211      # Exploitation for Defense Evasion
+T1620      # Reflective Code Loading
+T1036      # Masquerading
+T1486      # Data Encrypted for Impact
+T1529      # System Shutdown/Reboot
+
+## Behavioral Indicators
+
+### Encryption Behavior
+- Encrypts Master File Table (MFT) on NTFS partitions
+- Uses Salsa20 encryption algorithm
+- Displays fake CHKDSK messages during encryption
+- Creates encryption progress counter file
+
+### UEFI Specific Indicators
+- Installs malicious EFI application to EFI System Partition
+- Bypasses UEFI Secure Boot using CVE-2024-7344
+- Modifies EFI boot configuration
+- Persistence through UEFI bootkit

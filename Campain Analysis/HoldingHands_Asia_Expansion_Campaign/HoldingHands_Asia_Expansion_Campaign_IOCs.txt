@@ -1,0 +1,56 @@
+# HoldingHands Asia Expansion Campaign - IOCs
+# Source: Fortinet FortiGuard Labs
+# Reference: https://www.fortinet.com/blog/threat-research/tracking-malware-and-attack-expansion-a-hacker-groups-journey-across-asia
+# Date: October 17, 2025
+# Campaign: HoldingHands and Winos 4.0 malware targeting China, Taiwan, Japan, and Malaysia
+
+## Domains
+zxp0010w.vip
+gjqygs.cn
+zcqiyess.vip
+jpjpz1.cc
+jppjp.vip
+jpjpz1.top
+
+## IP Addresses
+206.238.199.22
+206.238.221.244
+154.91.64.45
+156.251.17.12
+206.238.221.182
+38.60.203.110
+
+## SHA256 Hashes
+c138ff7d0b46a657c3a327f4eb266866957b4117c0507507ba81aaeb42cdefa9
+03e1cdca2a9e08efa8448e20b50dc63fdbea0e850de25c3a8e04b03e743b983d
+2b1719108ec52e5dea20169a225b7d383ad450195a5e6274315c79874f448caa
+dc45981ff705b641434ff959de5f8d4c12341eaeda42d278bd4e46628df94ac5
+0db506d018413268e441a34e6e134c9f5a33ceea338fc323d231de966401bb2c
+031c916b599e17d8cfa13089bddafc2436be8522f0c9e479c7d76ba3010bbd18
+c6095912671a201dad86d101e4fe619319cc22b10b4e8d74c3cd655b2175364c
+804dc39c1f928964a5c02d129da72c836accf19b8f6d8dc69fc853ce5f65b4f3
+1c4bc67ae4af505f58bd11399d45e196fc17cc5dd32ad1d8e6836832d59df6e6
+fb9c9ed91fc70f862876bd77314d3b2275069ca7c4db045e5972e726a3e8e04c
+8d25da6459c427ad658ff400e1184084db1789a7abff9b70ca85cf57f4320283
+
+## Malware Families
+- Winos 4.0
+- HoldingHands
+
+## Attack Vectors
+- Phishing emails with malicious PDF attachments
+- Malicious links in PDF documents
+- Social engineering lures (government documents, tax forms, purchase orders)
+- Tencent Cloud storage abuse
+
+## Affected Regions
+- China
+- Taiwan
+- Japan
+- Malaysia
+
+## Key Infrastructure Patterns
+- Domains containing "tw" (Taiwan abbreviation)
+- Tencent Cloud Account IDs: 1321729461, 1329400280
+- Custom domain patterns for malware delivery
+

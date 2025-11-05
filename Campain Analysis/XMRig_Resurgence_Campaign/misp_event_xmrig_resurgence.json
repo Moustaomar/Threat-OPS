@@ -1,0 +1,345 @@
+{
+  "Event": {
+    "info": "XMRig Monero Miner Resurgence - Hidden Miners Campaign (G DATA, July 2025)",
+    "date": "2025-07-09",
+    "threat_level_id": "2",
+    "analysis": "2",
+    "meta-category": "malware",
+    "Attribute": [
+      {
+        "type": "sha256",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "C0F5375DD4530C7554212E7C8D85EBE41370BE49E1AA40D381F2E34CBF319134",
+        "comment": "NSIS Loader; detection: Gen:Variant.Strictor.239587"
+      },
+      {
+        "type": "sha256",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "A7ECF925427FA07C40FF335E57EE04DCB028A97B4C5A8429CC7ED101CB30B1D0",
+        "comment": "upgrade.ps1; detection: PowerShell.Trojan.Agent.AQX"
+      },
+      {
+        "type": "sha256",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "26E2794167F5A4F5A1C7E708823B77FD6500290DF4DA225181D55F030B0043EB",
+        "comment": "default_list.xml/ServHelper; detection: Gen:Variant.Ursu.750288"
+      },
+      {
+        "type": "sha256",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "85A8867844CC43840DB2ADB62153722A994EFEECC0F066A3E0211CAD69D1AA77",
+        "comment": "appcache.xml; detection: Gen:Variant.Ursu.750421"
+      },
+      {
+        "type": "url",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "http://almagel.icu/cp.exe",
+        "comment": "Malware download URL"
+      },
+      {
+        "type": "url",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "http://almagel.icu/ssh.zip",
+        "comment": "Malware download URL"
+      },
+      {
+        "type": "url",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "http://almagel.icu/mon.zip",
+        "comment": "Miner and images download URL"
+      },
+      {
+        "type": "url",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "http://rotoscoping.xyz:3389",
+        "comment": "C2 or infrastructure URL"
+      },
+      {
+        "type": "url",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "http://losos.cn:7201",
+        "comment": "C2 or infrastructure URL"
+      },
+      {
+        "type": "url",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "http://romashka.cn/guga.txt",
+        "comment": "C2 or infrastructure URL"
+      },
+      {
+        "type": "url",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "http://safuuf7774.pw/iplog/vmt.php?hst=vmt_installed_$env:computername",
+        "comment": "C2 or infrastructure URL"
+      },
+      {
+        "type": "url",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "http://asggh554tgahhr.pw",
+        "comment": "C2 or infrastructure URL"
+      },
+      {
+        "type": "url",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "http://nsggh554tgahhr.pw",
+        "comment": "C2 or infrastructure URL"
+      },
+      {
+        "type": "url",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "http://sggh554tgahhr.pw",
+        "comment": "C2 or infrastructure URL"
+      },
+      {
+        "type": "url",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "http://dfsgu747hugr.pw",
+        "comment": "C2 or infrastructure URL"
+      },
+      {
+        "type": "url",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "http://esggh554tgahhr.pw",
+        "comment": "C2 or infrastructure URL"
+      },
+      {
+        "type": "url",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "http://hsggh554tgahhr.pw",
+        "comment": "C2 or infrastructure URL"
+      },
+      {
+        "type": "url",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "http://kuarela.xyz/1.txt",
+        "comment": "C2 or infrastructure URL"
+      },
+      {
+        "type": "url",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "https://sgahugu4ijgji.xyz/list/b.php",
+        "comment": "C2 or infrastructure URL"
+      },
+      {
+        "type": "url",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "http://asggh554tgahhr.pw/list/b.php",
+        "comment": "C2 or infrastructure URL"
+      },
+      {
+        "type": "url",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "http://gabardina.xyz/log.txt",
+        "comment": "C2 or infrastructure URL"
+      }
+    ],
+    "Tag": [
+      { "name": "malware-family:XMrig" },
+      { "name": "category:cryptominer" },
+      { "name": "campaign:hidden-miners" },
+      { "name": "source:GDATA" },
+      { "name": "date:2025-07" },
+      { "name": "threat-level:medium" },
+      { "name": "tlp:amber" },
+      { "name": "attack-pattern:mining" },
+      { "name": "malware-type:backdoor" },
+      { "name": "malware-type:loader" },
+      { "name": "technique:privilege-escalation" },
+      { "name": "technique:virtualization-evasion" },
+      { "name": "monero:mining" },
+      { "name": "infrastructure:virtualbox" },
+      { "name": "os:windows" },
+      { "name": "os:linux" },
+      { "name": "language:golang" },
+      { "name": "language:powershell" },
+      { "name": "threat-actor:TA505" },
+      { "name": "malware-family:ServHelper" },
+      { "name": "malware-family:LoudMiner" },
+      { "name": "tool:UACME" },
+      { "name": "tool:VirtualBox" },
+      { "name": "tool:NSSM" },
+      { "name": "tool:SmartAssembly" }
+    ],
+    "description": "This event documents the resurgence of XMRig-based Monero cryptominer malware, as reported by G DATA in July 2025. The campaign uses a sophisticated multi-stage infection chain involving NSIS loaders, PowerShell scripts, privilege escalation via UACME, and VirtualBox-based stealth mining. The malware combines backdoor capabilities with passive cryptomining, enabling threat actors to gain both immediate financial benefit and persistent access to compromised systems. The campaign demonstrates advanced evasion techniques including virtualization detection, AMSI bypass, ETW disabling, and memory patching of system modules. The malware targets both Windows and Linux systems, with the Windows variant being a newer addition to the threat actor's arsenal. The campaign has been observed targeting financial and retail sectors, with infrastructure hosted across multiple domains and IP addresses. This represents a significant evolution in cryptominer malware, combining traditional backdoor functionality with sophisticated stealth mining capabilities.",
+    "Galaxy": [
+      {
+        "uuid": "5f22f4c4-fdb3-6c4f-0ea3-248abb005212",
+        "name": "MITRE ATT&CK",
+        "type": "mitre-attack-pattern",
+        "description": "MITRE ATT&CK techniques observed in this campaign",
+        "GalaxyCluster": [
+          {
+            "uuid": "5f22f4c4-fdb3-6c4f-0ea3-248abb005213",
+            "type": "mitre-attack-pattern",
+            "value": "T1059.001",
+            "description": "Command and Scripting Interpreter: PowerShell",
+            "meta": {
+              "external_id": "T1059.001",
+              "mitre_id": "T1059.001",
+              "tactic": "Execution"
+            }
+          },
+          {
+            "uuid": "5f22f4c4-fdb3-6c4f-0ea3-248abb005214",
+            "type": "mitre-attack-pattern",
+            "value": "T1053.005",
+            "description": "Scheduled Task/Job: Scheduled Task",
+            "meta": {
+              "external_id": "T1053.005",
+              "mitre_id": "T1053.005",
+              "tactic": "Execution, Persistence"
+            }
+          },
+          {
+            "uuid": "5f22f4c4-fdb3-6c4f-0ea3-248abb005215",
+            "type": "mitre-attack-pattern",
+            "value": "T1562.001",
+            "description": "Impair Defenses: Disable or Modify Tools",
+            "meta": {
+              "external_id": "T1562.001",
+              "mitre_id": "T1562.001",
+              "tactic": "Defense Evasion"
+            }
+          },
+          {
+            "uuid": "5f22f4c4-fdb3-6c4f-0ea3-248abb005216",
+            "type": "mitre-attack-pattern",
+            "value": "T1562.002",
+            "description": "Impair Defenses: Disable Windows Event Logging",
+            "meta": {
+              "external_id": "T1562.002",
+              "mitre_id": "T1562.002",
+              "tactic": "Defense Evasion"
+            }
+          },
+          {
+            "uuid": "5f22f4c4-fdb3-6c4f-0ea3-248abb005217",
+            "type": "mitre-attack-pattern",
+            "value": "T1127.001",
+            "description": "Trusted Developer Utilities Proxy Execution: MSBuild",
+            "meta": {
+              "external_id": "T1127.001",
+              "mitre_id": "T1127.001",
+              "tactic": "Defense Evasion"
+            }
+          },
+          {
+            "uuid": "5f22f4c4-fdb3-6c4f-0ea3-248abb005218",
+            "type": "mitre-attack-pattern",
+            "value": "T1027.011",
+            "description": "Obfuscated Files or Information: Fileless Storage",
+            "meta": {
+              "external_id": "T1027.011",
+              "mitre_id": "T1027.011",
+              "tactic": "Defense Evasion"
+            }
+          },
+          {
+            "uuid": "5f22f4c4-fdb3-6c4f-0ea3-248abb005219",
+            "type": "mitre-attack-pattern",
+            "value": "T1071.001",
+            "description": "Application Layer Protocol: Web Protocols",
+            "meta": {
+              "external_id": "T1071.001",
+              "mitre_id": "T1071.001",
+              "tactic": "Command and Control"
+            }
+          },
+          {
+            "uuid": "5f22f4c4-fdb3-6c4f-0ea3-248abb005220",
+            "type": "mitre-attack-pattern",
+            "value": "T1496",
+            "description": "Resource Hijacking",
+            "meta": {
+              "external_id": "T1496",
+              "mitre_id": "T1496",
+              "tactic": "Impact"
+            }
+          }
+        ]
+      },
+      {
+        "uuid": "5f22f4c4-fdb3-6c4f-0ea3-248abb005221",
+        "name": "Threat Actor",
+        "type": "threat-actor",
+        "description": "Threat actors associated with this campaign",
+        "GalaxyCluster": [
+          {
+            "uuid": "5f22f4c4-fdb3-6c4f-0ea3-248abb005222",
+            "type": "threat-actor",
+            "value": "TA505",
+            "description": "Threat actor group associated with ServHelper backdoor",
+            "meta": {
+              "synonyms": ["ServHelper Group"],
+              "country": "Unknown",
+              "motivation": "Financial Gain",
+              "sophistication": "High"
+            }
+          }
+        ]
+      },
+      {
+        "uuid": "5f22f4c4-fdb3-6c4f-0ea3-248abb005223",
+        "name": "Malware",
+        "type": "malware",
+        "description": "Malware families and variants",
+        "GalaxyCluster": [
+          {
+            "uuid": "5f22f4c4-fdb3-6c4f-0ea3-248abb005224",
+            "type": "malware",
+            "value": "ServHelper",
+            "description": "Backdoor malware family",
+            "meta": {
+              "synonyms": ["Ursu"],
+              "malware-type": "backdoor",
+              "capabilities": ["remote-access", "command-execution", "file-manipulation"]
+            }
+          },
+          {
+            "uuid": "5f22f4c4-fdb3-6c4f-0ea3-248abb005225",
+            "type": "malware",
+            "value": "LoudMiner",
+            "description": "Cryptominer component",
+            "meta": {
+              "synonyms": ["Hidden Miner"],
+              "malware-type": "cryptominer",
+              "capabilities": ["resource-hijacking", "stealth-mining"]
+            }
+          },
+          {
+            "uuid": "5f22f4c4-fdb3-6c4f-0ea3-248abb005226",
+            "type": "malware",
+            "value": "XMrig",
+            "description": "Open-source Monero miner",
+            "meta": {
+              "synonyms": ["XMRig Miner"],
+              "malware-type": "cryptominer",
+              "capabilities": ["cpu-mining", "monero-mining"]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

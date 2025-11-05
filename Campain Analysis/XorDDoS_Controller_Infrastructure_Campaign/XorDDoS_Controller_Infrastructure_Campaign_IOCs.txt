@@ -1,0 +1,362 @@
+# XorDDoS Controller and Infrastructure Campaign IOCs
+# Source: Cisco Talos Intelligence
+# Date: April 28, 2025
+# Campaign: Unmasking the new XorDDoS controller and infrastructure
+
+## Threat Actor Profile
+
+### Primary Identifiers
+- **Campaign Name**: XorDDoS Controller and Infrastructure Campaign
+- **Threat Type**: DDoS Botnet and Infrastructure
+- **Target**: Various organizations globally
+- **Threat Level**: High
+- **Attack Vector**: DDoS attacks and botnet infrastructure
+
+### Campaign Overview
+- **Target**: Various organizations globally
+- **Delivery Method**: DDoS attacks and botnet infrastructure
+- **Primary Objective**: DDoS attacks and network disruption
+- **Infection Chain**: Botnet recruitment → DDoS attacks → Network disruption
+
+## Malware Samples
+
+### SHA256 Hashes
+| **SHA256** | **Description** | **Category** | **Malware Type** |
+|------------|-----------------|--------------|------------------|
+| 70167bee44cde87b48e132a9abbac66055277cb552f666ca8b7bf5120914e852 | XorDDoS Controller | Payload delivery | DDoS Botnet |
+| d09731c39d57e1c38b771f530422815bb01c338870645e655e53d55266e81556 | XorDDoS Infrastructure | Payload delivery | DDoS Infrastructure |
+
+## Network Infrastructure
+
+### Command and Control (C2) Servers
+| **IP Address** | **Description** | **Category** |
+|----------------|-----------------|--------------|
+| 58.60.184.214 | C2 Server | Network activity |
+| 102.102.40.93 | C2 Server | Network activity |
+| 89.54.90.113 | C2 Server | Network activity |
+| 19.92.109.169 | C2 Server | Network activity |
+| 126.131.151.182 | C2 Server | Network activity |
+| 221.137.188.10 | C2 Server | Network activity |
+| 54.59.0.130 | C2 Server | Network activity |
+| 135.80.130.171 | C2 Server | Network activity |
+| 71.136.118.192 | C2 Server | Network activity |
+| 55.26.131.230 | C2 Server | Network activity |
+| 98.2.205.78 | C2 Server | Network activity |
+| 28.155.77.80 | C2 Server | Network activity |
+| 73.95.47.244 | C2 Server | Network activity |
+| 113.4.120.133 | C2 Server | Network activity |
+| 42.189.51.36 | C2 Server | Network activity |
+| 29.180.243.229 | C2 Server | Network activity |
+| 88.57.63.244 | C2 Server | Network activity |
+| 83.222.159.154 | C2 Server | Network activity |
+| 69.69.2.11 | C2 Server | Network activity |
+| 160.66.194.46 | C2 Server | Network activity |
+| 53.87.218.39 | C2 Server | Network activity |
+| 62.170.108.36 | C2 Server | Network activity |
+| 142.53.46.88 | C2 Server | Network activity |
+| 43.220.64.255 | C2 Server | Network activity |
+| 60.156.128.82 | C2 Server | Network activity |
+| 153.135.4.100 | C2 Server | Network activity |
+| 11.90.157.105 | C2 Server | Network activity |
+| 71.130.126.169 | C2 Server | Network activity |
+| 66.79.176.61 | C2 Server | Network activity |
+| 189.47.95.188 | C2 Server | Network activity |
+| 46.102.78.38 | C2 Server | Network activity |
+| 33.110.9.107 | C2 Server | Network activity |
+| 130.220.81.136 | C2 Server | Network activity |
+| 217.69.203.76 | C2 Server | Network activity |
+| 148.130.188.55 | C2 Server | Network activity |
+| 47.77.88.203 | C2 Server | Network activity |
+| 32.103.199.94 | C2 Server | Network activity |
+| 145.148.78.213 | C2 Server | Network activity |
+| 128.201.165.117 | C2 Server | Network activity |
+| 20.150.29.7 | C2 Server | Network activity |
+| 8.133.158.119 | C2 Server | Network activity |
+| 2.36.134.24 | C2 Server | Network activity |
+| 2.77.15.250 | C2 Server | Network activity |
+| 91.54.10.57 | C2 Server | Network activity |
+| 28.201.96.131 | C2 Server | Network activity |
+| 193.72.100.178 | C2 Server | Network activity |
+| 169.19.44.236 | C2 Server | Network activity |
+| 70.189.186.116 | C2 Server | Network activity |
+| 189.202.168.57 | C2 Server | Network activity |
+| 79.75.239.146 | C2 Server | Network activity |
+| 132.210.208.126 | C2 Server | Network activity |
+| 211.185.232.213 | C2 Server | Network activity |
+| 21.109.28.217 | C2 Server | Network activity |
+| 221.205.226.233 | C2 Server | Network activity |
+| 24.114.63.133 | C2 Server | Network activity |
+| 83.179.130.214 | C2 Server | Network activity |
+| 101.19.17.63 | C2 Server | Network activity |
+| 103.67.204.12 | C2 Server | Network activity |
+| 105.204.157.116 | C2 Server | Network activity |
+| 142.147.137.57 | C2 Server | Network activity |
+| 208.160.103.78 | C2 Server | Network activity |
+| 172.164.145.39 | C2 Server | Network activity |
+| 139.5.72.243 | C2 Server | Network activity |
+| 6.187.63.174 | C2 Server | Network activity |
+| 182.250.145.200 | C2 Server | Network activity |
+| 60.255.204.219 | C2 Server | Network activity |
+| 114.93.129.252 | C2 Server | Network activity |
+| 201.37.105.118 | C2 Server | Network activity |
+| 197.147.63.205 | C2 Server | Network activity |
+| 204.228.249.108 | C2 Server | Network activity |
+| 158.90.0.57 | C2 Server | Network activity |
+| 81.205.6.128 | C2 Server | Network activity |
+| 5.209.26.204 | C2 Server | Network activity |
+| 218.131.25.110 | C2 Server | Network activity |
+| 217.69.177.221 | C2 Server | Network activity |
+| 20.52.55.108 | C2 Server | Network activity |
+| 72.251.246.128 | C2 Server | Network activity |
+| 70.109.15.46 | C2 Server | Network activity |
+| 4.111.141.150 | C2 Server | Network activity |
+| 11.120.253.147 | C2 Server | Network activity |
+| 19.54.27.231 | C2 Server | Network activity |
+| 46.242.77.170 | C2 Server | Network activity |
+| 11.94.220.78 | C2 Server | Network activity |
+| 164.65.179.249 | C2 Server | Network activity |
+| 66.152.9.129 | C2 Server | Network activity |
+| 110.198.221.255 | C2 Server | Network activity |
+| 89.106.211.21 | C2 Server | Network activity |
+| 112.82.170.116 | C2 Server | Network activity |
+| 215.169.69.253 | C2 Server | Network activity |
+| 113.39.108.38 | C2 Server | Network activity |
+| 56.160.63.29 | C2 Server | Network activity |
+| 59.117.62.235 | C2 Server | Network activity |
+| 223.39.125.83 | C2 Server | Network activity |
+| 94.249.26.200 | C2 Server | Network activity |
+| 209.142.199.108 | C2 Server | Network activity |
+| 70.174.94.91 | C2 Server | Network activity |
+| 199.75.66.7 | C2 Server | Network activity |
+| 85.57.171.146 | C2 Server | Network activity |
+| 181.180.191.184 | C2 Server | Network activity |
+| 216.111.225.121 | C2 Server | Network activity |
+| 19.29.200.49 | C2 Server | Network activity |
+| 44.236.83.193 | C2 Server | Network activity |
+| 171.141.101.142 | C2 Server | Network activity |
+| 105.82.165.229 | C2 Server | Network activity |
+| 49.14.187.47 | C2 Server | Network activity |
+| 136.21.19.226 | C2 Server | Network activity |
+| 56.80.128.46 | C2 Server | Network activity |
+| 76.12.154.30 | C2 Server | Network activity |
+| 74.1.137.255 | C2 Server | Network activity |
+| 199.255.31.187 | C2 Server | Network activity |
+| 69.170.30.33 | C2 Server | Network activity |
+| 61.7.67.243 | C2 Server | Network activity |
+| 152.53.201.191 | C2 Server | Network activity |
+| 128.213.58.181 | C2 Server | Network activity |
+| 115.47.150.194 | C2 Server | Network activity |
+| 163.111.174.25 | C2 Server | Network activity |
+| 83.50.5.138 | C2 Server | Network activity |
+| 130.149.28.49 | C2 Server | Network activity |
+| 85.67.160.134 | C2 Server | Network activity |
+| 145.231.225.189 | C2 Server | Network activity |
+| 202.254.97.111 | C2 Server | Network activity |
+| 48.138.207.203 | C2 Server | Network activity |
+| 134.179.122.20 | C2 Server | Network activity |
+| 155.121.26.72 | C2 Server | Network activity |
+| 197.138.181.205 | C2 Server | Network activity |
+| 105.154.197.21 | C2 Server | Network activity |
+| 76.169.112.216 | C2 Server | Network activity |
+| 108.6.121.201 | C2 Server | Network activity |
+| 52.178.131.251 | C2 Server | Network activity |
+| 100.186.28.101 | C2 Server | Network activity |
+| 206.97.241.198 | C2 Server | Network activity |
+| 122.253.213.233 | C2 Server | Network activity |
+| 132.22.130.182 | C2 Server | Network activity |
+| 135.215.42.239 | C2 Server | Network activity |
+| 30.242.210.74 | C2 Server | Network activity |
+| 117.211.25.159 | C2 Server | Network activity |
+| 51.183.72.67 | C2 Server | Network activity |
+| 16.245.213.94 | C2 Server | Network activity |
+| 196.173.160.72 | C2 Server | Network activity |
+| 141.56.191.234 | C2 Server | Network activity |
+| 138.223.171.81 | C2 Server | Network activity |
+| 181.74.116.236 | C2 Server | Network activity |
+| 80.84.123.83 | C2 Server | Network activity |
+| 130.13.170.191 | C2 Server | Network activity |
+| 67.111.174.34 | C2 Server | Network activity |
+| 202.40.100.109 | C2 Server | Network activity |
+| 198.210.156.184 | C2 Server | Network activity |
+| 103.233.139.67 | C2 Server | Network activity |
+| 142.128.90.47 | C2 Server | Network activity |
+| 99.222.161.114 | C2 Server | Network activity |
+| 45.220.152.136 | C2 Server | Network activity |
+| 53.137.188.173 | C2 Server | Network activity |
+| 130.92.41.45 | C2 Server | Network activity |
+| 184.207.146.227 | C2 Server | Network activity |
+| 177.60.27.182 | C2 Server | Network activity |
+| 200.41.207.138 | C2 Server | Network activity |
+| 205.166.57.152 | C2 Server | Network activity |
+| 102.104.20.163 | C2 Server | Network activity |
+| 115.54.123.68 | C2 Server | Network activity |
+| 206.87.16.148 | C2 Server | Network activity |
+| 187.196.123.241 | C2 Server | Network activity |
+| 52.152.113.213 | C2 Server | Network activity |
+| 63.142.154.110 | C2 Server | Network activity |
+| 69.61.83.248 | C2 Server | Network activity |
+| 92.118.168.196 | C2 Server | Network activity |
+| 74.77.87.71 | C2 Server | Network activity |
+| 19.3.185.48 | C2 Server | Network activity |
+| 32.113.253.123 | C2 Server | Network activity |
+| 96.222.90.160 | C2 Server | Network activity |
+| 78.66.242.133 | C2 Server | Network activity |
+| 47.42.59.162 | C2 Server | Network activity |
+
+### Malicious Domains
+| **Domain** | **Description** | **Category** |
+|------------|-----------------|--------------|
+| ppp.xxxatat456.com:1520 | C2 Domain | Network activity |
+| www1.gggatat456.com:1520 | C2 Domain | Network activity |
+| ppp.gggatat456.com:1520 | C2 Domain | Network activity |
+
+## Attack Techniques
+
+### Initial Access
+- **Botnet Recruitment**: Recruiting systems into the botnet
+- **Vulnerability Exploitation**: Exploiting system vulnerabilities
+- **Social Engineering**: Tricking users into installing malware
+- **Drive-by Downloads**: Automatic malware installation
+
+### Execution
+- **DDoS Attacks**: Launching distributed denial of service attacks
+- **Botnet Control**: Controlling infected systems
+- **Command Execution**: Executing commands on botnet systems
+- **Network Flooding**: Flooding target networks with traffic
+
+### Persistence
+- **Botnet Persistence**: Maintaining botnet membership
+- **Registry Modification**: Modifying Windows registry for persistence
+- **Scheduled Tasks**: Creating scheduled tasks for persistence
+- **Service Installation**: Installing malicious services
+
+### Defense Evasion
+- **Traffic Obfuscation**: Hiding DDoS traffic patterns
+- **Anti-Analysis**: Evading security analysis tools
+- **Process Injection**: Injecting into legitimate processes
+- **Code Obfuscation**: Hiding malicious code
+
+### Command and Control
+- **C2 Communication**: Communication with command and control servers
+- **Botnet Management**: Managing botnet infrastructure
+- **Command Distribution**: Distributing commands to botnet systems
+- **Data Collection**: Collecting information from botnet systems
+
+### Impact
+- **Network Disruption**: Disrupting target networks
+- **Service Unavailability**: Making services unavailable
+- **Business Disruption**: Disrupting business operations
+- **Financial Loss**: Causing financial losses
+
+## MITRE ATT&CK Techniques
+
+### Initial Access
+T1190 - Exploit Public-Facing Application
+T1078.001 - Valid Accounts: Default Accounts
+T1078.002 - Valid Accounts: Domain Accounts
+T1566.001 - Spearphishing Attachment
+
+### Execution
+T1059.001 - Command and Scripting Interpreter: PowerShell
+T1059.003 - Command and Scripting Interpreter: Windows Command Shell
+T1204.002 - User Execution: Malicious File
+T1055 - Process Injection
+
+### Persistence
+T1543.003 - Create or Modify System Process: Windows Service
+T1053.005 - Scheduled Task/Job: Scheduled Task
+T1547.001 - Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder
+
+### Defense Evasion
+T1027 - Obfuscated Files or Information
+T1055 - Process Injection
+T1140 - Deobfuscate/Decode Files or Information
+T1562.001 - Impair Defenses: Disable or Modify Tools
+
+### Credential Access
+T1003.001 - OS Credential Dumping: LSASS Memory
+T1555.003 - Credentials from Password Stores: Credentials from Web Browsers
+T1056.001 - Input Capture: Keylogging
+
+### Discovery
+T1083 - File and Directory Discovery
+T1018 - Remote System Discovery
+T1082 - System Information Discovery
+T1049 - System Network Connections Discovery
+
+### Lateral Movement
+T1021.001 - Remote Services: Remote Desktop Protocol
+T1021.002 - Remote Services: SMB/Windows Admin Shares
+T1021.003 - Remote Services: Distributed Component Object Model
+
+### Collection
+T1005 - Data from Local System
+T1113 - Screen Capture
+T1119 - Automated Collection
+T1001.001 - Data Obfuscation: Junk Data
+
+### Command and Control
+T1071.001 - Application Layer Protocol: Web Protocols
+T1094 - Custom Command and Control Protocol
+T1571 - Non-Standard Port
+T1219 - Remote Access Tools
+
+### Impact
+T1498 - Network Denial of Service
+T1499.004 - Endpoint Denial of Service: Application or System Exploitation
+T1485 - Data Destruction
+T1486 - Data Encrypted for Impact
+
+## Detection Patterns
+
+### Network Indicators
+- **DDoS Traffic**: High volume of traffic to specific targets
+- **C2 Communication**: Connections to command and control servers
+- **Botnet Traffic**: Traffic patterns indicating botnet activity
+- **Network Flooding**: Unusual network traffic patterns
+
+### Endpoint Indicators
+- **Botnet Membership**: Systems participating in botnet activities
+- **DDoS Participation**: Systems launching DDoS attacks
+- **C2 Communication**: Communication with command servers
+- **Traffic Generation**: Generating high volumes of network traffic
+
+### Behavioral Indicators
+- **DDoS Attacks**: Launching distributed denial of service attacks
+- **Botnet Control**: Controlling multiple systems
+- **Network Flooding**: Flooding target networks
+- **Service Disruption**: Disrupting target services
+
+## Mitigation Strategies
+
+### Technical Controls
+- **DDoS Protection**: DDoS mitigation services and appliances
+- **Network Monitoring**: Network traffic analysis and monitoring
+- **Endpoint Protection**: Advanced endpoint detection and response
+- **Traffic Filtering**: Filtering malicious traffic
+
+### Administrative Controls
+- **Incident Response**: Comprehensive incident response procedures
+- **Network Segmentation**: Network segmentation and isolation
+- **Access Controls**: Principle of least privilege
+- **Monitoring**: Continuous monitoring of network activities
+
+### DDoS Protection
+- **Traffic Analysis**: Analyzing network traffic patterns
+- **Rate Limiting**: Implementing rate limiting mechanisms
+- **Traffic Filtering**: Filtering malicious traffic
+- **Load Balancing**: Distributing traffic across multiple servers
+
+### Monitoring and Detection
+- **Threat Hunting**: Proactive hunting for DDoS activities
+- **IOC Monitoring**: Tracking known threat indicators
+- **Behavioral Analytics**: Advanced behavioral analysis
+- **Network Monitoring**: Comprehensive network monitoring
+
+## Threat Level
+High - DDoS botnet with extensive infrastructure targeting organizations globally for network disruption and service unavailability.
+
+## References
+- [Cisco Talos Intelligence Blog - XorDDoS Controller and Infrastructure](https://blog.talosintelligence.com/xorddos-controller-infrastructure/)
+- [Cisco Talos IOCs - XorDDoS Controller and Infrastructure](https://raw.githubusercontent.com/Cisco-Talos/IOCs/refs/heads/main/2025/04/new_XorDDoS_controller_and_infrastructure.txt)
+- [Cisco Talos STIX Bundle - XorDDoS Controller and Infrastructure](https://raw.githubusercontent.com/Cisco-Talos/IOCs/refs/heads/main/2025/04/new_XorDDoS_controller_and_infrastructure.json)

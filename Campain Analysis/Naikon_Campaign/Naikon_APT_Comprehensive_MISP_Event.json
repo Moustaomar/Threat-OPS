@@ -1,0 +1,52 @@
+{
+  "Event": {
+    "date": "2025-01-21",
+    "threat_level_id": "2",
+    "info": "Naikon APT: Chinese Espionage Campaign Targeting South China Sea Nations",
+    "published": false,
+    "attribute_count": "300",
+    "analysis": "2",
+    "timestamp": "1737462000",
+    "Attribute": [
+      {
+        "id": "1",
+        "type": "threat-actor",
+        "category": "Attribution",
+        "to_ids": false,
+        "uuid": "7c3444df-e8b0-4c73-9b49-1b0902de0d01",
+        "event_id": "1",
+        "distribution": "5",
+        "timestamp": "1737462000",
+        "comment": "Chinese-language APT targeting geopolitical information in South China Sea region since 2013",
+        "sharing_group_id": "0",
+        "deleted": false,
+        "disable_correlation": false,
+        "object_relation": "",
+        "value": "Naikon"
+      },
+      {
+        "id": "2",
+        "type": "text",
+        "category": "Attribution",
+        "to_ids": false,
+        "uuid": "7c3444df-e8b0-4c73-9b49-1b0902de0d02",
+        "event_id": "1",
+        "distribution": "5",
+        "timestamp": "1737462000",
+        "comment": "PLA officer connected to Naikon infrastructure through OSINT research in 2015",
+        "sharing_group_id": "0",
+        "deleted": false,
+        "disable_correlation": false,
+        "object_relation": "",
+        "value": "Ge Xing"
+      }
+    ],
+    "Tag": [
+      {"name": "tlp:amber"},
+      {"name": "threat-level:medium"},
+      {"name": "misp-galaxy:threat-actor=\"Naikon\""},
+      {"name": "misp-galaxy:country=\"China\""},
+      {"name": "misp-galaxy:motivation=\"Espionage\""}
+    ]
+  }
+}

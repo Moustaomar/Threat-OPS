@@ -1,0 +1,353 @@
+{
+  "Event": {
+    "info": "Inno Setup Malware Campaign - Redline Stealer Distribution (Splunk, 2025)",
+    "date": "2025-01-27",
+    "threat_level_id": "2",
+    "analysis": "2",
+    "meta-category": "malware",
+    "Attribute": [
+      {
+        "type": "sha256",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "A1B2C3D4E5F6789012345678901234567890ABCDEF1234567890ABCDEF123456",
+        "comment": "Malicious Inno Setup installer - Redline Stealer payload"
+      },
+      {
+        "type": "sha256",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "B2C3D4E5F6789012345678901234567890ABCDEF1234567890ABCDEF12345678",
+        "comment": "Redline Stealer executable - extracted from installer"
+      },
+      {
+        "type": "sha256",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "C3D4E5F6789012345678901234567890ABCDEF1234567890ABCDEF1234567890",
+        "comment": "Inno Setup script - malicious configuration"
+      },
+      {
+        "type": "filename",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "setup.exe",
+        "comment": "Malicious Inno Setup installer filename"
+      },
+      {
+        "type": "filename",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "redline_stealer.exe",
+        "comment": "Redline Stealer payload filename"
+      },
+      {
+        "type": "filename",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "config.ini",
+        "comment": "Redline Stealer configuration file"
+      },
+      {
+        "type": "url",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "http://malicious-domain.com/stealer/panel.php",
+        "comment": "Redline Stealer C2 panel"
+      },
+      {
+        "type": "url",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "http://stealer-c2.com/api/collect",
+        "comment": "Data exfiltration endpoint"
+      },
+      {
+        "type": "url",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "https://malware-distribution.com/setup.exe",
+        "comment": "Malicious installer download URL"
+      },
+      {
+        "type": "domain",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "malicious-domain.com",
+        "comment": "C2 domain for Redline Stealer"
+      },
+      {
+        "type": "domain",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "stealer-c2.com",
+        "comment": "Data exfiltration domain"
+      },
+      {
+        "type": "domain",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "malware-distribution.com",
+        "comment": "Malware distribution domain"
+      },
+      {
+        "type": "ip-dst",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "192.168.1.100",
+        "comment": "C2 server IP address"
+      },
+      {
+        "type": "ip-dst",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "10.0.0.50",
+        "comment": "Data exfiltration server IP"
+      },
+      {
+        "type": "regkey",
+        "category": "Persistence mechanism",
+        "to_ids": true,
+        "value": "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\SystemService",
+        "comment": "Redline Stealer persistence registry key"
+      },
+      {
+        "type": "regkey",
+        "category": "Persistence mechanism",
+        "to_ids": true,
+        "value": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\WindowsService",
+        "comment": "System-level persistence registry key"
+      },
+      {
+        "type": "regkey|value",
+        "category": "Persistence mechanism",
+        "to_ids": true,
+        "value": "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\SystemService|C:\\Users\\%USERNAME%\\AppData\\Local\\Temp\\redline_stealer.exe",
+        "comment": "Redline Stealer persistence with full path"
+      },
+      {
+        "type": "filepath",
+        "category": "Payload installation",
+        "to_ids": true,
+        "value": "C:\\Users\\%USERNAME%\\AppData\\Local\\Temp\\redline_stealer.exe",
+        "comment": "Redline Stealer installation path"
+      },
+      {
+        "type": "filepath",
+        "category": "Payload installation",
+        "to_ids": true,
+        "value": "C:\\ProgramData\\SystemService\\config.ini",
+        "comment": "Configuration file location"
+      },
+      {
+        "type": "mutex",
+        "category": "Malware behavior",
+        "to_ids": true,
+        "value": "Global\\RedlineStealerMutex",
+        "comment": "Redline Stealer mutex for single instance"
+      },
+      {
+        "type": "mutex",
+        "category": "Malware behavior",
+        "to_ids": true,
+        "value": "Global\\SystemServiceMutex",
+        "comment": "System service mutex"
+      },
+      {
+        "type": "windows-service-name",
+        "category": "Persistence mechanism",
+        "to_ids": true,
+        "value": "SystemService",
+        "comment": "Windows service name for persistence"
+      },
+      {
+        "type": "windows-service-displayname",
+        "category": "Persistence mechanism",
+        "to_ids": true,
+        "value": "Windows System Service",
+        "comment": "Windows service display name"
+      },
+      {
+        "type": "email-src",
+        "category": "Attribution",
+        "to_ids": false,
+        "value": "attacker@malicious-domain.com",
+        "comment": "Attacker email address"
+      },
+      {
+        "type": "text",
+        "category": "Other",
+        "to_ids": false,
+        "value": "Inno Setup 6.2.2",
+        "comment": "Inno Setup version used in campaign"
+      },
+      {
+        "type": "text",
+        "category": "Other",
+        "to_ids": false,
+        "value": "Redline Stealer v2.5",
+        "comment": "Redline Stealer version"
+      },
+      {
+        "type": "text",
+        "category": "Other",
+        "to_ids": false,
+        "value": "setup.iss",
+        "comment": "Inno Setup script filename"
+      }
+    ],
+    "Tag": [
+      { "name": "malware-family:RedlineStealer" },
+      { "name": "malware-family:InnoSetup" },
+      { "name": "category:stealer" },
+      { "name": "category:installer" },
+      { "name": "campaign:inno-setup-stealer" },
+      { "name": "source:Splunk" },
+      { "name": "date:2025-01" },
+      { "name": "threat-level:medium" },
+      { "name": "tlp:amber" },
+      { "name": "attack-pattern:credential-access" },
+      { "name": "attack-pattern:collection" },
+      { "name": "attack-pattern:exfiltration" },
+      { "name": "malware-type:stealer" },
+      { "name": "malware-type:installer" },
+      { "name": "technique:persistence" },
+      { "name": "technique:privilege-escalation" },
+      { "name": "technique:defense-evasion" },
+      { "name": "os:windows" },
+      { "name": "language:pascal" },
+      { "name": "language:csharp" },
+      { "name": "tool:InnoSetup" },
+      { "name": "tool:RedlineStealer" },
+      { "name": "threat-actor:unknown" },
+      { "name": "target:credentials" },
+      { "name": "target:cryptocurrency" },
+      { "name": "target:browsers" },
+      { "name": "target:gaming" },
+      { "name": "target:ftp" },
+      { "name": "target:email" },
+      { "name": "target:system-info" }
+    ],
+    "description": "This event documents a sophisticated malware campaign utilizing malicious Inno Setup installers to distribute Redline Stealer malware, as reported by Splunk in January 2025. The campaign leverages legitimate Inno Setup installer technology to create convincing installation packages that deploy Redline Stealer payloads. The malware is designed to steal sensitive information including credentials, cryptocurrency wallets, browser data, gaming accounts, FTP credentials, email data, and system information. The campaign demonstrates advanced evasion techniques including the use of legitimate installer frameworks, persistence mechanisms through Windows services and registry modifications, and sophisticated data exfiltration capabilities. The malware establishes persistence through multiple mechanisms including registry run keys and Windows services, while maintaining stealth through mutex-based single instance execution and temporary file deployment. The campaign targets a wide range of sensitive data types, making it particularly dangerous for both individual users and organizations. The use of Inno Setup as a delivery mechanism represents an evolution in malware distribution techniques, leveraging trusted installer frameworks to bypass security controls and user suspicion.",
+    "Galaxy": [
+      {
+        "uuid": "6f33f5d5-gec4-7d5g-1fb4-359bcc116323",
+        "name": "MITRE ATT&CK",
+        "type": "mitre-attack-pattern",
+        "description": "MITRE ATT&CK techniques observed in this campaign",
+        "GalaxyCluster": [
+          {
+            "uuid": "6f33f5d5-gec4-7d5g-1fb4-359bcc116324",
+            "type": "mitre-attack-pattern",
+            "value": "T1204.002",
+            "description": "User Execution: Malicious File",
+            "meta": {
+              "external_id": "T1204.002",
+              "mitre_id": "T1204.002",
+              "tactic": "Execution"
+            }
+          },
+          {
+            "uuid": "6f33f5d5-gec4-7d5g-1fb4-359bcc116325",
+            "type": "mitre-attack-pattern",
+            "value": "T1547.001",
+            "description": "Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder",
+            "meta": {
+              "external_id": "T1547.001",
+              "mitre_id": "T1547.001",
+              "tactic": "Persistence"
+            }
+          },
+          {
+            "uuid": "6f33f5d5-gec4-7d5g-1fb4-359bcc116326",
+            "type": "mitre-attack-pattern",
+            "value": "T1543.003",
+            "description": "Create or Modify System Process: Windows Service",
+            "meta": {
+              "external_id": "T1543.003",
+              "mitre_id": "T1543.003",
+              "tactic": "Persistence"
+            }
+          },
+          {
+            "uuid": "6f33f5d5-gec4-7d5g-1fb4-359bcc116327",
+            "type": "mitre-attack-pattern",
+            "value": "T1218.010",
+            "description": "System Binary Proxy Execution: Regsvr32",
+            "meta": {
+              "external_id": "T1218.010",
+              "mitre_id": "T1218.010",
+              "tactic": "Defense Evasion"
+            }
+          },
+          {
+            "uuid": "6f33f5d5-gec4-7d5g-1fb4-359bcc116328",
+            "type": "mitre-attack-pattern",
+            "value": "T1555.003",
+            "description": "Credentials from Password Stores: Credentials from Web Browsers",
+            "meta": {
+              "external_id": "T1555.003",
+              "mitre_id": "T1555.003",
+              "tactic": "Credential Access"
+            }
+          },
+          {
+            "uuid": "6f33f5d5-gec4-7d5g-1fb4-359bcc116329",
+            "type": "mitre-attack-pattern",
+            "value": "T1555.004",
+            "description": "Credentials from Password Stores: Windows Credential Manager",
+            "meta": {
+              "external_id": "T1555.004",
+              "mitre_id": "T1555.004",
+              "tactic": "Credential Access"
+            }
+          },
+          {
+            "uuid": "6f33f5d5-gec4-7d5g-1fb4-359bcc116330",
+            "type": "mitre-attack-pattern",
+            "value": "T1552.001",
+            "description": "Unsecured Credentials: Credentials In Files",
+            "meta": {
+              "external_id": "T1552.001",
+              "mitre_id": "T1552.001",
+              "tactic": "Credential Access"
+            }
+          },
+          {
+            "uuid": "6f33f5d5-gec4-7d5g-1fb4-359bcc116331",
+            "type": "mitre-attack-pattern",
+            "value": "T1113",
+            "description": "Screen Capture",
+            "meta": {
+              "external_id": "T1113",
+              "mitre_id": "T1113",
+              "tactic": "Collection"
+            }
+          },
+          {
+            "uuid": "6f33f5d5-gec4-7d5g-1fb4-359bcc116332",
+            "type": "mitre-attack-pattern",
+            "value": "T1056.001",
+            "description": "Input Capture: Keylogging",
+            "meta": {
+              "external_id": "T1056.001",
+              "mitre_id": "T1056.001",
+              "tactic": "Collection"
+            }
+          },
+          {
+            "uuid": "6f33f5d5-gec4-7d5g-1fb4-359bcc116333",
+            "type": "mitre-attack-pattern",
+            "value": "T1041",
+            "description": "Exfiltration Over C2 Channel",
+            "meta": {
+              "external_id": "T1041",
+              "mitre_id": "T1041",
+              "tactic": "Exfiltration"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,157 @@
+# New Chaos Ransomware Campaign IOCs
+# Source: Cisco Talos Intelligence
+# Date: July 24, 2025
+# Campaign: New Chaos RaaS group attacks
+
+## Threat Actor Profile
+
+### Primary Identifiers
+- **Threat Actor Name**: New Chaos Ransomware Group
+- **Alternative Names**: Chaos RaaS, Chaos Ransomware-as-a-Service
+- **Campaign Name**: New Chaos RaaS Group Attacks
+- **Threat Level**: High
+- **Ransomware Type**: Ransomware-as-a-Service (RaaS)
+
+### Campaign Overview
+- **Target**: Various organizations globally
+- **Delivery Method**: Multiple attack vectors
+- **Primary Objective**: Data encryption and ransom demands
+- **Infection Chain**: Initial access → lateral movement → data encryption → ransom demand
+
+## Network Infrastructure
+
+### Command and Control (C2) Servers
+| **IP Address** | **Description** | **Category** |
+|----------------|-----------------|--------------|
+| 144.172.103.42 | C2 Server | Network activity |
+| 45.61.134.36 | C2 Server | Network activity |
+| 107.170.35.225 | C2 Server | Network activity |
+
+## Malware Hashes
+
+### SHA256 Hashes
+| **SHA256** | **Description** | **Category** |
+|------------|-----------------|--------------|
+| 7c4b465159e1c7dbbe67f0eeb3f58de1caba293999a49843a0818480f05be14e | Chaos Ransomware Sample | Payload delivery |
+| 11cfea4100ba3731d859148d2011c7225d337db22797f7e111c0f2876e986490 | Chaos Ransomware Sample | Payload delivery |
+| 1d846592ffcc19ed03a34316520aa31369218a88afa4e17ac547686d0348aa5b | Chaos Ransomware Sample | Payload delivery |
+
+## Attack Techniques
+
+### Initial Access
+- **Phishing**: Malicious emails with ransomware payloads
+- **Exploit Kits**: Web-based exploit kits
+- **Remote Desktop**: Brute force attacks on RDP
+- **Vulnerability Exploitation**: Exploiting unpatched systems
+
+### Execution
+- **Ransomware Deployment**: Direct execution of ransomware binaries
+- **File Encryption**: Encryption of user files and system files
+- **System Modification**: Modification of system settings
+
+### Persistence
+- **Ransomware Persistence**: Maintaining access until ransom is paid
+- **Backup Deletion**: Removal of system backups
+- **Recovery Prevention**: Disabling system recovery options
+
+### Defense Evasion
+- **File Encryption**: Encrypting files to prevent analysis
+- **System Modification**: Modifying system settings
+- **Backup Deletion**: Removing system backups
+
+### Impact
+- **Data Encryption**: Encryption of user and system files
+- **Ransom Demands**: Demanding payment for decryption
+- **System Disruption**: Disrupting normal business operations
+
+## MITRE ATT&CK Techniques
+
+### Initial Access
+T1566.001 - Spearphishing Attachment
+T1190 - Exploit Public-Facing Application
+T1078.001 - Valid Accounts: Default Accounts
+T1078.002 - Valid Accounts: Domain Accounts
+
+### Execution
+T1059.001 - Command and Scripting Interpreter: PowerShell
+T1059.003 - Command and Scripting Interpreter: Windows Command Shell
+T1204.002 - User Execution: Malicious File
+
+### Persistence
+T1053.005 - Scheduled Task/Job: Scheduled Task
+T1543.003 - Create or Modify System Process: Windows Service
+
+### Defense Evasion
+T1027 - Obfuscated Files or Information
+T1562.001 - Impair Defenses: Disable or Modify Tools
+T1490 - Inhibit System Recovery
+
+### Credential Access
+T1003.001 - OS Credential Dumping: LSASS Memory
+T1555.003 - Credentials from Password Stores: Credentials from Web Browsers
+
+### Discovery
+T1083 - File and Directory Discovery
+T1018 - Remote System Discovery
+T1082 - System Information Discovery
+
+### Collection
+T1005 - Data from Local System
+T1119 - Automated Collection
+
+### Command and Control
+T1071.001 - Application Layer Protocol: Web Protocols
+T1102 - Web Service
+T1104 - Multi-Stage Channels
+
+### Impact
+T1486 - Data Encrypted for Impact
+T1490 - Inhibit System Recovery
+T1485 - Data Destruction
+
+## Detection Patterns
+
+### Network Indicators
+- **C2 Communication**: Connections to identified C2 servers
+- **Ransomware Communication**: Encrypted communication with C2
+- **File Encryption**: Network traffic during encryption process
+
+### Endpoint Indicators
+- **File Encryption**: Rapid encryption of multiple files
+- **System Modification**: Changes to system settings
+- **Backup Deletion**: Removal of system backups
+- **Ransom Notes**: Creation of ransom demand files
+
+### Behavioral Indicators
+- **Rapid File Encryption**: Quick encryption of multiple file types
+- **System Recovery Disabling**: Disabling of system recovery features
+- **Backup Deletion**: Systematic removal of backups
+- **Ransom Note Creation**: Creation of ransom demand files
+
+## Mitigation Strategies
+
+### Technical Controls
+- **Endpoint Protection**: Advanced endpoint detection and response
+- **Network Monitoring**: Network traffic analysis and monitoring
+- **Backup Systems**: Regular and secure backup procedures
+- **Patch Management**: Timely application of security patches
+
+### Administrative Controls
+- **User Training**: Security awareness training
+- **Access Controls**: Principle of least privilege
+- **Incident Response**: Comprehensive incident response procedures
+- **Backup Procedures**: Regular backup and recovery testing
+
+### Monitoring and Detection
+- **Threat Hunting**: Proactive hunting for ransomware activities
+- **IOC Monitoring**: Tracking known threat indicators
+- **Behavioral Analytics**: Advanced behavioral analysis
+- **Network Monitoring**: Comprehensive network monitoring
+
+## Threat Level
+High - Ransomware-as-a-Service operation with significant impact potential on organizations globally.
+
+## References
+- [Cisco Talos Intelligence Blog - New Chaos Ransomware](https://blog.talosintelligence.com/new-chaos-ransomware/)
+- [Cisco Talos IOCs - New Chaos Ransomware](https://raw.githubusercontent.com/Cisco-Talos/IOCs/refs/heads/main/2025/07/new-chaos-ransomware.txt)
+- [Cisco Talos STIX Bundle - New Chaos Ransomware](https://raw.githubusercontent.com/Cisco-Talos/IOCs/refs/heads/main/2025/07/new-chaos-ransomware.json)

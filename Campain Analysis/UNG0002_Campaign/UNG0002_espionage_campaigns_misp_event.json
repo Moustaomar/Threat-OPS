@@ -1,0 +1,66 @@
+{
+  "Event": {
+    "date": "2025-01-21",
+    "threat_level_id": "2",
+    "info": "UNG0002: Regional Threat Operations Tracked Across Multiple Asian Jurisdictions",
+    "published": false,
+    "attribute_count": "58",
+    "timestamp": "1737462000",
+    "Attribute": [
+      {
+        "id": "1",
+        "type": "campaign-name",
+        "category": "Attribution",
+        "to_ids": false,
+        "uuid": "5c3444df-e8b0-4c73-9b49-1b0902de0b82",
+        "event_id": "1",
+        "distribution": "5",
+        "timestamp": "1737462000",
+        "comment": "First campaign conducted by UNG0002",
+        "sharing_group_id": "0",
+        "deleted": false,
+        "disable_correlation": false,
+        "object_relation": "",
+        "value": "Operation Cobalt Whisper"
+      },
+      {
+        "id": "2",
+        "type": "campaign-name", 
+        "category": "Attribution",
+        "to_ids": false,
+        "uuid": "5c3444df-e8b0-4c73-9b49-1b0902de0b83",
+        "event_id": "1",
+        "distribution": "5",
+        "timestamp": "1737462000",
+        "comment": "Second campaign conducted by UNG0002",
+        "sharing_group_id": "0",
+        "deleted": false,
+        "disable_correlation": false,
+        "object_relation": "",
+        "value": "Operation AmberMist"
+      },
+      {
+        "id": "3",
+        "type": "threat-actor",
+        "category": "Attribution",
+        "to_ids": false,
+        "uuid": "5c3444df-e8b0-4c73-9b49-1b0902de0b84",
+        "event_id": "1", 
+        "distribution": "5",
+        "timestamp": "1737462000",
+        "comment": "Regional threat actor conducting espionage operations",
+        "sharing_group_id": "0",
+        "deleted": false,
+        "disable_correlation": false,
+        "object_relation": "",
+        "value": "UNG0002"
+      }
+    ],
+    "Tag": [
+      {"name": "tlp:amber"},
+      {"name": "threat-level:medium"},
+      {"name": "misp-galaxy:threat-actor=\"UNG0002\""},
+      {"name": "misp-galaxy:motivation=\"Espionage\""}
+    ]
+  }
+}

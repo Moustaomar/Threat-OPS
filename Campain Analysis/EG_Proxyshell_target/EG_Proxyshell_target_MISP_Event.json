@@ -1,0 +1,52 @@
+{
+  "Event": {
+    "date": "2025-10-5",
+    "threat_level_id": "1",
+    "info": "EG_Proxyshell_target Campaign - ProxyShell exploitation targeting Egyptian organizations",
+    "published": false,
+    "attribute_count": "27",
+    "Attribute": [
+      {"type": "ip-dst", "category": "Network activity", "to_ids": true, "value": "154.236.170.166", "comment": "ProxyShell | Target infrastructure IP | Source: Threat Intelligence", "first_seen": "2025-01-15", "last_seen": "2025-01-15"},
+      {"type": "ip-dst", "category": "Network activity", "to_ids": true, "value": "41.128.153.60", "comment": "ProxyShell | Target infrastructure IP | Source: Threat Intelligence", "first_seen": "2025-01-15", "last_seen": "2025-01-15"},
+      {"type": "domain", "category": "Network activity", "to_ids": true, "value": "webmail.wdo-odf.org", "comment": "ProxyShell | Target email infrastructure | Source: Threat Intelligence", "first_seen": "2025-01-15", "last_seen": "2025-01-15"},
+      {"type": "ip-dst", "category": "Network activity", "to_ids": true, "value": "82.129.221.250", "comment": "ProxyShell | Target infrastructure IP | Source: Threat Intelligence", "first_seen": "2025-01-15", "last_seen": "2025-01-15"},
+      {"type": "domain", "category": "Network activity", "to_ids": true, "value": "email.zu.edu.eg", "comment": "ProxyShell | Target email infrastructure | Source: Threat Intelligence", "first_seen": "2025-01-15", "last_seen": "2025-01-15"},
+      {"type": "domain", "category": "Network activity", "to_ids": true, "value": "mail.eastzeit.com", "comment": "ProxyShell | Target email infrastructure | Source: Threat Intelligence", "first_seen": "2025-01-15", "last_seen": "2025-01-15"},
+      {"type": "domain", "category": "Network activity", "to_ids": true, "value": "mail.edita.com.eg", "comment": "ProxyShell | Target email infrastructure | Source: Threat Intelligence", "first_seen": "2025-01-15", "last_seen": "2025-01-15"},
+      {"type": "domain", "category": "Network activity", "to_ids": true, "value": "mail.elmaaly.com", "comment": "ProxyShell | Target email infrastructure | Source: Threat Intelligence", "first_seen": "2025-01-15", "last_seen": "2025-01-15"},
+      {"type": "domain", "category": "Network activity", "to_ids": true, "value": "mail.karnak-eg.com", "comment": "ProxyShell | Target email infrastructure | Source: Threat Intelligence", "first_seen": "2025-01-15", "last_seen": "2025-01-15"},
+      {"type": "domain", "category": "Network activity", "to_ids": true, "value": "mail.niof.sci.eg", "comment": "ProxyShell | Target email infrastructure | Source: Threat Intelligence", "first_seen": "2025-01-15", "last_seen": "2025-01-15"},
+      {"type": "domain", "category": "Network activity", "to_ids": true, "value": "mail.nsb-eg.com", "comment": "ProxyShell | Target email infrastructure | Source: Threat Intelligence", "first_seen": "2025-01-15", "last_seen": "2025-01-15"},
+      {"type": "domain", "category": "Network activity", "to_ids": true, "value": "mail.rashideenegypt.net", "comment": "ProxyShell | Target email infrastructure | Source: Threat Intelligence", "first_seen": "2025-01-15", "last_seen": "2025-01-15"},
+      {"type": "domain", "category": "Network activity", "to_ids": true, "value": "mail1.sakrgroup.net", "comment": "ProxyShell | Target email infrastructure | Source: Threat Intelligence", "first_seen": "2025-01-15", "last_seen": "2025-01-15"},
+      {"type": "ip-dst", "category": "Network activity", "to_ids": true, "value": "194.79.112.42", "comment": "ProxyShell | Target infrastructure IP | Source: Threat Intelligence", "first_seen": "2025-01-15", "last_seen": "2025-01-15"},
+      {"type": "ip-dst", "category": "Network activity", "to_ids": true, "value": "213.212.233.251", "comment": "ProxyShell | Target infrastructure IP | Source: Threat Intelligence", "first_seen": "2025-01-15", "last_seen": "2025-01-15"},
+      {"type": "ip-dst", "category": "Network activity", "to_ids": true, "value": "41.128.160.43", "comment": "ProxyShell | Target infrastructure IP | Source: Threat Intelligence", "first_seen": "2025-01-15", "last_seen": "2025-01-15"},
+      {"type": "ip-dst", "category": "Network activity", "to_ids": true, "value": "62.139.5.157", "comment": "ProxyShell | Target infrastructure IP | Source: Threat Intelligence", "first_seen": "2025-01-15", "last_seen": "2025-01-15"},
+      {"type": "ip-dst", "category": "Network activity", "to_ids": true, "value": "82.129.165.195", "comment": "ProxyShell | Target infrastructure IP | Source: Threat Intelligence", "first_seen": "2025-01-15", "last_seen": "2025-01-15"},
+      {"type": "domain", "category": "Network activity", "to_ids": true, "value": "mail.corc.com.eg", "comment": "ProxyShell | Target email infrastructure | Source: Threat Intelligence", "first_seen": "2025-01-15", "last_seen": "2025-01-15"},
+      {"type": "domain", "category": "Network activity", "to_ids": true, "value": "mail.drgreiche.com", "comment": "ProxyShell | Target email infrastructure | Source: Threat Intelligence", "first_seen": "2025-01-15", "last_seen": "2025-01-15"},
+      {"type": "domain", "category": "Network activity", "to_ids": true, "value": "mail.flexipack-eg.com", "comment": "ProxyShell | Target email infrastructure | Source: Threat Intelligence", "first_seen": "2025-01-15", "last_seen": "2025-01-15"},
+      {"type": "domain", "category": "Network activity", "to_ids": true, "value": "mail.sakrgroup.net", "comment": "ProxyShell | Target email infrastructure | Source: Threat Intelligence", "first_seen": "2025-01-15", "last_seen": "2025-01-15"},
+      {"type": "domain", "category": "Network activity", "to_ids": true, "value": "webmail.cairo-housing.com", "comment": "ProxyShell | Target email infrastructure | Source: Threat Intelligence", "first_seen": "2025-01-15", "last_seen": "2025-01-15"}
+    ],
+    "Tag": [
+      {"name": "tlp:amber"},
+      {"name": "type:OSINT"},
+      {"name": "misp:threat-level=\"high\""},
+      {"name": "misp-galaxy:threat-actor=\"ProxyShell\""},
+      {"name": "misp-galaxy:country=\"Egypt\""},
+      {"name": "misp-galaxy:malware=\"ProxyShell\""},
+      {"name": "misp-galaxy:tool=\"Exchange Server\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Exploit Public-Facing Application - T1190\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Remote Services - T1021\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Web Protocols - T1071.001\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Server Software - T1190.001\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"External Remote Services - T1133\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Email Collection - T1114\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Data from Information Repositories - T1213\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Network Service Scanning - T1046\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"System Network Configuration Discovery - T1016\""}
+    ]
+  }
+}

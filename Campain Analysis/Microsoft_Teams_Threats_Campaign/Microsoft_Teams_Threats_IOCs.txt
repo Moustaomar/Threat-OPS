@@ -1,0 +1,199 @@
+# Microsoft Teams Threats Campaign IOCs
+# Source: Microsoft Security Blog - Disrupting threats targeting Microsoft Teams
+# Date: October 7, 2025
+# Campaign: Comprehensive analysis of threat actors abusing Microsoft Teams capabilities
+
+## Attack Tools and Frameworks
+
+### Reconnaissance Tools
+ROADtools
+TeamFiltration
+TeamsEnum
+MSFT-Recon-RS
+GraphRunner
+convoC2
+EvilSlackbot
+
+### Exploitation Tools
+TeamsPhisher
+TeamsEnum
+TeamFiltration
+MSFT-Recon-RS
+GraphRunner
+
+## Attack Techniques
+
+### Reconnaissance Techniques
+- Directory object enumeration
+- Team and channel member enumeration
+- Tenant ID and domain enumeration
+- Federation tenant configuration analysis
+- Presence status exploitation
+- External communication permissions analysis
+
+### Initial Access Methods
+- Phishing via Teams chat
+- Malicious file uploads to Teams
+- External user impersonation
+- Guest user exploitation
+- Anonymous participant abuse
+
+### Persistence Mechanisms
+- Web shell deployment via Teams
+- Malicious file storage in Teams chat files
+- External user account persistence
+- Guest user account abuse
+
+## Microsoft Teams Attack Vectors
+
+### Messaging (Chat) Abuse
+- One-on-one phishing chats
+- Impersonation of legitimate users
+- Malicious file sharing
+- External communication abuse
+- Guest user exploitation
+
+### Calls and Meetings Abuse
+- Meeting hijacking
+- Screen sharing exploitation
+- Audio/video recording abuse
+- Meeting link manipulation
+
+### Video-based Screen Sharing Abuse
+- Screen capture for intelligence gathering
+- Screen sharing for social engineering
+- Video call manipulation
+- Screen recording abuse
+
+## Detection Patterns
+
+### Suspicious Chat Activity
+- External thread communication
+- Impersonated user interactions
+- Help desk impersonation
+- IT support impersonation
+- Microsoft Security impersonation
+
+### File Upload Patterns
+- Binary executable uploads
+- Portable executable uploads
+- Malicious document uploads
+- Script file uploads
+
+### External Communication Patterns
+- Communication with external help desk
+- Communication with IT support
+- Communication with "working from home" impersonators
+- External user enumeration
+
+## MITRE ATT&CK Techniques
+
+### Initial Access
+T1566.001 - Spearphishing Attachment
+T1566.003 - Spearphishing via Service
+T1189 - Drive-by Compromise
+T1078.004 - Valid Accounts: Cloud Accounts
+
+### Execution
+T1059.001 - Command and Scripting Interpreter: PowerShell
+T1059.003 - Command and Scripting Interpreter: Windows Command Shell
+T1204.002 - User Execution: Malicious File
+
+### Persistence
+T1078.004 - Valid Accounts: Cloud Accounts
+T1505.003 - Server Software Component: Web Shell
+T1543.003 - Create/Modify System Process: Windows Service
+
+### Privilege Escalation
+T1078.004 - Valid Accounts: Cloud Accounts
+T1068 - Exploitation for Privilege Escalation
+
+### Defense Evasion
+T1078.004 - Valid Accounts: Cloud Accounts
+T1562.001 - Impair Defenses: Disable or Modify Tools
+T1027 - Obfuscated Files or Information
+
+### Credential Access
+T1555 - Credentials from Password Stores
+T1056.001 - Input Capture: Keylogging
+T1552.001 - Unsecured Credentials: Credentials In Files
+
+### Discovery
+T1087.004 - Account Discovery: Cloud Account
+T1018 - Remote System Discovery
+T1046 - Network Service Scanning
+
+### Lateral Movement
+T1078.004 - Valid Accounts: Cloud Accounts
+T1210 - Exploitation of Remote Services
+
+### Collection
+T1005 - Data from Local System
+T1113 - Screen Capture
+T1114.003 - Email Collection: Email Forwarding Rules
+
+### Command and Control
+T1071.001 - Application Layer Protocol: Web Protocols
+T1071.004 - Application Layer Protocol: DNS
+T1102.003 - Web Service: OneDrive
+
+### Exfiltration
+T1041 - Exfiltration Over C2 Channel
+T1567.002 - Exfiltration Over Web Service: To Cloud Storage
+T1048.003 - Exfiltration Over Alternative Protocol: Exfiltration Over Unencrypted Non-C2 Protocol
+
+## Detection Queries
+
+### Microsoft Defender XDR Queries
+- Teams external communication detection
+- Suspicious file upload patterns
+- Impersonation detection
+- External user enumeration
+
+### Microsoft Sentinel Queries
+- Teams phishing activity detection
+- File upload and access tracking
+- External communication monitoring
+- Guest user abuse detection
+
+## Threat Actors and Campaigns
+
+### Known Campaigns
+- 3AM ransomware with Teams vishing
+- DarkGate malware via Teams
+- Atomic Stealer via fake Teams for Mac
+- VEILDrive C2 via Microsoft services
+- Email bombing leading to Teams exploitation
+
+### Attack Patterns
+- Teams phishing for credentials
+- Malicious file delivery via Teams
+- External user impersonation
+- Guest account abuse
+- Meeting hijacking
+
+## Mitigation Strategies
+
+### Technical Controls
+- Microsoft Entra ID Protection
+- Microsoft Defender for Cloud Apps
+- Microsoft Defender for Office 365
+- Microsoft Defender for Endpoint
+- Microsoft Defender for Identity
+
+### Configuration Recommendations
+- Disable external meetings and chat
+- Limit external communication to specified domains
+- Enable Privacy mode
+- Implement guest user restrictions
+- Configure external access policies
+
+### Monitoring and Detection
+- Monitor external thread communications
+- Track file uploads to Teams
+- Detect impersonation attempts
+- Monitor guest user activities
+- Track external user interactions
+
+## Threat Level
+High - Microsoft Teams is a high-value target for both cybercriminals and state-sponsored actors due to its extensive collaboration features and global adoption.

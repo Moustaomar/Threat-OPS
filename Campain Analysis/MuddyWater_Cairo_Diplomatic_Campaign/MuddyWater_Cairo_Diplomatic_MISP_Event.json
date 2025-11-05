@@ -1,0 +1,130 @@
+{
+  "Event": {
+    "date": "2025-9-8",
+    "threat_level_id": "1",
+    "info": "MuddyWater: Cairo-Centric Diplomatic Espionage Campaign targeting Egyptian Government Entities",
+    "published": false,
+    "attribute_count": "68",
+    "Attribute": [
+      {"type": "domain", "category": "Network activity", "to_ids": true, "value": "screenai.online", "comment": "Primary C2 domain used in diplomatic espionage campaign", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "ip-dst", "category": "Network activity", "to_ids": true, "value": "159.198.36.115", "comment": "IP address associated with screenai.online domain | CRITICAL: Shared infrastructure with HomeLand Justice (Void Manticore)", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "url", "category": "Network activity", "to_ids": true, "value": "https://screenai.online/Home/", "comment": "C2 communication endpoint", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      
+      {"type": "md5", "category": "Payload delivery", "to_ids": true, "value": "fd75770a2ef293fe0c2ffe1c46cbd904", "comment": "EML2_d3ea2214-3ada-4154-bf5e-a6077d7938f8.eml | Spear-phishing email", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "sha1", "category": "Payload delivery", "to_ids": true, "value": "d4378b67c2827ee4def62fd3e8a98f4a0d950298", "comment": "EML2_d3ea2214-3ada-4154-bf5e-a6077d7938f8.eml | Spear-phishing email", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "sha256", "category": "Payload delivery", "to_ids": true, "value": "05d8f686dcbb6078f91f49af779e4572ba1646a9c5629a1525e8499ab481dbf2", "comment": "EML2_d3ea2214-3ada-4154-bf5e-a6077d7938f8.eml | Spear-phishing email", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      
+      {"type": "md5", "category": "Payload delivery", "to_ids": true, "value": "69fed0fafc29065ff081793b4647bfc0", "comment": "ThisDocument.cls | Malicious VBA macro", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "sha1", "category": "Payload delivery", "to_ids": true, "value": "56013f71ff7cfd585708cce301cb4e52a340c6e0", "comment": "ThisDocument.cls | Malicious VBA macro", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "sha256", "category": "Payload delivery", "to_ids": true, "value": "e49766f63eb24ca7b0c9324c31a98586d3d91fae3bdbb5bdbd467a88323058ab", "comment": "ThisDocument.cls | Malicious VBA macro", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      
+      {"type": "md5", "category": "Payload delivery", "to_ids": true, "value": "a408e056425307096dbf3e8b50a0b673", "comment": "sysProcUpdate.exe | Custom backdoor malware", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "sha1", "category": "Payload delivery", "to_ids": true, "value": "4f69ab8e1f90ad087a4a74397ff8cd0748e85be8", "comment": "sysProcUpdate.exe | Custom backdoor malware", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "sha256", "category": "Payload delivery", "to_ids": true, "value": "1883db6de22d98ed00f8719b11de5bf1d02fc206b89fedd6dd0df0e8d40c4c56", "comment": "sysProcUpdate.exe | Custom backdoor malware", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      
+      {"type": "md5", "category": "Payload delivery", "to_ids": true, "value": "3bb65d389d5c535f068328e607d2d688", "comment": "Online Seminar.MFA.gov.ct.tr-1.doc | Diplomatic decoy document", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "sha1", "category": "Payload delivery", "to_ids": true, "value": "290ab496ab0a66e16f0558d621a52cacd5c66392", "comment": "Online Seminar.MFA.gov.ct.tr-1.doc | Diplomatic decoy document", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "sha256", "category": "Payload delivery", "to_ids": true, "value": "f0ba41ce46e566f83db1ba3fc762fd9b394d12a01a9cef4ac279135e4c1c67a9", "comment": "Online Seminar.MFA.gov.ct.tr-1.doc | Diplomatic decoy document", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      
+      {"type": "md5", "category": "Payload delivery", "to_ids": true, "value": "7e3c10bb262865a0daaf5c88a2fe7a79", "comment": "ThisDocument.cls | Variant 2 of malicious VBA macro", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "sha1", "category": "Payload delivery", "to_ids": true, "value": "183deb80b1a2e5fbc76f4f99c1291dd6020868e4", "comment": "ThisDocument.cls | Variant 2 of malicious VBA macro", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "sha256", "category": "Payload delivery", "to_ids": true, "value": "20e7b9dcf954660555d511a64a07996f6178f5819f8501611a521e19fbba74b0", "comment": "ThisDocument.cls | Variant 2 of malicious VBA macro", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      
+      {"type": "md5", "category": "Payload delivery", "to_ids": true, "value": "e71743da2965b2b85cc00dba5d9f6515", "comment": "ThisDocument.cls | Variant 3 of malicious VBA macro", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "sha1", "category": "Payload delivery", "to_ids": true, "value": "d549856a988b3df32b4fd48511f26e6d89f0f523", "comment": "ThisDocument.cls | Variant 3 of malicious VBA macro", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "sha256", "category": "Payload delivery", "to_ids": true, "value": "5927c790444db2b6194f7864a5cf3416cfc1af26d76c4e93431bb6bc616225c1", "comment": "ThisDocument.cls | Variant 3 of malicious VBA macro", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      
+      {"type": "md5", "category": "Payload delivery", "to_ids": true, "value": "78b778ba0bcd546337077a50b8f90532", "comment": "sysProcUpdate.exe | Variant 2 of custom backdoor", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "sha1", "category": "Payload delivery", "to_ids": true, "value": "f326bb96544e1b0c9df9bdc496c417dcf5760067", "comment": "sysProcUpdate.exe | Variant 2 of custom backdoor", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "sha256", "category": "Payload delivery", "to_ids": true, "value": "3d6f69cc0330b302ddf4701bbc956b8fca683d1c1b3146768dcbce4a1a3932ca", "comment": "sysProcUpdate.exe | Variant 2 of custom backdoor", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      
+      {"type": "md5", "category": "Payload delivery", "to_ids": true, "value": "3ab16bd1c339fd0727be650104b74dd1", "comment": "Online Seminar.FM.gov.om.doc | Oman government-themed decoy", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "sha1", "category": "Payload delivery", "to_ids": true, "value": "2b5ddc48fe17d014e38b9fd6646b23d5eb70b471", "comment": "Online Seminar.FM.gov.om.doc | Oman government-themed decoy", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "sha256", "category": "Payload delivery", "to_ids": true, "value": "b2c52fde1301a3624a9ceb995f2de4112d57fcbc6a4695799aec15af4fa0a122", "comment": "Online Seminar.FM.gov.om.doc | Oman government-themed decoy", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      
+      {"type": "md5", "category": "Payload delivery", "to_ids": true, "value": "8b01d3ba8a5df19a37d9bd212875c4aa", "comment": "ThisDocument.cls | Variant 4 of malicious VBA macro", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "sha1", "category": "Payload delivery", "to_ids": true, "value": "815b89d9e46ea0f9e3fb039992af3a303e89642c", "comment": "ThisDocument.cls | Variant 4 of malicious VBA macro", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "sha256", "category": "Payload delivery", "to_ids": true, "value": "19e1f01ecd17b8bce14b6c37b0ad22f0c22f155841e1c71d81eda4a2074fa9a0", "comment": "ThisDocument.cls | Variant 4 of malicious VBA macro", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      
+      {"type": "md5", "category": "Payload delivery", "to_ids": true, "value": "1a86ed697e24731b88e5e591c6ecfb91", "comment": "sysProcUpdate.exe | Variant 3 of custom backdoor", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "sha1", "category": "Payload delivery", "to_ids": true, "value": "ff3fe0c43949a9011f8fd4eab8bddce6c1287bdb", "comment": "sysProcUpdate.exe | Variant 3 of custom backdoor", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "sha256", "category": "Payload delivery", "to_ids": true, "value": "3ac8283916547c50501eed8e7c3a77f0ae8b009c7b72275be8726a5b6ae255e3", "comment": "sysProcUpdate.exe | Variant 3 of custom backdoor", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      
+      {"type": "md5", "category": "Payload delivery", "to_ids": true, "value": "e73ba93d008affdc4cce0cb4e18ae5c6", "comment": "DPR for dredging in FreeSpan_16082025.2.doc | Infrastructure-themed decoy", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "sha1", "category": "Payload delivery", "to_ids": true, "value": "f07a8014f36181e88d273d07b7a5503417f799a3", "comment": "DPR for dredging in FreeSpan_16082025.2.doc | Infrastructure-themed decoy", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "sha256", "category": "Payload delivery", "to_ids": true, "value": "2c92c7bf2d6574f9240032ec6adee738edddc2ba8d3207eb102eddf4ab963db0", "comment": "DPR for dredging in FreeSpan_16082025.2.doc | Infrastructure-themed decoy", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      
+      {"type": "md5", "category": "Payload delivery", "to_ids": true, "value": "7e73ca410dc6480c77a9236c0733c0a1", "comment": "sysProcUpdate.exe | Variant 4 of custom backdoor", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "sha1", "category": "Payload delivery", "to_ids": true, "value": "29f86bc6921b56ea178c8f2b06f136b3b1fc80a6", "comment": "sysProcUpdate.exe | Variant 4 of custom backdoor", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "sha256", "category": "Payload delivery", "to_ids": true, "value": "76fa8dca768b64aefedd85f7d0a33c2693b94bdb55f40ced7830561e48e39c75", "comment": "sysProcUpdate.exe | Variant 4 of custom backdoor", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      
+      {"type": "md5", "category": "Payload delivery", "to_ids": true, "value": "7a725ed8e770d9c5d32813a85b903bab", "comment": "EML1_b83e2495-1968-4cd2-ac40-ad5fcfee687d.eml | Another spear-phishing email", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "sha1", "category": "Payload delivery", "to_ids": true, "value": "8a7cf41375dae8561f5946f64e0b08d1ef007ed5", "comment": "EML1_b83e2495-1968-4cd2-ac40-ad5fcfee687d.eml | Another spear-phishing email", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "sha256", "category": "Payload delivery", "to_ids": true, "value": "03828aebefde47bca0fcf0684ecae18aedde035c85f9d39edd2b7a147a1146fa", "comment": "EML1_b83e2495-1968-4cd2-ac40-ad5fcfee687d.eml | Another spear-phishing email", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      
+      {"type": "md5", "category": "Payload delivery", "to_ids": true, "value": "d6ad04612f9a6060f3955c43ad5cf236", "comment": "DPR for dredging in FreeSpan_16082025.2.doc | Variant 2 infrastructure-themed decoy", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "sha1", "category": "Payload delivery", "to_ids": true, "value": "33591832d096223b4c44ac56e7894ec038a9ebf7", "comment": "DPR for dredging in FreeSpan_16082025.2.doc | Variant 2 infrastructure-themed decoy", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "sha256", "category": "Payload delivery", "to_ids": true, "value": "80e9105233f9d93df753a43291c2ab1a010375357db9327f9fe40d184f078c6b", "comment": "DPR for dredging in FreeSpan_16082025.2.doc | Variant 2 infrastructure-themed decoy", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      
+      {"type": "md5", "category": "Payload delivery", "to_ids": true, "value": "1de19958e7c2ef14addfb35b43a594ec", "comment": "Online Seminar.MFA.gov.ct.tr.doc | Cyprus government-themed decoy", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "sha1", "category": "Payload delivery", "to_ids": true, "value": "ec251c5b831be6265d8daeb0437229b8b00e0b68", "comment": "Online Seminar.MFA.gov.ct.tr.doc | Cyprus government-themed decoy", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "sha256", "category": "Payload delivery", "to_ids": true, "value": "1c16b271c0c4e277eb3d1a7795d4746ce80152f04827a4f3c5798aaf4d51f6a1", "comment": "Online Seminar.MFA.gov.ct.tr.doc | Cyprus government-themed decoy", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      
+      {"type": "md5", "category": "Payload delivery", "to_ids": true, "value": "e2a5019f85a8aed140b13c87cf9a791a", "comment": "Online Seminar.FM.gov.om.doc | Variant 2 Oman government-themed decoy", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "sha1", "category": "Payload delivery", "to_ids": true, "value": "cb0d1f3ea8230c1d46eff18ac846546786776782", "comment": "Online Seminar.FM.gov.om.doc | Variant 2 Oman government-themed decoy", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "sha256", "category": "Payload delivery", "to_ids": true, "value": "02ccc4271362b92a59e6851ac6d5d2c07182064a602906d7166fe2867cc662a5", "comment": "Online Seminar.FM.gov.om.doc | Variant 2 Oman government-themed decoy", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      
+      {"type": "filename", "category": "Artifacts dropped", "to_ids": true, "value": "EML2_d3ea2214-3ada-4154-bf5e-a6077d7938f8.eml", "comment": "Spear-phishing email filename", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "filename", "category": "Artifacts dropped", "to_ids": true, "value": "ThisDocument.cls", "comment": "Malicious VBA macro class module", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "filename", "category": "Artifacts dropped", "to_ids": true, "value": "sysProcUpdate.exe", "comment": "Custom backdoor executable", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "filename", "category": "Artifacts dropped", "to_ids": true, "value": "Online Seminar.MFA.gov.ct.tr-1.doc", "comment": "Diplomatic decoy document", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "filename", "category": "Artifacts dropped", "to_ids": true, "value": "Online Seminar.FM.gov.om.doc", "comment": "Government seminar decoy document", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "filename", "category": "Artifacts dropped", "to_ids": true, "value": "DPR for dredging in FreeSpan_16082025.2.doc", "comment": "Infrastructure project decoy document", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "filename", "category": "Artifacts dropped", "to_ids": true, "value": "EML1_b83e2495-1968-4cd2-ac40-ad5fcfee687d.eml", "comment": "Secondary spear-phishing email", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "filename", "category": "Artifacts dropped", "to_ids": true, "value": "Online Seminar.MFA.gov.ct.tr.doc", "comment": "Cyprus MFA themed decoy document", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      
+      {"type": "text", "category": "Attribution", "to_ids": false, "value": "MuddyWater", "comment": "APT group attribution - Iranian state-sponsored threat actor", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "text", "category": "Attribution", "to_ids": false, "value": "MERCURY", "comment": "Alternative name for MuddyWater group", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "text", "category": "Campaign name", "to_ids": false, "value": "Cairo-Centric Diplomatic Espionage Campaign", "comment": "Campaign targeting Egyptian diplomatic entities", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "text", "category": "Targeting data", "to_ids": false, "value": "Egyptian Ministry of Foreign Affairs", "comment": "Primary target organization", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "text", "category": "Targeting data", "to_ids": false, "value": "Middle Eastern Diplomatic Entities", "comment": "Secondary targets include Cyprus and Oman government entities", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "text", "category": "Other", "to_ids": false, "value": "VBA Macro Obfuscation", "comment": "Evasion technique used in malicious documents", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "text", "category": "Other", "to_ids": false, "value": "PowerShell Command Execution", "comment": "Primary execution method for payloads", "first_seen": "2025-08-09", "last_seen": "2025-08-09"},
+      {"type": "text", "category": "Other", "to_ids": false, "value": "Process Hollowing", "comment": "Code injection technique used by sysProcUpdate.exe", "first_seen": "2025-08-09", "last_seen": "2025-08-09"}
+    ],
+    "Tag": [
+      {"name": "tlp:amber"},
+      {"name": "type:OSINT"},
+      {"name": "misp:threat-level=\"high\""},
+      {"name": "misp-galaxy:threat-actor=\"MuddyWater\""},
+      {"name": "misp-galaxy:threat-actor=\"MERCURY\""},
+      {"name": "misp-galaxy:threat-actor=\"HomeLand Justice\""},
+      {"name": "misp-galaxy:threat-actor=\"Void Manticore\""},
+      {"name": "misp-galaxy:country=\"Iran\""},
+      {"name": "misp-galaxy:sector=\"Government\""},
+      {"name": "misp-galaxy:sector=\"Diplomatic\""},
+      {"name": "misp-galaxy:target-country=\"Egypt\""},
+      {"name": "misp-galaxy:target-country=\"Cyprus\""},
+      {"name": "misp-galaxy:target-country=\"Oman\""},
+      {"name": "misp-galaxy:malware=\"PowerShell\""},
+      {"name": "misp-galaxy:tool=\"VBA Macros\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Spearphishing Attachment - T1566.001\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"User Execution - T1204.002\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Visual Basic - T1059.005\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Windows Command Shell - T1059.003\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Registry Run Keys / Startup Folder - T1547.001\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Process Injection - T1055\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Portable Executable Injection - T1055.002\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Deobfuscate/Decode Files or Information - T1140\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Obfuscated Files or Information - T1027.016\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Virtualization/Sandbox Evasion - T1497\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Account Discovery - T1087.001\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"System Information Discovery - T1082\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"System Owner/User Discovery - T1033\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Ingress Tool Transfer - T1105\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Web Protocols - T1071.001\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Exfiltration Over C2 Channel - T1041\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Compromise Accounts - T1586.002\""}
+    ]
+  }
+}

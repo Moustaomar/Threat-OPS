@@ -1,0 +1,645 @@
+{
+  "Event": {
+    "date": "2025-10-17",
+    "threat_level_id": "1",
+    "info": "HoldingHands Asia Expansion Campaign - Multi-Stage Malware Targeting China, Taiwan, Japan, Malaysia (2024-2025)",
+    "published": false,
+    "attribute_count": "67",
+    "analysis": "2",
+    "orgc_id": "1",
+    "timestamp": "1729206000",
+    "distribution": "3",
+    "sharing_group_id": "0",
+    "Attribute": [
+      {
+        "type": "domain",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "zxp0010w.vip",
+        "comment": "Malware distribution domain - HoldingHands campaign",
+        "first_seen": "2024-03-01",
+        "last_seen": "2025-10-17"
+      },
+      {
+        "type": "domain",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "gjqygs.cn",
+        "comment": "Malware distribution domain - HoldingHands campaign",
+        "first_seen": "2024-03-01",
+        "last_seen": "2025-10-17"
+      },
+      {
+        "type": "domain",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "zcqiyess.vip",
+        "comment": "Malware distribution domain - HoldingHands campaign",
+        "first_seen": "2024-03-01",
+        "last_seen": "2025-10-17"
+      },
+      {
+        "type": "domain",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "jpjpz1.cc",
+        "comment": "Malware distribution domain - HoldingHands campaign",
+        "first_seen": "2025-03-01",
+        "last_seen": "2025-10-17"
+      },
+      {
+        "type": "domain",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "jppjp.vip",
+        "comment": "Malware distribution domain - HoldingHands campaign",
+        "first_seen": "2025-03-01",
+        "last_seen": "2025-10-17"
+      },
+      {
+        "type": "domain",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "jpjpz1.top",
+        "comment": "Malware distribution domain - HoldingHands campaign",
+        "first_seen": "2025-03-01",
+        "last_seen": "2025-10-17"
+      },
+      {
+        "type": "domain",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "twczb.com",
+        "comment": "Malaysia campaign malware distribution domain",
+        "first_seen": "2025-10-01",
+        "last_seen": "2025-10-17"
+      },
+      {
+        "type": "domain",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "twsww.xin",
+        "comment": "Japan campaign malware download domain",
+        "first_seen": "2025-03-01",
+        "last_seen": "2025-10-17"
+      },
+      {
+        "type": "domain",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "twswzz.xin",
+        "comment": "Taiwan campaign malware download domain",
+        "first_seen": "2025-03-01",
+        "last_seen": "2025-10-17"
+      },
+      {
+        "type": "ip-dst",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "206.238.199.22",
+        "comment": "C2 server - HoldingHands malware",
+        "first_seen": "2024-03-01",
+        "last_seen": "2025-10-17"
+      },
+      {
+        "type": "ip-dst",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "206.238.221.244",
+        "comment": "C2 server - HoldingHands malware",
+        "first_seen": "2024-03-01",
+        "last_seen": "2025-10-17"
+      },
+      {
+        "type": "ip-dst",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "154.91.64.45",
+        "comment": "C2 server - HoldingHands malware",
+        "first_seen": "2024-03-01",
+        "last_seen": "2025-10-17"
+      },
+      {
+        "type": "ip-dst",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "156.251.17.12",
+        "comment": "C2 server - HoldingHands malware",
+        "first_seen": "2025-02-01",
+        "last_seen": "2025-10-17"
+      },
+      {
+        "type": "ip-dst",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "156.251.17.9",
+        "comment": "C2 server shared between Taiwan and Japan campaigns",
+        "first_seen": "2025-02-01",
+        "last_seen": "2025-10-17"
+      },
+      {
+        "type": "ip-dst",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "206.238.221.182",
+        "comment": "C2 server - HoldingHands malware",
+        "first_seen": "2024-03-01",
+        "last_seen": "2025-10-17"
+      },
+      {
+        "type": "ip-dst",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "38.60.203.110",
+        "comment": "C2 server - HoldingHands malware",
+        "first_seen": "2024-03-01",
+        "last_seen": "2025-10-17"
+      },
+      {
+        "type": "sha256",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "c138ff7d0b46a657c3a327f4eb266866957b4117c0507507ba81aaeb42cdefa9",
+        "comment": "HoldingHands malware sample"
+      },
+      {
+        "type": "sha256",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "03e1cdca2a9e08efa8448e20b50dc63fdbea0e850de25c3a8e04b03e743b983d",
+        "comment": "HoldingHands malware sample"
+      },
+      {
+        "type": "sha256",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "2b1719108ec52e5dea20169a225b7d383ad450195a5e6274315c79874f448caa",
+        "comment": "HoldingHands malware sample"
+      },
+      {
+        "type": "sha256",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "dc45981ff705b641434ff959de5f8d4c12341eaeda42d278bd4e46628df94ac5",
+        "comment": "HoldingHands malware sample"
+      },
+      {
+        "type": "sha256",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "0db506d018413268e441a34e6e134c9f5a33ceea338fc323d231de966401bb2c",
+        "comment": "HoldingHands malware sample"
+      },
+      {
+        "type": "sha256",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "031c916b599e17d8cfa13089bddafc2436be8522f0c9e479c7d76ba3010bbd18",
+        "comment": "HoldingHands malware sample"
+      },
+      {
+        "type": "sha256",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "c6095912671a201dad86d101e4fe619319cc22b10b4e8d74c3cd655b2175364c",
+        "comment": "HoldingHands malware sample"
+      },
+      {
+        "type": "sha256",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "804dc39c1f928964a5c02d129da72c836accf19b8f6d8dc69fc853ce5f65b4f3",
+        "comment": "HoldingHands malware sample"
+      },
+      {
+        "type": "sha256",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "1c4bc67ae4af505f58bd11399d45e196fc17cc5dd32ad1d8e6836832d59df6e6",
+        "comment": "HoldingHands malware sample"
+      },
+      {
+        "type": "sha256",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "fb9c9ed91fc70f862876bd77314d3b2275069ca7c4db045e5972e726a3e8e04c",
+        "comment": "HoldingHands malware sample"
+      },
+      {
+        "type": "sha256",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "8d25da6459c427ad658ff400e1184084db1789a7abff9b70ca85cf57f4320283",
+        "comment": "HoldingHands malware sample"
+      },
+      {
+        "type": "filename",
+        "category": "Artifacts dropped",
+        "to_ids": true,
+        "value": "dokan2.dll",
+        "comment": "Malicious DLL - shellcode loader, masquerades as Dokany library"
+      },
+      {
+        "type": "filename",
+        "category": "Artifacts dropped",
+        "to_ids": true,
+        "value": "sw.dat",
+        "comment": "Stage 2 payload - environment setup and privilege escalation"
+      },
+      {
+        "type": "filename",
+        "category": "Artifacts dropped",
+        "to_ids": true,
+        "value": "TimeBrokerClient.dll",
+        "comment": "Malicious DLL - persistence mechanism via Task Scheduler"
+      },
+      {
+        "type": "filename",
+        "category": "Artifacts dropped",
+        "to_ids": true,
+        "value": "svchost.ini",
+        "comment": "Configuration file containing VirtualAlloc RVA"
+      },
+      {
+        "type": "filename",
+        "category": "Artifacts dropped",
+        "to_ids": true,
+        "value": "msvchost.dat",
+        "comment": "Encrypted shellcode - Stage 4 payload"
+      },
+      {
+        "type": "filename",
+        "category": "Artifacts dropped",
+        "to_ids": true,
+        "value": "system.dat",
+        "comment": "Encrypted HoldingHands payload"
+      },
+      {
+        "type": "filename",
+        "category": "Payload delivery",
+        "to_ids": false,
+        "value": "Dokumen audit cukai dan sampel bahan.exe",
+        "comment": "Social engineering lure - tax audit document (Malaysia campaign)"
+      },
+      {
+        "type": "mutex",
+        "category": "Artifacts dropped",
+        "to_ids": true,
+        "value": "HHClient",
+        "comment": "Possible mutex or identifier for HoldingHands malware"
+      },
+      {
+        "type": "regkey",
+        "category": "Persistence mechanism",
+        "to_ids": true,
+        "value": "HKEY_CURRENT_USER\\SOFTWARE\\HHClient",
+        "comment": "Registry key for HoldingHands configuration storage"
+      },
+      {
+        "type": "regkey|value",
+        "category": "Persistence mechanism",
+        "to_ids": true,
+        "value": "HKEY_CURRENT_USER\\SOFTWARE\\HHClient|AdrrStrChar",
+        "comment": "Registry value for dynamic C2 IP address updates"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "D:\\Workspace\\HoldingHands-develop\\HoldingHands-develop\\Door\\x64\\Release\\BackDoor.pdb",
+        "comment": "Debug path found in malware samples - development artifact"
+      },
+      {
+        "type": "text",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "C:\\windows\\system32\\svchost.exe -k netsvcs -p -s Schedule",
+        "comment": "Command line validated by malware for Task Scheduler execution"
+      },
+      {
+        "type": "text",
+        "category": "Other",
+        "to_ids": false,
+        "value": "1321729461",
+        "comment": "Tencent Cloud Account ID used for malware distribution"
+      },
+      {
+        "type": "text",
+        "category": "Other",
+        "to_ids": false,
+        "value": "1329400280",
+        "comment": "Tencent Cloud Account ID used for malware distribution"
+      },
+      {
+        "type": "malware-sample",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "Winos 4.0",
+        "comment": "Initial malware family used in China and Taiwan campaigns (Jan 2024 - Feb 2025)"
+      },
+      {
+        "type": "malware-sample",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "HoldingHands",
+        "comment": "Primary malware family (Feb 2025 - Present) with backdoor and info-stealing capabilities"
+      },
+      {
+        "type": "attachment",
+        "category": "Artifacts dropped",
+        "to_ids": false,
+        "value": "Ministry of Finance Document.pdf",
+        "comment": "Phishing lure - fake government document containing malicious links"
+      },
+      {
+        "type": "yara",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "rule HoldingHands_Registry_Key { strings: $reg1 = \"HHClient\" $reg2 = \"AdrrStrChar\" condition: any of them }",
+        "comment": "YARA rule for HoldingHands registry artifacts"
+      },
+      {
+        "type": "yara",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "rule HoldingHands_Files { strings: $f1 = \"dokan2.dll\" $f2 = \"sw.dat\" $f3 = \"msvchost.dat\" $f4 = \"svchost.ini\" $f5 = \"TimeBrokerClient.dll\" condition: 2 of them }",
+        "comment": "YARA rule for HoldingHands file artifacts"
+      },
+      {
+        "type": "pattern-in-file",
+        "category": "Artifacts dropped",
+        "to_ids": true,
+        "value": "HoldingHands-develop",
+        "comment": "String pattern in debug paths indicating development project name"
+      },
+      {
+        "type": "pattern-in-memory",
+        "category": "Artifacts dropped",
+        "to_ids": true,
+        "value": "0x47A",
+        "comment": "ASCII sum value checked for process name validation (must equal 0x47A for svchost.exe)"
+      },
+      {
+        "type": "target-user",
+        "category": "Targeting data",
+        "to_ids": false,
+        "value": "Government employees",
+        "comment": "Primary targeting - government ministry impersonation (Finance, etc.)"
+      },
+      {
+        "type": "target-machine",
+        "category": "Targeting data",
+        "to_ids": false,
+        "value": "Windows workstations",
+        "comment": "Target platform - Microsoft Windows systems"
+      },
+      {
+        "type": "threat-actor",
+        "category": "Attribution",
+        "to_ids": false,
+        "value": "Unidentified APT Group",
+        "comment": "Asia-focused threat actor - systematic regional expansion"
+      },
+      {
+        "type": "campaign-name",
+        "category": "Attribution",
+        "to_ids": false,
+        "value": "HoldingHands Asia Expansion Campaign",
+        "comment": "Campaign tracking across China, Taiwan, Japan, Malaysia (2024-2025)"
+      },
+      {
+        "type": "campaign-id",
+        "category": "Attribution",
+        "to_ids": false,
+        "value": "HHAE-2024-001",
+        "comment": "Internal campaign identifier"
+      },
+      {
+        "type": "vulnerability",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "CVE-N/A",
+        "comment": "No specific CVEs exploited - relies on social engineering"
+      },
+      {
+        "type": "comment",
+        "category": "Internal reference",
+        "to_ids": false,
+        "value": "Multi-stage execution: PDF/Excel/Word > Download > EXE > dokan2.dll > sw.dat > TimeBrokerClient.dll > msvchost.dat > HoldingHands payload"
+      },
+      {
+        "type": "comment",
+        "category": "Internal reference",
+        "to_ids": false,
+        "value": "Anti-analysis techniques: Anti-VM (RAM checks), Anti-AV (process detection), Process validation (ASCII sum), Command line validation"
+      },
+      {
+        "type": "comment",
+        "category": "Internal reference",
+        "to_ids": false,
+        "value": "Privilege escalation: TrustedInstaller impersonation, User token duplication via WTSEnumerateSessions"
+      },
+      {
+        "type": "comment",
+        "category": "Internal reference",
+        "to_ids": false,
+        "value": "Persistence: Task Scheduler service abuse, DLL side-loading, Registry keys (HHClient)"
+      },
+      {
+        "type": "comment",
+        "category": "Internal reference",
+        "to_ids": false,
+        "value": "C2 updates: Dynamic IP address modification via registry (Command 0x15), AdrrStrChar value"
+      },
+      {
+        "type": "comment",
+        "category": "Internal reference",
+        "to_ids": false,
+        "value": "Geographic expansion timeline: China (Mar 2024) > Taiwan (Jan 2025) > Japan (Mar 2025) > Malaysia (Oct 2025)"
+      },
+      {
+        "type": "link",
+        "category": "External analysis",
+        "to_ids": false,
+        "value": "https://www.fortinet.com/blog/threat-research/tracking-malware-and-attack-expansion-a-hacker-groups-journey-across-asia",
+        "comment": "Fortinet FortiGuard Labs threat research publication"
+      },
+      {
+        "type": "other",
+        "category": "Other",
+        "to_ids": false,
+        "value": "Severity: High - Information theft, persistent backdoor access, credential harvesting"
+      },
+      {
+        "type": "other",
+        "category": "Other",
+        "to_ids": false,
+        "value": "Detection: FortiGuard signatures XML/Agent.EFA9!tr, W64/ShellcodeRunner.ARG!tr, W64/Agent.BDN!tr"
+      }
+    ],
+    "Tag": [
+      {
+        "name": "misp-galaxy:threat-actor=\"Unidentified APT\""
+      },
+      {
+        "name": "misp-galaxy:tool=\"HoldingHands\""
+      },
+      {
+        "name": "misp-galaxy:tool=\"Winos 4.0\""
+      },
+      {
+        "name": "misp-galaxy:mitre-attack-pattern=\"Spearphishing Attachment - T1566.001\""
+      },
+      {
+        "name": "misp-galaxy:mitre-attack-pattern=\"DLL Side-Loading - T1574.002\""
+      },
+      {
+        "name": "misp-galaxy:mitre-attack-pattern=\"Scheduled Task - T1053.005\""
+      },
+      {
+        "name": "misp-galaxy:mitre-attack-pattern=\"Process Injection - T1055.001\""
+      },
+      {
+        "name": "misp-galaxy:mitre-attack-pattern=\"Access Token Manipulation - T1134.001\""
+      },
+      {
+        "name": "misp-galaxy:mitre-attack-pattern=\"Obfuscated Files or Information - T1027\""
+      },
+      {
+        "name": "misp-galaxy:mitre-attack-pattern=\"Deobfuscate/Decode Files - T1140\""
+      },
+      {
+        "name": "misp-galaxy:mitre-attack-pattern=\"Virtualization/Sandbox Evasion - T1497.001\""
+      },
+      {
+        "name": "misp-galaxy:mitre-attack-pattern=\"Code Signing - T1553.002\""
+      },
+      {
+        "name": "misp-galaxy:mitre-attack-pattern=\"Modify Registry - T1112\""
+      },
+      {
+        "name": "misp-galaxy:mitre-attack-pattern=\"Fallback Channels - T1008\""
+      },
+      {
+        "name": "tlp:white"
+      },
+      {
+        "name": "workflow:state=\"in-progress\""
+      },
+      {
+        "name": "type:OSINT"
+      },
+      {
+        "name": "targeted-country:CN"
+      },
+      {
+        "name": "targeted-country:TW"
+      },
+      {
+        "name": "targeted-country:JP"
+      },
+      {
+        "name": "targeted-country:MY"
+      },
+      {
+        "name": "malware:backdoor"
+      },
+      {
+        "name": "malware:infostealer"
+      },
+      {
+        "name": "adversary:apt"
+      }
+    ],
+    "Galaxy": [
+      {
+        "name": "Threat Actor",
+        "type": "threat-actor",
+        "description": "Threat actors are characteristics of malicious actors.",
+        "GalaxyCluster": [
+          {
+            "type": "threat-actor",
+            "value": "Unidentified APT - Asia-Pacific Focus",
+            "description": "Sophisticated threat actor conducting systematic malware campaigns across Asia targeting China, Taiwan, Japan, and Malaysia with HoldingHands and Winos 4.0 malware families. Demonstrates strong operational security through infrastructure reuse patterns and evolving tactics.",
+            "meta": {
+              "country": "Unknown",
+              "motive": "Information theft, Espionage",
+              "first-seen": "2024-03",
+              "last-seen": "2025-10"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Tool",
+        "type": "mitre-tool",
+        "description": "Tools used by adversaries.",
+        "GalaxyCluster": [
+          {
+            "type": "mitre-tool",
+            "value": "HoldingHands",
+            "description": "Multi-stage backdoor and information stealer with dynamic C2 update capabilities, registry-based configuration, and advanced anti-analysis features. Active since February 2025."
+          },
+          {
+            "type": "mitre-tool",
+            "value": "Winos 4.0",
+            "description": "Malware family used in early campaign phases (January 2025) before transition to HoldingHands. Targeted users in China and Taiwan."
+          }
+        ]
+      },
+      {
+        "name": "MITRE ATT&CK",
+        "type": "mitre-attack-pattern",
+        "description": "ATT&CK Techniques",
+        "GalaxyCluster": [
+          {
+            "type": "mitre-attack-pattern",
+            "value": "T1566.001 - Spearphishing Attachment",
+            "description": "Phishing emails with malicious PDF, Excel, and Word attachments mimicking government documents"
+          },
+          {
+            "type": "mitre-attack-pattern",
+            "value": "T1574.002 - DLL Side-Loading",
+            "description": "dokan2.dll and TimeBrokerClient.dll side-loading for malware execution"
+          },
+          {
+            "type": "mitre-attack-pattern",
+            "value": "T1053.005 - Scheduled Task",
+            "description": "Task Scheduler service abuse for persistence and execution"
+          },
+          {
+            "type": "mitre-attack-pattern",
+            "value": "T1134.001 - Access Token Manipulation",
+            "description": "TrustedInstaller impersonation and user token duplication"
+          },
+          {
+            "type": "mitre-attack-pattern",
+            "value": "T1055.001 - Process Injection",
+            "description": "Payload injection into taskhostw.exe"
+          },
+          {
+            "type": "mitre-attack-pattern",
+            "value": "T1140 - Deobfuscate/Decode Files",
+            "description": "Multi-stage decryption using process names as keys"
+          },
+          {
+            "type": "mitre-attack-pattern",
+            "value": "T1027 - Obfuscated Files or Information",
+            "description": "Encrypted .dat files and shellcode obfuscation"
+          },
+          {
+            "type": "mitre-attack-pattern",
+            "value": "T1497.001 - Virtualization/Sandbox Evasion",
+            "description": "Anti-VM detection via physical RAM checks"
+          },
+          {
+            "type": "mitre-attack-pattern",
+            "value": "T1008 - Fallback Channels",
+            "description": "Dynamic C2 IP address updates via registry"
+          }
+        ]
+      }
+    ]
+  }
+}
+

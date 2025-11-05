@@ -1,0 +1,34 @@
+{
+  "Event": {
+    "date": "2025-07-24",
+    "threat_level_id": "1",
+    "info": "New Chaos Ransomware Campaign: Ransomware-as-a-Service (RaaS) operation targeting organizations globally with data encryption and ransom demands",
+    "published": false,
+    "attribute_count": "6",
+    "Attribute": [
+      {"type": "ip-dst", "category": "Network activity", "to_ids": true, "value": "144.172.103.42", "comment": "New Chaos Ransomware | C2 Server | Source: Cisco Talos", "first_seen": "2025-07-24", "last_seen": "2025-07-24"},
+      {"type": "ip-dst", "category": "Network activity", "to_ids": true, "value": "45.61.134.36", "comment": "New Chaos Ransomware | C2 Server | Source: Cisco Talos", "first_seen": "2025-07-24", "last_seen": "2025-07-24"},
+      {"type": "ip-dst", "category": "Network activity", "to_ids": true, "value": "107.170.35.225", "comment": "New Chaos Ransomware | C2 Server | Source: Cisco Talos", "first_seen": "2025-07-24", "last_seen": "2025-07-24"},
+      {"type": "sha256", "category": "Payload delivery", "to_ids": true, "value": "7c4b465159e1c7dbbe67f0eeb3f58de1caba293999a49843a0818480f05be14e", "comment": "New Chaos Ransomware | Ransomware Sample | Source: Cisco Talos", "first_seen": "2025-07-24", "last_seen": "2025-07-24"},
+      {"type": "sha256", "category": "Payload delivery", "to_ids": true, "value": "11cfea4100ba3731d859148d2011c7225d337db22797f7e111c0f2876e986490", "comment": "New Chaos Ransomware | Ransomware Sample | Source: Cisco Talos", "first_seen": "2025-07-24", "last_seen": "2025-07-24"},
+      {"type": "sha256", "category": "Payload delivery", "to_ids": true, "value": "1d846592ffcc19ed03a34316520aa31369218a88afa4e17ac547686d0348aa5b", "comment": "New Chaos Ransomware | Ransomware Sample | Source: Cisco Talos", "first_seen": "2025-07-24", "last_seen": "2025-07-24"}
+    ],
+    "Tag": [
+      {"name": "tlp:white"},
+      {"name": "type:OSINT"},
+      {"name": "misp:threat-level=\"high\""},
+      {"name": "misp-galaxy:malware=\"Chaos Ransomware\""},
+      {"name": "misp-galaxy:malware=\"Ransomware\""},
+      {"name": "misp-galaxy:tool=\"Ransomware-as-a-Service\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Data Encrypted for Impact - T1486\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Inhibit System Recovery - T1490\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Data Destruction - T1485\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Spearphishing Attachment - T1566.001\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"User Execution - T1204.002\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Command and Control - T1071\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"OS Credential Dumping - T1003\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"System Information Discovery - T1082\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"File and Directory Discovery - T1083\""}
+    ]
+  }
+}

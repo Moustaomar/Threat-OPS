@@ -1,0 +1,43 @@
+{
+  "Event": {
+    "date": "2025-09-26",
+    "threat_level_id": "1",
+    "info": "Sophisticated malvertising campaign leveraging SEO poisoning and certificate abuse. Attackers abused legitimate code-signing services with short-lived certificates (2-3 days) to evade detection. Campaign used fake Microsoft Teams installer delivered through malvertising redirects from search engines. Microsoft Defender ASR rules successfully prevented C2 communication, neutralizing the threat. Campaign represents emerging pattern of certificate abuse for bypassing signature-based security controls.",
+    "published": false,
+    "attribute_count": "15",
+    "Attribute": [
+      {"type": "domain", "category": "Network activity", "to_ids": true, "value": "teams-install.icu", "comment": "Malicious payload delivery site | Malvertising campaign | Source: Conscia", "first_seen": "2025-09-26", "last_seen": "2025-09-26"},
+      {"type": "domain", "category": "Network activity", "to_ids": true, "value": "team.frywow.com", "comment": "Redirect/gate infrastructure | Malvertising campaign | Source: Conscia", "first_seen": "2025-09-26", "last_seen": "2025-09-26"},
+      {"type": "domain", "category": "Network activity", "to_ids": true, "value": "witherspoon-law.com", "comment": "Redirect/gate infrastructure | Malvertising campaign | Source: Conscia", "first_seen": "2025-09-26", "last_seen": "2025-09-26"},
+      {"type": "domain", "category": "Network activity", "to_ids": true, "value": "nickbush24.com", "comment": "C2 Server | Oyster backdoor infrastructure | Source: Conscia", "first_seen": "2025-09-26", "last_seen": "2025-09-26"},
+      {"type": "ip-dst", "category": "Network activity", "to_ids": true, "value": "172.67.154.95", "comment": "teams-install.icu IP | Cloudflare CDN | Source: Conscia", "first_seen": "2025-09-26", "last_seen": "2025-09-26"},
+      {"type": "ip-dst", "category": "Network activity", "to_ids": true, "value": "104.21.72.190", "comment": "teams-install.icu IP | Cloudflare CDN | Source: Conscia", "first_seen": "2025-09-26", "last_seen": "2025-09-26"},
+      {"type": "url", "category": "Network activity", "to_ids": true, "value": "https://teams-install.icu", "comment": "Malicious payload delivery URL | Malvertising campaign | Source: Conscia", "first_seen": "2025-09-26", "last_seen": "2025-09-26"},
+      {"type": "url", "category": "Network activity", "to_ids": true, "value": "https://team.frywow.com", "comment": "Redirect infrastructure URL | Malvertising campaign | Source: Conscia", "first_seen": "2025-09-26", "last_seen": "2025-09-26"},
+      {"type": "url", "category": "Network activity", "to_ids": true, "value": "https://nickbush24.com", "comment": "C2 Server URL | Oyster backdoor infrastructure | Source: Conscia", "first_seen": "2025-09-26", "last_seen": "2025-09-26"},
+      {"type": "sha256", "category": "Payload delivery", "to_ids": true, "value": "bd6ad2e1b62b2d0994adf322011f2a3afbb14f097efa3cbe741bc4c963e48889", "comment": "MSTeamsSetup.exe | Signed malware with certificate abuse | Source: Conscia", "first_seen": "2025-09-26", "last_seen": "2025-09-26"},
+      {"type": "filename", "category": "Payload delivery", "to_ids": true, "value": "MSTeamsSetup.exe", "comment": "Malicious executable | Fake Microsoft Teams installer | Source: Conscia", "first_seen": "2025-09-26", "last_seen": "2025-09-26"},
+      {"type": "text", "category": "Attribution", "to_ids": false, "value": "KUTTANADAN CREATIONS INC.", "comment": "Certificate signer | Malicious code signing | Source: Conscia", "first_seen": "2025-09-26", "last_seen": "2025-09-26"},
+      {"type": "text", "category": "Attribution", "to_ids": false, "value": "Microsoft ID Verified CS EOC CA 01", "comment": "Certificate chain | Code signing certificate | Source: Conscia", "first_seen": "2025-09-26", "last_seen": "2025-09-26"},
+      {"type": "text", "category": "Attribution", "to_ids": false, "value": "Oyster Backdoor", "comment": "Malware family | Broomstick/CleanUpLoader | Source: Conscia", "first_seen": "2025-09-26", "last_seen": "2025-09-26"},
+      {"type": "text", "category": "Attribution", "to_ids": false, "value": "Google Trust Services (WE1)", "comment": "Certificate authority | SSL certificate issuer | Source: Conscia", "first_seen": "2025-09-26", "last_seen": "2025-09-26"}
+    ],
+    "Tag": [
+      {"name": "tlp:amber"},
+      {"name": "type:OSINT"},
+      {"name": "misp:threat-level=\"high\""},
+      {"name": "misp-galaxy:malware=\"Oyster\""},
+      {"name": "misp-galaxy:malware=\"Broomstick\""},
+      {"name": "misp-galaxy:malware=\"CleanUpLoader\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Spearphishing Attachment - T1566.001\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Drive-by Compromise - T1189\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Command and Scripting Interpreter: PowerShell - T1059.001\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Application Layer Protocol: Web Protocols - T1071.001\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Obfuscated Files or Information - T1027\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Impair Defenses: Disable or Modify Tools - T1562.001\""},
+      {"name": "misp-galaxy:tool=\"Microsoft Teams\""},
+      {"name": "misp-galaxy:tool=\"Cloudflare\""},
+      {"name": "misp-galaxy:tool=\"Google Trust Services\""}
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "Event": {
+    "date": "2025-01-21",
+    "threat_level_id": "2",
+    "info": "Summary of IP 213.183.34.200 and swiftycdn.net - Suspicious Infrastructure Under Monitoring",
+    "published": false,
+    "attribute_count": "6",
+    "analysis": "1",
+    "timestamp": "1737462000",
+    "distribution": "0",
+    "proposal_email_lock": false,
+    "locked": false,
+    "publish_timestamp": "0",
+    "sharing_group_id": "0",
+    "disable_correlation": false,
+    "extends_uuid": "",
+    "event_creator_email": "analyst@threatops.org",
+    "Attribute": [
+      {
+        "id": "1",
+        "type": "ip-dst",
+        "category": "Network activity",
+        "to_ids": true,
+        "uuid": "8a1234df-e8b0-4c73-9b49-1b0902de0d01",
+        "event_id": "1",
+        "distribution": "5",
+        "timestamp": "1737462000",
+        "comment": "Suspicious IP associated with swiftycdn.net subdomains flagged in Falcon Sandbox",
+        "sharing_group_id": "0",
+        "deleted": false,
+        "disable_correlation": false,
+        "object_relation": "",
+        "value": "213.183.34.200"
+      },
+      {
+        "id": "2",
+        "type": "domain",
+        "category": "Network activity",
+        "to_ids": true,
+        "uuid": "8a1234df-e8b0-4c73-9b49-1b0902de0d02",
+        "event_id": "1",
+        "distribution": "5",
+        "timestamp": "1737462000",
+        "comment": "Domain used in malware delivery or staging operations",
+        "sharing_group_id": "0",
+        "deleted": false,
+        "disable_correlation": false,
+        "object_relation": "",
+        "value": "swiftycdn.net"
+      }
+    ],
+    "Tag": [
+      {"name": "tlp:amber"},
+      {"name": "threat-level:medium"},
+      {"name": "misp-galaxy:infrastructure=\"Suspicious\""},
+      {"name": "misp-galaxy:tool=\"CDN\""}
+    ]
+  }
+}

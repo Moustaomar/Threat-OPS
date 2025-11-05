@@ -1,0 +1,194 @@
+# Colombian Judicial Notification SVG AsyncRAT Campaign - IOCs
+# Source: Seqrite Security Research
+# Reference: https://www.seqrite.com/blog/judicial-notification-phish-colombia-svg-asyncrat/
+# Date: October 13, 2025
+# Campaign: Colombian Judicial Notification Phishing Campaign with AsyncRAT Payload
+# Target: Colombian users (Spanish language)
+
+## Campaign Overview
+Target Region: Colombia (Bogotá)
+Language: Spanish
+Lure: Judicial notification from "Juzgado 17 Civil Municipal del Circuito de Bogotá"
+Initial Vector: Phishing email with .SVG attachment
+Final Payload: AsyncRAT Remote Access Trojan
+
+## Email Details
+Subject: "Demanda judicial en su contra – Juzgado 17 Civil Municipal"
+         (Judicial lawsuit against you - Municipal Civil Court 17)
+Body Theme: Lawsuit notification from 17th Municipal Civil Court of Bogotá Circuit
+Date Referenced: September 11, 2025
+Sender Impersonation: Judicial Notification System
+
+## File Hashes
+
+### Stage 1: SVG Attachment (Initial Dropper)
+Filename: Fiscalia General De La Nacion Juzgado Civil 17.svg
+         (Attorney General's Office Civil Court 17.svg)
+MD5: b1ed63ee45ec48b324bf126446fdc888
+SHA-1: 30780d6c0c092f31635fafafabc7fd51201cbe32
+SHA-256: 05d0e4b3be0f2e98fdb18d80d90036109797ae68ed8459d4fd2930dca1c74a10
+SSDEEP: 24576:emfb7XZZXhZw6PdpXEkaYpNb0Fu4pRIVA2A5GN69AAepl+zSKmcd6dVXFOwjw+W+:b1ZXvzXNvuScGN6FsdVXruMRZ
+TLSH: T1ADD58DB3D9089175CF6865262CBFD3EE6E068707811BA0DE28208BEFA571F59C24F175
+File Size: 2.66 MB (2,788,430 bytes)
+File Type: SVG Scalable Vector Graphics image
+Detection: Html.Asyncrat.49974.GC
+
+### Stage 2: HTA File (Dropper)
+Filename: DOCUMENTO_OFICIAL_JUZGADO.hta
+         (Official Court Document)
+MD5: 817081c745aa14fcb15d76f029e80e15
+SHA-1: 11ecf9edcf1918885f35984171a6862e5b602504
+SHA-256: a30e619c87f3f47265cf43ae3e868392a2e3bfdf1ce09a6b0d4e315080d889db
+Vhash: ffe10e9c76e6c72bf05ab38c20f8431a
+SSDEEP: 1536:g4sdadLSF8Ku6vSj3gGyade49x+WH2Rat4Tuejwaq4KsUG/VpxG+VS6DOvE6:gTdyScj3Le4T+m2R/rji4pdpxuvE6
+TLSH: T11FC438A0472A5FAD335767A2C80DB185B4C71FCD3DC700F8A6C1ADDEE9B9F292A61414
+File Size: 577.36 KB (591,213 bytes)
+File Type: HTML document, UTF-8 with BOM
+Detection: Script.Trojan.49969.GC
+
+### Stage 3: VBS Dropper
+Filename: actualiza.vbs
+MD5: 6da792b17c4bba72ca995061e040f984
+SHA-1: 9bdcaf963d298edc70ef6c26fcc5ccd489a59e44
+SHA-256: 6f8cce7829a7033b15f28b551fc0528247c996f69734649f78d318a575f7ae83
+SSDEEP: 192:w+++H+++H+++SpOBC7y4uF59T+++G+++G+++G+++8592+++G+++G+++G+++859Yk:zBN7op
+TLSH: T1788414AE5FBAF3297522CDF11D5E02D28D613B65EAF88445008F4083F8E85B247687DE
+File Size: 376.85 KB (385,896 bytes)
+File Type: Unicode text, UTF-16 LE
+Detection: Trojandownloader.AgentCiR
+
+### Stage 4: PowerShell Downloader
+Filename: veooZ.ps1
+Function: Downloads encoded blob from dpaste domain
+
+### Stage 5: .NET Downloader/Loader
+Filename: ClassLibrary3.dll
+MD5: f3b56b3cfe462e4f8a32c989cd0c5a7c
+SHA-1: 98b31d4e3e69a14705e95c4dec4e3b768b7968b0
+SHA-256: f6f1d85437d887e5872f2395670307182626453de15416e08c81a7108759a555
+Vhash: 31403665151100721141021
+Authentihash: aa335aa4f43ac5b8d4b33767a67f2cd53d9f976ac8bb7ae2592279005a96ed93
+Imphash: dae02f32a21e03ce65412f6e56942daa
+SSDEEP: 192:9XNLey1pyr3buQv77mRGCrm1UQZoDRGOskd7eb1Zqoov9H3Oq5y7n9SKEOXHscq5:qy1Qr/tzLbcepZR29H3OQQy7n9SuMcq5
+TLSH: T1C2625C28AEC44675CABD4F328C72F0044278924AD162FE5D9E83D3DA1CE32DF4F106A9
+File Size: 15.00 KB (15,360 bytes)
+File Type: PE32 DLL (.NET assembly v4.0.30319)
+Compiler: VB.NET
+Detection: Trojandownloader.AgentCiR
+
+### Stage 6: .NET Injector
+Filename: MoNtReaL.dll
+MD5: 5fad0c5b6e5a758059c5a4e633424555
+SHA-1: 8f3d5e5f05e5064832dff5c8af0e6a72a4c8026e
+SHA-256: d3c19be06cf4d3c02cede7b7d4bcc2926c0449739e570f95643e7fe94a4751fc
+Vhash: 31403665151e071f21020
+Authentihash: d29f49e3230a1934ec6c9a7a5834c7eb014369defab41ace9bbca4b58b3bd808
+Imphash: dae02f32a21e03ce65412f6e56942daa
+SSDEEP: 192:44wgJaVERwOh8RMKnbR7x5XSSQ/JGOifSU1HoSx9s1DoseOoC4n9:RaCRQnbR98OXIGsdosSC4n9
+TLSH: T180422B2597D4A53AC8BF0FB6D8B35204373499A09747FB2BB985E16A2CA335C0F103A1
+File Size: 12.00 KB (12,288 bytes)
+File Type: PE32 DLL (.NET assembly v4.0.30319)
+Compiler: VB.NET
+Detection: Trojan.InjectorCiR
+
+### Stage 7: AsyncRAT Payload
+Filename: Client.exe
+MD5: fe0fc2949addeefa6506b50215329ed9
+SHA-1: 153215c07a3334f2ce0881a0a56cc39f593f68f6
+SHA-256: 96ae863780107947c8e262f187e96b85f8cd96d66fe2d7e39dc8cef2ae669445
+Vhash: 244036555511f08d311e105d
+Authentihash: 1049bec28ce5b9ddb4bd3693c82d96b822d72c989ed9ae1fa0d7c2a9b448aa6e
+Imphash: f34d5f2d4577ed6d9ceec516c1f5a744
+SSDEEP: 768:Eq+s3pUtDILNCCa+DiPV/ih+ViRi+nK8YbIge9dF0KmvEgK/JDZVc6KN:Eq+AGtQO5CfxnKzbf8vfmnkJDZVclN
+TLSH: T1C9236D403B988176E2BD4BB5ACF3A2058279D66B5D03DA5D7CC810EB1B13BC596036FE
+File Size: 47.50 KB (48,640 bytes)
+File Type: PE32 EXE (.NET assembly v4.0.30319)
+Compiler: VB.NET
+Linker: Microsoft Linker (8.0)
+Detection: Backdoor.MsilFC.S13564499
+
+## Infrastructure
+
+### Download Domains/URLs
+dpaste.com/[ID] - Text file hosting service for encoded payload (Ysemg.txt)
+
+### Text File Downloaded
+Filename: Ysemg.txt
+Content: Base64 encoded .NET assembly (ClassLibrary3.dll)
+Encoding: Base64 with "$$" replacement for "A", reversed strings
+
+## Malware Family
+AsyncRAT - Remote Access Trojan (C# .NET)
+Mutex: DcRatMutex_qwqdanchun
+
+## Quick Heal / Seqrite Detections
+Trojan.InjectorCiR
+Html.Asyncrat.49974.GC
+Script.Trojan.49969.GC
+Backdoor.MsilFC.S13564499
+Trojandownloader.AgentCiR
+
+## Attack Chain Summary
+1. Phishing email with malicious .SVG attachment
+2. SVG contains embedded Base64-encoded fake web page
+3. Fake web page downloads DOCUMENTO_OFICIAL_JUZGADO.hta
+4. HTA drops and executes actualiza.vbs
+5. VBS writes and runs PowerShell script (veooZ.ps1)
+6. PowerShell downloads encoded text (Ysemg.txt) from dpaste
+7. Text decoded to ClassLibrary3.dll (downloader/loader)
+8. ClassLibrary3.dll downloads MoNtReaL.dll (injector)
+9. MoNtReaL.dll injects AsyncRAT (Client.exe) into MSBuild.exe
+10. AsyncRAT establishes C2 connection and persistence
+
+## Persistence Mechanisms
+1. Registry Run Key: HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run\
+2. Scheduled Task: schtasks /create /f /sc onlogon /rl highest /tn "<filename>" /tr "<fullpath>"
+
+## Target Injection Process
+MSBuild.exe (legitimate Microsoft Build Engine process)
+
+## Anti-Analysis Techniques
+- Anti-VM checks (WMI queries, process enumeration)
+- Anti-Sandbox detection
+- AMSI bypass
+- Base64 encoding and obfuscation
+- Reversed strings
+- Junk code insertion
+- Process name checks
+- Kills analysis tools (Taskmgr.exe, ProcessHacker.exe)
+
+## Capabilities (AsyncRAT)
+- Remote desktop access
+- Keystroke logging
+- Webcam surveillance
+- File upload/download
+- Process execution
+- Plugin loading from C2
+- System information gathering (HWID, OS, privileges, camera, AV)
+- Credential theft
+- Data exfiltration via TLS-encrypted MessagePack
+- Process termination (monitoring tools)
+
+## Targeted Region Details
+Primary Target: Colombia (specifically Bogotá)
+Impersonated Entity: Juzgado 17 Civil Municipal del Circuito de Bogotá
+                     (17th Municipal Civil Court of the Bogotá Circuit)
+Language: Spanish
+Social Engineering: Official judicial notification theme
+
+## Campaign Characteristics
+- Geographically targeted (Colombian users)
+- Language-specific (Spanish)
+- Institution impersonation (Colombian court system)
+- Multi-stage infection chain (7 stages)
+- Advanced evasion techniques
+- Legitimate process injection (MSBuild.exe)
+- Persistent RAT deployment
+
+## Notes
+- Campaign demonstrates high level of localization and social engineering
+- Uses less common attack vector (.SVG files) to evade detection
+- Multi-stage architecture complicates analysis and detection
+- AsyncRAT is open-source C# RAT widely used by threat actors
+- Campaign active as of October 2025
+
