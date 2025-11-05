@@ -1,0 +1,103 @@
+{
+  "Event": {
+    "date": "2025-11-05",
+    "threat_level_id": "1",
+    "info": "MuddyWater Espionage: Group-IB report",
+    "published": false,
+    "attribute_count": "9",
+    "Attribute": [
+      {
+        "type": "domain",
+        "category": "Network activity",
+        "to_ids": true,
+        "value": "screenai.online",
+        "comment": "C2 domain | Creation date noted in report | Source: Group-IB",
+        "first_seen": "2025-08-17",
+        "last_seen": "2025-08-17"
+      },
+      {
+        "type": "filename",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "mononoke.exe",
+        "comment": "Backdoor filename observed in campaign | Source: Group-IB",
+        "first_seen": "2025-08-17",
+        "last_seen": "2025-08-17"
+      },
+      {
+        "type": "sha256",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "668dd5b6fb06fe30a98dd59dd802258b45394ccd7cd610f0aaab43d801bf1a1e",
+        "comment": "mononoke.exe backdoor sample | Source: Group-IB",
+        "first_seen": "2025-08-17",
+        "last_seen": "2025-08-17"
+      },
+      {
+        "type": "sha256",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "5ec5a2adaa82a983fcc42ed9f720f4e894652bd7bd1f366826a16ac98bb91839",
+        "comment": "mononoke.exe backdoor sample | Source: Group-IB",
+        "first_seen": "2025-08-17",
+        "last_seen": "2025-08-17"
+      },
+      {
+        "type": "filename",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "sysProcUpdate",
+        "comment": "Backdoor filename observed in campaign | Source: Group-IB",
+        "first_seen": "2025-08-17",
+        "last_seen": "2025-08-17"
+      },
+      {
+        "type": "sha256",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "1883db6de22d98ed00f8719b11de5bf1d02fc206b89fedd6dd0df0e8d40c4c56",
+        "comment": "sysProcUpdate backdoor sample | Source: Group-IB",
+        "first_seen": "2025-08-17",
+        "last_seen": "2025-08-17"
+      },
+      {
+        "type": "sha256",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "3ac8283916547c50501eed8e7c3a77f0ae8b009c7b72275be8726a5b6ae255e3",
+        "comment": "sysProcUpdate backdoor sample | Source: Group-IB",
+        "first_seen": "2025-08-17",
+        "last_seen": "2025-08-17"
+      },
+      {
+        "type": "sha256",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "76fa8dca768b64aefedd85f7d0a33c2693b94bdb55f40ced7830561e48e39c75",
+        "comment": "sysProcUpdate backdoor sample | Source: Group-IB",
+        "first_seen": "2025-08-17",
+        "last_seen": "2025-08-17"
+      },
+      {
+        "type": "sha256",
+        "category": "Payload delivery",
+        "to_ids": true,
+        "value": "3d6f69cc0330b302ddf4701bbc956b8fca683d1c1b3146768dcbce4a1a3932ca",
+        "comment": "sysProcUpdate backdoor sample | Source: Group-IB",
+        "first_seen": "2025-08-17",
+        "last_seen": "2025-08-17"
+      }
+    ],
+    "Tag": [
+      {"name": "tlp:amber"},
+      {"name": "type:OSINT"},
+      {"name": "misp:threat-level=\"high\""},
+      {"name": "misp-galaxy:threat-actor=\"MuddyWater\""},
+      {"name": "misp-galaxy:country=\"Iran\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"Web Protocols - T1071.001\""},
+      {"name": "misp-galaxy:mitre-attack-pattern=\"PowerShell - T1059.001\""}
+    ]
+  }
+}
+
+
